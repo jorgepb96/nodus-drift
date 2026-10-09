@@ -1,0 +1,167 @@
+{
+  "audited_at_utc": "2026-10-09T09:01:22.560979+00:00",
+  "nodus_pin": "68fa0210dc8407938d644978291840d85aeb49b1",
+  "upstream_license": "AGPL-3.0-only",
+  "historical_mit_release": {
+    "tag": "v3.2.7",
+    "commit": "cfc0f7f03649fe4a6b80bd2ad97b4b7a81aa6441",
+    "license_sha256": "f008fa0290c055c3d842bf61f18917accf7877a19d057fd1776040bd767df892"
+  },
+  "historical_mit_files": [
+    {
+      "path": "src/components/nodi/Nodi.tsx",
+      "current_sha256": "c7482c56378d9419edccdb5c39d46f8e6c5d81422072a009148c7a180005ee19",
+      "historical_mit_sha256": "c7482c56378d9419edccdb5c39d46f8e6c5d81422072a009148c7a180005ee19",
+      "identical": true
+    },
+    {
+      "path": "src/assets/nodus-logo.svg",
+      "current_sha256": "fc676b5e5d7def435d465eaad7582e28523c8d62928f85946e977bedba602d0f",
+      "historical_mit_sha256": "fc676b5e5d7def435d465eaad7582e28523c8d62928f85946e977bedba602d0f",
+      "identical": true
+    },
+    {
+      "path": "src/components/nodi/nodi.css",
+      "current_sha256": "4d5a11409cf97b155fb7738be9dc41f9c58338383739c3f38020e71419183f1d",
+      "historical_mit_sha256": "4d5a11409cf97b155fb7738be9dc41f9c58338383739c3f38020e71419183f1d",
+      "identical": true
+    }
+  ],
+  "scoped_upstream_history": [
+    {
+      "commit": "dacb1f89deca01fbdd5437679d45f367a823cf82",
+      "date": "2026-09-30T12:30:20+02:00",
+      "author": "Drakonis96",
+      "subject": "feat(drift): add recommended, alphabetical, type and usage sorting"
+    },
+    {
+      "commit": "9c0cd63d890ad0509fe4824786307285e0ec174e",
+      "date": "2026-09-30T11:56:10+02:00",
+      "author": "Drakonis96",
+      "subject": "fix(drift): keep preset search and enable manual preview audio"
+    },
+    {
+      "commit": "a317d027b91098adda2d773b176af6a6ad095aa5",
+      "date": "2026-09-30T11:32:41+02:00",
+      "author": "Drakonis96",
+      "subject": "feat(drift): add independent workspace and named presets"
+    },
+    {
+      "commit": "94ded555ab094cb4db7c5a99e2594cad9ebb8ffe",
+      "date": "2026-09-30T01:35:42+02:00",
+      "author": "Jorge Pérez Burgueño",
+      "subject": "fix(drift): release cancelled loads and reset detached media anchors"
+    },
+    {
+      "commit": "3c65d5c349dd9d5f2ab48f1eef33e5d36ba9107f",
+      "date": "2026-09-30T00:19:44+02:00",
+      "author": "Drakonis96",
+      "subject": "feat(drift): bundle the Moodist recordings under the licenses Moodist declares"
+    },
+    {
+      "commit": "0b103105c88694a662480a8e53800c7e4deecdf5",
+      "date": "2026-09-29T23:42:44+02:00",
+      "author": "Drakonis96",
+      "subject": "feat(toolkit): add Nodus Drift, an offline ambient-sound mixer in Nodus Tools"
+    },
+    {
+      "commit": "3ebee4c274114c2c93f1b8dee151802bd4fabd43",
+      "date": "2026-08-09T19:36:21+02:00",
+      "author": "Drakonis96",
+      "subject": "Reduce modal animation resource usage"
+    },
+    {
+      "commit": "4281da7be097172fa0c84042cab2d69f253f0cdd",
+      "date": "2026-07-30T22:08:00+02:00",
+      "author": "Drakonis96",
+      "subject": "Let Nodi hold its pose when nothing is happening"
+    },
+    {
+      "commit": "23177edb57068c749414861ed5e31a31b1f95ad8",
+      "date": "2026-07-16T13:20:26+02:00",
+      "author": "Drakonis96",
+      "subject": "feat: improve Nodi and family tree interactions"
+    },
+    {
+      "commit": "245e6ae77b0a920e9a8412c334f81cd51907a19a",
+      "date": "2026-07-16T10:57:36+02:00",
+      "author": "Drakonis96",
+      "subject": "Animate Nodi while thinking"
+    },
+    {
+      "commit": "4f0e35f1868e360737ccc908595824c37b8a7f9a",
+      "date": "2026-07-15T16:59:16+02:00",
+      "author": "Drakonis96",
+      "subject": "Release v2.3.0: study workspace and complete recovery"
+    },
+    {
+      "commit": "cc480895a479f69767602f8e319aa31d4047c366",
+      "date": "2026-07-13T23:51:26+02:00",
+      "author": "Drakonis96",
+      "subject": "v2.2.0: Nodi mascot — floating companion with chat, notifications, help"
+    },
+    {
+      "commit": "bf627fc5177fde08e6675277076d05d77ca6040f",
+      "date": "2026-06-15T10:03:41+02:00",
+      "author": "Drakonis96",
+      "subject": "Add research assistant and smarter reading path"
+    },
+    {
+      "commit": "9c7b634ebd48d13c33fba883a2dd236ef0caa524",
+      "date": "2026-06-15T01:01:57+02:00",
+      "author": "Drakonis96",
+      "subject": "Release v0.3.1"
+    }
+  ],
+  "native_swift_files": [
+    {
+      "path": "ios/NodusDrift/DriftAudioEngine.swift",
+      "sha256": "1c77eb843637f3f3337cec912bae16810779990244d963bc30d58ff5f779c7aa"
+    },
+    {
+      "path": "ios/NodusDrift/DriftModel.swift",
+      "sha256": "03199ff879a6e34dcfdcf683a69691f99e548061eb3eda712cc66a8c8e041f1d"
+    },
+    {
+      "path": "ios/NodusDrift/DriftViews.swift",
+      "sha256": "c54a72fefa3f4dc3e7e4da6896d78cf58331b1c415d30a6131697d9ddaa356f7"
+    },
+    {
+      "path": "ios/NodusDrift/ImmersiveView.swift",
+      "sha256": "ef6806799b67ad8b26b736e62bcee30a933d5292bb2901c52b0bba126c9ca8c0"
+    },
+    {
+      "path": "ios/NodusDrift/NodiView.swift",
+      "sha256": "2dfe444a30bea25bd6479060bc7bae146823e528d9865054ec3e47acc4d02713"
+    },
+    {
+      "path": "ios/NodusDrift/NodusDriftApp.swift",
+      "sha256": "c2f7ee3a96fe8ce2b7ed67e8a30e4c6e64ef9a5d6b705fed65c72e1b68519a5f"
+    },
+    {
+      "path": "ios/NodusDrift/NodusMark.swift",
+      "sha256": "faaa8e7698e386c474f1dcc32aec11174afa7b0c3919f790353bdb236123b132"
+    },
+    {
+      "path": "ios/NodusDrift/SettingsView.swift",
+      "sha256": "6848251695ee633cba44e3097a906dd7b711f8172910ddf4612be8aa7f1a686a"
+    },
+    {
+      "path": "ios/NodusDriftTests/DriftTests.swift",
+      "sha256": "16c390041233e22ca5a3a2d15222f1589351204637f0b56781adcbb60ab0011e"
+    },
+    {
+      "path": "ios/NodusDriftUITests/DriftSilentUITests.swift",
+      "sha256": "ff6b8f7a263f7bc6f4be16046c18bc0d674525eaef810f8250fb166eada74615"
+    },
+    {
+      "path": "ios/NodusDriftUITests/DriftUITests.swift",
+      "sha256": "228cebd290f108a2a9b4e23cf2fdcf3b3ac17a3037f1f0574fb4ad2f4f59ac8b"
+    },
+    {
+      "path": "scripts/render_icon.swift",
+      "sha256": "5df39601794f383a87c516c7b4fe73b5a2e939ccd78f2d9a73feebadb5ba6e6e"
+    }
+  ],
+  "conclusions_not_automated": "Git attribution and matching bytes are evidence; not a warranty of title or an Apple license grant."
+}

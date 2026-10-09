@@ -1,0 +1,29 @@
+{
+  "method": "Three separate 5-second waveform windows; mono 8000 Hz PCM; exhaustive normalized cross-correlation against public preview. Title alone is not an identity match.",
+  "local_file": "ios/NodusDrift/Resources/Audio/places/restaurant.mp3",
+  "candidate_page": "https://freesound.org/people/vickyleao1/sounds/366003/",
+  "preview_url": "https://cdn.freesound.org/previews/366/366003_6034773-hq.mp3",
+  "local_duration_seconds": 170.88675,
+  "preview_duration_seconds": 291.875875,
+  "comparisons": [
+    {
+      "local_window_start_seconds": 20,
+      "preview_best_start_seconds": 257.853875,
+      "absolute_normalized_correlation": 0.04938421520988821,
+      "offset_seconds": 237.85387500000002
+    },
+    {
+      "local_window_start_seconds": 80,
+      "preview_best_start_seconds": 178.86025,
+      "absolute_normalized_correlation": 0.06253209166773899,
+      "offset_seconds": 98.86025000000001
+    },
+    {
+      "local_window_start_seconds": 140,
+      "preview_best_start_seconds": 80.905,
+      "absolute_normalized_correlation": 0.06815049798053212,
+      "offset_seconds": -59.095
+    }
+  ],
+  "identity_match_established": false
+}

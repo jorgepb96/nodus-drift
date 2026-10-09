@@ -1,0 +1,15 @@
+Nodus Drift 0.1.0 (3) — interaction and layout fixes.
+
+WHAT CHANGED
+• Tap the upper, middle or side of a sound card to add or remove it. Favorites and volume remain separate controls, and the card keeps its size when selected.
+• Search and category filters stay in place while the sound library updates.
+• Settings cards share the same width. Find Nodus website and support, the original Moodist repository and its correctly formatted license.
+• Nodi is centered in the app icon.
+• A dedicated Nodus Drift privacy policy is bundled and linked from the App Store listing.
+
+PLEASE CHECK
+Try selecting and deselecting sounds, changing filters repeatedly, and viewing Settings and license text on your iPhone or iPad. Verify that these controls are easy to tap and that the layout stays stable.
+
+The app remains free, in English and offline, with no account, tracking, ads or purchases. All playback controls remain available for normal use. This update was validated with silent UI activations; no audio playback test was performed for this build.
+
+Send feedback and screenshots through TestFlight.

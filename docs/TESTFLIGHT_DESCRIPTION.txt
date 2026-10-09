@@ -1,0 +1,9 @@
+Make a little space to be.
+
+Nodus Drift is a native ambient sound mixer for iPhone and iPad, with 89 sounds that work entirely offline. Blend up to six layers, adjust each volume, discover rain, waves, birds and everyday places, or explore white, pink and brown noise and stereo binaural tones. Save your favorite mixes and return to them whenever you want.
+
+Set a sleep timer and keep your soundscape playing with the screen locked. Enter a dark, full-screen meditation scene with Nodi, your quiet animated companion. Let Nodi rest, then tap anywhere to open those familiar eyes and bring the controls back.
+
+Free, with no account, ads, tracking, subscriptions or purchases. English only in this beta. Use stereo headphones for binaural tones.
+
+Please send feedback through TestFlight about audio, battery use, accessibility and the layout on your device.

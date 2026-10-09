@@ -1,0 +1,285 @@
+{
+  "updated_local_date": "2026-10-09",
+  "timezone": "Europe/Madrid",
+  "app_store_id": "6820753637",
+  "language": "en-US",
+  "beta_build": "0.1.0 (5)",
+  "app_store_draft_version": "0.1.0",
+  "app_store_draft_status": "Prepare for Submission",
+  "submitted_for_review": false,
+  "testflight_screenshot_visibility": "Awaiting an approved Ready for Distribution App Store version",
+  "text_files": {
+    "beta_description": "docs/TESTFLIGHT_DESCRIPTION.txt",
+    "what_to_test": "docs/TESTFLIGHT_NOTES.txt",
+    "store_description": "docs/APP_STORE_DESCRIPTION.txt",
+    "promotional_text": "docs/APP_STORE_PROMOTIONAL_TEXT.txt"
+  },
+  "galleries": [
+    {
+      "kind": "iphone-medium",
+      "device": "iPhone 17 Pro",
+      "source_xcresult": null,
+      "uploaded_count": 6,
+      "images": [
+        {
+          "file": "screenshots/01-home.png",
+          "dimensions": [
+            1206,
+            2622
+          ],
+          "sha256": "90e38f57acb7722be352ab1ad842e2b9946d5d526fdfad0b79b098136c926dc4"
+        },
+        {
+          "file": "screenshots/02-mix.png",
+          "dimensions": [
+            1206,
+            2622
+          ],
+          "sha256": "e8250151b174d48f2768a45c7f8d758090bc9c5cac41dced394f9461e8a68e2e"
+        },
+        {
+          "file": "screenshots/03-saved.png",
+          "dimensions": [
+            1206,
+            2622
+          ],
+          "sha256": "914eab9e1242b99600906a00f04e6d8c60a0e11b23e1c3c8b0f9437b3c5b64cd"
+        },
+        {
+          "file": "screenshots/05-meditation-resting.png",
+          "dimensions": [
+            1206,
+            2622
+          ],
+          "sha256": "685e5916c2d7cf829d11d4b8240122920a8c1f7dfa5502e4f7a5bbc42e11daad"
+        },
+        {
+          "file": "screenshots/06-meditation-awake.png",
+          "dimensions": [
+            1206,
+            2622
+          ],
+          "sha256": "10b714f1856e3881d6e5b4d92c441f239c6273ce04e2147317fb1970f0cad0e8"
+        },
+        {
+          "file": "screenshots/08-sound-library.png",
+          "dimensions": [
+            1206,
+            2622
+          ],
+          "sha256": "17da1eedf4e35582a8daf382a64d804db98e19bbcc0df898929b0a896cb25f18"
+        }
+      ]
+    },
+    {
+      "kind": "iphone-large",
+      "device": "iPhone 17 Pro Max",
+      "source_xcresult": ".build/StoreMediaPhone.xcresult",
+      "uploaded_count": 6,
+      "images": [
+        {
+          "file": "screenshots/app-store/iphone-large/01-home.png",
+          "dimensions": [
+            1320,
+            2868
+          ],
+          "sha256": "80571ce469da2007069a2676181a5d4b179b8e526686cd6c3f27757c8f8ed573"
+        },
+        {
+          "file": "screenshots/app-store/iphone-large/02-mix.png",
+          "dimensions": [
+            1320,
+            2868
+          ],
+          "sha256": "f54816420c5a65a4b86c3a5e7c154ff752adb86c97676308b77dacf9ac8422f5"
+        },
+        {
+          "file": "screenshots/app-store/iphone-large/03-saved.png",
+          "dimensions": [
+            1320,
+            2868
+          ],
+          "sha256": "ed6cb29814cd402af24a49cc0273e94c98fcb8f4dd22efe71d529d1ac80d8d3b"
+        },
+        {
+          "file": "screenshots/app-store/iphone-large/05-meditation-resting.png",
+          "dimensions": [
+            1320,
+            2868
+          ],
+          "sha256": "f60e20a366e2b97312aa4182fca43792b7f3d1b3f28a61951566c4691ead0cad"
+        },
+        {
+          "file": "screenshots/app-store/iphone-large/06-meditation-awake.png",
+          "dimensions": [
+            1320,
+            2868
+          ],
+          "sha256": "364fd8125d84d06e1772f3f0f6b891c64a8fbd70a436d5de45bdf8e2bda9ff89"
+        },
+        {
+          "file": "screenshots/app-store/iphone-large/08-sound-library.png",
+          "dimensions": [
+            1320,
+            2868
+          ],
+          "sha256": "b77ab40fb8bfcd4c76448962e63c5b25b57d2ae4e4af23034b267ad2e8bb6335"
+        }
+      ]
+    },
+    {
+      "kind": "ipad-13",
+      "device": "iPad Pro 13-inch (M5)",
+      "source_xcresult": ".build/StoreMediaTabletFinal.xcresult",
+      "uploaded_count": 6,
+      "images": [
+        {
+          "file": "screenshots/app-store/ipad-13/01-home.png",
+          "dimensions": [
+            2064,
+            2752
+          ],
+          "sha256": "cf178d2f0646c44deed1b713a8b98c569721a77843bffe1b84a1ed9705737a0f"
+        },
+        {
+          "file": "screenshots/app-store/ipad-13/02-mix.png",
+          "dimensions": [
+            2064,
+            2752
+          ],
+          "sha256": "ae4eed9627cfc9f51a915116a0ab195de4648defd7ae47146a5d7282d9ad47f4"
+        },
+        {
+          "file": "screenshots/app-store/ipad-13/03-saved.png",
+          "dimensions": [
+            2064,
+            2752
+          ],
+          "sha256": "c26aa16bb1054159ca10f148443d7f0cab76782691ddf0fd234474605a4c8c87"
+        },
+        {
+          "file": "screenshots/app-store/ipad-13/05-meditation-resting.png",
+          "dimensions": [
+            2064,
+            2752
+          ],
+          "sha256": "3727ece9e9ed8f0eaceeb9a9da417830b2d0858adbd48d03d290cee6149f7185"
+        },
+        {
+          "file": "screenshots/app-store/ipad-13/06-meditation-awake.png",
+          "dimensions": [
+            2064,
+            2752
+          ],
+          "sha256": "1e1367f144c193b154661da513ac34444b5d78eb2cd2df3d5d18672a178ac792"
+        },
+        {
+          "file": "screenshots/app-store/ipad-13/08-sound-library.png",
+          "dimensions": [
+            2064,
+            2752
+          ],
+          "sha256": "4e4858f40e550d5e28d9da9f2babcb8297dc0476052dba5cbad00de1407f971b"
+        }
+      ]
+    }
+  ],
+  "text_sha256": {
+    "beta_description": "90a54fcf2bcacbc02dab69ce10790ee74ec9515f56fd3aaa6262a3e39f75bd93",
+    "what_to_test": "b074ca38dd074fa5ffef4eed74df2482a61576f8422389c16377ab8184a9ac09",
+    "store_description": "c62e46b8b75fb76e93b787487ac5b6178281ee805130053ff8bdcbcb167058a5",
+    "promotional_text": "d90a56cc79f4fafa363007d1f33264e9cb86f399881b8a018f639a57d6d6f786"
+  },
+  "version_history": [
+    {
+      "beta_build": "1.0.0 (1)",
+      "app_store_draft_version": "1.0",
+      "what_to_test_file": "docs/TESTFLIGHT_NOTES_BUILD1.txt",
+      "status": "previous internal build"
+    },
+    {
+      "beta_build": "0.1.0 (2)",
+      "beta_build_id": "96ac5c9e-873d-4f91-9879-8bda3a547bb9",
+      "what_to_test_file": "docs/TESTFLIGHT_NOTES_BUILD2.txt",
+      "status": "previous internal build"
+    },
+    {
+      "beta_build": "0.1.0 (3)",
+      "beta_build_id": "2e3af21f-c548-41d5-9634-2ca0ab7f032e",
+      "what_to_test_file": "docs/TESTFLIGHT_NOTES_BUILD3.txt",
+      "status": "previous internal build"
+    },
+    {
+      "beta_build": "0.1.0 (4)",
+      "beta_build_id": "c021e78c-1691-4157-9f07-ea4bf1261751",
+      "what_to_test_file": "docs/TESTFLIGHT_NOTES_BUILD4.txt",
+      "status": "previous internal build"
+    }
+  ],
+  "beta_status": "Testing",
+  "beta_build_url": "https://appstoreconnect.apple.com/teams/36804ede-f0b5-4cd2-a273-c619feb6168f/apps/6820753637/testflight/ios/0db78c13-67bd-42d4-8c55-a09d1ccc6e8c",
+  "beta_build_id": "0db78c13-67bd-42d4-8c55-a09d1ccc6e8c",
+  "privacy_policy_url": "https://nodusresearch.com/drift/privacy/",
+  "support_url": "https://github.com/jorgepb96/nodus/issues",
+  "marketing_url": "https://nodusresearch.com/",
+  "what_to_test_sha256": "b074ca38dd074fa5ffef4eed74df2482a61576f8422389c16377ab8184a9ac09",
+  "testflight_state": "Testing",
+  "privacy_label_answer": "No Data Collected",
+  "privacy_label_publication": "Awaiting authorization for Apple accuracy/update declaration",
+  "proof_build3": {
+    "testing": "screenshots/30-testflight-0.1.0-3-active.png",
+    "notes": "screenshots/29-testflight-0.1.0-3-notes.png"
+  },
+  "proof_build4": {
+    "testing": "screenshots/34-testflight-0.1.0-4-active.png",
+    "notes": "screenshots/33-testflight-0.1.0-4-notes.png"
+  },
+  "native_ui_validation_build4": {
+    "audio_playback_tested": false,
+    "silent_debug_guard": true,
+    "iphone_tests_passed": 2,
+    "ipad_tests_passed": 2,
+    "captures": [
+      "screenshots/24-card-activation.png",
+      "screenshots/25-stable-filters.png",
+      "screenshots/26-settings-aligned.png",
+      "screenshots/27-moodist-license.png",
+      "screenshots/32-deep-filter-results.png"
+    ],
+    "deep_filtered_results_visible": true
+  },
+  "native_ui_validation": {
+    "test": "DriftSilentUITests/testSilentSavedLayoutParity",
+    "audio_playback_tested": false,
+    "silent_debug_guard": true,
+    "iphone_tests_passed": 1,
+    "ipad_tests_passed": 1,
+    "iphone_failures": 0,
+    "ipad_failures": 0,
+    "captures": [
+      "screenshots/36-empty-my-mix.png",
+      "screenshots/37-empty-saved.png",
+      "screenshots/38-saved-parity-my-mix.png",
+      "screenshots/39-saved-parity-saved.png"
+    ],
+    "checks": [
+      "matching heading origin and height",
+      "matching Nodi width and height",
+      "matching empty action dimensions",
+      "matching populated card width and origin",
+      "saved card at least as tall as a mixer card",
+      "save and load restore both sounds with playback paused"
+    ]
+  },
+  "source_repository": {
+    "url": "https://github.com/jorgepb96/nodus-drift-mobile",
+    "visibility": "private",
+    "audio_files_versioned": false,
+    "signing_credentials_versioned": false
+  },
+  "upload_completed_local": "2026-10-09 11:07:35 Europe/Madrid",
+  "proof_build5": {
+    "testing": "screenshots/41-testflight-0.1.0-5-active.png",
+    "notes": "screenshots/40-testflight-0.1.0-5-notes.png"
+  }
+}

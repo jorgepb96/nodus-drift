@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01E3B3E25027EC9DFD40D47E /* DriftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9BEAB0E1DD899E05573E9F /* DriftUITests.swift */; };
+		07CF76F58B0B4D5220CDE575 /* DriftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E895F7DD6650E60EC07C2C /* DriftModel.swift */; };
+		082901040E25BEC52B8A6FFE /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = 03F9AC09FBA646FDA4F2E366 /* Audio */; };
+		3CB028F5067062168F0BA882 /* DriftSilentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0695ADA48AA59C96D135DD /* DriftSilentUITests.swift */; };
+		4DC99DE9E08D61A68120D0C6 /* NodiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F027CEE9FDFAB20990939C /* NodiView.swift */; };
+		526935550D0B66D28F58CBE9 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 3DF741CE779FDFB73313566C /* PrivacyInfo.xcprivacy */; };
+		5C769B97931D0938B8A088B5 /* DriftAudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89E07F425C8E8D1F86C7836 /* DriftAudioEngine.swift */; };
+		7986275B745C1C6F759698EF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F9BFC3DBF594A88C981610 /* SettingsView.swift */; };
+		7A3A27B92B3998DCF6C7CA03 /* DriftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BADB4C7FC3D49E1D6B4AA0 /* DriftTests.swift */; };
+		96BB1E7CF84C2BF711D49494 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D0165B5206E972B693474F /* Assets.xcassets */; };
+		A99EF57860E79C9C54D5C61B /* NodusMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F73A1AD4A46E1887E6C28B /* NodusMark.swift */; };
+		ACAF8EC4E8BDD489155AD8E4 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FC25CD44F09B358E1D6EB /* ImmersiveView.swift */; };
+		BEE56685B9EA297D5D780555 /* DriftViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A195C117C5DEBB3A168D186A /* DriftViews.swift */; };
+		CC585B0CE1747F29EBCC62B0 /* catalog.json in Resources */ = {isa = PBXBuildFile; fileRef = 92995F4DEBF1D3CC62A6B52A /* catalog.json */; };
+		D521869BF2C2BBA1524D3716 /* NodusDriftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C3C9D32D4684EF9CC142C /* NodusDriftApp.swift */; };
+		F241BAF37146F0D5340DF4BF /* Legal in Resources */ = {isa = PBXBuildFile; fileRef = ECA3F7732062896D44A9EC31 /* Legal */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		021D3DBEC502B3B53302B685 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D6D774532E9F3778D4B7A86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8480334EAB671594807745A;
+			remoteInfo = NodusDrift;
+		};
+		1B52CAC3577FDC1576C9709B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D6D774532E9F3778D4B7A86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8480334EAB671594807745A;
+			remoteInfo = NodusDrift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03F9AC09FBA646FDA4F2E366 /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Audio; path = NodusDrift/Resources/Audio; sourceTree = SOURCE_ROOT; };
+		26D0165B5206E972B693474F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3DF741CE779FDFB73313566C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		5F9B403FD94152EAFCCCA7B6 /* NodusDriftUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = NodusDriftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D0695ADA48AA59C96D135DD /* DriftSilentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftSilentUITests.swift; sourceTree = "<group>"; };
+		90E895F7DD6650E60EC07C2C /* DriftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftModel.swift; sourceTree = "<group>"; };
+		92995F4DEBF1D3CC62A6B52A /* catalog.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = catalog.json; sourceTree = "<group>"; };
+		97F73A1AD4A46E1887E6C28B /* NodusMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodusMark.swift; sourceTree = "<group>"; };
+		9E09FF571AA2354D1A59789A /* NodusDriftTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = NodusDriftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F5C3C9D32D4684EF9CC142C /* NodusDriftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodusDriftApp.swift; sourceTree = "<group>"; };
+		A195C117C5DEBB3A168D186A /* DriftViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftViews.swift; sourceTree = "<group>"; };
+		A45F99AC624C21EAFD2D9D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B3BADB4C7FC3D49E1D6B4AA0 /* DriftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftTests.swift; sourceTree = "<group>"; };
+		B4F027CEE9FDFAB20990939C /* NodiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodiView.swift; sourceTree = "<group>"; };
+		C89E07F425C8E8D1F86C7836 /* DriftAudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftAudioEngine.swift; sourceTree = "<group>"; };
+		C8F9BFC3DBF594A88C981610 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D6259506D5FD8337D53C9828 /* NodusDrift.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = NodusDrift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E78FC25CD44F09B358E1D6EB /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		ECA3F7732062896D44A9EC31 /* Legal */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Legal; path = NodusDrift/Resources/Legal; sourceTree = SOURCE_ROOT; };
+		EE9BEAB0E1DD899E05573E9F /* DriftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftUITests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		049DD2541427B1914A7DE632 = {
+			isa = PBXGroup;
+			children = (
+				03F9AC09FBA646FDA4F2E366 /* Audio */,
+				ECA3F7732062896D44A9EC31 /* Legal */,
+				A1047A896C960764E7103893 /* NodusDrift */,
+				201B5FD8B48E3B47DBA07222 /* NodusDriftTests */,
+				807FE0A485A5FFEB1D362A21 /* NodusDriftUITests */,
+				E88A9A2481F7EF5B7702F6E0 /* Resources */,
+				8B586B073018A9A7609AB5DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		201B5FD8B48E3B47DBA07222 /* NodusDriftTests */ = {
+			isa = PBXGroup;
+			children = (
+				B3BADB4C7FC3D49E1D6B4AA0 /* DriftTests.swift */,
+			);
+			path = NodusDriftTests;
+			sourceTree = "<group>";
+		};
+		807FE0A485A5FFEB1D362A21 /* NodusDriftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8D0695ADA48AA59C96D135DD /* DriftSilentUITests.swift */,
+				EE9BEAB0E1DD899E05573E9F /* DriftUITests.swift */,
+			);
+			path = NodusDriftUITests;
+			sourceTree = "<group>";
+		};
+		8B586B073018A9A7609AB5DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6259506D5FD8337D53C9828 /* NodusDrift.app */,
+				9E09FF571AA2354D1A59789A /* NodusDriftTests.xctest */,
+				5F9B403FD94152EAFCCCA7B6 /* NodusDriftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1047A896C960764E7103893 /* NodusDrift */ = {
+			isa = PBXGroup;
+			children = (
+				26D0165B5206E972B693474F /* Assets.xcassets */,
+				C89E07F425C8E8D1F86C7836 /* DriftAudioEngine.swift */,
+				90E895F7DD6650E60EC07C2C /* DriftModel.swift */,
+				A195C117C5DEBB3A168D186A /* DriftViews.swift */,
+				E78FC25CD44F09B358E1D6EB /* ImmersiveView.swift */,
+				A45F99AC624C21EAFD2D9D6E /* Info.plist */,
+				B4F027CEE9FDFAB20990939C /* NodiView.swift */,
+				9F5C3C9D32D4684EF9CC142C /* NodusDriftApp.swift */,
+				97F73A1AD4A46E1887E6C28B /* NodusMark.swift */,
+				C8F9BFC3DBF594A88C981610 /* SettingsView.swift */,
+			);
+			path = NodusDrift;
+			sourceTree = "<group>";
+		};
+		E88A9A2481F7EF5B7702F6E0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				92995F4DEBF1D3CC62A6B52A /* catalog.json */,
+				3DF741CE779FDFB73313566C /* PrivacyInfo.xcprivacy */,
+			);
+			name = Resources;
+			path = NodusDrift/Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0CCE33ED96226799F6E61133 /* NodusDriftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB3CDBA5F4A6A4B7F3588745 /* Build configuration list for PBXNativeTarget "NodusDriftUITests" */;
+			buildPhases = (
+				CA240D735AED91EDEC7BBD51 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D02943889AB30B9446068C2 /* PBXTargetDependency */,
+			);
+			name = NodusDriftUITests;
+			packageProductDependencies = (
+			);
+			productName = NodusDriftUITests;
+			productReference = 5F9B403FD94152EAFCCCA7B6 /* NodusDriftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		3E94949046B4EAE0CD236905 /* NodusDriftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81A95CDF96E750C28FC07310 /* Build configuration list for PBXNativeTarget "NodusDriftTests" */;
+			buildPhases = (
+				93AB9A746A13D6A7B734D082 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E9730D8407FC56DC7CAFF1C /* PBXTargetDependency */,
+			);
+			name = NodusDriftTests;
+			packageProductDependencies = (
+			);
+			productName = NodusDriftTests;
+			productReference = 9E09FF571AA2354D1A59789A /* NodusDriftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C8480334EAB671594807745A /* NodusDrift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D7B916A172FB531EE7AAF0A /* Build configuration list for PBXNativeTarget "NodusDrift" */;
+			buildPhases = (
+				B9BB400D3247C103D0CD892C /* Sources */,
+				CF05E7D2535A21615E339549 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NodusDrift;
+			packageProductDependencies = (
+			);
+			productName = NodusDrift;
+			productReference = D6259506D5FD8337D53C9828 /* NodusDrift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D6D774532E9F3778D4B7A86 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					0CCE33ED96226799F6E61133 = {
+						DevelopmentTeam = 6RPLS9EA4X;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C8480334EAB671594807745A;
+					};
+					3E94949046B4EAE0CD236905 = {
+						DevelopmentTeam = 6RPLS9EA4X;
+						ProvisioningStyle = Automatic;
+					};
+					C8480334EAB671594807745A = {
+						DevelopmentTeam = 6RPLS9EA4X;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EE6D7CD0378ECDC2029C8320 /* Build configuration list for PBXProject "NodusDrift" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 049DD2541427B1914A7DE632;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8480334EAB671594807745A /* NodusDrift */,
+				3E94949046B4EAE0CD236905 /* NodusDriftTests */,
+				0CCE33ED96226799F6E61133 /* NodusDriftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF05E7D2535A21615E339549 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96BB1E7CF84C2BF711D49494 /* Assets.xcassets in Resources */,
+				082901040E25BEC52B8A6FFE /* Audio in Resources */,
+				F241BAF37146F0D5340DF4BF /* Legal in Resources */,
+				526935550D0B66D28F58CBE9 /* PrivacyInfo.xcprivacy in Resources */,
+				CC585B0CE1747F29EBCC62B0 /* catalog.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93AB9A746A13D6A7B734D082 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A3A27B92B3998DCF6C7CA03 /* DriftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9BB400D3247C103D0CD892C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C769B97931D0938B8A088B5 /* DriftAudioEngine.swift in Sources */,
+				07CF76F58B0B4D5220CDE575 /* DriftModel.swift in Sources */,
+				BEE56685B9EA297D5D780555 /* DriftViews.swift in Sources */,
+				ACAF8EC4E8BDD489155AD8E4 /* ImmersiveView.swift in Sources */,
+				4DC99DE9E08D61A68120D0C6 /* NodiView.swift in Sources */,
+				D521869BF2C2BBA1524D3716 /* NodusDriftApp.swift in Sources */,
+				A99EF57860E79C9C54D5C61B /* NodusMark.swift in Sources */,
+				7986275B745C1C6F759698EF /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA240D735AED91EDEC7BBD51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB028F5067062168F0BA882 /* DriftSilentUITests.swift in Sources */,
+				01E3B3E25027EC9DFD40D47E /* DriftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E9730D8407FC56DC7CAFF1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8480334EAB671594807745A /* NodusDrift */;
+			targetProxy = 1B52CAC3577FDC1576C9709B /* PBXContainerItemProxy */;
+		};
+		7D02943889AB30B9446068C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8480334EAB671594807745A /* NodusDrift */;
+			targetProxy = 021D3DBEC502B3B53302B685 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		136AAF436D9C550B1C7842FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.drakonis96.NodusDriftTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NodusDrift.app/NodusDrift";
+			};
+			name = Release;
+		};
+		14B6EACD1798C5284C5BDFAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6RPLS9EA4X;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3827A096FDA9E00B9CF93735 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.drakonis96.NodusDriftUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NodusDrift;
+			};
+			name = Debug;
+		};
+		4975670D8A0E68C3C74BCF1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.drakonis96.NodusDriftTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NodusDrift.app/NodusDrift";
+			};
+			name = Debug;
+		};
+		53B3FF69B0ECB97EC232A457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.drakonis96.NodusDriftUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NodusDrift;
+			};
+			name = Release;
+		};
+		6F8C92882C0A05C7DECB44F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6RPLS9EA4X;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C5329FF1F64FA245F0E92AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 5;
+				INFOPLIST_FILE = NodusDrift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drakonis96.nodusdrift;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D819E643F14A320870344854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 5;
+				INFOPLIST_FILE = NodusDrift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drakonis96.nodusdrift;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D7B916A172FB531EE7AAF0A /* Build configuration list for PBXNativeTarget "NodusDrift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D819E643F14A320870344854 /* Debug */,
+				9C5329FF1F64FA245F0E92AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		81A95CDF96E750C28FC07310 /* Build configuration list for PBXNativeTarget "NodusDriftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4975670D8A0E68C3C74BCF1E /* Debug */,
+				136AAF436D9C550B1C7842FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CB3CDBA5F4A6A4B7F3588745 /* Build configuration list for PBXNativeTarget "NodusDriftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3827A096FDA9E00B9CF93735 /* Debug */,
+				53B3FF69B0ECB97EC232A457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EE6D7CD0378ECDC2029C8320 /* Build configuration list for PBXProject "NodusDrift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F8C92882C0A05C7DECB44F0 /* Debug */,
+				14B6EACD1798C5284C5BDFAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8D6D774532E9F3778D4B7A86 /* Project object */;
+}

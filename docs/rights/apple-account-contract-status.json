@@ -1,0 +1,13 @@
+{
+  "observed_on": "2026-10-09 Europe/Madrid",
+  "method": "Read-only App Store Connect Business agreement table in the integrated browser; no agreement accepted or changed.",
+  "agreement_type": "Free Apps Agreement",
+  "regions": "All countries or regions",
+  "effective_period": {
+    "from": "2026-08-31",
+    "to": "2027-08-31"
+  },
+  "status": "Active",
+  "signed_contract_text_obtained": false,
+  "public_terms_reference": "https://developer.apple.com/support/terms/apple-developer-program-license-agreement/"
+}

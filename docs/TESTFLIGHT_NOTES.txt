@@ -1,0 +1,14 @@
+Nodus Drift 0.1.0 (5) — Saved layout parity.
+
+WHAT CHANGED
+• Saved and My mix share the same page width, margins, heading scale and empty-state layout.
+• Meditating Nodi has the same size in both empty screens, with matching full-width action buttons.
+• Saved mix cards are roomier, with larger icons, easier-to-read sound and volume details, and titles that follow your iPhone’s text-size setting.
+• Tap anywhere in the main saved-card area to load a mix. The options menu remains separate and loaded mixes start paused.
+
+PLEASE CHECK
+Compare My mix and Saved before creating a mix. Choose a starter mix, save it, and check the saved card’s size and readability. Load it again and verify that the sounds and volumes are restored and playback stays paused. Try searching, sorting and editing your saved mixes.
+
+The app remains free, in English and offline, with no account, tracking, ads or purchases. This update was validated with silent UI activations; no audio playback test was performed for this build.
+
+Send feedback and screenshots through TestFlight.

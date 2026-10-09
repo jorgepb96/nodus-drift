@@ -1,0 +1,17 @@
+Welcome to Nodus Drift 0.1.0 (2). The app is in English and all 89 sounds work offline.
+
+Please test these experiences:
+
+SOUNDS AND MIXES
+Browse, search and sort the library. Mark favorites, combine up to six sound layers, and adjust individual and master volume. Save a named mix, then load it again; saved mixes should load paused.
+
+A QUIET MOMENT WITH NODI
+Open the full-screen meditation scene. After five seconds the controls fade away, leaving Nodi resting on a dark background. Tap anywhere to open Nodi's eyes and reveal the controls. Check entering, leaving and rotating the scene.
+
+PLAYBACK ON YOUR DEVICE
+Set a sleep timer and lock the screen. Check background playback, lock-screen play/pause and that audio stops when the timer ends. Try wired headphones, Bluetooth, interruptions and unplugging headphones. Use stereo headphones for binaural tones.
+
+ACCESSIBILITY AND EVERYDAY USE
+Try larger text, VoiceOver and Reduce Motion. Tell us about battery use, unexpected pauses, audio glitches or layout issues on your iPhone or iPad.
+
+No account, network connection, payment, ads or subscription is required. Please send your feedback and screenshots through TestFlight.
