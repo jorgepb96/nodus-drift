@@ -69,3 +69,18 @@ captures above retain their actual uploaded image contents.
 
 - [Saved build 5 instructions](40-testflight-0.1.0-5-notes.png)
 - [Current internal TestFlight beta, 0.1.0 (5)](41-testflight-0.1.0-5-active.png)
+
+## Replacement audio bank — build 6
+
+These captures come from the successful silent iPhone and iPad tests:
+
+- [Sound activations, iPhone](43-build6-iphone-sounds.png)
+- [Settings, iPhone](44-build6-iphone-settings.png)
+- [Settings, iPad](45-build6-ipad-settings.png)
+- [Audio permissions and source credits, iPhone](46-build6-iphone-audio-credits.png)
+- [Audio permissions and source credits, iPad](47-build6-ipad-audio-credits.png)
+
+The new bank keeps all 89 options. No audio was played for these captures.
+
+- [Saved build 6 notes](48-testflight-0.1.0-6-notes.jpg)
+- [Private TestFlight beta 0.1.0 (6), Testing](49-testflight-0.1.0-6-active.jpg)

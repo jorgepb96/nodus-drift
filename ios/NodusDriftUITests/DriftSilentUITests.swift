@@ -140,4 +140,23 @@ final class DriftSilentUITests: XCTestCase {
         XCTAssertTrue(app.buttons["remove-light-rain"].exists)
         XCTAssertTrue(app.buttons["remove-brown-noise"].exists)
     }
+    func testSilentAudioSourceCredits() {
+        tab("Settings")
+        let license = app.buttons["moodist-license"]
+        reveal(license); license.tap()
+        let sources = app.buttons["Audio sources & permissions"]
+        XCTAssertTrue(sources.waitForExistence(timeout: 5))
+        reveal(sources); sources.tap()
+        let body = app.textViews.matching(NSPredicate(format: "value BEGINSWITH %@", "Nodus Drift · Audio sources and permissions")).firstMatch
+        XCTAssertTrue(body.waitForExistence(timeout: 5))
+        let text = body.value as? String ?? ""
+        XCTAssertTrue(text.contains("Eighty options use 77 individually documented CC0"))
+        XCTAssertTrue(text.contains("FSD50K acknowledgement"))
+        XCTAssertTrue(text.contains("Clotho acknowledgement"))
+        XCTAssertTrue(text.contains("vocal imitation"))
+        XCTAssertTrue(text.contains("tuning-radio"))
+        XCTAssertFalse(text.contains("could not be loaded"))
+        capture("42-audio-source-credits")
+        app.buttons["Done"].tap()
+    }
 }

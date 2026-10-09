@@ -1,0 +1,41 @@
+{
+  "method": "three-window exhaustive normalized cross-correlation with fractional-sample refinement; mono 8000 Hz; silent PCM decoding",
+  "recording": "ios/NodusDrift/Resources/Audio/things/keyboard.mp3",
+  "recording_sha256": "2499954ba838ce1b32b79560a2ab273209ae350bb9988490738ed2e2b23f82ae",
+  "source_page": "https://freesound.org/people/BigKahuna360/sounds/155574/",
+  "source_page_sha256": "c15c78561f812420c3e448f2b372805d314ff7d4eef43c264c4b033e3ad1838c",
+  "public_preview_url": "https://cdn.freesound.org/previews/155/155574_2643065-hq.mp3",
+  "public_preview_sha256": "ccbb782b9659396c8181a71fcb857cfafb99019b875a24fef2b35f6766f165f3",
+  "source_license_links": [
+    "http://creativecommons.org/publicdomain/zero/1.0/"
+  ],
+  "recording_decoded_seconds": 12.146875,
+  "source_decoded_seconds": 12.131875,
+  "window_seconds": 3.032875,
+  "window_selection": "start, middle, end",
+  "matches": [
+    {
+      "recording_start_seconds": 1.0,
+      "source_start_seconds": 1.778859375,
+      "source_minus_recording_seconds": 0.7788593749999999,
+      "normalized_correlation": 0.088619640799595
+    },
+    {
+      "recording_start_seconds": 4.557,
+      "source_start_seconds": 6.1778125,
+      "source_minus_recording_seconds": 1.6208124999999995,
+      "normalized_correlation": 0.0786066352895263
+    },
+    {
+      "recording_start_seconds": 8.114,
+      "source_start_seconds": 2.64315625,
+      "source_minus_recording_seconds": -5.47084375,
+      "normalized_correlation": 0.05763565375551852
+    }
+  ],
+  "offset_spread_seconds": 7.09165625,
+  "strong_signal_identity": false,
+  "loop_adjusted_offset_spread_seconds": 5.897171875,
+  "strong_signal_identity_allowing_loop_rotation": false,
+  "limits": "A match supports the identified source, not legal ownership. A non-match does not exclude time stretching, edits, or other transformations."
+}

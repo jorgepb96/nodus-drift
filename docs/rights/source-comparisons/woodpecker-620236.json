@@ -1,0 +1,41 @@
+{
+  "method": "three-window exhaustive normalized cross-correlation with fractional-sample refinement; mono 8000 Hz; silent PCM decoding",
+  "recording": "ios/NodusDrift/Resources/Audio/animals/woodpecker.mp3",
+  "recording_sha256": "b2c66c84d6d9ef6d9cc6d064d2da7b9068f994d1e18080f6a62deaa786b18eaf",
+  "source_page": "https://freesound.org/people/JKata/sounds/620236/",
+  "source_page_sha256": "d30a35361a443b19d1ac6bee55a8ef12002e6b1a9aea5dd72b87ef6b08f7631a",
+  "public_preview_url": "https://cdn.freesound.org/previews/620/620236_966329-hq.mp3",
+  "public_preview_sha256": "566d21939b64fffe9dd4f8065449ae22956dd46e280bad576a5315d4888ab63f",
+  "source_license_links": [
+    "http://creativecommons.org/publicdomain/zero/1.0/"
+  ],
+  "recording_decoded_seconds": 15.319125,
+  "source_decoded_seconds": 15.982625,
+  "window_seconds": 3.82975,
+  "window_selection": "start, middle, end",
+  "matches": [
+    {
+      "recording_start_seconds": 1.0,
+      "source_start_seconds": 2.1643984375,
+      "source_minus_recording_seconds": 1.1643984375,
+      "normalized_correlation": 0.07857326268110197
+    },
+    {
+      "recording_start_seconds": 5.744625,
+      "source_start_seconds": 2.900578125,
+      "source_minus_recording_seconds": -2.844046875,
+      "normalized_correlation": 0.08454947427696578
+    },
+    {
+      "recording_start_seconds": 10.489375,
+      "source_start_seconds": 10.7429296875,
+      "source_minus_recording_seconds": 0.25355468749999943,
+      "normalized_correlation": 0.030755148243428357
+    }
+  ],
+  "offset_spread_seconds": 4.0084453125,
+  "strong_signal_identity": false,
+  "loop_adjusted_offset_spread_seconds": 4.0084453125,
+  "strong_signal_identity_allowing_loop_rotation": false,
+  "limits": "A match supports the identified source, not legal ownership. A non-match does not exclude time stretching, edits, or other transformations."
+}

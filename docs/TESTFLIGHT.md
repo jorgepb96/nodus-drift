@@ -1,79 +1,71 @@
 # Internal TestFlight beta
 
-The current version **0.1.0 (5)** was archived, signed and uploaded on October 9, 2026.
-Apple completed processing and App Store Connect shows **En pruebas / Testing**.
-It is assigned to **Jorge — beta interna**, containing only the account holder.
-The account holder has installed the previous 1.0.0 (1) build on an iPhone.
-Installation of 0.1.0 (5) has not been verified; select this version in TestFlight.
-Test instructions and the beta description are saved in English.
+The current private beta is **0.1.0 (6)**. Its signed package was uploaded on
+October 9, 2026 at **13:33:06 Europe/Madrid**. Apple completed processing and
+App Store Connect shows **En pruebas / Testing** in **Jorge — beta interna**,
+with only the account holder as tester. The current iPhone installation has not
+been verified; choose 0.1.0 (6) in TestFlight.
 
-## Description and screenshots updated October 9
+Build 6 replaces **81/81** original Moodist audio files with newly produced loops.
+Eighty options use 77 individually documented CC0 sources; radio tuning is
+original Nodus synthesis without broadcast samples. All **89 options** remain,
+as do saved-mix IDs, favorites and the eight native generators. Actual per-file
+weights range from −0.1377% to +0.4299% versus build 5; the whole bank grows by
+30,436 bytes. Source creators, individual licenses and production recipes are
+recorded in [the replacement report](AUDIO_REPLACEMENT_2026-10-09.md) and in
+Settings → Moodist license → Audio sources & permissions.
 
-The English (US) beta description was saved in App Store Connect, and the build's
-What to Test instructions were updated. Their exact text is preserved in
-[TESTFLIGHT_DESCRIPTION.txt](TESTFLIGHT_DESCRIPTION.txt) and
-[TESTFLIGHT_NOTES.txt](TESTFLIGHT_NOTES.txt).
+Five focused unit tests and four silent UI tests on each of iPhone and iPad
+passed: **13/13** total. The native test decodes all 81 files and checks their
+streaming joins. The signed package's catalogue, audio hashes, eight legal
+notices, version and signature were verified. No audio output was activated;
+no auditory review was performed. The owner will assess the loops by listening
+on the private iPhone beta. See [VALIDATION.md](VALIDATION.md).
 
-Eighteen real screenshots were uploaded to the English (US) App Store draft,
-initially version 1.0 and now corrected to 0.1.0: six for the medium Dynamic Island
-iPhone, six for the large Dynamic Island
-iPhone, and six for the 13-inch iPad. Each set presents the home library, mixer,
-saved mixes, resting Nodi, awake Nodi and selected rain sounds, in that order.
-The draft description and promotional text were also saved. See
-[TESTFLIGHT_METADATA.md](TESTFLIGHT_METADATA.md) for sizes, source files and proof.
-
-The existing Show approved screenshots and category option remains enabled.
-[Apple uses screenshots from the latest approved Ready for Distribution version](https://developer.apple.com/help/app-store-connect/test-a-beta-version/provide-test-information/)
-for TestFlight. This app has no such version yet, so the uploaded draft screenshots
-are prepared for that later approval and do not appear in the current beta.
-The beta description and What to Test text can already be shown by TestFlight.
-
-The initial metadata update did not upload another binary. The later version
-correction uploaded 0.1.0 (2), as recorded below. The draft was not submitted for review.
+English What to Test notes are saved in App Store Connect and preserved in
+[TESTFLIGHT_NOTES.txt](TESTFLIGHT_NOTES.txt). Build 5 notes remain in
+[TESTFLIGHT_NOTES_BUILD5.txt](TESTFLIGHT_NOTES_BUILD5.txt). The existing beta
+description and App Store draft screenshots remain as previously recorded in
+[TESTFLIGHT_METADATA.md](TESTFLIGHT_METADATA.md); this release adds current
+native audit captures under screenshots/43–47.
 
 - App Store ID: `6820753637`
 - Bundle ID: `com.drakonis96.nodusdrift`
 - Signing team: `6RPLS9EA4X`
-- Build: `0.1.0 (5)`
+- Build: `0.1.0 (6)`
 - Scope: **TestFlight internal testing only**
-- Automatic distribution of future builds: disabled
-- Current upload completed: October 9, 2026, 11:07:35 Europe/Madrid
-- [Build in App Store Connect](https://appstoreconnect.apple.com/teams/36804ede-f0b5-4cd2-a273-c619feb6168f/apps/6820753637/testflight/ios/0db78c13-67bd-42d4-8c55-a09d1ccc6e8c)
-- [Internal group](https://appstoreconnect.apple.com/teams/36804ede-f0b5-4cd2-a273-c619feb6168f/apps/6820753637/testflight/groups/40f2ec9c-cccb-4c2d-b3ce-ce073515bc77)
+- [Current build](https://appstoreconnect.apple.com/teams/36804ede-f0b5-4cd2-a273-c619feb6168f/apps/6820753637/testflight/ios/d7e6bc52-a11e-47bb-aa51-8e448625b2a1)
+- [Internal group](https://appstoreconnect.apple.com/teams/36804ede-f0b5-4cd2-a273-c619feb6168f/apps/6820753637/testflight/groups/40f2ec9c-cccb-4c2d-b3ce-ce073515bc77/builds)
 
-![Current internal TestFlight version](../screenshots/41-testflight-0.1.0-5-active.png)
+![Current private TestFlight beta](../screenshots/49-testflight-0.1.0-6-active.jpg)
 
 ## Install on the iPhone
 
-Open TestFlight on the iPhone and select Nodus Drift 0.1.0 (5). Use the account
-in the existing internal group. Reopen TestFlight if necessary to refresh the
-available build. An invitation already accepted for this group remains valid.
-
-Build 5 aligns Saved with My mix: shared heading and page scale, matching empty
-Nodi and action sizes, larger saved-card details and roomier cards. The focused
-iPhone and iPad parity tests passed, including saving and loading while paused.
-A Debug guard prevented audio activation, and neither test pressed Play. No
-playback test was performed. The instructions are in TESTFLIGHT_NOTES.txt.
+Open TestFlight, select Nodus Drift and update to **0.1.0 (6)** using the existing
+internal tester account. Reopen TestFlight to refresh available builds if needed.
+The accepted invitation remains valid. Existing build 5 remains available for
+comparison; the new replacement bank is in build 6. No new external invitation
+or public link was created.
 
 ## Repeatable distribution
 
 ```sh
 python3 scripts/prepare_audio.py
+python3 scripts/audit_audio_bank.py
 xcodegen generate --spec ios/project.yml
 xcodebuild -project ios/NodusDrift.xcodeproj -scheme NodusDrift \
   -configuration Release -destination 'generic/platform=iOS' \
-  -archivePath .build/NodusDrift-0.1.0-5.xcarchive \
-  -derivedDataPath .build/ArchiveDerivedData -allowProvisioningUpdates archive
-xcodebuild -exportArchive -archivePath .build/NodusDrift-0.1.0-5.xcarchive \
+  -archivePath .build/NodusDrift-0.1.0-6.xcarchive \
+  -derivedDataPath .build/Archive6DerivedData -allowProvisioningUpdates archive
+xcodebuild -exportArchive -archivePath .build/NodusDrift-0.1.0-6.xcarchive \
   -exportOptionsPlist ios/ExportOptions-TestFlight.plist \
-  -exportPath .build/TestFlightExport5 -allowProvisioningUpdates
+  -exportPath .build/TestFlightExport6 -allowProvisioningUpdates
 ```
 
 For another upload, increase CURRENT_PROJECT_VERSION and use new archive/log paths.
-The export destination is upload, so Xcode submits directly to Apple and need not
-leave an IPA in exportPath. Wait for processing and assign the new build to the group
-in App Store Connect. The signed archive, upload log and release record remain in
-the ignored .build directory. No keys, certificates or profiles are versioned.
+Export submits directly to Apple; it need not leave an IPA. Verify processing and
+internal group availability in the integrated browser. Signed archives, source WAVs,
+MP3s, distribution logs and signing credentials stay excluded from Git.
 
 ## Version history
 
@@ -98,33 +90,24 @@ TESTFLIGHT_NOTES_BUILD4.txt. Current proof is
 screenshots/41-testflight-0.1.0-5-active.png, with saved English notes in
 screenshots/40-testflight-0.1.0-5-notes.png.
 
-## Privacy and support
+## Privacy and scope
 
 The app-specific policy is live at https://nodusresearch.com/drift/privacy/,
-published through merged Nodus PR #1079 and successful Website deployment
-37903966692. This URL was saved in App Store Connect. The product draft also
-uses https://github.com/jorgepb96/nodus/issues for support and
-https://nodusresearch.com/ for marketing. The No Data Collected privacy answer
-is saved; final publication of that label requires the account holder
-to authorize Apple’s explicit accuracy/update declaration.
+published through Nodus PR #1079 and saved in App Store Connect. The draft uses
+https://github.com/jorgepb96/nodus/issues for support and https://nodusresearch.com/
+for marketing. The saved No Data Collected answer still has its separate final
+Apple accuracy/update declaration pending; this internal build did not publish it.
 
-## Public release remains separate
-
-The current 0.1.0 (5) archive includes the historical Nodus MIT notice and its
-Settings access added by the October 9 rights audit. The version label in Settings
-reads the packaged app version. These changes compiled, and the signed package
-was verified, including all 81 unchanged recordings and legal documents.
-The release-rights decisions recorded in LICENSING.md remain pending.
-
-No App Store review submission, external tester group or public TestFlight link was
-created. The internal-only binary cannot be submitted to public App Store review.
-Rights clearance described in LICENSING.md and the public release requirements in
-APP_STORE.md remain pending; this testing upload does not establish new permissions.
+No App Store review submission, external tester group or public TestFlight link is
+part of this update. The binary is internal-only. The removed Moodist-bank source
+gaps are superseded by the new documented CC0 inputs; public first-party licensing
+and recipient source access remain separate from this private test step.
 
 ## GitHub source
 
-The native source, generated Xcode project, build scripts, legal notices, rights
-audit, release documentation and real captures are versioned in
-https://github.com/jorgepb96/nodus-drift-mobile on main. The existing repository
-remains private. Audio recordings, signed archives, provisioning profiles and
-credentials are excluded; prepare_audio.py reconstructs the pinned local assets.
+Native source, legal notices, original-source evidence, loop recipes, hashes,
+size comparisons, tests, release documentation and captures are versioned in the
+existing **private** repository https://github.com/jorgepb96/nodus-drift-mobile.
+prepare_audio.py reconstructs the licensed replacement bank; it never downloads
+the removed Moodist audio. The translation JSON is explicitly a draft, not shipped
+localization: this internal release remains English-only.

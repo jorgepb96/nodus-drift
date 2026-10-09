@@ -3,36 +3,49 @@
 These drafts are reviewable next steps. They establish no permission and must not
 be sent without an explicit instruction to contact the recipients.
 
+October 9, 2026: the user declined posting the prepared Moodist source query and
+requested retaining only the investigation report. No request has been sent.
+
 ## Moodist maintainer: identify the original recordings
 
-Subject: Original-source and license records for 81 Moodist recordings in a free iOS app
+Subject: Original-source records for 76 Moodist recordings in a free iOS app
 
 Hello,
 
 I am developing Nodus Drift, a free native iOS ambient-sound app with no purchases,
 subscriptions or advertising. It uses 81 original recordings from Moodist commit
 `11c0be2200116a3635880d600fd6953899cc51a3`. A list with paths, SHA-256 digests and
-metadata is attached as `audio-recordings.csv`.
+metadata is prepared as `audio-source-investigation.csv`.
 
 Your April 2024 comment in issue #33 explains that sounds came from Pixabay and
 CC0 selections on Freesound. Fourteen files in this list were added after that
 comment. Issue #113 also asks for the original-source list.
 
-Could you provide, per recording, its original download URL or sound ID, creator,
-applicable license/date/version and any saved license receipt or permission?
+We have independently matched these five recordings to originals currently
+published under CC0, using digital signal comparisons of three windows:
+
+- `transport/submarine.mp3`: Squeeb, Freesound 185589.
+- `places/laundry-room.mp3`: moviebuffgavin, Freesound 411914.
+- `places/restaurant.mp3`: mshahen, Freesound 507218.
+- `things/morse-code.mp3`: NebulousRoyale, Freesound 343740.
+- `things/slide-projector.mp3`: guyburns, Freesound 551486.
+
+For the remaining 76, could you provide the original download URL or sound ID,
+creator, applicable license/date/version and any retained download/license record?
 Please identify trimming, conversion, renaming or other changes between the source
-and Moodist file so that we can verify identity. `places/restaurant.mp3` embeds
-“Resturant Ambience” and artist “Michael Shahen”; its original page would help.
+and Moodist file so that we can verify identity. We are asking for provenance,
+not assuming that each recording requires a new permission: an applicable CC0
+license already provides copyright reuse permission.
 
 The app bundles recordings offline and permits one alone or up to six mixed,
 individual volume, continuous loops, saved mixes, a timer, background playback and
 an animated Nodi meditation view. It has no audio export. Proposed distribution
 is through Apple's App Store and TestFlight.
 
-We need underlying rights evidence for that use. We are not treating Moodist's MIT
-code license or a general confirmation as permission to relicense other people's
-recordings. If you hold direct creator permissions, please share their scope and
-any limits relevant to this app.
+Our five binaural variants and three noise variants are synthesized locally, so
+we do not distribute Moodist's binaural or noise audio files. We retain Moodist's
+MIT notice for its catalogue. We also retain your public statement about the other
+recordings' licenses and would like to complete the original-source records.
 
 Thank you.
 

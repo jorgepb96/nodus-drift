@@ -1,34 +1,42 @@
 #!/usr/bin/env python3
-"""Prepare development audio; preserve upstream bytes, check every digest."""
-import concurrent.futures
+"""Reconstruct the current licensed audio bank; never fetch Moodist recordings."""
 import hashlib
 import json
 from pathlib import Path
-import urllib.request
+import shutil
+import subprocess
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-COMMIT = '11c0be2200116a3635880d600fd6953899cc51a3'
-CATALOG = json.loads((ROOT / 'ios/NodusDrift/Resources/catalog.json').read_text())
+DEST = ROOT / 'ios/NodusDrift/Resources/Audio'
 
-def prepare(sound):
-    destination = ROOT / 'ios/NodusDrift/Resources/Audio' / sound['asset']
-    if destination.exists():
-        data = destination.read_bytes()
-        if len(data) == sound['bytes'] and hashlib.sha256(data).hexdigest() == sound['sha256']:
-            return sound['id']
-    url = f"https://raw.githubusercontent.com/remvze/moodist/{COMMIT}/public/sounds/{sound['asset']}"
-    data = urllib.request.urlopen(url, timeout=60).read()
-    if len(data) != sound['bytes'] or hashlib.sha256(data).hexdigest() != sound['sha256']:
-        raise ValueError(f"Upstream bytes changed: {sound['id']}")
-    destination.parent.mkdir(parents=True, exist_ok=True)
-    temporary = destination.with_suffix('.part')
-    temporary.write_bytes(data)
-    temporary.replace(destination)
-    return sound['id']
+
+def matches(path, sound):
+    if not path.exists() or path.stat().st_size != sound['bytes']:
+        return False
+    with path.open('rb') as f:
+        return hashlib.file_digest(f, 'sha256').hexdigest() == sound['sha256']
+
+
+def main():
+    catalog = json.loads((ROOT / 'ios/NodusDrift/Resources/catalog.json').read_text())
+    recordings = [s for s in catalog if s['kind'] == 'file']
+    if all(matches(DEST / s['asset'], s) for s in recordings):
+        print('81/81 current licensed loops match the catalogue; no download needed.')
+        return
+    subprocess.run([sys.executable, str(ROOT / 'scripts/download_audio_sources.py')], check=True)
+    subprocess.run([sys.executable, str(ROOT / 'scripts/create_audio_loops.py')], check=True)
+    stage = ROOT / '.build/replacement-audio/loops'
+    # Validate the complete reconstruction before touching any bundled asset.
+    for sound in recordings:
+        if not matches(stage / sound['asset'], sound):
+            raise ValueError(f"Reconstructed bytes differ for {sound['id']}. Use the encoder and NumPy versions in docs/rights/replacement-audio/build-report.json; do not overwrite the release catalogue.")
+    for sound in recordings:
+        dest = DEST / sound['asset']
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(stage / sound['asset'], dest)
+    print('81/81 licensed loops prepared. All 89 options preserved.')
+
 
 if __name__ == '__main__':
-    recordings = [s for s in CATALOG if s['kind'] == 'file']
-    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
-        for index, name in enumerate(pool.map(prepare, recordings), 1):
-            print(f"{index}/{len(recordings)} checked: {name}", flush=True)
-    print('All 81 recordings match the pinned upstream catalogue.')
+    main()

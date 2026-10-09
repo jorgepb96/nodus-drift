@@ -1,11 +1,51 @@
 # Validation record
 
+## Build 6 · Replacement audio bank (October 9, 2026)
+
+All 81 original Moodist MP3s were replaced; the 89 catalogue options and the
+eight native generators are unchanged. The silent Python audit checks each
+current asset hash, original source evidence, per-file weight, mono/stereo PCM,
+44.1 kHz rate, finite samples, level headroom, DC and circular joins. Actual
+byte changes range from −0.1377% to +0.4299%; total bytes change from
+103,863,687 to 103,894,123. Post-codec maximum peak is −3.078 dBFS and lowest
+loop RMS is −26.898 dBFS. See rights/replacement-audio/audit-summary.json.
+
+Five focused iPhone unit tests passed, including decoding **every one of the 81**
+files and comparing streaming seams with the whole-buffer algorithm. The four
+silent UI tests passed on both iPhone 17 Pro Max and iPad Pro 13-inch (M5): card
+hit areas/stable filters, Saved parity, Settings widths/Moodist license, and the
+new Audio sources & permissions disclosure. **13/13 tests passed**, with no
+failures. UI launches use `-ui-testing-silent`; no test presses Play, and no
+audio engine/session is started. No other XCTest methods were run.
+
+New legal credits were verified to load, including the 80/77 CC0 count, FSD50K
+and Clotho notices, the Whale vocal-imitation disclosure and original radio
+source. Actual captures were visually reviewed for page widths, controls and
+justified legal text:
+
+- screenshots/43-build6-iphone-sounds.png
+- screenshots/44-build6-iphone-settings.png
+- screenshots/45-build6-ipad-settings.png
+- screenshots/46-build6-iphone-audio-credits.png
+- screenshots/47-build6-ipad-audio-credits.png
+
+The signed Release archive was checked to contain 0.1.0 (6), the exact current
+catalogue, all 81 new audio hashes and eight current legal documents. Code
+signing verification passed. The export configuration is internal testing only.
+Results and complete logs are retained in ignored .build: AudioAudit6-iphone,
+AudioAudit6-ipad, AudioCredits6-iphone and AudioCredits6-ipad xcresult bundles.
+
+**No auditory quality test or physical-device audio-route test was performed.**
+The owner will listen on the private iPhone beta. Technical silence is not a
+claim that perceptual quality or every background/route scenario was checked.
+
+
 Validated October 9, 2026 with Xcode 26.2 (17C52), SwiftUI and Apple SDKs.
 Deployment target: iOS 17.0. No third-party runtime dependencies.
 
-## Automated evidence
+## Historical baseline automated evidence
 
-The complete suite has twelve unit/integration tests and three UI tests. Final adaptive
+The initial suite had twelve unit/integration tests and three UI tests. Final adaptive
 checks wait for the actual landscape frame, rather than merely setting the simulated
 device orientation. Screen captures use the physical screen to avoid app-region
 cropping problems after iPad rotation.

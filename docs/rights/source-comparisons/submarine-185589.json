@@ -1,0 +1,38 @@
+{
+  "method": "three-window exhaustive normalized cross-correlation; mono 8000 Hz; silent PCM decoding",
+  "recording": "ios/NodusDrift/Resources/Audio/transport/submarine.mp3",
+  "recording_sha256": "739e7ae10aa770522b0007482813f8961567fda8cf2941fce46acfe00fdd18e8",
+  "source_page": "https://freesound.org/people/Squeeb/sounds/185589/",
+  "source_page_sha256": "9642119fb727823d738b996e64bf8902427cbfb5d842c63d14d88f5e24fca84d",
+  "public_preview_url": "https://cdn.freesound.org/previews/185/185589_252710-hq.mp3",
+  "public_preview_sha256": "00382d4a1bc0d26e20927a7fc56e467a5602cafefe15f6406a6f4e40cebb5372",
+  "source_license_links": [
+    "http://creativecommons.org/publicdomain/zero/1.0/"
+  ],
+  "recording_decoded_seconds": 46.032,
+  "source_decoded_seconds": 46.394625,
+  "window_seconds": 5.0,
+  "matches": [
+    {
+      "recording_start_seconds": 1.0,
+      "source_start_seconds": 0.954,
+      "source_minus_recording_seconds": -0.04600000000000004,
+      "normalized_correlation": 0.9808449111716392
+    },
+    {
+      "recording_start_seconds": 20.516,
+      "source_start_seconds": 20.47,
+      "source_minus_recording_seconds": -0.045999999999999375,
+      "normalized_correlation": 0.9807181628086706
+    },
+    {
+      "recording_start_seconds": 40.032,
+      "source_start_seconds": 39.986,
+      "source_minus_recording_seconds": -0.045999999999999375,
+      "normalized_correlation": 0.9807657871089586
+    }
+  ],
+  "offset_spread_seconds": 6.661338147750939e-16,
+  "strong_signal_identity": true,
+  "limits": "A match supports the identified source, not legal ownership. A non-match does not exclude time stretching, edits, or other transformations."
+}

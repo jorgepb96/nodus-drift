@@ -1,0 +1,38 @@
+{
+  "method": "three-window exhaustive normalized cross-correlation; mono 8000 Hz; silent PCM decoding",
+  "recording": "ios/NodusDrift/Resources/Audio/places/laundry-room.mp3",
+  "recording_sha256": "b24f418d7d1b931312944f2383fcca0f56fe5c397b8e8571cc3ab1b27f701da4",
+  "source_page": "https://freesound.org/people/moviebuffgavin/sounds/411914/",
+  "source_page_sha256": "cadc6b8338f1eb186739c8431b76d1104f8298e6ac73e2cb7e9b4b530c1d92d7",
+  "public_preview_url": "https://cdn.freesound.org/previews/411/411914_6028322-hq.mp3",
+  "public_preview_sha256": "edc9401baa6e033a0b17ea275f57f88efdba614a1bfa696711136cd0cf54de07",
+  "source_license_links": [
+    "http://creativecommons.org/publicdomain/zero/1.0/"
+  ],
+  "recording_decoded_seconds": 32.48375,
+  "source_decoded_seconds": 33.291625,
+  "window_seconds": 5.0,
+  "matches": [
+    {
+      "recording_start_seconds": 1.0,
+      "source_start_seconds": 4.99775,
+      "source_minus_recording_seconds": 3.99775,
+      "normalized_correlation": 0.9888552228631718
+    },
+    {
+      "recording_start_seconds": 13.741875,
+      "source_start_seconds": 17.739625,
+      "source_minus_recording_seconds": 3.99775,
+      "normalized_correlation": 0.9937873130849487
+    },
+    {
+      "recording_start_seconds": 26.48375,
+      "source_start_seconds": 21.39925,
+      "source_minus_recording_seconds": -5.084500000000002,
+      "normalized_correlation": 0.3269438030483487
+    }
+  ],
+  "offset_spread_seconds": 9.082250000000002,
+  "strong_signal_identity": false,
+  "limits": "A match supports the identified source, not legal ownership. A non-match does not exclude time stretching, edits, or other transformations."
+}

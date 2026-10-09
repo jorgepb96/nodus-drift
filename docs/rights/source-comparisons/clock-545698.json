@@ -1,0 +1,41 @@
+{
+  "method": "three-window exhaustive normalized cross-correlation with fractional-sample refinement; mono 8000 Hz; silent PCM decoding",
+  "recording": "ios/NodusDrift/Resources/Audio/things/clock.mp3",
+  "recording_sha256": "45283d30ccc1ccebab2ddb84dbaaaedf5265275c33cb7c4c8defce9451059160",
+  "source_page": "https://freesound.org/people/colorsCrimsonTears/sounds/545698/",
+  "source_page_sha256": "76fdfd335adb9312c0d5d803fc6b09173daec8c85e950e80ecaafd6dd6d44aad",
+  "public_preview_url": "https://cdn.freesound.org/previews/545/545698_11785387-hq.mp3",
+  "public_preview_sha256": "683a1b99d02bbaabdd566b99f82a6494d8f9b8436e416b762ae62f8d019346af",
+  "source_license_links": [
+    "http://creativecommons.org/publicdomain/zero/1.0/"
+  ],
+  "recording_decoded_seconds": 15.939625,
+  "source_decoded_seconds": 16.04975,
+  "window_seconds": 3.984875,
+  "window_selection": "start, middle, end",
+  "matches": [
+    {
+      "recording_start_seconds": 1.0,
+      "source_start_seconds": 5.768890625,
+      "source_minus_recording_seconds": 4.768890625,
+      "normalized_correlation": 0.08514959890883339
+    },
+    {
+      "recording_start_seconds": 5.977375,
+      "source_start_seconds": 6.7485,
+      "source_minus_recording_seconds": 0.7711249999999996,
+      "normalized_correlation": 0.09180170558334622
+    },
+    {
+      "recording_start_seconds": 10.95475,
+      "source_start_seconds": 9.739375,
+      "source_minus_recording_seconds": -1.2153749999999999,
+      "normalized_correlation": 0.08071346199283745
+    }
+  ],
+  "offset_spread_seconds": 5.984265625,
+  "strong_signal_identity": false,
+  "loop_adjusted_offset_spread_seconds": 5.984265625,
+  "strong_signal_identity_allowing_loop_rotation": false,
+  "limits": "A match supports the identified source, not legal ownership. A non-match does not exclude time stretching, edits, or other transformations."
+}

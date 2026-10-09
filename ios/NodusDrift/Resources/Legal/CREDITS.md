@@ -7,8 +7,7 @@ character, lotus pose and original connected N logo from jorgepb96/nodus, revisi
 68fa0210dc8407938d644978291840d85aeb49b1.
 The adapted native code is licensed under GNU AGPL v3. The full license is
 available in Settings. The intended source URL is
-https://github.com/jorgepb96/nodus-drift-mobile. At this internal development
-stage that repository is private and has not received the release source.
+https://github.com/jorgepb96/nodus-drift-mobile. The repository remains private and contains the source and reproducible build instructions for the internal release. The current tester is the project owner with repository access. Public recipient source access is a separate release obligation.
 
 The original Nodi vector geometry/animation and connected N SVG are also
 available under the MIT license shipped with Nodus v3.2.7, commit
@@ -27,12 +26,16 @@ Moodist's code and catalogue data are MIT licensed, © 2023 MAZE. The full MIT
 notice is included in Settings. No Moodist application code is bundled.
 
 Audio recordings
-Moodist declares its recordings under either the Pixabay Content License
-or CC0. Which license applies to each individual file is not identified by
-upstream and has not been independently verified here. These recordings
-retain their original licenses; they are not relicensed under MIT or AGPL.
-The original bytes are bundled without modification. Circular crossfades
-are applied to decoded memory only. There is no audio export feature.
+The original Moodist audio bank was entirely replaced in this release. Eighty
+newly edited loop options derive from 77 individually documented CC0 1.0
+originals. The radio loop is original Nodus synthesis without broadcast samples.
+Authors, source URLs, license evidence and hashes are listed in AUDIO_SOURCES.md.
+The CC0 legal text is available in Settings. Nodus owns the new editing and
+sound-design contributions; the underlying public-domain permissions remain.
+FSD50K's dataset compilation is CC BY 4.0; its curators, paper, license and
+changes are acknowledged in AUDIO_SOURCES.md and FSD50K-LICENSE.txt.
+Clotho supplies four individually CC0 audio files; its captions and code are
+not used. No Moodist recording or untraced Pixabay recording is bundled.
 
 Noise and binaural tones
 White, pink and brown noise and the five binaural presets are generated on
@@ -43,7 +46,9 @@ Sound descriptions state their physical properties and make no medical claims.
 References
 https://github.com/jorgepb96/nodus
 https://github.com/remvze/moodist
-https://pixabay.com/service/terms/
+https://bigsoundbank.com/licenses.html
+https://zenodo.org/records/4060432
+https://zenodo.org/records/4783391
 https://creativecommons.org/publicdomain/zero/1.0/
 
 Nodus Research is an independent personal project. Third-party names and

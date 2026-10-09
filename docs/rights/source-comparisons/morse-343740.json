@@ -1,0 +1,39 @@
+{
+  "method": "three-window exhaustive normalized cross-correlation; mono 8000 Hz; silent PCM decoding",
+  "recording": "ios/NodusDrift/Resources/Audio/things/morse-code.mp3",
+  "recording_sha256": "a00a81bbbcafdcdb2196054941827ecf9d2075ff7459f5794e6b6acabc979b10",
+  "source_page": "https://freesound.org/people/NebulousRoyale/sounds/343740/",
+  "source_page_sha256": "00635e5f18fc21d4508daf9d0c9d09593560beb2972d6b3495679f2e6bb28c95",
+  "public_preview_url": "https://cdn.freesound.org/previews/343/343740_2695787-hq.mp3",
+  "public_preview_sha256": "e55918cab428b38ec99f3f4305e9b3aa672814a70f31a233c879f09fbe416eda",
+  "source_license_links": [
+    "http://creativecommons.org/publicdomain/zero/1.0/"
+  ],
+  "recording_decoded_seconds": 75.387875,
+  "source_decoded_seconds": 76.272,
+  "window_seconds": 5.0,
+  "window_selection": "start, middle, end",
+  "matches": [
+    {
+      "recording_start_seconds": 1.0,
+      "source_start_seconds": 2.48275,
+      "source_minus_recording_seconds": 1.4827499999999998,
+      "normalized_correlation": 0.9920531460244606
+    },
+    {
+      "recording_start_seconds": 35.193875,
+      "source_start_seconds": 36.676625,
+      "source_minus_recording_seconds": 1.482750000000003,
+      "normalized_correlation": 0.9909278529751102
+    },
+    {
+      "recording_start_seconds": 69.387875,
+      "source_start_seconds": 70.870625,
+      "source_minus_recording_seconds": 1.48275000000001,
+      "normalized_correlation": 0.9584068749868471
+    }
+  ],
+  "offset_spread_seconds": 1.021405182655144e-14,
+  "strong_signal_identity": true,
+  "limits": "A match supports the identified source, not legal ownership. A non-match does not exclude time stretching, edits, or other transformations."
+}

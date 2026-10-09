@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-09",
+  "loop_files": 81,
+  "replaced_files": 81,
+  "retained_total_options": 89,
+  "cc0_based_options": 80,
+  "unique_cc0_sources": 77,
+  "original_radio_options": 1,
+  "native_generators_unchanged": 8,
+  "min_byte_change_percent": -0.1377,
+  "max_byte_change_percent": 0.4299,
+  "old_total_bytes": 103863687,
+  "new_total_bytes": 103894123,
+  "min_rms_dbfs": -26.898,
+  "max_peak_dbfs": -3.078,
+  "playback_performed": false,
+  "all_checks_passed": true
+}

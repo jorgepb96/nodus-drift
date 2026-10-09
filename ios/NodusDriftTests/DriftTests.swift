@@ -16,7 +16,8 @@ final class DriftTests: XCTestCase {
                     let buffer = try DriftAudioEngine.decode(sound, budget: 192 * 1024 * 1024)
                     XCTAssertGreaterThan(buffer.frameLength, 0, sound.id)
                     XCTAssertLessThanOrEqual(buffer.format.channelCount, 2)
-                    XCTAssertEqual(sound.licenseStatus, "declared")
+                    XCTAssertEqual(sound.licenseStatus, "verified")
+                    XCTAssertTrue(["LicenseRef-Nodus-loop-CC0-sources", "LicenseRef-Nodus-original-audio"].contains(sound.licenseId))
                     let duration = Double(buffer.frameLength) / buffer.format.sampleRate
                     XCTAssertEqual(duration, (sound.duration ?? 0) - Double(sound.crossfadeMs ?? 0) / 1000, accuracy: 0.1, sound.id)
                     let loop = try DriftAudioEngine.prepareFileLoop(sound, budget: 2 * 1024 * 1024)

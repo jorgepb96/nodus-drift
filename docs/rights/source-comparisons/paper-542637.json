@@ -1,0 +1,41 @@
+{
+  "method": "three-window exhaustive normalized cross-correlation with fractional-sample refinement; mono 8000 Hz; silent PCM decoding",
+  "recording": "ios/NodusDrift/Resources/Audio/things/paper.mp3",
+  "recording_sha256": "6aecf96cbcb2403188c010bcdae37de74b604c494dda3097b5cc0a206f686741",
+  "source_page": "https://freesound.org/people/Warrick_Lendon/sounds/542637/",
+  "source_page_sha256": "8e1511ff2634defb154d634d56903bc9eb24682297a25b0090855f34f1c5a13b",
+  "public_preview_url": "https://cdn.freesound.org/previews/542/542637_10974698-hq.mp3",
+  "public_preview_sha256": "da2739a8a1612632c22cbc1fb1afbd7a23659d2d2bdbcc2f209cbfab791388ac",
+  "source_license_links": [
+    "http://creativecommons.org/publicdomain/zero/1.0/"
+  ],
+  "recording_decoded_seconds": 17.209125,
+  "source_decoded_seconds": 17.38675,
+  "window_seconds": 4.30225,
+  "window_selection": "start, middle, end",
+  "matches": [
+    {
+      "recording_start_seconds": 1.0,
+      "source_start_seconds": 4.638859375,
+      "source_minus_recording_seconds": 3.638859375,
+      "normalized_correlation": 0.014012976397736892
+    },
+    {
+      "recording_start_seconds": 6.453375,
+      "source_start_seconds": 7.104765625,
+      "source_minus_recording_seconds": 0.6513906249999994,
+      "normalized_correlation": 0.016584279938060945
+    },
+    {
+      "recording_start_seconds": 11.906875,
+      "source_start_seconds": 5.8378828125,
+      "source_minus_recording_seconds": -6.068992187499999,
+      "normalized_correlation": 0.021010544933972496
+    }
+  ],
+  "offset_spread_seconds": 9.7078515625,
+  "strong_signal_identity": false,
+  "loop_adjusted_offset_spread_seconds": 10.488742187500002,
+  "strong_signal_identity_allowing_loop_rotation": false,
+  "limits": "A match supports the identified source, not legal ownership. A non-match does not exclude time stretching, edits, or other transformations."
+}

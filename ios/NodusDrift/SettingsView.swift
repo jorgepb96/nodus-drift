@@ -40,7 +40,7 @@ struct SettingsView: View {
                     }.font(.subheadline).accessibilityIdentifier("nodus-support")
                     Divider().overlay(DriftTheme.line)
                     Text("Sound catalogue by Moodist").font(.subheadline.weight(.medium))
-                    Text("Moodist’s catalogue data is MIT licensed, © 2023 MAZE. The recordings retain their own licenses; they are not covered by the Moodist code license.")
+                    Text("Moodist’s catalogue data is MIT licensed, © 2023 MAZE. Audio loops were newly made for Nodus from documented CC0 sources, with original radio sound design. Source credits and licenses are included below.")
                         .font(.footnote).foregroundStyle(DriftTheme.muted).lineSpacing(4)
                     Link(destination: URL(string: "https://github.com/remvze/moodist")!) {
                         Label("Original Moodist repository", systemImage: "arrow.up.right")
@@ -48,6 +48,10 @@ struct SettingsView: View {
                     Button("Moodist license") {
                         legalDocument = LegalDocument(title: "Moodist license", file: "MOODIST_LICENSE.txt", notices: [
                             LegalNotice(title: "Nodus credits", file: "CREDITS.md"),
+                            LegalNotice(title: "Audio sources & permissions", file: "AUDIO_SOURCES.md"),
+                            LegalNotice(title: "CC0 · Public domain dedication", file: "CC0-1.0.txt"),
+                            LegalNotice(title: "FSD50K · Dataset notice", file: "FSD50K-LICENSE.txt"),
+                            LegalNotice(title: "CC BY 4.0 · Dataset license", file: "CC-BY-4.0.txt"),
                             LegalNotice(title: "GNU AGPL v3", file: "AGPL-3.0.txt"),
                             LegalNotice(title: "Original Nodi & N · MIT", file: "NODUS_HISTORICAL_MIT.txt")
                         ])

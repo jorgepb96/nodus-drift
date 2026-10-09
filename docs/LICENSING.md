@@ -1,38 +1,46 @@
 # Distribution rights: current status
 
-Fresh audit: October 9, 2026. **The release is not yet cleared for public App Store
-distribution.** See the [full audit](RIGHTS_AUDIT_2026-10-09.md) for evidence,
-limits and decisions needed to close it.
+**The replacement bank resolves the missing-source issue for bundled audio.**
+All 81 original Moodist MP3s have been replaced: 80 new loop options derive
+from 77 individually documented CC0 originals, and radio tuning is original
+Nodus synthesis. Exactly 89 options remain. See the
+[replacement report](AUDIO_REPLACEMENT_2026-10-09.md) and
+[current source register](rights/replacement-audio/source-register.csv).
 
-| Material / obligation | Verified evidence | Closure status |
+The user's production instruction authorizes creation, inclusion and upload
+of this bank to the existing **private internal tester**. It does not request
+a public beta for this step. No Moodist author query was sent; the declined
+query remains an unsent historical draft.
+
+| Material / obligation | Evidence | Current status |
 | --- | --- | --- |
-| Original Nodi geometry/animation and connected N | Three source files byte-identical to published Nodus v3.2.7 MIT; notice added to app resources and Settings | Historical MIT route documented and notice prepared for next build |
-| September DRIFT material and native adaptation | 14 scoped upstream commits attributed to Drakonis96 / Jorge; matching GitHub identity; verified CLA acceptance | First-party Apple license route available; explicit release license decision not yet recorded |
-| Moodist catalogue data | Pinned MIT license and bundled notice | Notice retained; no audio rights inferred from MIT |
-| 81 original recordings | All bytes, SHA-256 digests and upstream Git blobs match; metadata/history recorded | **0/81 individual original sources or licenses verified**; obtain evidence/permission or replace unresolved recordings |
-| Native noise/binaural generators | Local synthesis; no upstream recordings used | No third-party recording clearance needed; project code license applies |
-| Corresponding Source | In-app URL points to a private, empty repository | Provide exact release source and build instructions to recipients under the chosen license |
-| Apple terms | Current public texts checked; account free-app agreement Active through Aug 31, 2027 | Signed account agreement text / EULA must be reconciled with the release license before external distribution |
+| 80 CC0-based file options | Individual author/license records, primary metadata, selected BigSoundBank pages, original WAV hashes and output hashes | Reuse permission documented under CC0; new editing contributions distinguished from underlying originals |
+| Radio-tuning file option | Deterministic original noise and tone synthesis; no broadcast samples | First-party sound design created for the owner's app |
+| FSD50K compilation | CC BY 4.0 dataset notice and named curators/paper; only individually CC0 clips used | Credit, license and changes included in Settings |
+| Clotho sources | Four individually CC0 audio rows; canonical archive MD5 and selected WAV hashes | No captions or Clotho code incorporated |
+| Original Nodi geometry/animation and connected N | Three files byte-identical to Nodus v3.2.7 MIT; full notice bundled | Historical MIT route documented and notice preserved |
+| September DRIFT material and native adaptation | Scoped upstream history and owner's statement of ownership | Code remains AGPL-3.0-only; owner authorized the internal testing upload. The separate Apple additional-permission draft remains unsigned and unadopted |
+| Moodist catalogue data | Pinned MIT license and bundled notice | Original options retained; no Moodist audio rights inferred from MIT |
+| Native noise/binaural generators | Original on-device synthesis; unchanged generator entries | No third-party recordings used |
+| Corresponding Source | Native source, evidence, build scripts and recipes in owner's private repository | Current tester is owner with repository access; public recipient access is a separate release obligation |
+| Apple public distribution terms | Earlier scoped audit and unsigned draft | Not adopted by this audio replacement; public release remains a separate requested step |
 
-AGPL is not treated here as a blanket App Store prohibition. The fresh audit replaces
-the earlier broad compatibility warning with a scoped ownership and licensing analysis.
-Historical MIT permissions do not cover later DRIFT additions; the CLA does not
-retrospectively cover earlier merged contributions or third-party audio.
+The historical [October 9 audit](RIGHTS_AUDIT_2026-10-09.md) and
+[source investigation](AUDIO_SOURCE_INVESTIGATION_2026-10-09.md) concern the
+**removed** original Moodist bank in builds 1–5. They retain the finding of
+five traced CC0 originals and 76 untraced originals. That count is not applied
+to the replacement bank and is not overwritten to suggest the old recordings
+were all identified.
 
-Evidence and reviewable next steps:
+CC0 gives copyright reuse permission without obtaining an additional individual
+grant from each uploader. The selected recordings have an explicit per-source
+CC0 basis. This records the licenses and evidence rather than promising that
+public availability alone creates permission or that any source comes with an
+absolute warranty of title. New Nodus-owned edits have not been unsolicitedly
+dedicated to CC0.
 
-- [First-party material and hashes](rights/first-party-material.json)
-- [Verified CLA record and identity](rights/cla-evidence.json)
-- [Historical Nodus MIT notice](rights/NODUS-HISTORICAL-MIT.txt)
-- [81-recording table](rights/audio-recordings.csv) and [detailed evidence](rights/audio-recordings.json)
-- [Unsigned first-party Apple permission draft](rights/APPLE_PERMISSION_DRAFT.md)
-- [Unsent requests for original sources and use-specific permission](rights/PERMISSION_REQUESTS_DRAFT.md)
-
-The historical desktop Legal/REVIEW.md and PROVENANCE.md remain unchanged. Their
-September 29 decision concerns desktop Nodus, not a new iOS grant. Record a new
-release decision against exact files and evidence.
-
-No third-party permission was obtained by this audit. No grant, public release,
-source publication or new external beta distribution was made. The existing internal
-TestFlight build is separate from public clearance; Apple's processing is not a
-copyright authorization.
+No public TestFlight link, external group or App Store review submission is
+part of this release. Future public distribution still needs the first-party
+license decision, a source-access route usable by recipients and the relevant
+Apple release declarations. The earlier upload hold was superseded by the
+owner's express instruction to replace the bank and upload a new private copy.

@@ -6,3 +6,6 @@ ios/NodusDrift/Resources/Audio/*
 !ios/NodusDrift/Resources/Audio/README.md
 .build/
 *.log
+
+__pycache__/
+*.pyc

@@ -1,13 +1,46 @@
 # Auditoría de distribución de Nodus Drift — 9 de octubre de 2026
 
-**Conclusión: la publicación pública todavía tiene permisos pendientes.** Hay una
+> Historical bank: this report concerns the original Moodist MP3s in builds 1–5. All 81 were subsequently replaced. See [the current replacement report](AUDIO_REPLACEMENT_2026-10-09.md); original findings remain preserved below.
+
+**Conclusión: quedan condiciones de licencia y evidencias pendientes para cerrar la publicación pública.** Hay una
 vía documentada para resolver el material propio de Nodus. El bloqueo principal son
-las 81 grabaciones: su identidad está comprobada, pero no su procedencia y licencia
-individual. La falta de evidencia no demuestra una infracción; tampoco permite
+las grabaciones: su identidad está comprobada; la investigación posterior ha
+identificado cinco originales CC0 y mantiene 76 fuentes individuales pendientes.
+La falta de evidencia no demuestra una infracción; tampoco permite
 dar por cerrados los derechos al presentar la app.
 
 Esta es una auditoría de evidencias y condiciones, no un dictamen jurídico ni una
 garantía de titularidad. No se ha concedido ninguna licencia en nombre del autor.
+
+### Aclaración y actualización posterior del mismo día
+
+La [investigación de fuentes originales](AUDIO_SOURCE_INVESTIGATION_2026-10-09.md)
+identifica Submarine, Laundry room, Restaurant, Morse code y Slide projector mediante
+comparaciones digitales con originales CC0. El estado actualizado es **5/81**, con
+76 fuentes pendientes. Los «0/81» de las tablas y archivos de la revisión inicial
+se conservan como registro histórico y no describen ya el resultado actual.
+El usuario ha aclarado expresamente que es propietario de Nodus; no se le exige
+pedirse autorización a sí mismo para su material propio. Esa titularidad no se
+extiende automáticamente a grabaciones ajenas. Los cinco binaurales y tres ruidos
+de iOS son generadores locales, sin grabaciones de Moodist incorporadas.
+
+No se exige obtener 81 autorizaciones nuevas por defecto. Una licencia pública
+aplicable puede dar ya permiso suficiente: CC0 permite reutilización sin pedir
+permiso de copyright al autor; Pixabay permite numerosos usos, con restricciones
+como la distribución independiente, también gratuita. La declaración general de
+Moodist es evidencia que debe conservarse. El resultado «0/81» se refiere a la
+ausencia de un vínculo individual comprobado entre cada archivo y su licencia
+original; no demuestra que las grabaciones carezcan de licencia o que exista una
+infracción. Hay que identificar las licencias y evaluar su alcance antes de decidir
+si hace falta un permiso adicional para algún uso concreto.
+
+Después de la revisión inicial se subieron el código y las instrucciones al
+repositorio en el commit `5954092717ac07341e74f6d2a300a90d601ff39f`. Sigue siendo
+privado, por lo que el enlace no proporciona acceso al código a futuros testers
+externos. La referencia a un repositorio vacío y al build 1.0.0 (1) en el cuerpo
+describe el estado de la revisión inicial. La beta interna actual es 0.1.0 (5).
+El usuario ha pedido una explicación antes de nuevas subidas; no se realizarán
+subidas a TestFlight ni GitHub mientras se aclara esta cuestión.
 
 ## Alcance y método
 

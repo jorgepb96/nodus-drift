@@ -1,0 +1,41 @@
+{
+  "method": "three-window exhaustive normalized cross-correlation with fractional-sample refinement; mono 8000 Hz; silent PCM decoding",
+  "recording": "ios/NodusDrift/Resources/Audio/animals/cat-purring.mp3",
+  "recording_sha256": "a779a2a3fe77b08722517e2e1a4f8ecbfb59a6282a74e46f0e9244d6cfdf230e",
+  "source_page": "https://freesound.org/people/evsecrets/sounds/333183/",
+  "source_page_sha256": "688fd84b9d561717162ac93e4207244992ecf83995b8bb256412382e14e9591a",
+  "public_preview_url": "https://cdn.freesound.org/previews/333/333183_2367065-hq.mp3",
+  "public_preview_sha256": "8590e80c1e5dd58998fc966ce55888f6819dc1ed05eb2258631ed419c4e6a1af",
+  "source_license_links": [
+    "http://creativecommons.org/publicdomain/zero/1.0/"
+  ],
+  "recording_decoded_seconds": 38.66225,
+  "source_decoded_seconds": 35.801875,
+  "window_seconds": 5.0,
+  "window_selection": "start, middle, end",
+  "matches": [
+    {
+      "recording_start_seconds": 1.0,
+      "source_start_seconds": 28.1964921875,
+      "source_minus_recording_seconds": 27.1964921875,
+      "normalized_correlation": 0.024958769789832313
+    },
+    {
+      "recording_start_seconds": 16.831125,
+      "source_start_seconds": 27.324625,
+      "source_minus_recording_seconds": 10.493500000000001,
+      "normalized_correlation": 0.025354749368002184
+    },
+    {
+      "recording_start_seconds": 32.66225,
+      "source_start_seconds": 28.8336953125,
+      "source_minus_recording_seconds": -3.8285546874999987,
+      "normalized_correlation": 0.027922311846260327
+    }
+  ],
+  "offset_spread_seconds": 31.025046874999997,
+  "strong_signal_identity": false,
+  "loop_adjusted_offset_spread_seconds": 24.340195312499997,
+  "strong_signal_identity_allowing_loop_rotation": false,
+  "limits": "A match supports the identified source, not legal ownership. A non-match does not exclude time stretching, edits, or other transformations."
+}

@@ -1,0 +1,41 @@
+{
+  "method": "three-window exhaustive normalized cross-correlation with fractional-sample refinement; mono 8000 Hz; silent PCM decoding",
+  "recording": "ios/NodusDrift/Resources/Audio/things/singing-bowl.mp3",
+  "recording_sha256": "9b86534b01679a113a26da201f6160d604c9408ddd6effb00e38c5be78f0192e",
+  "source_page": "https://freesound.org/people/TitusL108/sounds/272059/",
+  "source_page_sha256": "dde321c57fefff0e0d2b5970092f96ea5746f14c6663d141d9e204a4e674a10b",
+  "public_preview_url": "https://cdn.freesound.org/previews/272/272059_3748023-hq.mp3",
+  "public_preview_sha256": "4b3fb3770815d2ffd620dcfb3ff4ac79c17ae0847b5fbe80330969954cb140ce",
+  "source_license_links": [
+    "http://creativecommons.org/licenses/by-nc/3.0/"
+  ],
+  "recording_decoded_seconds": 49.082,
+  "source_decoded_seconds": 49.39975,
+  "window_seconds": 5.0,
+  "window_selection": "start, middle, end",
+  "matches": [
+    {
+      "recording_start_seconds": 1.0,
+      "source_start_seconds": 31.162921875,
+      "source_minus_recording_seconds": 30.162921875,
+      "normalized_correlation": 0.0011372988655243474
+    },
+    {
+      "recording_start_seconds": 22.041,
+      "source_start_seconds": 31.1100234375,
+      "source_minus_recording_seconds": 9.0690234375,
+      "normalized_correlation": 0.0006488727409971844
+    },
+    {
+      "recording_start_seconds": 43.082,
+      "source_start_seconds": 31.1510859375,
+      "source_minus_recording_seconds": -11.930914062500001,
+      "normalized_correlation": 0.0005274652697635051
+    }
+  ],
+  "offset_spread_seconds": 42.0938359375,
+  "strong_signal_identity": false,
+  "loop_adjusted_offset_spread_seconds": 28.0820625,
+  "strong_signal_identity_allowing_loop_rotation": false,
+  "limits": "A match supports the identified source, not legal ownership. A non-match does not exclude time stretching, edits, or other transformations."
+}

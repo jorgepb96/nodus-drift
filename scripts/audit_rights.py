@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Record byte identity, metadata and Git history; never infer a recording's license.
+"""Historical Moodist-bank audit (before replacement). For current audio use
+scripts/audit_audio_bank.py. Record byte identity, metadata and Git history;
+never infer a recording's license.
 
 Requires ffprobe and local pinned Nodus/Moodist Git repositories. It does not
 download audio, send requests to rights holders, or grant/change any license.

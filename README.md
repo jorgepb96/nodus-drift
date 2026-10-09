@@ -22,10 +22,10 @@ are needed. Recordings are downloaded only during preparation; the app works off
 
 | Desktop Drift capability | Native iOS implementation |
 | --- | --- |
-| Full catalogue | Same 89 entries, names, categories, recordings and frequencies |
+| Full catalogue | Same 89 options, names, categories and frequencies; newly produced licensed loops |
 | Six simultaneous sounds | Shared selection rule; one binaural preset at a time |
 | Individual and master volume | Native sliders, 150 ms gain ramps and output peak limiter |
-| Seamless loops | Original files play from disk; small PCM seams preserve circular crossfades |
+| Seamless loops | New licensed loops stream from disk with 200 ms circular PCM seams |
 | Noise | Independent stereo white, Voss–McCartney pink and leaky-integrator brown noise |
 | Binaural | 100 Hz carrier; Delta 2, Theta 5, Alpha 10, Beta 20, Gamma 40 Hz |
 | Favorites and search | Local favorites, accent-insensitive search, nine category filters |
@@ -62,21 +62,29 @@ also passes on both devices, including saving and loading while paused.
 
 ## Source and rights
 
-The current app version is **0.1.0**, with build number **5**.
-It is Testing in the account holder's existing internal TestFlight group.
+The current app version is **0.1.0**, with build number **6**.
+It is Testing in the account holder's existing private internal TestFlight group.
+All 81 old audio files have been replaced; no public beta was created.
 The previous upload, 1.0.0 (1), remains in the release history.
 See [docs/TESTFLIGHT.md](docs/TESTFLIGHT.md) for installation and release evidence.
 
 Reference: `jorgepb96/nodus` at `68fa0210dc8407938d644978291840d85aeb49b1`.
-Audio: `remvze/moodist` at `11c0be2200116a3635880d600fd6953899cc51a3`.
+Catalogue reference: `remvze/moodist` at `11c0be2200116a3635880d600fd6953899cc51a3`.
+Audio: 80 new CC0-based loops and one original Nodus radio loop; see
+[the replacement report](docs/AUDIO_REPLACEMENT_2026-10-09.md).
 
 Adapted native code retains AGPL-3.0-only. The historical MIT notice for the original
 Nodi geometry/animation and connected N is also included. Moodist catalogue data
-retains its MIT notice. The recordings retain the licenses declared by Moodist, distinct
-from its code license. Audio files are excluded from Git and never exported by the app.
+retains its MIT notice. The original Moodist audio bank has been completely replaced.
+CC0 source permissions, FSD50K attribution and new Nodus sound design are
+recorded in the [81-option source register](docs/rights/replacement-audio/source-register.csv).
+Audio assets remain excluded from Git and are reproducible with the checked-in
+recipes. Preparation never fetches the removed Moodist recordings.
 
-**App Store distribution is not legally cleared yet.** Free pricing does not replace
-rights clearance. See [docs/LICENSING.md](docs/LICENSING.md) and
-[docs/APP_STORE.md](docs/APP_STORE.md) before distribution.
-The [October 9 fresh audit](docs/RIGHTS_AUDIT_2026-10-09.md) verifies all 81 file
-identities and records the remaining individual source/permission gaps.
+Install Python dependencies with `python3 -m pip install -r scripts/requirements-audio.txt`
+and use FFmpeg 8.0.1 with libmp3lame. `prepare_audio.py` validates complete release
+hashes before installing reconstructed assets. `audit_audio_bank.py` checks all
+81 replacements, per-file weights and the unchanged 89-option catalogue.
+
+This is an owner-only internal beta. Public distribution and recipient source access
+remain a separate release step; see [docs/LICENSING.md](docs/LICENSING.md).

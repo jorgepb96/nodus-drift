@@ -1,0 +1,41 @@
+{
+  "method": "three-window exhaustive normalized cross-correlation with fractional-sample refinement; mono 8000 Hz; silent PCM decoding",
+  "recording": "ios/NodusDrift/Resources/Audio/places/library.mp3",
+  "recording_sha256": "95095ef77ed7f1d1c2550b6f39d95cde31f72b37d8023c1dfd7c22931d84fe05",
+  "source_page": "https://freesound.org/people/xkeril/sounds/620683/",
+  "source_page_sha256": "b8df4d9a14469c3f43137c90818d0acf30b798982ccd5e735b7e0c69015fe516",
+  "public_preview_url": "https://cdn.freesound.org/previews/620/620683_13504080-lq.mp3",
+  "public_preview_sha256": "a8bd0c3c259e659172d687321f995ebe0fd82fdb4cbea23249a5bf9f6919f0ce",
+  "source_license_links": [
+    "http://creativecommons.org/publicdomain/zero/1.0/"
+  ],
+  "recording_decoded_seconds": 176.52825,
+  "source_decoded_seconds": 580.6085,
+  "window_seconds": 5.0,
+  "window_selection": "start, middle, end",
+  "matches": [
+    {
+      "recording_start_seconds": 1.0,
+      "source_start_seconds": 257.0936953125,
+      "source_minus_recording_seconds": 256.0936953125,
+      "normalized_correlation": 0.07029892601300392
+    },
+    {
+      "recording_start_seconds": 85.764125,
+      "source_start_seconds": 297.380984375,
+      "source_minus_recording_seconds": 211.61685937500002,
+      "normalized_correlation": 0.07201451437930831
+    },
+    {
+      "recording_start_seconds": 170.52825,
+      "source_start_seconds": 163.9501796875,
+      "source_minus_recording_seconds": -6.578070312500017,
+      "normalized_correlation": 0.05318867346227554
+    }
+  ],
+  "offset_spread_seconds": 262.67176562500003,
+  "strong_signal_identity": false,
+  "loop_adjusted_offset_spread_seconds": 86.14351562500002,
+  "strong_signal_identity_allowing_loop_rotation": false,
+  "limits": "A match supports the identified source, not legal ownership. A non-match does not exclude time stretching, edits, or other transformations."
+}

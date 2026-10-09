@@ -33,7 +33,7 @@ This is a standalone native SwiftUI ambient sound mixer. It needs no account, ne
 connection, companion desktop app or purchase. Select any sound in Sounds to start
 playback, or load a starter mix and press Play in My mix. Up to six voices may play
 at once. One binaural preset may be selected at a time; use stereo headphones to
-hear separated tones. All original recordings are included in the app bundle.
+hear separated tones. All 81 newly produced loops are included in the app bundle; the eight native generators work on device.
 
 My mix provides volume controls, saved mixes and a sleep timer. The expand icon
 opens meditation mode. Controls hide after five seconds; tap anywhere to reveal
@@ -45,9 +45,10 @@ headphones or an audio interruption pauses playback. No medical effects are clai
 ## Before public App Store distribution
 
 1. Complete the release rights review in LICENSING.md. Attach any rights documentation
-   Apple needs; do not equate free pricing with cleared distribution. The fresh
-   RIGHTS_AUDIT_2026-10-09.md identifies the first-party license decision, 81 individual
-   recording provenance gaps and source-delivery work required before release.
+   Apple needs; do not equate free pricing with cleared distribution.
+   The original recording-provenance gap was resolved by the replacement bank;
+   AUDIO_REPLACEMENT_2026-10-09.md records its individual CC0 sources and notices.
+   The first-party public release license and recipient source access remain separate.
 2. Select the developer's team, verify the bundle ID, and configure distribution signing.
 3. Run the app on a physical iPhone: headphones/Bluetooth routes, phone interruptions,
    locked-screen playback, timer completion, VoiceOver, energy usage and sleep/wake.
@@ -59,7 +60,7 @@ headphones or an audio interruption pauses playback. No medical effects are clai
 7. Set the price to Free, attach the real screenshots, and submit for Apple's review.
 
 The previous internal-only build 1.0.0 (1) was signed, uploaded and assigned to the
-account holder in TestFlight. The current version is 0.1.0, build 5. See
+account holder in TestFlight. The current source version is 0.1.0, build 6. See
 TESTFLIGHT.md for the actual distribution evidence.
 Public rights clearance, device validation and App Store approval remain separate.
 No public App Store review submission or external beta distribution was performed.

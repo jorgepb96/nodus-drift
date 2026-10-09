@@ -1,0 +1,41 @@
+{
+  "method": "three-window exhaustive normalized cross-correlation with fractional-sample refinement; mono 8000 Hz; silent PCM decoding",
+  "recording": "ios/NodusDrift/Resources/Audio/things/slide-projector.mp3",
+  "recording_sha256": "f87b98c4d5f1d5979679a870928700baa03c78a52785eaa25941373c16f0f5f2",
+  "source_page": "https://freesound.org/people/guyburns/sounds/551485/",
+  "source_page_sha256": "e7b0c819ce399cdae250cb49515d64006a348688d0cbf981db1a12022b50fbc0",
+  "public_preview_url": "https://cdn.freesound.org/previews/551/551485_5454234-hq.mp3",
+  "public_preview_sha256": "d5a02487c14350a78e58e2b23884156d733e2718f42d7ce93b4cbd93d5e2636c",
+  "source_license_links": [
+    "http://creativecommons.org/publicdomain/zero/1.0/"
+  ],
+  "recording_decoded_seconds": 142.88375,
+  "source_decoded_seconds": 167.721,
+  "window_seconds": 5.0,
+  "window_selection": "start, middle, end",
+  "matches": [
+    {
+      "recording_start_seconds": 1.0,
+      "source_start_seconds": 159.625484375,
+      "source_minus_recording_seconds": 158.625484375,
+      "normalized_correlation": 0.30269933425436246
+    },
+    {
+      "recording_start_seconds": 68.941875,
+      "source_start_seconds": 157.499640625,
+      "source_minus_recording_seconds": 88.55776562500002,
+      "normalized_correlation": 0.24202960571124071
+    },
+    {
+      "recording_start_seconds": 136.88375,
+      "source_start_seconds": 153.213375,
+      "source_minus_recording_seconds": 16.32962500000002,
+      "normalized_correlation": 0.06456176113306614
+    }
+  ],
+  "offset_spread_seconds": 142.295859375,
+  "strong_signal_identity": false,
+  "loop_adjusted_offset_spread_seconds": 70.655609375,
+  "strong_signal_identity_allowing_loop_rotation": false,
+  "limits": "A match supports the identified source, not legal ownership. A non-match does not exclude time stretching, edits, or other transformations."
+}

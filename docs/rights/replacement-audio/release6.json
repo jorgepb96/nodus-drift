@@ -1,0 +1,59 @@
+{
+  "version": "0.1.0",
+  "build": "6",
+  "catalog_options": 89,
+  "verified_audio_files": 81,
+  "legal_files_verified": 8,
+  "export_internal_only": true,
+  "team": "6RPLS9EA4X",
+  "archive_path": ".build/NodusDrift-0.1.0-6.xcarchive",
+  "verified_at_utc": "2026-10-09T11:41:20.221254+00:00",
+  "uploaded_at_local": "2026-10-09 13:33:06 Europe/Madrid",
+  "app_store_id": "6820753637",
+  "build_id": "d7e6bc52-a11e-47bb-aa51-8e448625b2a1",
+  "status": "Testing",
+  "internal_group_id": "40f2ec9c-cccb-4c2d-b3ce-ce073515bc77",
+  "internal_group_name": "Jorge — beta interna",
+  "testers": 1,
+  "public_beta": false,
+  "app_store_submission": false,
+  "what_to_test_file": "docs/TESTFLIGHT_NOTES.txt",
+  "proof": "screenshots/49-testflight-0.1.0-6-active.jpg",
+  "catalog_sha256": "c1673a8ca1c25d70ee41940507100e88380c94ae7f65e4b592242882e4a6e57b",
+  "auditory_test_performed": false,
+  "silent_tests_passed": 13,
+  "native_source": [
+    {
+      "path": "ios/NodusDrift/DriftAudioEngine.swift",
+      "sha256": "1c77eb843637f3f3337cec912bae16810779990244d963bc30d58ff5f779c7aa"
+    },
+    {
+      "path": "ios/NodusDrift/DriftModel.swift",
+      "sha256": "03199ff879a6e34dcfdcf683a69691f99e548061eb3eda712cc66a8c8e041f1d"
+    },
+    {
+      "path": "ios/NodusDrift/DriftViews.swift",
+      "sha256": "c54a72fefa3f4dc3e7e4da6896d78cf58331b1c415d30a6131697d9ddaa356f7"
+    },
+    {
+      "path": "ios/NodusDrift/ImmersiveView.swift",
+      "sha256": "ef6806799b67ad8b26b736e62bcee30a933d5292bb2901c52b0bba126c9ca8c0"
+    },
+    {
+      "path": "ios/NodusDrift/NodiView.swift",
+      "sha256": "2dfe444a30bea25bd6479060bc7bae146823e528d9865054ec3e47acc4d02713"
+    },
+    {
+      "path": "ios/NodusDrift/NodusDriftApp.swift",
+      "sha256": "c2f7ee3a96fe8ce2b7ed67e8a30e4c6e64ef9a5d6b705fed65c72e1b68519a5f"
+    },
+    {
+      "path": "ios/NodusDrift/NodusMark.swift",
+      "sha256": "faaa8e7698e386c474f1dcc32aec11174afa7b0c3919f790353bdb236123b132"
+    },
+    {
+      "path": "ios/NodusDrift/SettingsView.swift",
+      "sha256": "69fb855a6cfc4692e847fc449dcbaeac604df5a7bed191f7dc38e4eb72370a25"
+    }
+  ]
+}
