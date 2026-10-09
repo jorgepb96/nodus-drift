@@ -1,13 +1,11 @@
-Nodus Drift 0.1.0 (7) — Navigation fixes and the first public beta.
+Nodus Drift 0.1.0 (8) — Favorites and filter scrolling fix.
 
 WHAT CHANGED
-• Sounds, My mix, Saved and Settings now open at the top whenever you switch tabs, even after scrolling deeply. Searches and filters stay selected.
-• Clear in My mix immediately empties the active soundscape and cancels its sleep timer, without a confirmation dialog. Favorites and saved mixes remain.
-• Nodus Drift for iOS now carries the owner's MIT license. Moodist catalogue, CC0 audio source and FSD50K notices remain available in Settings.
+• After scrolling deeply through Sounds, choosing Favorites now shows the first favorite or the empty-state explanation below the search and filters.
+• The same correction applies when changing categories, search results or sorting. The library controls remain available, without jumping back to Nodi’s introduction.
+• Switching the bottom tabs still returns each destination to its top. Clear still empties the mix immediately while preserving favorites and saved mixes.
 
 PLEASE CHECK
-Scroll down in each tab, switch away and return: the heading should be visible again. Search or choose a category, switch away and return: your filter should remain. Create a mix, set a sleep timer, then tap Clear once. Restore a saved mix and confirm it remains paused and the old timer is gone.
+Scroll far down in Sounds and tap Favorites, both with and without saved favorites. The search, filters and first result or explanation should be visible immediately, without manually scrolling up. Return to All and check its first results. Repeat with alphabetical sorting and an active mix.
 
-The same 89 options remain, including 81 newly produced loops from the documented replacement bank and eight native noise/binaural generators. When ready to listen in a suitable place, check the sounds with headphones. Whale uses its CC0 author's vocal imitation; Wolf and Beehive are documented sound designs, and Carousel is amusement-park ambience. Please report repetitive loops or sounds that do not fit their label.
-
-Free, offline and English-only in this beta, with no account, tracking, ads, purchases or subscriptions. Interaction and layout checks were silent; no auditory quality test was performed. Send feedback and screenshots through TestFlight.
+The same 89 options, 81 documented replacement loops and eight native generators remain unchanged. Free, offline and English-only in this beta, with no account, tracking, ads, purchases or subscriptions. All interaction and layout checks were silent; no auditory quality test was performed. Send feedback and screenshots through TestFlight.

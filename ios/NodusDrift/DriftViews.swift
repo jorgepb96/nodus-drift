@@ -16,11 +16,11 @@ extension View {
 struct DriftTabScrollView<Content: View>: View {
     @EnvironmentObject private var store: DriftStore
     let tab: Int
-    @ViewBuilder var content: () -> Content
+    @ViewBuilder var content: (ScrollViewProxy) -> Content
     private var top: String { "drift-tab-top-\(tab)" }
     var body: some View {
         ScrollViewReader { proxy in
-            ScrollView { content().id(top) }
+            ScrollView { content(proxy).id(top) }
                 .onAppear { if store.tab == tab { proxy.scrollTo(top, anchor: .top) } }
                 .onChange(of: store.tab) { _, selected in
                     if selected == tab { proxy.scrollTo(top, anchor: .top) }
@@ -114,7 +114,9 @@ struct SoundsView: View {
     @State private var favoritesOnly = false
     @State private var awake = false
     @State private var wakeTask: Task<Void, Never>?
+    @State private var filterTask: Task<Void, Never>?
     @State private var controlsHeight: CGFloat = 180
+    @State private var libraryOffset: CGFloat = .infinity
     @FocusState private var searchFocused: Bool
     @ScaledMetric(relativeTo: .largeTitle) private var headingSize = 39.0
     @Environment(\.dynamicTypeSize) private var typeSize
@@ -125,23 +127,51 @@ struct SoundsView: View {
             (query.isEmpty || "\($0.name) \($0.detail) \(DriftCatalog.categoryName($0.category))".folding(options: [.caseInsensitive, .diacriticInsensitive], locale: Locale(identifier: "en")).contains(query))
         })
     }
+    private var libraryRevision: [String] {
+        // A filter choice also resets the results when it happens to match the
+        // same sounds, for example when all 89 sounds are favorites.
+        [search, category, String(favoritesOnly), store.config.sort.rawValue] + filtered.map(\.id)
+    }
     var body: some View {
         GeometryReader { viewport in
-            DriftTabScrollView(tab: 0) {
-                LazyVStack(alignment: .leading, spacing: 24, pinnedViews: [.sectionHeaders]) {
-                    companion
-                    starters
-                    Section {
-                        // Clamp short lists with their first card below the
-                        // pinned header, even after filtering far down the grid.
+            ZStack(alignment: .top) {
+                DriftTabScrollView(tab: 0) { proxy in
+                    // Eager section geometry prevents a shrinking lazy grid from
+                    // retaining an estimated origin thousands of points away.
+                    VStack(alignment: .leading, spacing: 24) {
+                        companion
+                        starters
+                        Color.clear.frame(height: controlsHeight)
+                            .background(GeometryReader { geometry in
+                                Color.clear.preference(key: LibraryControlsPositionKey.self,
+                                                       value: geometry.frame(in: .named("sounds-viewport")).minY)
+                            })
+                            .overlay(alignment: .top) {
+                                // Keep the controls in the scroll view's gesture
+                                // hierarchy while pinning their rendered position.
+                                libraryControls.fixedSize(horizontal: false, vertical: true)
+                                    .offset(y: libraryOffset.isFinite ? max(0, -libraryOffset) : 0)
+                            }
+                            .zIndex(1)
+                            .id("sound-library")
                         libraryResults(minimumHeight: max(0, viewport.size.height - controlsHeight - 32))
-                    } header: {
-                        libraryControls
-                    }
-                }.padding(.horizontal, 24).padding(.top, 18).padding(.bottom, 24)
-                    .frame(maxWidth: 860).frame(maxWidth: .infinity)
+                            .id(filtered.map(\.id))
+                    }.padding(.horizontal, 24).padding(.top, 18).padding(.bottom, 24)
+                        .frame(maxWidth: 860).frame(maxWidth: .infinity)
+                        .onChange(of: libraryRevision) { _, _ in
+                            filterTask?.cancel()
+                            filterTask = Task {
+                                await Task.yield()
+                                if !Task.isCancelled && store.tab == 0 && libraryOffset <= 1 {
+                                    proxy.scrollTo("sound-library", anchor: .top)
+                                }
+                            }
+                        }
+                }
+                .scrollDismissesKeyboard(.interactively)
             }
-            .scrollDismissesKeyboard(.interactively)
+            .coordinateSpace(name: "sounds-viewport")
+            .clipped()
         }
         .background(DriftTheme.background)
         .safeAreaInset(edge: .bottom, spacing: 0) { if !store.selection.isEmpty { MiniPlayer() } }
@@ -149,11 +179,13 @@ struct SoundsView: View {
         .onPreferenceChange(LibraryControlsHeightKey.self) { height in
             if height > 0 { controlsHeight = height }
         }
-        .onDisappear { wakeTask?.cancel(); awake = false }
+        .onPreferenceChange(LibraryControlsPositionKey.self) { top in
+            if top.isFinite { libraryOffset = top }
+        }
+        .onDisappear { wakeTask?.cancel(); filterTask?.cancel(); awake = false }
         .onChange(of: store.selection) { _, _ in searchFocused = false }
     }
-    // Keep the introduction in the layout so filtering never removes content
-    // above the user's scroll position. The native section header stays available.
+    // Filtering retains the introduction and the persistent library controls.
     private var companion: some View {
     VStack(spacing: 0) {
         HStack {
@@ -203,7 +235,7 @@ struct SoundsView: View {
                     filterChip(item.name, icon: item.icon, selected: category == item.id && !favoritesOnly) { category = item.id; favoritesOnly = false }
                 }
             }
-        }.contentMargins(.trailing, 3)
+        }.frame(height: 44).contentMargins(.trailing, 3)
         }.padding(.bottom, 16).background(DriftTheme.background)
             .background(GeometryReader { geometry in
                 Color.clear.preference(key: LibraryControlsHeightKey.self, value: geometry.size.height)
@@ -263,6 +295,11 @@ struct SoundsView: View {
 private struct LibraryControlsHeightKey: PreferenceKey {
     static var defaultValue: CGFloat = 0
     static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) { value = nextValue() }
+}
+
+private struct LibraryControlsPositionKey: PreferenceKey {
+    static var defaultValue: CGFloat = .infinity
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) { value = min(value, nextValue()) }
 }
 
 struct SoundCard: View {
@@ -347,7 +384,7 @@ struct MixView: View {
     @State private var save = false
     @State private var timer = false
     var body: some View {
-        DriftTabScrollView(tab: 1) {
+        DriftTabScrollView(tab: 1) { _ in
             VStack(alignment: .leading, spacing: 24) {
                 DriftPageHeader(title: "Your soundscape", subtitle: "A balance that feels like you.")
                 if store.selection.isEmpty {
@@ -432,7 +469,7 @@ struct SavedView: View {
         }
     }
     var body: some View {
-        DriftTabScrollView(tab: 2) {
+        DriftTabScrollView(tab: 2) { _ in
             VStack(alignment: .leading, spacing: 24) {
                 DriftPageHeader(title: "Quiet, on repeat.", subtitle: "Your favorite moments, saved for later.")
                 if store.config.presets.isEmpty {

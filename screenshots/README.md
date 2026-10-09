@@ -84,3 +84,22 @@ The new bank keeps all 89 options. No audio was played for these captures.
 
 - [Saved build 6 notes](48-testflight-0.1.0-6-notes.jpg)
 - [Private TestFlight beta 0.1.0 (6), Testing](49-testflight-0.1.0-6-active.jpg)
+
+
+## Deep Favorites filtering — build 8
+
+Fresh, unretouched silent simulator captures show the first result or empty-state
+explanation immediately after scrolling to the end of Sounds and choosing Favorites.
+The populated card retains its catalogue dimensions. The mix stays paused.
+
+- 66-build8-iphone-deep-library.png: catalogue before changing the filter.
+- 67-build8-iphone-favorites.png: first favorite with a paused active mix.
+- 68-build8-iphone-empty-favorites.png: empty Favorites with the mini-player.
+- 69-build8-iphone-empty-favorites-no-mix.png: alphabetical catalogue to empty Favorites, no active mix.
+- 70-build8-iphone-category.png: deep catalogue to the first Rain results.
+- [iPad first favorite](71-build8-ipad-favorites.png)
+- [iPad empty Favorites](72-build8-ipad-empty-favorites.png)
+
+- [Private beta, build 8 Testing](73-testflight-build8-private.jpg)
+- [Public beta, build 8 Waiting for Review](74-testflight-build8-public-review.jpg)
+- [All 89 favorites and retained search after tab navigation](76-build8-all-favorites-search.png)

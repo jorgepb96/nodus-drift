@@ -62,7 +62,7 @@ also passes on both devices, including saving and loading while paused.
 
 ## Source and rights
 
-The current app version is **0.1.0**, with build number **7**. This release fixes tab scroll restoration and makes Clear immediate. It is Testing in the existing internal group. The public TestFlight group and join link have been created, and build 7 is **Waiting for Review**. Public joining and installation begin after Apple approves the first external build.
+The current app version is **0.1.0**, with build number **8**. This release fixes deeply scrolled Favorites and other library filters while retaining search focus and card dimensions. Eight focused silent UI checks passed across iPhone and iPad. Build 8 is **Testing** in the existing internal group and **Waiting for Review** in the public TestFlight group. Public joining and installation begin after Apple approves the first external build. The obsolete pending build 7 review was withdrawn; earlier private builds remain available.
 The previous upload, 1.0.0 (1), remains in the release history.
 See [docs/TESTFLIGHT.md](docs/TESTFLIGHT.md) for installation and release evidence.
 

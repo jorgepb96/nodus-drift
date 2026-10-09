@@ -1,6 +1,6 @@
-# TestFlight beta · 0.1.0 (7)
+# TestFlight beta · 0.1.0 (8)
 
-**0.1.0 (7) is Testing in the existing internal group and Waiting for Review for the public beta.** The signed archive was uploaded successfully on October 9, 2026 at **14:10:28 Europe/Madrid**, processed by Apple and assigned to both groups. The first external TestFlight review has been submitted with automatic tester notification enabled. **Public joining and installation are not yet available**: App Store Connect explicitly says the group needs an approved build before testers can join the public link.
+**0.1.0 (8) is Testing in the existing internal group and Waiting for Review for the public beta.** The signed archive was uploaded successfully on October 9, 2026 at **16:05:51 Europe/Madrid**, processed by Apple and assigned to both groups. The replacement external TestFlight review has been submitted with automatic tester notification enabled. **Public joining and installation are not yet available**: App Store Connect explicitly says the group needs an approved build before testers can join the public link.
 
 The beta will become available after Apple's approval; this record does not claim it has been approved.
 
@@ -8,27 +8,27 @@ The beta will become available after Apple's approval; this record does not clai
 - Public link: https://testflight.apple.com/join/kAXnsjJS
 - External group ID: `4dcab8a9-bef4-4ff4-bb70-7118cb375068`
 - Existing internal group: **Jorge — beta interna**
-- Version and build: **0.1.0 (7)**
+- Version and build: **0.1.0 (8)**
 - Internal-only export: **false**, using ios/ExportOptions-PublicBeta.plist
-- [Build 7](https://appstoreconnect.apple.com/teams/36804ede-f0b5-4cd2-a273-c619feb6168f/apps/6820753637/testflight/ios/36d4db25-e574-46af-a481-6affc1ed7c0b)
+- [Build 8](https://appstoreconnect.apple.com/teams/36804ede-f0b5-4cd2-a273-c619feb6168f/apps/6820753637/testflight/ios/7905ec5e-d60e-4912-a79d-57371cc4cdca)
 - [Public group](https://appstoreconnect.apple.com/teams/36804ede-f0b5-4cd2-a273-c619feb6168f/apps/6820753637/testflight/groups/4dcab8a9-bef4-4ff4-bb70-7118cb375068/builds)
-- [Internal Testing proof](../screenshots/63-testflight-build7-internal-active.jpg)
-- [External Waiting for Review proof](../screenshots/64-testflight-build7-public-review.jpg)
+- [Internal Testing proof](../screenshots/73-testflight-build8-private.jpg)
+- [External Waiting for Review proof](../screenshots/74-testflight-build8-public-review.jpg)
 - [Enabled link and approval requirement](../screenshots/65-testflight-public-link-awaiting-approval.jpg)
 
 ## Install and share
 
-The owner can update now through the existing internal TestFlight invitation and select **0.1.0 (7)**. Physical iPhone installation of build 7 has not been verified. Builds 5 and 6 remain available for comparison.
+The owner can update now through the existing internal TestFlight invitation and select **0.1.0 (8)**. Physical iPhone installation of build 8 has not been verified. Builds 5, 6 and 7 remain available for comparison.
 
 Share https://testflight.apple.com/join/kAXnsjJS once the first external build has been approved. The link is enabled and open to everyone under Apple's standard tester maximum; no device-specific criteria or custom lower tester cap were set. No recipient email addresses were uploaded, and there are currently no external testers.
 
 ## Changes and validation
 
-Sounds, My mix, Saved and Settings return to the top when selected, while retaining search/filter state. Clear immediately empties the active mix and cancels its timer, preserving favorites and saved mixes. No confirmation dialog remains.
+After deeply scrolling through Sounds, choosing Favorites shows the first favorite or the empty-state explanation below the persistent search and filters. Categories, search and sorting also return to their first results, including when a new filter matches the same IDs. Card dimensions and search focus are preserved. Sounds, My mix, Saved and Settings still return to the top when selected, retaining search/filter state. Clear remains immediate and preserves favorites and saved mixes.
 
-The owner selected MIT for the iOS implementation and incorporated first-party DRIFT material. The repository stays private; MIT requires retained notices rather than publishing source. Third-party Moodist MIT, CC0 source and FSD50K compilation notices remain bundled. See [LICENSING.md](LICENSING.md).
+The owner selected MIT from build 7 for the iOS implementation and incorporated first-party DRIFT material. The repository stays private; MIT requires retained notices rather than publishing source. Third-party Moodist MIT, CC0 source and FSD50K compilation notices remain bundled. See [LICENSING.md](LICENSING.md).
 
-The same 89 options and build 6 replacement audio bank remain unchanged. English testing notes are in [TESTFLIGHT_NOTES.txt](TESTFLIGHT_NOTES.txt), review notes in [TESTFLIGHT_REVIEW_NOTES_BUILD7.txt](TESTFLIGHT_REVIEW_NOTES_BUILD7.txt), and silent checks in [VALIDATION.md](VALIDATION.md). No audio output or auditory test is performed.
+The same 89 options and build 6 replacement audio bank remain unchanged. Eight focused silent UI checks passed across iPhone and iPad; simulator captures 66–72 and 76 record the fixed behavior. Physical-device verification remains for the owner. The signed archive receipt is [release8-archive-verification.json](rights/release8-archive-verification.json), and the distribution receipt is [release8.json](rights/release8.json). English testing notes are in [TESTFLIGHT_NOTES.txt](TESTFLIGHT_NOTES.txt), review notes in [TESTFLIGHT_REVIEW_NOTES_BUILD8.txt](TESTFLIGHT_REVIEW_NOTES_BUILD8.txt), and silent checks in [VALIDATION.md](VALIDATION.md). No audio output or auditory test is performed.
 
 ## Reproduce the upload
 
@@ -42,4 +42,4 @@ The app-specific policy is https://nodusresearch.com/drift/privacy/ and is saved
 
 ## Previous builds
 
-[The build 6 record](TESTFLIGHT_BUILD6.md) preserves all earlier private-beta history and proof. Builds 5 and 6 remain in the existing internal group; their source notices and uploaded binaries are unchanged.
+[The build 7 record](TESTFLIGHT_BUILD7.md) preserves the earlier release and review submission; [build 6](TESTFLIGHT_BUILD6.md) preserves the replacement-audio release. The pending public review for build 7 was withdrawn before submitting build 8, so Apple reviews the corrected build. Build 7 remains in the public group as Ready to Submit and in the private group as Testing; it was not expired or deleted. Builds 5 and 6 also remain in the internal group.

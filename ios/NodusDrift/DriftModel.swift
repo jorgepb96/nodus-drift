@@ -142,6 +142,9 @@ struct DriftConfiguration: Codable {
                             volumes: config.volumes, master: config.master)
             }
         }
+        if ProcessInfo.processInfo.arguments.contains("-ui-testing-all-favorites") {
+            config.favorites = Set(DriftCatalog.sounds.map(\.id))
+        }
         #endif
         audio.didStartVoice = { [weak self] id in
             guard let self else { return }

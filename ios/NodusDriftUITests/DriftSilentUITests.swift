@@ -141,6 +141,92 @@ final class DriftSilentUITests: XCTestCase {
         XCTAssertGreaterThanOrEqual(sound.frame.minY, app.buttons["filter-favorites"].frame.maxY)
         capture("32-deep-filter-results")
     }
+    func testSilentFavoritesAfterDeepLibraryScroll() {
+        launchScrollFixture()
+        // Keep the mini-player present, as in the reported physical-device case.
+        let favorites = app.buttons["filter-favorites"]
+        let search = app.textFields["sound-search"]
+        reveal(favorites)
+        let normalCardHeight = app.buttons["sound-light-rain"].frame.height
+        for _ in 0..<12 { app.swipeUp() }
+        XCTAssertTrue(favorites.isHittable, "Filters must remain available deep in the full catalogue")
+        let pinnedTop = search.frame.minY
+        XCTAssertFalse(app.staticTexts["A little space\nto be."].isHittable, "The test must actually leave the introduction behind")
+        XCTAssertLessThan(pinnedTop, app.frame.minY + app.frame.height * 0.3, "The test must reach the pinned library controls")
+        capture("46-before-deep-favorites")
+        favorites.tap()
+        let firstFavorite = app.buttons["sound-light-rain"]
+        XCTAssertTrue(firstFavorite.waitForExistence(timeout: 5))
+        capture("47-deep-favorites-populated")
+        XCTAssertTrue(search.isHittable, "Filtering must not leave the header above a stale scroll offset")
+        XCTAssertEqual(search.frame.minY, pinnedTop, accuracy: 3)
+        XCTAssertTrue(firstFavorite.isHittable)
+        XCTAssertEqual(firstFavorite.frame.height, normalCardHeight, accuracy: 1, "A single result keeps the catalogue's card proportions")
+        XCTAssertGreaterThanOrEqual(firstFavorite.frame.minY, favorites.frame.maxY)
+        XCTAssertLessThan(firstFavorite.frame.maxY, app.buttons["mini-play"].frame.minY)
+        // Removing the last favorite must keep the empty-state explanation visible.
+        app.buttons["favorite-light-rain"].tap()
+        XCTAssertTrue(app.staticTexts["Keep your favorites close"].isHittable)
+        app.buttons["filter-all"].tap()
+        for _ in 0..<12 { app.swipeUp() }
+        favorites.tap()
+        capture("48-deep-favorites-empty")
+        XCTAssertTrue(search.isHittable)
+        XCTAssertEqual(search.frame.minY, pinnedTop, accuracy: 3)
+        XCTAssertTrue(app.staticTexts["Keep your favorites close"].isHittable)
+        XCTAssertGreaterThanOrEqual(app.staticTexts["Keep your favorites close"].frame.minY, favorites.frame.maxY)
+        app.buttons["filter-all"].tap()
+        XCTAssertTrue(firstFavorite.isHittable, "Returning to All starts at its first results")
+        XCTAssertEqual(app.buttons["mini-play"].label, "Play mix", "The entire regression stays silent")
+    }
+    func testSilentEmptyFavoritesAfterDeepAlphabeticalScroll() {
+        let favorites = app.buttons["filter-favorites"]
+        let search = app.textFields["sound-search"]
+        reveal(favorites)
+        app.buttons["sort-sounds"].tap()
+        app.buttons["Alphabetical"].tap()
+        for _ in 0..<12 { app.swipeUp() }
+        let pinnedTop = search.frame.minY
+        XCTAssertFalse(app.staticTexts["A little space\nto be."].isHittable)
+        XCTAssertLessThan(pinnedTop, app.frame.minY + app.frame.height * 0.3)
+        favorites.tap()
+        capture("49-deep-empty-favorites-no-mix")
+        XCTAssertTrue(search.isHittable)
+        XCTAssertEqual(search.frame.minY, pinnedTop, accuracy: 3)
+        XCTAssertTrue(app.staticTexts["Keep your favorites close"].isHittable)
+        XCTAssertFalse(app.buttons["mini-play"].exists)
+        app.buttons["filter-all"].tap()
+        XCTAssertTrue(app.buttons["sound-airplane"].isHittable)
+        for _ in 0..<6 { app.swipeUp() }
+        app.buttons["filter-rain"].tap()
+        XCTAssertTrue(search.isHittable)
+        XCTAssertEqual(search.frame.minY, pinnedTop, accuracy: 3)
+        XCTAssertTrue(app.buttons["sound-heavy-rain"].isHittable)
+        capture("50-deep-category-results")
+    }
+    func testSilentFullFavoritesAndSearchState() {
+        app.terminate()
+        app.launchArguments.append("-ui-testing-all-favorites")
+        app.launch()
+        let favorites = app.buttons["filter-favorites"]
+        let search = app.textFields["sound-search"]
+        reveal(favorites)
+        for _ in 0..<12 { app.swipeUp() }
+        XCTAssertFalse(app.staticTexts["A little space\nto be."].isHittable)
+        XCTAssertLessThan(search.frame.minY, app.frame.minY + app.frame.height * 0.3)
+        favorites.tap()
+        XCTAssertTrue(app.buttons["sound-light-rain"].isHittable, "Favorites starts at the first result even when all 89 sounds are favorites")
+        XCTAssertGreaterThanOrEqual(app.buttons["sound-light-rain"].frame.minY, favorites.frame.maxY)
+        search.tap(); search.typeText("rain\n")
+        XCTAssertEqual(search.value as? String, "rain", "Filtering preserves keyboard focus through every character")
+        tab("Saved"); tab("Sounds")
+        XCTAssertTrue(app.staticTexts["A little space\nto be."].isHittable)
+        reveal(search)
+        XCTAssertEqual(search.value as? String, "rain")
+        XCTAssertTrue(favorites.isSelected)
+        XCTAssertFalse(app.buttons["mini-play"].exists)
+        capture("51-full-favorites-search")
+    }
     func testSilentSettingsWidthsAndLicense() {
         tab("Settings")
         let privacy = app.otherElements["settings-privacy-card"]

@@ -9,7 +9,7 @@ struct SettingsView: View {
         Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0.1.0"
     }
     var body: some View {
-        DriftTabScrollView(tab: 3) {
+        DriftTabScrollView(tab: 3) { _ in
             VStack(alignment: .leading, spacing: 26) {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Make yourself\nat home.").font(.system(size: headingSize, design: .serif)).tracking(-0.8)
