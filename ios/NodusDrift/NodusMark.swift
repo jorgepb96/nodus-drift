@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-License-Identifier: MIT
 import SwiftUI
 
 /// Original connected N from src/assets/nodus-logo.svg (64×64).

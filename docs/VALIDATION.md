@@ -1,5 +1,17 @@
 # Validation record
 
+## Build 7 · Tab navigation, immediate Clear and MIT notices (October 9, 2026)
+
+All nine intended silent UI checks passed: four on iPhone 17 Pro Max and five on iPad Pro 13-inch (M5). Both devices verify deep scrolling and return-to-top behavior for all four tabs, retained search/category state, immediate Clear, preserved favorites/saved mixes, cancelled sleep timer and paused saved-mix loading. Card activation regions and stable filters remain correct. Settings widths and the loaded Nodus Drift MIT notice pass on both devices; Saved parity also passes on iPad.
+
+The initial iPad Clear test stopped at a timer button whose reported hitability included an off-screen frame. The test now reveals the complete control before tapping; its focused repeat passed. A separate iPhone Settings run failed during simulator startup before the tab was present; repeating that focused check after the other simulator test ended passed. No production change was needed for those harness failures. All initial failure logs and result bundles remain in ignored .build; they are not omitted from this record.
+
+No Play control was pressed. Debug UI launches use -ui-testing-silent, which blocks audio engine/session activation. No auditory or physical-device audio-route test was performed. The audio bank and catalogue were not regenerated: the signed Release archive contains the exact same 89 entries and 81 audio hashes as build 6. All 11 current legal files match the source, the bundled Nodus Drift notice is MIT, and the old AGPL app notice is absent. Archive version 0.1.0 (7), bundle ID and strict code signature verification pass. The archive receipt is rights/release7-archive-verification.json.
+
+Captures 50–60 show the returned tab headings, cleared mix, iPad layout and MIT notices; capture 62 verifies the iPhone MIT disclosure. They were visually reviewed for alignment, card dimensions, usable controls and native paragraph wrapping. Captures using the scroll fixture include six paused voices and twelve dummy saved mixes only in Debug; fixture data is excluded from Release.
+
+Result bundles: Silent7Phone (three passing checks), Silent7IPad (four passing checks and the initial Clear failure), Silent7IPadClear (passing focused repeat), Silent7PhoneMIT (startup failure) and Silent7PhoneMITRetry (passing Settings/MIT check). The public export uses ExportOptions-PublicBeta.plist with internal-only false; upload success is recorded separately in TESTFLIGHT.md.
+
 ## Build 6 · Replacement audio bank (October 9, 2026)
 
 All 81 original Moodist MP3s were replaced; the 89 catalogue options and the

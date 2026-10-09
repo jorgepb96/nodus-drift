@@ -48,7 +48,7 @@ headphones or an audio interruption pauses playback. No medical effects are clai
    Apple needs; do not equate free pricing with cleared distribution.
    The original recording-provenance gap was resolved by the replacement bank;
    AUDIO_REPLACEMENT_2026-10-09.md records its individual CC0 sources and notices.
-   The first-party public release license and recipient source access remain separate.
+   The owner selected MIT for the iOS implementation from build 7; public source publication is not required by MIT. Third-party notices remain bundled.
 2. Select the developer's team, verify the bundle ID, and configure distribution signing.
 3. Run the app on a physical iPhone: headphones/Bluetooth routes, phone interruptions,
    locked-screen playback, timer completion, VoiceOver, energy usage and sleep/wake.
@@ -60,7 +60,7 @@ headphones or an audio interruption pauses playback. No medical effects are clai
 7. Set the price to Free, attach the real screenshots, and submit for Apple's review.
 
 The previous internal-only build 1.0.0 (1) was signed, uploaded and assigned to the
-account holder in TestFlight. The current source version is 0.1.0, build 6. See
+account holder in TestFlight. The current source version is 0.1.0, build 7. See
 TESTFLIGHT.md for the actual distribution evidence.
 Public rights clearance, device validation and App Store approval remain separate.
-No public App Store review submission or external beta distribution was performed.
+No public App Store review submission was performed. The separate external TestFlight beta is tracked in TESTFLIGHT.md.

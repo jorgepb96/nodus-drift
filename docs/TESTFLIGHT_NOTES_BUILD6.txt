@@ -1,0 +1,16 @@
+Nodus Drift 0.1.0 (6) — Newly produced, documented audio loops.
+
+WHAT CHANGED
+• All 81 original Moodist audio files were replaced with newly made loops. The same 89 options, categories, favorites and saved-mix IDs remain.
+• Eighty options use individually documented CC0 sources; radio tuning is original Nodus synthesis without broadcast samples. Source authors, links and license notices are available in Settings → Moodist license → Audio sources & permissions.
+• Each file remains within 1% of its previous size (actual range: -0.14% to +0.43%). Levels are balanced and every loop uses a 200 ms circular boundary join.
+• The three noise colors and five binaural generators remain unchanged.
+
+PLEASE CHECK
+When ready to listen, try every file option with headphones and check its character, repetition and boundary joins. Try gentle multi-sound mixes and individual volume controls. The Whale source is its CC0 author's whale-song vocal imitation; Wolf and Beehive also use documented author-made sound designs. Carousel is an amusement-park ambience. Please report any option that feels repetitive or does not fit its label.
+
+Save and restore a mix, confirm favorites remain, and verify loading stays paused. Check the source credits in Settings on your iPhone.
+
+This build is for the existing private internal group only. The app remains free, in English and offline, with no account, tracking, ads or purchases. Technical decoding and interaction checks were silent; no audio playback or auditory quality test was performed.
+
+Send feedback and screenshots through TestFlight.

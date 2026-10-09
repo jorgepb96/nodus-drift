@@ -1,7 +1,9 @@
-Current internal release rights review · October 9, 2026
+Public beta release rights review · October 9, 2026
 
-Audio: all 81 Moodist recordings have been replaced. Eighty options use individually documented CC0 originals and one uses original Nodus radio synthesis. All source licenses, creators, receipts and transformations are recorded in the bundled Audio sources & permissions and in the repository manifest. No Pixabay or unidentified Moodist audio remains in the bundle. The audio evidence gap in the historical bank is therefore superseded for this release.
+Audio: all 81 Moodist recordings have been replaced. Eighty options use individually documented CC0 originals and one uses original Nodus radio synthesis. Source licenses, creators, receipts and transformations are recorded in Audio sources & permissions and in the private development repository. No Pixabay or unidentified Moodist audio remains in the bundle.
 
-Catalogue: the 89 identifiers, labels, categories and generator settings remain unchanged. Moodist catalogue data retains its MIT notice. Native code remains AGPL-3.0-only; Nodus historical MIT notice is preserved. The project owner authorized this internal private testing release. This review does not assert adoption of the separate unsigned Apple additional-permission draft or clearance of public distribution.
+Catalogue: the 89 identifiers, labels, categories and generator settings remain unchanged. Moodist catalogue data retains its MIT notice. FSD50K dataset acknowledgement and CC BY 4.0 notice are preserved; Clotho captions and code are not incorporated.
 
-This build is intended only for the existing internal TestFlight group. No external group, public beta link or App Store submission is authorized for this step. Source is in the owner-accessible private repository. Public licensing and recipient source access must be addressed separately if a public release is requested.
+Nodus Drift for iOS: version 0.1.0 (7) uses MIT for the native implementation and the owner's incorporated DRIFT contributions, following the owner's license decision. Original Nodi and N notices are preserved. The scoped history identifies the owner as the human contributor; runtime dependencies are Apple platform frameworks. Earlier Nodus releases retain their licenses. MIT does not require public source distribution. The unsigned historical Apple additional-permission draft is not used as a grant.
+
+The project owner has requested a public TestFlight beta. Apple reviews the first external build before it becomes available to external testers. This beta is separate from App Store publication.

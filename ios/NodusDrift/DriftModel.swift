@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-License-Identifier: MIT
 import Foundation
 import SwiftUI
 
@@ -133,6 +133,16 @@ struct DriftConfiguration: Codable {
            var saved = try? JSONDecoder().decode(DriftConfiguration.self, from: data), saved.version == 1 {
             saved.sanitize(); config = saved
         } else { config = DriftConfiguration() }
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("-ui-testing-scroll-fixture") {
+            config.selection = Array(DriftCatalog.sounds.prefix(6).map(\.id))
+            config.favorites = [config.selection[0]]
+            config.presets = (1...12).map { index in
+                DriftPreset(name: "Quiet moment \(index)", icon: "book", selection: config.selection,
+                            volumes: config.volumes, master: config.master)
+            }
+        }
+        #endif
         audio.didStartVoice = { [weak self] id in
             guard let self else { return }
             self.config.usage[id] = min(1_000_000, (self.config.usage[id] ?? 0) + 1)

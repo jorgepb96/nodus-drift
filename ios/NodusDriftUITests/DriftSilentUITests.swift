@@ -40,6 +40,71 @@ final class DriftSilentUITests: XCTestCase {
         XCTAssertTrue(element.isHittable)
         XCTAssertLessThanOrEqual(element.frame.maxY, app.frame.maxY - 180)
     }
+    private func launchScrollFixture() {
+        app.terminate()
+        app.launchArguments.append("-ui-testing-scroll-fixture")
+        app.launch()
+    }
+    func testSilentTabsReturnToTop() {
+        launchScrollFixture()
+        let destinations = [("Sounds", "A little space\nto be."), ("My mix", "Your soundscape"),
+                            ("Saved", "Quiet, on repeat."), ("Settings", "Make yourself\nat home.")]
+        var topPositions: [String: CGFloat] = [:]
+        for (name, heading) in destinations {
+            tab(name)
+            let title = app.staticTexts[heading]
+            XCTAssertTrue(title.waitForExistence(timeout: 5)); XCTAssertTrue(title.isHittable)
+            topPositions[name] = title.frame.minY
+        }
+        for (name, heading) in destinations {
+            tab(name)
+            for _ in 0..<6 { app.swipeUp() }
+            if name == "Sounds" || name == "My mix" || name == "Saved" {
+                XCTAssertFalse(app.staticTexts[heading].isHittable, "The test must leave the destination deeply scrolled")
+            }
+            tab(name == "Settings" ? "Sounds" : "Settings")
+            tab(name)
+            let title = app.staticTexts[heading]
+            XCTAssertTrue(title.isHittable, "Switching tabs brings the destination's heading back")
+            XCTAssertEqual(title.frame.minY, topPositions[name]!, accuracy: 2)
+            capture("43-tab-top-" + name)
+        }
+        tab("Sounds")
+        let search = app.textFields["sound-search"]
+        reveal(search); search.tap(); search.typeText("rain\n")
+        app.buttons["filter-rain"].tap()
+        tab("Saved"); tab("Sounds")
+        XCTAssertTrue(app.staticTexts["A little space\nto be."].isHittable)
+        reveal(search)
+        XCTAssertEqual(search.value as? String, "rain", "Resetting scroll preserves the search")
+        XCTAssertTrue(app.buttons["filter-rain"].isSelected, "Resetting scroll preserves the category")
+        XCTAssertEqual(app.buttons["mini-play"].label, "Play mix")
+    }
+    func testSilentClearIsImmediateAndPreservesSavedMixes() {
+        launchScrollFixture()
+        tab("My mix")
+        let timer = app.buttons["sleep-timer"]
+        revealCard(timer); timer.tap()
+        let fifteenMinutes = app.buttons["timer-15"]
+        XCTAssertTrue(fifteenMinutes.waitForExistence(timeout: 5)); fifteenMinutes.tap()
+        tab("Settings"); tab("My mix")
+        let clear = app.buttons["clear-mix"]
+        XCTAssertTrue(clear.isHittable); clear.tap()
+        XCTAssertTrue(app.staticTexts["Start with a sound"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["mix-play"].exists)
+        XCTAssertFalse(app.buttons["Clear mix"].exists, "Clear does not present a confirmation")
+        capture("44-clear-immediate")
+        tab("Saved")
+        XCTAssertTrue(app.buttons["Load Quiet moment 1"].exists, "Clear keeps saved mixes")
+        app.buttons["Load Quiet moment 1"].tap()
+        XCTAssertEqual(app.buttons["mix-play"].label, "Play soundscape")
+        reveal(timer)
+        XCTAssertEqual(timer.label, "Sleep timer", "Clear cancels the previous sleep timer")
+        tab("Sounds")
+        let favorites = app.buttons["filter-favorites"]
+        reveal(favorites); favorites.tap()
+        XCTAssertTrue(app.buttons["favorite-light-rain"].exists, "Clear keeps favorites")
+    }
     func testSilentCardHitAreasAndStableFilters() {
         let sound = app.buttons["sound-light-rain"]
         XCTAssertTrue(sound.waitForExistence(timeout: 5)); revealCard(sound)
@@ -96,6 +161,13 @@ final class DriftSilentUITests: XCTestCase {
         XCTAssertTrue(text.contains("MIT License")); XCTAssertTrue(text.contains("Copyright (c) 2023 MAZE"))
         XCTAssertTrue(text.contains("does NOT cover the audio files"))
         capture("27-moodist-license")
+        let driftLicense = app.buttons["Nodus Drift · MIT"]
+        reveal(driftLicense); driftLicense.tap()
+        let driftBody = app.textViews.matching(NSPredicate(format: "value BEGINSWITH %@", "MIT License\n\nCopyright (c) 2026 Jorge Pérez Burgueño")).firstMatch
+        XCTAssertTrue(driftBody.waitForExistence(timeout: 5))
+        XCTAssertTrue((driftBody.value as? String ?? "").contains("Permission is hereby granted"))
+        XCTAssertFalse(app.buttons["GNU AGPL v3"].exists)
+        capture("45-drift-mit-license")
         app.buttons["Done"].tap()
     }
     func testSilentSavedLayoutParity() {

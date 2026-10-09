@@ -62,9 +62,7 @@ also passes on both devices, including saving and loading while paused.
 
 ## Source and rights
 
-The current app version is **0.1.0**, with build number **6**.
-It is Testing in the account holder's existing private internal TestFlight group.
-All 81 old audio files have been replaced; no public beta was created.
+The current app version is **0.1.0**, with build number **7**. This release fixes tab scroll restoration and makes Clear immediate. It is Testing in the existing internal group. The public TestFlight group and join link have been created, and build 7 is **Waiting for Review**. Public joining and installation begin after Apple approves the first external build.
 The previous upload, 1.0.0 (1), remains in the release history.
 See [docs/TESTFLIGHT.md](docs/TESTFLIGHT.md) for installation and release evidence.
 
@@ -73,7 +71,7 @@ Catalogue reference: `remvze/moodist` at `11c0be2200116a3635880d600fd6953899cc51
 Audio: 80 new CC0-based loops and one original Nodus radio loop; see
 [the replacement report](docs/AUDIO_REPLACEMENT_2026-10-09.md).
 
-Adapted native code retains AGPL-3.0-only. The historical MIT notice for the original
+The native iOS implementation and owner’s incorporated DRIFT contributions use MIT from build 7, on the owner’s instruction. Earlier Nodus releases retain their licenses. The historical MIT notice for the original
 Nodi geometry/animation and connected N is also included. Moodist catalogue data
 retains its MIT notice. The original Moodist audio bank has been completely replaced.
 CC0 source permissions, FSD50K attribution and new Nodus sound design are
@@ -86,5 +84,4 @@ and use FFmpeg 8.0.1 with libmp3lame. `prepare_audio.py` validates complete rele
 hashes before installing reconstructed assets. `audit_audio_bank.py` checks all
 81 replacements, per-file weights and the unchanged 89-option catalogue.
 
-This is an owner-only internal beta. Public distribution and recipient source access
-remain a separate release step; see [docs/LICENSING.md](docs/LICENSING.md).
+The development repository remains private. MIT does not require public source publication; third-party notices remain bundled. See [docs/LICENSING.md](docs/LICENSING.md) for the scoped license decision and [docs/TESTFLIGHT.md](docs/TESTFLIGHT.md) for public beta status.

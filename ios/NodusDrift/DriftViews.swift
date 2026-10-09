@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-License-Identifier: MIT
 import SwiftUI
 
 extension View {
@@ -9,6 +9,23 @@ extension View {
     func driftPageLayout() -> some View {
         self.frame(maxWidth: .infinity, alignment: .leading)
             .padding(24).frame(maxWidth: 720).frame(maxWidth: .infinity)
+    }
+}
+
+/// Each destination opens at its beginning without discarding its filters or edits.
+struct DriftTabScrollView<Content: View>: View {
+    @EnvironmentObject private var store: DriftStore
+    let tab: Int
+    @ViewBuilder var content: () -> Content
+    private var top: String { "drift-tab-top-\(tab)" }
+    var body: some View {
+        ScrollViewReader { proxy in
+            ScrollView { content().id(top) }
+                .onAppear { if store.tab == tab { proxy.scrollTo(top, anchor: .top) } }
+                .onChange(of: store.tab) { _, selected in
+                    if selected == tab { proxy.scrollTo(top, anchor: .top) }
+                }
+        }
     }
 }
 
@@ -110,7 +127,7 @@ struct SoundsView: View {
     }
     var body: some View {
         GeometryReader { viewport in
-            ScrollView {
+            DriftTabScrollView(tab: 0) {
                 LazyVStack(alignment: .leading, spacing: 24, pinnedViews: [.sectionHeaders]) {
                     companion
                     starters
@@ -329,9 +346,8 @@ struct MixView: View {
     @EnvironmentObject private var audio: DriftAudioEngine
     @State private var save = false
     @State private var timer = false
-    @State private var confirmClear = false
     var body: some View {
-        ScrollView {
+        DriftTabScrollView(tab: 1) {
             VStack(alignment: .leading, spacing: 24) {
                 DriftPageHeader(title: "Your soundscape", subtitle: "A balance that feels like you.")
                 if store.selection.isEmpty {
@@ -342,7 +358,8 @@ struct MixView: View {
                     HStack(spacing: 12) {
                         Label("\(store.selection.count) of 6 sounds", systemImage: "waveform").font(.footnote).foregroundStyle(DriftTheme.accent)
                         Spacer()
-                        Button { confirmClear = true } label: { Text("Clear").font(.footnote).padding(.vertical, 12) }.foregroundStyle(DriftTheme.muted)
+                        Button { store.clear() } label: { Text("Clear").font(.footnote).padding(.vertical, 12) }.foregroundStyle(DriftTheme.muted)
+                            .accessibilityIdentifier("clear-mix")
                     }
                     ForEach(store.sorted(store.activeSounds)) { sound in
                         VStack(spacing: 16) {
@@ -393,7 +410,6 @@ struct MixView: View {
         }
         .sheet(isPresented: $save) { PresetEditor() }
         .sheet(isPresented: $timer) { SleepTimerView() }
-        .confirmationDialog("Clear your soundscape?", isPresented: $confirmClear, titleVisibility: .visible) { Button("Clear mix", role: .destructive) { store.clear() } }
     }
     private var timerLabel: String {
         guard let seconds = store.remainingSeconds else { return "Sleep timer" }
@@ -416,7 +432,7 @@ struct SavedView: View {
         }
     }
     var body: some View {
-        ScrollView {
+        DriftTabScrollView(tab: 2) {
             VStack(alignment: .leading, spacing: 24) {
                 DriftPageHeader(title: "Quiet, on repeat.", subtitle: "Your favorite moments, saved for later.")
                 if store.config.presets.isEmpty {

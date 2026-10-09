@@ -5,17 +5,14 @@ Nodus Drift, Nodi and the connected N mark
 This SwiftUI application adapts the Nodus Drift experience and Nodi's vector
 character, lotus pose and original connected N logo from jorgepb96/nodus, revision
 68fa0210dc8407938d644978291840d85aeb49b1.
-The adapted native code is licensed under GNU AGPL v3. The full license is
-available in Settings. The intended source URL is
-https://github.com/jorgepb96/nodus-drift-mobile. The repository remains private and contains the source and reproducible build instructions for the internal release. The current tester is the project owner with repository access. Public recipient source access is a separate release obligation.
+The native implementation and the owner's incorporated DRIFT contributions are distributed under the MIT License starting with version 0.1.0 (7), following the owner's license decision on October 9, 2026. The complete Nodus Drift MIT notice is included in Settings. This decision is specific to Drift for iOS; earlier Nodus releases retain their existing licenses. The development repository remains private. MIT does not require publishing corresponding source. Third-party material retains its own notices and permissions below.
 
 The original Nodi vector geometry/animation and connected N SVG are also
 available under the MIT license shipped with Nodus v3.2.7, commit
 cfc0f7f03649fe4a6b80bd2ad97b4b7a81aa6441. Its Nodi.tsx, nodi.css and
 nodus-logo.svg files are byte-identical to the current reference versions.
 Their historical copyright and full MIT permission notice are retained in
-NODUS_HISTORICAL_MIT.txt, accessible in Settings. This historical permission
-does not cover the later September DRIFT lotus pose or all DRIFT code.
+NODUS_HISTORICAL_MIT.txt, accessible in Settings. The later September DRIFT lotus pose and first-party adaptation are covered separately by the owner’s MIT license decision for this iOS release.
 The N's original path, four nodes and violet gradient are rendered natively.
 The in-app mark follows Nodus Mobile's painted-bounds sizing; the app icon stays Nodi.
 
@@ -52,6 +49,4 @@ https://zenodo.org/records/4783391
 https://creativecommons.org/publicdomain/zero/1.0/
 
 Nodus Research is an independent personal project. Third-party names and
-marks belong to their respective holders. Audio provenance and the desktop
-distribution review are included in the source repository. App Store rights
-clearance is tracked separately in docs/LICENSING.md.
+marks belong to their respective holders. The individual audio source register is included in Settings. The owner keeps the reproduction recipes and distribution review in the private development repository.

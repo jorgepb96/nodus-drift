@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-License-Identifier: MIT
 // Reproduce the app icon from Nodi's original vector geometry.
 import AppKit
 import CoreGraphics

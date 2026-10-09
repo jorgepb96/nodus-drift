@@ -1,113 +1,45 @@
-# Internal TestFlight beta
+# TestFlight beta · 0.1.0 (7)
 
-The current private beta is **0.1.0 (6)**. Its signed package was uploaded on
-October 9, 2026 at **13:33:06 Europe/Madrid**. Apple completed processing and
-App Store Connect shows **En pruebas / Testing** in **Jorge — beta interna**,
-with only the account holder as tester. The current iPhone installation has not
-been verified; choose 0.1.0 (6) in TestFlight.
+**0.1.0 (7) is Testing in the existing internal group and Waiting for Review for the public beta.** The signed archive was uploaded successfully on October 9, 2026 at **14:10:28 Europe/Madrid**, processed by Apple and assigned to both groups. The first external TestFlight review has been submitted with automatic tester notification enabled. **Public joining and installation are not yet available**: App Store Connect explicitly says the group needs an approved build before testers can join the public link.
 
-Build 6 replaces **81/81** original Moodist audio files with newly produced loops.
-Eighty options use 77 individually documented CC0 sources; radio tuning is
-original Nodus synthesis without broadcast samples. All **89 options** remain,
-as do saved-mix IDs, favorites and the eight native generators. Actual per-file
-weights range from −0.1377% to +0.4299% versus build 5; the whole bank grows by
-30,436 bytes. Source creators, individual licenses and production recipes are
-recorded in [the replacement report](AUDIO_REPLACEMENT_2026-10-09.md) and in
-Settings → Moodist license → Audio sources & permissions.
+The beta will become available after Apple's approval; this record does not claim it has been approved.
 
-Five focused unit tests and four silent UI tests on each of iPhone and iPad
-passed: **13/13** total. The native test decodes all 81 files and checks their
-streaming joins. The signed package's catalogue, audio hashes, eight legal
-notices, version and signature were verified. No audio output was activated;
-no auditory review was performed. The owner will assess the loops by listening
-on the private iPhone beta. See [VALIDATION.md](VALIDATION.md).
+- Public group: **Nodus Drift — Public Beta**
+- Public link: https://testflight.apple.com/join/kAXnsjJS
+- External group ID: `4dcab8a9-bef4-4ff4-bb70-7118cb375068`
+- Existing internal group: **Jorge — beta interna**
+- Version and build: **0.1.0 (7)**
+- Internal-only export: **false**, using ios/ExportOptions-PublicBeta.plist
+- [Build 7](https://appstoreconnect.apple.com/teams/36804ede-f0b5-4cd2-a273-c619feb6168f/apps/6820753637/testflight/ios/36d4db25-e574-46af-a481-6affc1ed7c0b)
+- [Public group](https://appstoreconnect.apple.com/teams/36804ede-f0b5-4cd2-a273-c619feb6168f/apps/6820753637/testflight/groups/4dcab8a9-bef4-4ff4-bb70-7118cb375068/builds)
+- [Internal Testing proof](../screenshots/63-testflight-build7-internal-active.jpg)
+- [External Waiting for Review proof](../screenshots/64-testflight-build7-public-review.jpg)
+- [Enabled link and approval requirement](../screenshots/65-testflight-public-link-awaiting-approval.jpg)
 
-English What to Test notes are saved in App Store Connect and preserved in
-[TESTFLIGHT_NOTES.txt](TESTFLIGHT_NOTES.txt). Build 5 notes remain in
-[TESTFLIGHT_NOTES_BUILD5.txt](TESTFLIGHT_NOTES_BUILD5.txt). The existing beta
-description and App Store draft screenshots remain as previously recorded in
-[TESTFLIGHT_METADATA.md](TESTFLIGHT_METADATA.md); this release adds current
-native audit captures under screenshots/43–47.
+## Install and share
 
-- App Store ID: `6820753637`
-- Bundle ID: `com.drakonis96.nodusdrift`
-- Signing team: `6RPLS9EA4X`
-- Build: `0.1.0 (6)`
-- Scope: **TestFlight internal testing only**
-- [Current build](https://appstoreconnect.apple.com/teams/36804ede-f0b5-4cd2-a273-c619feb6168f/apps/6820753637/testflight/ios/d7e6bc52-a11e-47bb-aa51-8e448625b2a1)
-- [Internal group](https://appstoreconnect.apple.com/teams/36804ede-f0b5-4cd2-a273-c619feb6168f/apps/6820753637/testflight/groups/40f2ec9c-cccb-4c2d-b3ce-ce073515bc77/builds)
+The owner can update now through the existing internal TestFlight invitation and select **0.1.0 (7)**. Physical iPhone installation of build 7 has not been verified. Builds 5 and 6 remain available for comparison.
 
-![Current private TestFlight beta](../screenshots/49-testflight-0.1.0-6-active.jpg)
+Share https://testflight.apple.com/join/kAXnsjJS once the first external build has been approved. The link is enabled and open to everyone under Apple's standard tester maximum; no device-specific criteria or custom lower tester cap were set. No recipient email addresses were uploaded, and there are currently no external testers.
 
-## Install on the iPhone
+## Changes and validation
 
-Open TestFlight, select Nodus Drift and update to **0.1.0 (6)** using the existing
-internal tester account. Reopen TestFlight to refresh available builds if needed.
-The accepted invitation remains valid. Existing build 5 remains available for
-comparison; the new replacement bank is in build 6. No new external invitation
-or public link was created.
+Sounds, My mix, Saved and Settings return to the top when selected, while retaining search/filter state. Clear immediately empties the active mix and cancels its timer, preserving favorites and saved mixes. No confirmation dialog remains.
 
-## Repeatable distribution
+The owner selected MIT for the iOS implementation and incorporated first-party DRIFT material. The repository stays private; MIT requires retained notices rather than publishing source. Third-party Moodist MIT, CC0 source and FSD50K compilation notices remain bundled. See [LICENSING.md](LICENSING.md).
 
-```sh
-python3 scripts/prepare_audio.py
-python3 scripts/audit_audio_bank.py
-xcodegen generate --spec ios/project.yml
-xcodebuild -project ios/NodusDrift.xcodeproj -scheme NodusDrift \
-  -configuration Release -destination 'generic/platform=iOS' \
-  -archivePath .build/NodusDrift-0.1.0-6.xcarchive \
-  -derivedDataPath .build/Archive6DerivedData -allowProvisioningUpdates archive
-xcodebuild -exportArchive -archivePath .build/NodusDrift-0.1.0-6.xcarchive \
-  -exportOptionsPlist ios/ExportOptions-TestFlight.plist \
-  -exportPath .build/TestFlightExport6 -allowProvisioningUpdates
-```
+The same 89 options and build 6 replacement audio bank remain unchanged. English testing notes are in [TESTFLIGHT_NOTES.txt](TESTFLIGHT_NOTES.txt), review notes in [TESTFLIGHT_REVIEW_NOTES_BUILD7.txt](TESTFLIGHT_REVIEW_NOTES_BUILD7.txt), and silent checks in [VALIDATION.md](VALIDATION.md). No audio output or auditory test is performed.
 
-For another upload, increase CURRENT_PROJECT_VERSION and use new archive/log paths.
-Export submits directly to Apple; it need not leave an IPA. Verify processing and
-internal group availability in the integrated browser. Signed archives, source WAVs,
-MP3s, distribution logs and signing credentials stay excluded from Git.
+## Reproduce the upload
 
-## Version history
+Increase CURRENT_PROJECT_VERSION for each new upload, regenerate with XcodeGen, archive the Release scheme, verify the packaged version, catalogue, audio hashes, legal notices and signature, then export with **ExportOptions-PublicBeta.plist**. The previous ExportOptions-TestFlight.plist restricts uploads to internal testing and cannot enable an external beta.
 
-The first upload was 1.0.0 (1), completed at 01:07:15 Europe/Madrid. Its original
-instructions are preserved in TESTFLIGHT_NOTES_BUILD1.txt, and the original
-Testing proof is screenshots/14-testflight-build1.jpg. The user corrected the
-intended current version to 0.1.0. Build 2 was uploaded, processed and assigned to
-the same internal group, with current instructions saved in English. Build 1
-was removed from this group's available builds; its upload/archive history was
-retained. Build 3 was uploaded at 10:16:20, processed and assigned to the same
-internal group. At activation, its status was En pruebas / Testing. Build 2 was removed only from
-the group, preserving its archive/upload history and ability to reassign it.
-Build 2 notes remain in TESTFLIGHT_NOTES_BUILD2.txt. See VERSIONING.md for the
-version source of truth. Build 4 was uploaded at 10:38:46 and activated in the
-same group after its iPhone and iPad deep-filter checks passed. Build 3 was
-removed only from the group; its archive and notes remain available. Historical
-build 4 proof is screenshots/34-testflight-0.1.0-4-active.png, with saved English
-notes in screenshots/33-testflight-0.1.0-4-notes.png. Build 5 was uploaded at
-11:07:35 and activated in the same group after both Saved parity checks passed.
-Build 4 was removed only from the group; its upload and notes are retained in
-TESTFLIGHT_NOTES_BUILD4.txt. Current proof is
-screenshots/41-testflight-0.1.0-5-active.png, with saved English notes in
-screenshots/40-testflight-0.1.0-5-notes.png.
+Signed archives, source WAVs, MP3s, upload logs and signing credentials stay excluded from Git. English-only remains the shipped interface; the translation JSON is a draft.
 
-## Privacy and scope
+## Privacy and App Store scope
 
-The app-specific policy is live at https://nodusresearch.com/drift/privacy/,
-published through Nodus PR #1079 and saved in App Store Connect. The draft uses
-https://github.com/jorgepb96/nodus/issues for support and https://nodusresearch.com/
-for marketing. The saved No Data Collected answer still has its separate final
-Apple accuracy/update declaration pending; this internal build did not publish it.
+The app-specific policy is https://nodusresearch.com/drift/privacy/ and is saved in the App Store draft. TestFlight’s own privacy URL was saved as https://nodusresearch.com/drift/privacy/ and its public Feedback Email was saved as **contact@nodusresearch.com**, per the owner’s instruction. The owner entered the private review-contact fields directly; those details are not saved in source or captures. [Public metadata proof](../screenshots/61-testflight-public-contact-privacy.jpg). The saved No Data Collected answer's final Apple accuracy/update declaration remains separate; this beta does not publish an App Store listing or accept that declaration. The existing App Store description and screenshots remain in the draft.
 
-No App Store review submission, external tester group or public TestFlight link is
-part of this update. The binary is internal-only. The removed Moodist-bank source
-gaps are superseded by the new documented CC0 inputs; public first-party licensing
-and recipient source access remain separate from this private test step.
+## Previous builds
 
-## GitHub source
-
-Native source, legal notices, original-source evidence, loop recipes, hashes,
-size comparisons, tests, release documentation and captures are versioned in the
-existing **private** repository https://github.com/jorgepb96/nodus-drift-mobile.
-prepare_audio.py reconstructs the licensed replacement bank; it never downloads
-the removed Moodist audio. The translation JSON is explicitly a draft, not shipped
-localization: this internal release remains English-only.
+[The build 6 record](TESTFLIGHT_BUILD6.md) preserves all earlier private-beta history and proof. Builds 5 and 6 remain in the existing internal group; their source notices and uploaded binaries are unchanged.

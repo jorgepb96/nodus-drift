@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-License-Identifier: MIT
 import SwiftUI
 
 struct SettingsView: View {
@@ -9,7 +9,7 @@ struct SettingsView: View {
         Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0.1.0"
     }
     var body: some View {
-        ScrollView {
+        DriftTabScrollView(tab: 3) {
             VStack(alignment: .leading, spacing: 26) {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Make yourself\nat home.").font(.system(size: headingSize, design: .serif)).tracking(-0.8)
@@ -52,7 +52,7 @@ struct SettingsView: View {
                             LegalNotice(title: "CC0 · Public domain dedication", file: "CC0-1.0.txt"),
                             LegalNotice(title: "FSD50K · Dataset notice", file: "FSD50K-LICENSE.txt"),
                             LegalNotice(title: "CC BY 4.0 · Dataset license", file: "CC-BY-4.0.txt"),
-                            LegalNotice(title: "GNU AGPL v3", file: "AGPL-3.0.txt"),
+                            LegalNotice(title: "Nodus Drift · MIT", file: "NODUS_DRIFT_MIT.txt"),
                             LegalNotice(title: "Original Nodi & N · MIT", file: "NODUS_HISTORICAL_MIT.txt")
                         ])
                     }.font(.subheadline).accessibilityIdentifier("moodist-license")

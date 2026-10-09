@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-License-Identifier: MIT
 // Native vector adaptation of Nodus's Nodi.tsx and DRIFT's lotus pose.
 import SwiftUI
 

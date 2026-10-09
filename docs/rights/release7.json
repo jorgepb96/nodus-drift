@@ -1,0 +1,82 @@
+{
+  "version": "0.1.0",
+  "build": 7,
+  "bundle_id": "com.drakonis96.nodusdrift",
+  "catalog_options": 89,
+  "verified_audio_files": 81,
+  "catalog_sha256": "c1673a8ca1c25d70ee41940507100e88380c94ae7f65e4b592242882e4a6e57b",
+  "verified_legal_files": [
+    "CC-BY-4.0.txt",
+    "FSD50K-LICENSE.txt",
+    "MOODIST_LICENSE.txt",
+    "CREDITS.md",
+    "PRIVACY.md",
+    "CC0-1.0.txt",
+    "PROVENANCE.md",
+    "AUDIO_SOURCES.md",
+    "NODUS_DRIFT_MIT.txt",
+    "REVIEW.md",
+    "NODUS_HISTORICAL_MIT.txt"
+  ],
+  "license": "MIT",
+  "signature_verified": true,
+  "playback_performed": false,
+  "export_internal_only": false,
+  "runtime_source": [
+    {
+      "path": "ios/NodusDrift/DriftAudioEngine.swift",
+      "sha256": "2876e63fd8667dde8999b91a93a897733545353436cc3f7cbf211adb3c3d28dc"
+    },
+    {
+      "path": "ios/NodusDrift/DriftModel.swift",
+      "sha256": "c4b688930bd8763257683996e6ddd1ce71c457176e5c1b42b8cf1710ea401d5f"
+    },
+    {
+      "path": "ios/NodusDrift/DriftViews.swift",
+      "sha256": "0010846fd7f48af14b1b60f24157c82fecbb3852e0a68f622d637809bf1ca080"
+    },
+    {
+      "path": "ios/NodusDrift/ImmersiveView.swift",
+      "sha256": "5d5c137b2bc2046d7f72f36413337fe3fc284e29034f4eab9fe8cbc14c7d8730"
+    },
+    {
+      "path": "ios/NodusDrift/NodiView.swift",
+      "sha256": "cffe8f6acb417b136dbbab00045a9fb670bd5c25e5c8088caa2200296b41e5b5"
+    },
+    {
+      "path": "ios/NodusDrift/NodusDriftApp.swift",
+      "sha256": "4748172b470623e9fdc26b9d0a26ae061222b33153ffab7b0572f945d5a4f46f"
+    },
+    {
+      "path": "ios/NodusDrift/NodusMark.swift",
+      "sha256": "9efc9f55041fc88103ed6a1e9d8c34672d11abe63ce0c18b7132c1297d796d48"
+    },
+    {
+      "path": "ios/NodusDrift/SettingsView.swift",
+      "sha256": "bcb211eaea4f429cdb1a8f3079ffb6aba4c16b543295bb4adf15f8ab6e6ecedf"
+    }
+  ],
+  "observed_at": "2026-10-09T14:23:13.285419+02:00",
+  "uploaded_at": "2026-10-09T14:10:28+02:00",
+  "app_store_id": "6820753637",
+  "build_id": "36d4db25-e574-46af-a481-6affc1ed7c0b",
+  "internal_group_id": "40f2ec9c-cccb-4c2d-b3ce-ce073515bc77",
+  "internal_status": "Testing",
+  "external_group_id": "4dcab8a9-bef4-4ff4-bb70-7118cb375068",
+  "external_group_name": "Nodus Drift — Public Beta",
+  "public_link": "https://testflight.apple.com/join/kAXnsjJS",
+  "public_link_enabled": true,
+  "external_review_submitted": true,
+  "external_installation_approved": false,
+  "automatic_notification_after_approval": true,
+  "public_feedback_email": "contact@nodusresearch.com",
+  "privacy_url": "https://nodusresearch.com/drift/privacy/",
+  "source_repository_visibility": "private",
+  "silent_ui_checks_passed": 9,
+  "external_status": "Waiting for Review",
+  "public_join_available": false,
+  "proof_internal": "screenshots/63-testflight-build7-internal-active.jpg",
+  "proof_external": "screenshots/64-testflight-build7-public-review.jpg",
+  "proof_link": "screenshots/65-testflight-public-link-awaiting-approval.jpg",
+  "proof_public_contact_privacy": "screenshots/61-testflight-public-contact-privacy.jpg"
+}

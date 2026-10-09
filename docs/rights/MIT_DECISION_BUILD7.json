@@ -1,0 +1,193 @@
+{
+  "date": "2026-10-09",
+  "version": "0.1.0",
+  "build": 7,
+  "license": "MIT",
+  "copyright_holder": "Jorge Pérez Burgueño",
+  "owner_statement": "Yo soy el propietario de Nodus, solo por aclararlo",
+  "owner_license_instruction": "y si hacemos nodus drift MIT y ya? y asi no subimos el codigo",
+  "scope": "Native Drift iOS implementation and the owner’s incorporated DRIFT contributions; this does not relicense the main Nodus repository or third-party material.",
+  "prior_releases": "Previously granted AGPL rights remain; builds 1–6 retain their notices.",
+  "nodus_pin": "68fa0210dc8407938d644978291840d85aeb49b1",
+  "scoped_upstream_history": [
+    {
+      "commit": "dacb1f89deca01fbdd5437679d45f367a823cf82",
+      "date": "2026-09-30T12:30:20+02:00",
+      "author": "Drakonis96",
+      "subject": "feat(drift): add recommended, alphabetical, type and usage sorting"
+    },
+    {
+      "commit": "9c0cd63d890ad0509fe4824786307285e0ec174e",
+      "date": "2026-09-30T11:56:10+02:00",
+      "author": "Drakonis96",
+      "subject": "fix(drift): keep preset search and enable manual preview audio"
+    },
+    {
+      "commit": "a317d027b91098adda2d773b176af6a6ad095aa5",
+      "date": "2026-09-30T11:32:41+02:00",
+      "author": "Drakonis96",
+      "subject": "feat(drift): add independent workspace and named presets"
+    },
+    {
+      "commit": "94ded555ab094cb4db7c5a99e2594cad9ebb8ffe",
+      "date": "2026-09-30T01:35:42+02:00",
+      "author": "Jorge Pérez Burgueño",
+      "subject": "fix(drift): release cancelled loads and reset detached media anchors"
+    },
+    {
+      "commit": "3c65d5c349dd9d5f2ab48f1eef33e5d36ba9107f",
+      "date": "2026-09-30T00:19:44+02:00",
+      "author": "Drakonis96",
+      "subject": "feat(drift): bundle the Moodist recordings under the licenses Moodist declares"
+    },
+    {
+      "commit": "0b103105c88694a662480a8e53800c7e4deecdf5",
+      "date": "2026-09-29T23:42:44+02:00",
+      "author": "Drakonis96",
+      "subject": "feat(toolkit): add Nodus Drift, an offline ambient-sound mixer in Nodus Tools"
+    },
+    {
+      "commit": "3ebee4c274114c2c93f1b8dee151802bd4fabd43",
+      "date": "2026-08-09T19:36:21+02:00",
+      "author": "Drakonis96",
+      "subject": "Reduce modal animation resource usage"
+    },
+    {
+      "commit": "4281da7be097172fa0c84042cab2d69f253f0cdd",
+      "date": "2026-07-30T22:08:00+02:00",
+      "author": "Drakonis96",
+      "subject": "Let Nodi hold its pose when nothing is happening"
+    },
+    {
+      "commit": "23177edb57068c749414861ed5e31a31b1f95ad8",
+      "date": "2026-07-16T13:20:26+02:00",
+      "author": "Drakonis96",
+      "subject": "feat: improve Nodi and family tree interactions"
+    },
+    {
+      "commit": "245e6ae77b0a920e9a8412c334f81cd51907a19a",
+      "date": "2026-07-16T10:57:36+02:00",
+      "author": "Drakonis96",
+      "subject": "Animate Nodi while thinking"
+    },
+    {
+      "commit": "4f0e35f1868e360737ccc908595824c37b8a7f9a",
+      "date": "2026-07-15T16:59:16+02:00",
+      "author": "Drakonis96",
+      "subject": "Release v2.3.0: study workspace and complete recovery"
+    },
+    {
+      "commit": "cc480895a479f69767602f8e319aa31d4047c366",
+      "date": "2026-07-13T23:51:26+02:00",
+      "author": "Drakonis96",
+      "subject": "v2.2.0: Nodi mascot — floating companion with chat, notifications, help"
+    },
+    {
+      "commit": "bf627fc5177fde08e6675277076d05d77ca6040f",
+      "date": "2026-06-15T10:03:41+02:00",
+      "author": "Drakonis96",
+      "subject": "Add research assistant and smarter reading path"
+    },
+    {
+      "commit": "9c7b634ebd48d13c33fba883a2dd236ef0caa524",
+      "date": "2026-06-15T01:01:57+02:00",
+      "author": "Drakonis96",
+      "subject": "Release v0.3.1"
+    }
+  ],
+  "human_authors": [
+    "Drakonis96",
+    "Jorge Pérez Burgueño"
+  ],
+  "historical_mit_files": [
+    {
+      "path": "src/components/nodi/Nodi.tsx",
+      "current_sha256": "c7482c56378d9419edccdb5c39d46f8e6c5d81422072a009148c7a180005ee19",
+      "historical_mit_sha256": "c7482c56378d9419edccdb5c39d46f8e6c5d81422072a009148c7a180005ee19",
+      "identical": true
+    },
+    {
+      "path": "src/assets/nodus-logo.svg",
+      "current_sha256": "fc676b5e5d7def435d465eaad7582e28523c8d62928f85946e977bedba602d0f",
+      "historical_mit_sha256": "fc676b5e5d7def435d465eaad7582e28523c8d62928f85946e977bedba602d0f",
+      "identical": true
+    },
+    {
+      "path": "src/components/nodi/nodi.css",
+      "current_sha256": "4d5a11409cf97b155fb7738be9dc41f9c58338383739c3f38020e71419183f1d",
+      "historical_mit_sha256": "4d5a11409cf97b155fb7738be9dc41f9c58338383739c3f38020e71419183f1d",
+      "identical": true
+    }
+  ],
+  "runtime_dependencies": [
+    "Apple SwiftUI",
+    "Apple Foundation",
+    "Apple AVFoundation",
+    "Apple MediaPlayer",
+    "Apple CryptoKit"
+  ],
+  "third_party_code_packages": [],
+  "third_party_notices_preserved": [
+    "Moodist MIT © 2023 MAZE",
+    "Historical Nodus MIT",
+    "CC0-1.0 individual originals",
+    "FSD50K CC-BY-4.0 compilation"
+  ],
+  "source_publication_required_by_mit": false,
+  "source_repository_visibility": "private",
+  "files": [
+    {
+      "path": "ios/NodusDrift/DriftAudioEngine.swift",
+      "sha256": "2876e63fd8667dde8999b91a93a897733545353436cc3f7cbf211adb3c3d28dc"
+    },
+    {
+      "path": "ios/NodusDrift/DriftModel.swift",
+      "sha256": "c4b688930bd8763257683996e6ddd1ce71c457176e5c1b42b8cf1710ea401d5f"
+    },
+    {
+      "path": "ios/NodusDrift/DriftViews.swift",
+      "sha256": "0010846fd7f48af14b1b60f24157c82fecbb3852e0a68f622d637809bf1ca080"
+    },
+    {
+      "path": "ios/NodusDrift/ImmersiveView.swift",
+      "sha256": "5d5c137b2bc2046d7f72f36413337fe3fc284e29034f4eab9fe8cbc14c7d8730"
+    },
+    {
+      "path": "ios/NodusDrift/NodiView.swift",
+      "sha256": "cffe8f6acb417b136dbbab00045a9fb670bd5c25e5c8088caa2200296b41e5b5"
+    },
+    {
+      "path": "ios/NodusDrift/NodusDriftApp.swift",
+      "sha256": "4748172b470623e9fdc26b9d0a26ae061222b33153ffab7b0572f945d5a4f46f"
+    },
+    {
+      "path": "ios/NodusDrift/NodusMark.swift",
+      "sha256": "9efc9f55041fc88103ed6a1e9d8c34672d11abe63ce0c18b7132c1297d796d48"
+    },
+    {
+      "path": "ios/NodusDrift/SettingsView.swift",
+      "sha256": "bcb211eaea4f429cdb1a8f3079ffb6aba4c16b543295bb4adf15f8ab6e6ecedf"
+    },
+    {
+      "path": "ios/NodusDriftTests/DriftTests.swift",
+      "sha256": "d802f5c1a9813228aff81caa3049eeacf434fecb0176647f1339a689c685f72b"
+    },
+    {
+      "path": "ios/NodusDriftUITests/DriftSilentUITests.swift",
+      "sha256": "13528505f2510f344c40a293bbf3d51a26bb2e5e9eb456321ca356e254d5e82d"
+    },
+    {
+      "path": "ios/NodusDriftUITests/DriftUITests.swift",
+      "sha256": "228cebd290f108a2a9b4e23cf2fdcf3b3ac17a3037f1f0574fb4ad2f4f59ac8b"
+    },
+    {
+      "path": "scripts/render_icon.swift",
+      "sha256": "400f27ca8647304418f0a286841a6a376bbc6fec93fb6cf50a2a2f0a42f674b2"
+    }
+  ],
+  "basis_urls": [
+    "https://opensource.org/license/mit",
+    "https://www.gnu.org/licenses/gpl-faq.en.html#ReleaseUnderGPLAndNF"
+  ],
+  "conclusion": "Scoped Git history identifies only the owner’s aliases as human authors. MIT is applied on the owner’s instruction and ownership statement; this is an evidence review, not an absolute warranty of title."
+}
