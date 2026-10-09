@@ -116,3 +116,7 @@ details and the physical recording are excluded from these screenshots.
 The large iPhone gallery also contains six accepted screenshots. The draft has
 not been submitted: Apple requires the final App Privacy declaration publication.
 See [current preparation](../docs/APP_STORE.md).
+
+After the owner accepted the App Privacy declaration, Add for Review passed.
+[Ready for Review and final submission button](80-app-store-ready-for-review.jpg)
+shows build 0.1.0 (8) in the draft. Submit for Review was not pressed.

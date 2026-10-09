@@ -66,16 +66,19 @@
   "mac_apple_silicon_opt_in": false,
   "vision_pro_opt_in": false,
   "review_contact_information": "Completed by the owner; private values not copied to this record",
-  "privacy_declaration": "No Data Collected draft saved; final Publish requires owner confirmation",
+  "privacy_declaration": "No Data Collected; owner accepted publication, and Add for Review validation succeeded.",
   "proof_screenshots": [
     "77-app-store-final-iphone.jpg",
     "78-app-store-final-ipad.jpg",
-    "79-app-store-video-auto-release.jpg"
+    "79-app-store-video-auto-release.jpg",
+    "80-app-store-ready-for-review.jpg"
   ],
-  "draft_status": "Prepare for Submission",
-  "validation_errors": [
-    "Before submission, an administrator must provide app privacy practices in App Privacy."
-  ],
-  "privacy_declaration_published": false,
-  "verified_on": "2026-10-09"
+  "draft_status": "Ready for Review",
+  "validation_errors": [],
+  "privacy_declaration_published": true,
+  "verified_on": "2026-10-09",
+  "privacy_publication_evidence": "Owner confirmed acceptance; App Store Connect accepted 0.1.0 (8) into the review draft without privacy errors.",
+  "review_draft_created": true,
+  "final_submission_button": "Submit for Review remains unclicked",
+  "owner_review_pending": true
 }

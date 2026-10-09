@@ -3,10 +3,11 @@
 ## Current saved draft — 9 October 2026
 
 Nodus Drift: Ambient Sounds, version 0.1.0, build 8, is saved in App Store
-Connect for the owner's final review. No App Store review has been submitted.
-The attempt to add the version to a review draft returned one requirement:
-finalize App Privacy. The No Data Collected answer and policy URL are saved;
-Apple's Publish confirmation awaits the owner's authorization.
+Connect for the owner's final review. The owner accepted publication of the
+No Data Collected privacy declaration. App Store Connect then accepted 0.1.0 (8)
+into the review draft and changed the version to Ready for Review.
+The final Submit for Review button remains unclicked: no App Store review has
+been submitted.
 
 - App Store ID: 6820753637
 - Bundle ID: com.drakonis96.nodusdrift
@@ -62,13 +63,14 @@ silent build-8 UI checks and signed archive verification remain the build eviden
 
 ## Final owner step
 
-Apple's App Privacy Publish dialog states that publication confirms the answers
-are accurate, comply with App Store guidelines and applicable law, and will be
-updated promptly if data practices change. That acceptance has not been performed.
+The owner completed Apple's App Privacy publication acceptance. Add for Review
+validation passed with no remaining errors. The review draft contains iOS 0.1.0 (8)
+and is left open for the owner's final review.
 
-After the owner authorizes this declaration, revalidate Add for Review and leave
-the final Submit for Review action for the owner's review. Automatic release after
-approval is already selected. No approval or release date is promised.
+Submit for Review has not been pressed. Automatic release after approval remains
+selected. No approval or release date is promised. The latest
+[Ready for Review proof](../screenshots/80-app-store-ready-for-review.jpg) shows the
+version, build and unclicked final submission button.
 
 [Preparation receipt](APP_STORE_PREPARATION.json) records the verified fields.
 [TESTFLIGHT.md](TESTFLIGHT.md) retains the separate beta distribution history.
