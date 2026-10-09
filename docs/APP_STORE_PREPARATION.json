@@ -1,0 +1,81 @@
+{
+  "app": "Nodus Drift: Ambient Sounds",
+  "version": "0.1.0",
+  "build": 8,
+  "app_store_id": "6820753637",
+  "review_submission_performed": false,
+  "app_store_publication_performed": false,
+  "physical_device": "iPhone 16 Pro Max",
+  "os": "iOS 26.4",
+  "device_os_evidence": "Owner statement; screen recording resolution 1320×2868 is consistent. The recording does not independently identify OS/build.",
+  "video_visual_review": "Silent sampled frames show mixing, saving/loading/deleting presets, timer settings, search/sort/categories and meditation. No audible playback by the agent.",
+  "physical_audio_route_interruptions_energy_tests": "Not established by this recording.",
+  "app_store_notes_file": "APP_REVIEW_MESSAGE.txt",
+  "local_attachment": "Nodus-Drift-demo-iPhone-16-Pro-Max-iOS-26.4.mp4",
+  "attachment_kind": "Private App Review demonstration; not a public 15–30 second App Preview.",
+  "store_build_sdk": "iphoneos26.2",
+  "min_os": "17.0",
+  "platforms": [
+    "iPhone",
+    "iPad"
+  ],
+  "archive_receipt": "docs/rights/release8-archive-verification.json",
+  "privacy_url": "https://nodusresearch.com/drift/privacy/",
+  "marketing_url": "https://nodusresearch.com/",
+  "presenter_url": "https://apps.apple.com/es/app/nodus-presenter/id6818107823",
+  "presenter_link_evidence": "Apple iTunes Search API, software in ES; track ID 6818107823, artist Jorge Perez Burgueno, bundle com.nodusresearch.presenter.",
+  "approval_guarantee": false,
+  "prepared_attachment_metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1320,
+        "height": 2868,
+        "r_frame_rate": "30/1"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "r_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "185.473991",
+      "size": "18588480"
+    }
+  },
+  "prepared_attachment_sha256": "613f28b4150b262620f813b6af18d86d1d3f861d02075b41812bf06ebb90816d",
+  "attachment_prepared": true,
+  "attachment_uploaded": true,
+  "proposed_store_title": "Nodus Drift: Ambient Sounds",
+  "proposed_store_title_characters": 27,
+  "proposed_store_description_file": "APP_STORE_DESCRIPTION.txt",
+  "proposed_store_promotional_text_file": "APP_STORE_PROMOTIONAL_TEXT.txt",
+  "store_changes_saved": true,
+  "requested_release_setting": "Automatically release this version after Apple approves it",
+  "release_setting_saved": true,
+  "store_screenshot_live_verification": true,
+  "build_selected": true,
+  "age_rating": "4+ with regional equivalents",
+  "category": "Lifestyle",
+  "price": "Free (0 in all 175 territories)",
+  "availability": "All 175 territories: available when the app is released",
+  "mac_apple_silicon_opt_in": false,
+  "vision_pro_opt_in": false,
+  "review_contact_information": "Completed by the owner; private values not copied to this record",
+  "privacy_declaration": "No Data Collected draft saved; final Publish requires owner confirmation",
+  "proof_screenshots": [
+    "77-app-store-final-iphone.jpg",
+    "78-app-store-final-ipad.jpg",
+    "79-app-store-video-auto-release.jpg"
+  ],
+  "draft_status": "Prepare for Submission",
+  "validation_errors": [
+    "Before submission, an administrator must provide app privacy practices in App Privacy."
+  ],
+  "privacy_declaration_published": false,
+  "verified_on": "2026-10-09"
+}

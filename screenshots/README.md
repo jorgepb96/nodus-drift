@@ -103,3 +103,16 @@ The populated card retains its catalogue dimensions. The mix stays paused.
 - [Private beta, build 8 Testing](73-testflight-build8-private.jpg)
 - [Public beta, build 8 Waiting for Review](74-testflight-build8-public-review.jpg)
 - [All 89 favorites and retained search after tab navigation](76-build8-all-favorites-search.png)
+
+## App Store final draft — 0.1.0 (8)
+
+Fresh browser proofs show the saved title and existing accepted media. Contact
+details and the physical recording are excluded from these screenshots.
+
+- [Six medium iPhone screenshots](77-app-store-final-iphone.jpg)
+- [Six 13-inch iPad screenshots](78-app-store-final-ipad.jpg)
+- [Named video attachment and automatic release](79-app-store-video-auto-release.jpg)
+
+The large iPhone gallery also contains six accepted screenshots. The draft has
+not been submitted: Apple requires the final App Privacy declaration publication.
+See [current preparation](../docs/APP_STORE.md).

@@ -1,66 +1,74 @@
 # App Store preparation
 
-## Product
+## Current saved draft — 9 October 2026
 
-- Name: Nodus Drift
-- Bundle ID: `com.drakonis96.nodusdrift`
-- Language: English
-- Devices: iPhone and iPad; iOS 17+
-- Price: Free; all features included
-- In-app purchases/subscriptions/advertising: None
-- Login: None; no demo account needed
-- Category suggestion: Lifestyle
-- Privacy: No data collected; tracking disabled
-- Privacy policy source: `ios/NodusDrift/Resources/Legal/PRIVACY.md`
-- Background mode: Audio, for user-initiated ambient playback
-- Required-reason API: app-only UserDefaults, CA92.1, declared in PrivacyInfo.xcprivacy
+Nodus Drift: Ambient Sounds, version 0.1.0, build 8, is saved in App Store
+Connect for the owner's final review. No App Store review has been submitted.
+The attempt to add the version to a review draft returned one requirement:
+finalize App Privacy. The No Data Collected answer and policy URL are saved;
+Apple's Publish confirmation awaits the owner's authorization.
 
-## Saved draft description and media
+- App Store ID: 6820753637
+- Bundle ID: com.drakonis96.nodusdrift
+- Main language: English (US)
+- Devices: iPhone and iPad; minimum iOS/iPadOS 17.0
+- Category: Lifestyle
+- Age rating: 4+, with regional equivalents
+- Price: Free in all 175 configured countries and regions
+- Availability: Available when the app is released
+- Purchases, subscriptions, advertising and login: None
+- Mac with Apple silicon and Apple Vision Pro distribution: Disabled
+- Copyright: 2026 Nodus Research
+- Release setting: Automatically release after Apple approval
+- Private App Review contacts: Completed by the owner; not copied to this repository
 
-On October 9, 2026, the English (US) description and promotional text were saved
-to the App Store draft, initially version 1.0 and corrected to 0.1.0. Exact text is in
-[APP_STORE_DESCRIPTION.txt](APP_STORE_DESCRIPTION.txt) and
-[APP_STORE_PROMOTIONAL_TEXT.txt](APP_STORE_PROMOTIONAL_TEXT.txt).
+## Saved product information
 
-Six actual screenshots were uploaded for each of the medium Dynamic Island
-iPhone, large Dynamic Island iPhone and 13-inch iPad. The draft remains Prepare
-for Submission, with no build attached or App Store review submitted. See
-[TESTFLIGHT_METADATA.md](TESTFLIGHT_METADATA.md) for the upload record.
+The title is in [APP_STORE_TITLE.txt](APP_STORE_TITLE.txt), the English description in
+[APP_STORE_DESCRIPTION.txt](APP_STORE_DESCRIPTION.txt), the promotional text in
+[APP_STORE_PROMOTIONAL_TEXT.txt](APP_STORE_PROMOTIONAL_TEXT.txt), and the 94-character
+keyword list in [APP_STORE_KEYWORDS.txt](APP_STORE_KEYWORDS.txt).
+The description includes reading and studying and removes both passages the owner
+requested. The existing in-app name remains Nodus Drift.
 
-## Proposed review notes
+- Marketing: https://nodusresearch.com/
+- Support: https://github.com/jorgepb96/nodus/issues
+- Privacy policy: https://nodusresearch.com/drift/privacy/
+- Nodus Presenter: https://apps.apple.com/es/app/nodus-presenter/id6818107823
 
-This is a standalone native SwiftUI ambient sound mixer. It needs no account, network
-connection, companion desktop app or purchase. Select any sound in Sounds to start
-playback, or load a starter mix and press Play in My mix. Up to six voices may play
-at once. One binaural preset may be selected at a time; use stereo headphones to
-hear separated tones. All 81 newly produced loops are included in the app bundle; the eight native generators work on device.
+There are six accepted screenshots in each gallery: medium Dynamic Island iPhone,
+large Dynamic Island iPhone, and 13-inch iPad. The six images cover home, mixer,
+saved mixes, Nodi resting, Nodi awake, and the sound library. These are existing
+uploaded captures; they were verified, not replaced with new build-8 captures.
+See [the store media record](../screenshots/app-store/README.md).
 
-My mix provides volume controls, saved mixes and a sleep timer. The expand icon
-opens meditation mode. Controls hide after five seconds; tap anywhere to reveal
-controls and open Nodi's eyes. The X leaves meditation mode. VoiceOver keeps the
-controls visible and supplies an escape action. Reduce Motion stops the breathing
-animation. Audio background mode is used only for deliberate playback. Unplugging
-headphones or an audio interruption pauses playback. No medical effects are claimed.
+## Private review demonstration
 
-## Before public App Store distribution
+[APP_REVIEW_MESSAGE.txt](APP_REVIEW_MESSAGE.txt) is saved in App Review Information.
+The complete 3:05 demonstration is attached as
+Nodus-Drift-demo-iPhone-16-Pro-Max-iOS-26.4.mp4.
+It is a private review attachment, not a public App Preview.
 
-1. Complete the release rights review in LICENSING.md. Attach any rights documentation
-   Apple needs; do not equate free pricing with cleared distribution.
-   The original recording-provenance gap was resolved by the replacement bank;
-   AUDIO_REPLACEMENT_2026-10-09.md records its individual CC0 sources and notices.
-   The owner selected MIT for the iOS implementation from build 7; public source publication is not required by MIT. Third-party notices remain bundled.
-2. Select the developer's team, verify the bundle ID, and configure distribution signing.
-3. Run the app on a physical iPhone: headphones/Bluetooth routes, phone interruptions,
-   locked-screen playback, timer completion, VoiceOver, energy usage and sleep/wake.
-4. Confirm iPad multitasking, landscape and accessibility sizes on intended devices.
-5. The Drift-specific policy is hosted at https://nodusresearch.com/drift/privacy/
-   and saved in App Store Connect, with the main Nodus issue tracker as support URL.
-   Complete the current age-rating questionnaire accurately.
-6. Archive the Release scheme, validate the signed archive and upload using Xcode.
-7. Set the price to Free, attach the real screenshots, and submit for Apple's review.
+The owner identifies the device as a physical iPhone 16 Pro Max running iOS 26.4.
+The 1320 × 2868 recording is consistent with that device, but does not independently
+identify the OS version. A full-duration H.264/AAC copy was uploaded after silent
+visual inspection. Neither the original nor the prepared video is committed.
 
-The previous internal-only build 1.0.0 (1) was signed, uploaded and assigned to the
-account holder in TestFlight. The current source version is 0.1.0, build 7. See
-TESTFLIGHT.md for the actual distribution evidence.
-Public rights clearance, device validation and App Store approval remain separate.
-No public App Store review submission was performed. The separate external TestFlight beta is tracked in TESTFLIGHT.md.
+The recording shows mixing, saved mixes, timer settings, search/sort/categories and
+meditation. It does not establish every physical audio route, interruption or energy
+test. No sound was played during this preparation. The eight previously completed
+silent build-8 UI checks and signed archive verification remain the build evidence:
+[archive receipt](rights/release8-archive-verification.json).
+
+## Final owner step
+
+Apple's App Privacy Publish dialog states that publication confirms the answers
+are accurate, comply with App Store guidelines and applicable law, and will be
+updated promptly if data practices change. That acceptance has not been performed.
+
+After the owner authorizes this declaration, revalidate Add for Review and leave
+the final Submit for Review action for the owner's review. Automatic release after
+approval is already selected. No approval or release date is promised.
+
+[Preparation receipt](APP_STORE_PREPARATION.json) records the verified fields.
+[TESTFLIGHT.md](TESTFLIGHT.md) retains the separate beta distribution history.
