@@ -12,7 +12,7 @@ Nodus Drift is a free, open-source app for playing ambient sounds on iPhone and 
 
 It is built with SwiftUI and AVAudioEngine. Audio is decoded, mixed and played on the device.
 
-A public TestFlight is not open yet. The current release supports iPhone and iPad on iOS 17 or later; a macOS version is not included in this repository.
+A public TestFlight is not open yet. The current mobile release supports iPhone and iPad on iOS 17 or later.
 
 ## Features
 
@@ -71,6 +71,6 @@ All screenshots use the same 600 × 800 frame.
 
 ### macOS
 
-The current release is for iPhone and iPad. It does not include a macOS app.
+To use the Nodus Drift experience on macOS, install the original [Nodus Research](https://github.com/jorgepb96/nodus) app.
 
 Nodus Drift is licensed under the MIT licence. See [docs/LICENSING.md](docs/LICENSING.md) for the licence scope and [docs/rights](docs/rights) for the audio source register. Moodist catalogue data is MIT licensed.
