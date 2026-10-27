@@ -1,87 +1,76 @@
-# Nodus Drift for iOS
+<p align="center">
+  <img src="screenshots/readme-banner.png" alt="Nodus Drift: Nodi with headphones, sound category icons and the Nodus Drift N on a dark background.">
+</p>
 
-The quiet corner of [Nodus](https://github.com/jorgepb96/nodus), rebuilt with
-SwiftUI, AVAudioEngine and native iOS controls. English only. iPhone and iPad,
-iOS 17 and later. Free, with no accounts, advertisements, subscriptions or purchases.
+<p align="center">
+  <img alt="TestFlight: Coming soon" src="https://img.shields.io/badge/TestFlight-Coming_soon-4f46e5?style=for-the-badge&amp;logo=apple&amp;logoColor=white">
+</p>
 
-## Run
+# Nodus Drift
 
-Requires Xcode and [XcodeGen](https://github.com/yonaskolb/XcodeGen).
+Nodus Drift is a free, open-source app for playing ambient sounds on iPhone and iPad. It includes 89 sounds, supports mixes of up to six sounds, and works without a network connection. There are no accounts, ads, tracking, subscriptions or purchases.
 
-```sh
-python3 scripts/prepare_audio.py
-xcodegen generate --spec ios/project.yml
-open ios/NodusDrift.xcodeproj
-```
+It is built with SwiftUI and AVAudioEngine. Audio is decoded, mixed and played on the device.
 
-Select the NodusDrift scheme and an iPhone or iPad simulator. For a physical device,
-select your own development team in Signing & Capabilities. No API keys or server
-are needed. Recordings are downloaded only during preparation; the app works offline.
+A public TestFlight is not open yet. The current release supports iPhone and iPad on iOS 17 or later; a macOS version is not included in this repository.
 
-## Experience
+## Features
 
-| Desktop Drift capability | Native iOS implementation |
-| --- | --- |
-| Full catalogue | Same 89 options, names, categories and frequencies; newly produced licensed loops |
-| Six simultaneous sounds | Shared selection rule; one binaural preset at a time |
-| Individual and master volume | Native sliders, 150 ms gain ramps and output peak limiter |
-| Seamless loops | New licensed loops stream from disk with 200 ms circular PCM seams |
-| Noise | Independent stereo white, Voss–McCartney pink and leaky-integrator brown noise |
-| Binaural | 100 Hz carrier; Delta 2, Theta 5, Alpha 10, Beta 20, Gamma 40 Hz |
-| Favorites and search | Local favorites, accent-insensitive search, nine category filters |
-| Sort | Recommended, alphabetical, by type, most used; also for saved mixes |
-| Presets | Up to 48 saved mixes; names, icons, sounds and all volumes; edit/delete |
-| Restore | Local settings persist; restored and loaded mixes always start paused |
-| Meditating Nodi | Native vector lotus pose, pearl limbs, internal mesh and six-second breath |
-| Full screen | Black meditation scene, tap to wake, gaze toward touch, rest after 2.5 s |
-| Mobile additions | Starter mixes, sleep timer, haptics, background playback, lock-screen controls |
-| Accessibility | VoiceOver labels and actions, Reduce Motion, adaptive grids, native controls |
+- **Sound catalogue:** 89 sounds in Rain, Nature, Animals, Places, Things, Transport, Urban, Noise and Binaural categories.
+- **Mixing:** play up to six sounds at once. Each sound has its own volume, and a master volume controls the mix. Gain changes use 150 ms ramps and the output passes through a peak limiter.
+- **Playback:** seamless loops, independent stereo white, pink and brown noise, and five binaural presets. Audio playback continues in the background with lock-screen controls.
+- **Discovery:** search sounds, mark favorites, filter by category and sort by recommended order, name, type or use count.
+- **Saved mixes:** save up to 48 mixes with a name, icon, sounds and volumes. Edit or delete them at any time. Restored mixes start paused.
+- **Sleep timer:** stop playback after a chosen number of minutes. Playback fades out when the timer ends, including while the screen is locked.
+- **Nodi:** an animated Nodus character with a lotus pose, breathing animation and a full-screen meditation view.
+- **Accessibility:** VoiceOver labels and actions, Reduce Motion support, adaptive grids and native controls.
+- **Offline use:** all sounds, favorites, mixes and settings are stored on the device. No account or server is required.
 
-There is no React, Electron, web view, audio service or third-party runtime dependency.
-Nodi is drawn with SwiftUI Canvas from the original vector geometry.
-The original connected N identifies the in-app headers; Nodi remains the app icon.
+## Sound library
 
-## Tests
+The app contains 89 sounds. The counts below match the bundled catalogue.
 
-```sh
-xcodebuild -project ios/NodusDrift.xcodeproj -scheme NodusDrift \
-  -destination 'platform=iOS Simulator,name=iPhone 17 Pro' \
-  -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO test
-```
+| Category | Sounds | Examples |
+| --- | ---: | --- |
+| Rain | 8 | Light rain, heavy rain, thunder, rain on a window or tent |
+| Nature | 12 | River, waves, campfire, wind, forest |
+| Animals | 16 | Birds, seagulls, crickets, wolf, owl |
+| Places | 16 | Café, airport, church, temple, construction site |
+| Things | 16 | Keyboard, typewriter, paper, clock, wind chimes |
+| Transport | 6 | Train, airplane, submarine, sailboat |
+| Urban | 7 | Highway, road, ambulance siren, busy street, crowd |
+| Noise | 3 | White noise, pink noise, brown noise |
+| Binaural | 5 | Delta 2 Hz, Theta 5 Hz, Alpha 10 Hz, Beta 20 Hz, Gamma 40 Hz |
 
-The tests check the entire audio catalogue, file hashes and decoding, circular seams,
-noise characteristics, binaural frequencies, memory limits, state recovery, saved mixes,
-selection policy, playback cancellation and the main UI flows. UI tests attach real
-simulator screenshots. See [docs/VALIDATION.md](docs/VALIDATION.md) for recorded results.
+Binaural presets use a 100 Hz carrier. Use stereo headphones; play one binaural preset at a time. The other categories can be mixed together.
 
-For silent interaction checks, run only `NodusDriftUITests/DriftSilentUITests`
-with `-only-testing:NodusDriftUITests/DriftSilentUITests`. These tests launch
-the Debug app with an audio guard and never press Play. The build 4 iPhone and
-iPad runs each passed both interaction tests. The build 5 Saved parity regression
-also passes on both devices, including saving and loading while paused.
+## Mixes and playback
 
-## Source and rights
+- A mix can contain up to six sounds. The current mix is shown in **My mix**, where each sound and the master output can be adjusted.
+- Starter mixes provide a quick way to begin. **Rainy pages** combines light rain and brown noise; **By the sea** combines waves and seabirds.
+- Up to 48 mixes can be saved. A saved mix stores its name, icon, sound selection and volume levels.
+- The player supports background audio, lock-screen controls, a sleep timer and optional haptics.
+- The meditating Nodi view provides a full-screen scene. It respects Reduce Motion and keeps controls available to VoiceOver.
+- All mixing and playback are local. The app does not send listening data to a server.
 
-The current app version is **0.1.0**, with build number **8**. This release fixes deeply scrolled Favorites and other library filters while retaining search focus and card dimensions. Eight focused silent UI checks passed across iPhone and iPad. Build 8 is **Testing** in the existing internal group and **Waiting for Review** in the public TestFlight group. Public joining and installation begin after Apple approves the first external build. The obsolete pending build 7 review was withdrawn; earlier private builds remain available.
-The previous upload, 1.0.0 (1), remains in the release history.
-See [docs/TESTFLIGHT.md](docs/TESTFLIGHT.md) for installation and release evidence.
+## Screenshots
 
-Reference: `jorgepb96/nodus` at `68fa0210dc8407938d644978291840d85aeb49b1`.
-Catalogue reference: `remvze/moodist` at `11c0be2200116a3635880d600fd6953899cc51a3`.
-Audio: 80 new CC0-based loops and one original Nodus radio loop; see
-[the replacement report](docs/AUDIO_REPLACEMENT_2026-10-09.md).
+All screenshots use the same 600 × 800 frame.
 
-The native iOS implementation and owner’s incorporated DRIFT contributions use MIT from build 7, on the owner’s instruction. Earlier Nodus releases retain their licenses. The historical MIT notice for the original
-Nodi geometry/animation and connected N is also included. Moodist catalogue data
-retains its MIT notice. The original Moodist audio bank has been completely replaced.
-CC0 source permissions, FSD50K attribution and new Nodus sound design are
-recorded in the [81-option source register](docs/rights/replacement-audio/source-register.csv).
-Audio assets remain excluded from Git and are reproducible with the checked-in
-recipes. Preparation never fetches the removed Moodist recordings.
+### iOS
 
-Install Python dependencies with `python3 -m pip install -r scripts/requirements-audio.txt`
-and use FFmpeg 8.0.1 with libmp3lame. `prepare_audio.py` validates complete release
-hashes before installing reconstructed assets. `audit_audio_bank.py` checks all
-81 replacements, per-file weights and the unchanged 89-option catalogue.
+| Home | Sounds | My mix |
+| :---: | :---: | :---: |
+| ![iPhone Home screen with Nodi, starter mixes and sound search](screenshots/readme/ios-home.png) | ![iPhone sound catalogue filtered to Rain](screenshots/readme/ios-sounds.png) | ![iPhone My mix screen with two sounds and master volume](screenshots/readme/ios-mix.png) |
 
-The development repository remains private. MIT does not require public source publication; third-party notices remain bundled. See [docs/LICENSING.md](docs/LICENSING.md) for the scoped license decision and [docs/TESTFLIGHT.md](docs/TESTFLIGHT.md) for public beta status.
+### iPadOS
+
+| Home | My mix | Settings |
+| :---: | :---: | :---: |
+| ![iPad Home screen with Nodi, starter mixes and the sound catalogue](screenshots/readme/ipados-home.png) | ![iPad My mix screen with six sounds and playback controls](screenshots/readme/ipados-mix.png) | ![iPad Settings screen with haptics, meditation and audio options](screenshots/readme/ipados-settings.png) |
+
+### macOS
+
+The current release is for iPhone and iPad. It does not include a macOS app.
+
+Nodus Drift is licensed under the MIT licence. See [docs/LICENSING.md](docs/LICENSING.md) for the licence scope and [docs/rights](docs/rights) for the audio source register. Moodist catalogue data is MIT licensed.
