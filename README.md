@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <a href="https://testflight.apple.com/join/kAXnsjJS">
-    <img alt="Join the Nodus Drift public beta on TestFlight" src="https://img.shields.io/badge/TestFlight-Public_beta-4f46e5?style=for-the-badge&amp;logo=apple&amp;logoColor=white">
+  <a href="https://apps.apple.com/app/nodus-drift-ambient-sounds/id6820753637">
+    <img alt="Download Nodus Drift on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" width="150">
   </a>
 </p>
 
@@ -14,7 +14,7 @@ Nodus Drift is a free, open-source app for playing ambient sounds on iPhone and 
 
 It is built with SwiftUI and AVAudioEngine. Audio is decoded, mixed and played on the device.
 
-The public beta is available on [TestFlight](https://testflight.apple.com/join/kAXnsjJS). The current mobile release supports iPhone and iPad on iOS 17 or later.
+Download Nodus Drift on the [App Store](https://apps.apple.com/app/nodus-drift-ambient-sounds/id6820753637) for iPhone and iPad. It requires iOS 17 or iPadOS 17 or later.
 
 ## Features
 
