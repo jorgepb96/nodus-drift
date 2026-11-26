@@ -1,0 +1,28 @@
+{
+  "source": "Existing OS crash report copied read-only from systemCrashLogs; app was not launched and no device test was run",
+  "rawReportStoredInIgnoredBuildDirectory": true,
+  "rawReportSHA256": "31a19961a39e2f95fb86bcbabc87eb3aa3d3a0d27e1098ae7c4958cdb3fbe1f0",
+  "appVersion": "0.1.0",
+  "build": "10",
+  "osVersion": "iPhone OS 27.2 (24B119)",
+  "exception": {
+    "codes": "0x0000000000000000, 0x0000000000000000",
+    "rawCodes": [
+      0,
+      0
+    ],
+    "type": "EXC_CRASH",
+    "signal": "SIGABRT"
+  },
+  "terminationSignal": "Abort trap: 6",
+  "faultingThread": 0,
+  "appImageUUID": "9a52f179-29b8-36e8-9d5b-3067a6f45b72",
+  "symbolicatedAppFrame": "closure #1 in DriftAudioEngine.pump()",
+  "failingFrameworkFrames": [
+    "AVAudioPlayerNodeImpl::StartImpl(AVAudioTime*, NSError**)",
+    "AVAudioNodeImplBase::Start(AVAudioTime*, NSError**)",
+    "-[AVAudioPlayerNode playAndReturnError:]"
+  ],
+  "interpretation": "An Objective-C exception during legacy player startup aborts the app. The report does not include the exception reason, so the exact invalid graph condition is not asserted.",
+  "fix": "Validate player attachment/output connection, restart an engine stopped during asynchronous preparation, call the throwing playAudio() API on iOS 27+, detach failed sources and report errors through the existing UI."
+}

@@ -1,0 +1,11 @@
+Version 0.2.0 — CarPlay soundscapes and static cover art
+
+- Added a native CarPlay Audio interface with Home, My Mixes and Explore. Saved mixes and Studio scenes use static photographic covers and readable titles. On iOS 26 and later, artwork appears in adaptive multi-line grids; earlier versions use native image rows or thumbnail lists.
+- Select a cover to play the soundscape and open the system Now Playing screen. Connecting to CarPlay does not start playback automatically. Continue Listening and recent selections provide quick access to existing audio.
+- The phone and CarPlay share one audio engine, saved library and Studio timeline. Scene editing, AI generation, model downloads and animated landscapes remain in the iPhone app.
+- Now Playing publishes the selected mix or scene name and static cover. Finite Studio scenes also provide duration and playback position. Temporary interruptions resume only when permitted by the system; an explicit pause cancels resumption.
+- Missing local recordings are unavailable. Playback errors are shown on CarPlay without asking you to operate the iPhone.
+
+Please check the artwork grid, saved mixes, Studio scenes, Explore, recent selections and play/pause from the vehicle controls. Try switching between a mix and a Studio scene, reconnecting, and browsing with the iPhone locked. Confirm navigation prompts and calls behave appropriately.
+
+Validation note: shared playback, all 22 static covers, full-library grid content and interruption logic were tested in the iOS simulator. Phone landscape browsing and Studio editing regression tests passed. Actual vehicle-display rendering and locked-phone/vehicle routing have not yet been validated on physical hardware.

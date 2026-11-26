@@ -45,6 +45,77 @@ final class DriftSilentUITests: XCTestCase {
         app.launchArguments.append("-ui-testing-scroll-fixture")
         app.launch()
     }
+    func testLandscapeLibraryShowsCompleteCardsWithAnActiveMix() {
+        launchScrollFixture()
+        defer { XCUIDevice.shared.orientation = .portrait }
+        // Use the app's native geometry control: simulator sensor rotation can
+        // be ignored while a resizable window is retained by Device Hub.
+        app.buttons["enter-meditation"].tap(); app.tap()
+        let rotate = app.buttons["rotate-immersive-view"]
+        XCTAssertTrue(rotate.waitForExistence(timeout: 5))
+        if app.windows.firstMatch.frame.width < app.windows.firstMatch.frame.height { rotate.tap() }
+        let wide = NSPredicate { _, _ in self.app.windows.firstMatch.frame.width > self.app.windows.firstMatch.frame.height }
+        expectation(for: wide, evaluatedWith: app); waitForExpectations(timeout: 8)
+        app.tap(); app.buttons["leave-meditation"].tap()
+        expectation(for: wide, evaluatedWith: app); waitForExpectations(timeout: 8)
+        func dragCatalogue(up: Bool, distance: CGFloat? = nil, target: XCUIElement? = nil) {
+            // App-wide swipeUp starts in the bottom player in landscape. Keep
+            // the entire gesture inside the observed catalogue viewport.
+            let top = app.navigationBars.firstMatch.frame.maxY + 8
+            let bottom = app.buttons["mini-play"].frame.minY - 16
+            let upper = top + 4, lower = bottom - 2
+            let amount = min(distance ?? (lower - upper) * 0.65, lower - upper)
+            var startY = up ? lower : upper
+            var x = app.frame.width * 0.45
+            if let target {
+                let visibleTop = max(upper, target.frame.minY + 2)
+                let visibleBottom = min(lower, target.frame.maxY - 2)
+                if visibleBottom > visibleTop { startY = (visibleTop + visibleBottom) / 2 }
+                x = target.frame.midX
+            }
+            let endY = min(lower, max(upper, startY + (up ? -amount : amount)))
+            let origin = app.coordinate(withNormalizedOffset: .zero)
+            let start = origin.withOffset(CGVector(dx: x, dy: startY))
+            let end = origin.withOffset(CGVector(dx: x, dy: endY))
+            start.press(forDuration: 0.05, thenDragTo: end, withVelocity: .slow, thenHoldForDuration: 0.2)
+        }
+        let rain = app.buttons["filter-rain"]
+        for _ in 0..<16 {
+            let top = app.navigationBars.firstMatch.frame.maxY
+            let bottom = app.buttons["mini-play"].frame.minY - 8
+            if rain.isHittable && rain.frame.minY >= top && rain.frame.maxY <= bottom { break }
+            dragCatalogue(up: rain.frame.minY >= top)
+        }
+        capture("landscape-library-before-category-selection")
+        XCTAssertTrue(rain.isHittable, app.debugDescription); rain.tap()
+        let card = app.buttons["sound-light-rain"]
+        XCTAssertTrue(card.waitForExistence(timeout: 5))
+        for _ in 0..<10 {
+            let top = app.navigationBars.firstMatch.frame.maxY
+            let bottom = app.buttons["mini-play"].frame.minY - 8
+            if card.frame.minY >= top && card.frame.maxY <= bottom { break }
+            let up = card.frame.minY >= top
+            let distance = up ? card.frame.maxY - bottom + 6 : top - card.frame.minY + 6
+            dragCatalogue(up: up, distance: max(12, distance), target: card)
+        }
+        capture("landscape-library-with-six-sound-mix")
+        let visibleFiltersBottom = rain.isHittable ? rain.frame.maxY : app.navigationBars.firstMatch.frame.maxY
+        let playerTop = app.buttons["mini-play"].frame.minY - 4
+        XCTAssertGreaterThanOrEqual(card.frame.minY, visibleFiltersBottom, "The card must be below visible filters")
+        XCTAssertLessThanOrEqual(card.frame.maxY, playerTop, "A complete sound card must fit above playback in a short landscape window")
+        XCTAssertGreaterThanOrEqual(card.frame.height, 100)
+        XCTAssertTrue(app.buttons["favorite-light-rain"].isHittable)
+        XCTAssertTrue(app.sliders["volume-light-rain"].isHittable)
+        app.buttons["mini-landscape"].tap(); app.tap()
+        XCTAssertTrue(app.staticTexts["meditation-landscape-name"].waitForExistence(timeout: 5))
+        XCTAssertGreaterThan(app.windows.firstMatch.frame.width, app.windows.firstMatch.frame.height)
+        app.buttons["hide-meditation-controls"].tap()
+        let hidden = NSPredicate(format: "exists == false OR hittable == false")
+        expectation(for: hidden, evaluatedWith: app.buttons["leave-meditation"]); waitForExpectations(timeout: 5)
+        capture("landscape-opened-from-horizontal-library")
+        app.tap(); app.buttons["leave-meditation"].tap()
+    }
+
     func testSilentTabsReturnToTop() {
         launchScrollFixture()
         let destinations = [("Sounds", "A little space\nto be."), ("My mix", "Your soundscape"),

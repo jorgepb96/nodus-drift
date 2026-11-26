@@ -1,45 +1,84 @@
-# TestFlight beta · 0.1.0 (8)
+# TestFlight private preview · 0.2.0 (18)
 
-**0.1.0 (8) is Testing in the existing internal group and Waiting for Review for the public beta.** The signed archive was uploaded successfully on October 9, 2026 at **16:05:51 Europe/Madrid**, processed by Apple and assigned to both groups. The replacement external TestFlight review has been submitted with automatic tester notification enabled. **Public joining and installation are not yet available**: App Store Connect explicitly says the group needs an approved build before testers can join the public link.
+**Build 18 is available for private internal testing**, verified at
+2026-11-26T10:29:47.697242+01:00 (Europe/Madrid). Apple reports `VALID`, `INTERNAL_ONLY` and
+`IN_BETA_TESTING`. Update Nodus Drift to **0.2.0 (18)** using the existing internal
+TestFlight invitation.
 
-The beta will become available after Apple's approval; this record does not claim it has been approved.
+- App: Nodus Drift (`com.drakonis96.nodusdrift`, App Store ID `6820753637`).
+- Upload/build ID: `a40f7359-90f7-4144-9e70-ef84f72904e6`.
+- CLI upload completed: 2026-11-26T10:26:02+01:00 (Europe/Madrid).
+- Group: **Jorge — beta interna**, the only group with access.
+- External state: `NOT_APPLICABLE`; no external beta review or App Store submission.
+- English What to Test notes saved as `en-US`, read back with an exact match.
+- [Open build in App Store Connect](https://appstoreconnect.apple.com/teams/36804ede-f0b5-4cd2-a273-c619feb6168f/apps/6820753637/testflight/ios/a40f7359-90f7-4144-9e70-ef84f72904e6).
 
-- Public group: **Nodus Drift — Public Beta**
-- Public link: https://testflight.apple.com/join/kAXnsjJS
-- External group ID: `4dcab8a9-bef4-4ff4-bb70-7118cb375068`
-- Existing internal group: **Jorge — beta interna**
-- Version and build: **0.1.0 (8)**
-- Internal-only export: **false**, using ios/ExportOptions-PublicBeta.plist
-- [Build 8](https://appstoreconnect.apple.com/teams/36804ede-f0b5-4cd2-a273-c619feb6168f/apps/6820753637/testflight/ios/7905ec5e-d60e-4912-a79d-57371cc4cdca)
-- [Public group](https://appstoreconnect.apple.com/teams/36804ede-f0b5-4cd2-a273-c619feb6168f/apps/6820753637/testflight/groups/4dcab8a9-bef4-4ff4-bb70-7118cb375068/builds)
-- [Internal Testing proof](../screenshots/73-testflight-build8-private.jpg)
-- [External Waiting for Review proof](../screenshots/74-testflight-build8-public-review.jpg)
-- [Enabled link and approval requirement](../screenshots/65-testflight-public-link-awaiting-approval.jpg)
+## CarPlay Audio
 
-## Install and share
+Home offers Continue Listening and recent selections. My Mixes displays saved
+simple mixes and Studio scenes; Explore offers three starter mixes and three
+Studio soundscapes. Static photographic covers and titles use native multi-line
+image grids on iOS 26+, titled image rows on iOS 17.4–25, and labelled thumbnail
+lists on iOS 17.0–17.3. CarPlay controls the final screen layout and column count.
+Selecting an available cover starts playback and opens the system Now Playing
+screen after a voice is ready. Connecting alone never starts playback.
 
-The owner can update now through the existing internal TestFlight invitation and select **0.1.0 (8)**. Physical iPhone installation of build 8 has not been verified. Builds 5, 6 and 7 remain available for comparison.
+The phone and CarPlay share one engine, library and Studio clock. Editing,
+generation, downloads and immersive visuals remain on the phone. Now Playing
+publishes the selected title and static artwork, plus elapsed time and duration
+for finite Studio scenes. Play, pause and stop use system remote commands;
+unsupported seeking and queue controls are disabled. Interruption resumption
+requires the system's permission and is canceled by a user pause.
 
-Share https://testflight.apple.com/join/kAXnsjJS once the first external build has been approved. The link is enabled and open to everyone under Apple's standard tester maximum; no device-specific criteria or custom lower tester cap were set. No recipient email addresses were uploaded, and there are currently no external testers.
+The existing account capability was enabled for Drift in the Apple Developer
+portal and read back. The signed Release archive and embedded profile both
+contain CarPlay Audio and the compiled manifest declares its scene. A matching
+App Store distribution profile was created and used for manual internal-only
+export. No new entitlement request or agreement was required.
 
-## Changes and validation
+## Verification and limits
 
-After deeply scrolling through Sounds, choosing Favorites shows the first favorite or the empty-state explanation below the persistent search and filters. Categories, search and sorting also return to their first results, including when a new filter matches the same IDs. Card dimensions and search focus are preserved. Sounds, My mix, Saved and Settings still return to the top when selected, retaining search/filter state. Clear remains immediate and preserves favorites and saved mixes.
+Six CarPlay tests passed with the final entitlement configuration, including the
+selected name for otherwise identical saved mixes. An earlier completed run also
+passed those six tests plus the two phone regressions for horizontal catalogue
+browsing and manual Studio creation/edit/save/reopen.
 
-The owner selected MIT from build 7 for the iOS implementation and incorporated first-party DRIFT material. The repository stays private; MIT requires retained notices rather than publishing source. Third-party Moodist MIT, CC0 source and FSD50K compilation notices remain bundled. See [LICENSING.md](LICENSING.md).
+Coverage includes all 144 saved library entries, names, native grid element
+limits, recent identifiers, updated/deleted entries, missing recordings, all 22
+static covers, real simulator playback, shared ownership/clock, metadata and
+interruption behavior. Tests ran on the dedicated iPhone 17 Pro / iOS 26.5
+simulator. No physical iPhone tests were performed, per user instruction.
 
-The same 89 options and build 6 replacement audio bank remain unchanged. Eight focused silent UI checks passed across iPhone and iPad; simulator captures 66–72 and 76 record the fixed behavior. Physical-device verification remains for the owner. The signed archive receipt is [release8-archive-verification.json](rights/release8-archive-verification.json), and the distribution receipt is [release8.json](rights/release8.json). English testing notes are in [TESTFLIGHT_NOTES.txt](TESTFLIGHT_NOTES.txt), review notes in [TESTFLIGHT_REVIEW_NOTES_BUILD8.txt](TESTFLIGHT_REVIEW_NOTES_BUILD8.txt), and silent checks in [VALIDATION.md](VALIDATION.md). No audio output or auditory test is performed.
+Actual CarPlay-display rendering, rotary input, light/dark appearance,
+locked-phone playback and real vehicle/navigation/call routing remain unverified
+on hardware. The desktop CarPlay Simulator did not provide a usable native UI
+snapshot; no vehicle-screen screenshot or physical compatibility claim is made.
 
-## Reproduce the upload
+The strict archive verification covers 208 source/runtime files, 89 catalogue
+entries, all 81 recording checksums, 44 photographic plates, two dormant atlases,
+legal/privacy files and both Metal libraries. Artwork remains 31,046,523 bytes;
+no model weights are bundled. The source fingerprint includes uncommitted
+working-tree changes and does not imply those changes are in Git HEAD.
 
-Increase CURRENT_PROJECT_VERSION for each new upload, regenerate with XcodeGen, archive the Release scheme, verify the packaged version, catalogue, audio hashes, legal notices and signature, then export with **ExportOptions-PublicBeta.plist**. The previous ExportOptions-TestFlight.plist restricts uploads to internal testing and cannot enable an external beta.
+- [Delivery receipt](rights/release18.json).
+- [Archive verification](rights/release18-archive-verification.json).
+- [Exact source fingerprint](rights/release18-source.json).
+- [English What to Test notes](TESTFLIGHT_NOTES_BUILD18.txt).
+- [CarPlay implementation](carplay/IMPLEMENTATION.md).
+- [Validation evidence and remaining checks](carplay/VALIDATION.md).
+- [Final six-test summary](carplay/CarPlaySignedConfiguration-summary.json).
+- [Eight-test summary with phone UI regressions](carplay/CarPlayFinalValidation-summary.json).
+- [Capability activation](carplay/CAPABILITY.json).
+- [Signed generic-iOS Debug build](carplay/SIGNED_BUILD.json).
+- [Distribution profile verification](carplay/DISTRIBUTION_PROFILE.json).
 
-Signed archives, source WAVs, MP3s, upload logs and signing credentials stay excluded from Git. English-only remains the shipped interface; the translation JSON is a draft.
+## Reproduce
 
-## Privacy and App Store scope
+Marketing version is 0.2.0 and build number is 18. Archive the Release scheme for
+generic iOS, verify it, then use `ios/ExportOptions-TestFlight-CarPlay.plist` with
+the installed **Nodus Drift App Store CarPlay** profile and existing Apple
+Distribution identity. Internal-only export is enabled and automatic build
+renumbering is disabled. Future uploads need a new build number. Credentials,
+profiles, archives and upload logs are not stored in Git.
 
-The app-specific policy is https://nodusresearch.com/drift/privacy/ and is saved in the App Store draft. TestFlight’s own privacy URL was saved as https://nodusresearch.com/drift/privacy/ and its public Feedback Email was saved as **contact@nodusresearch.com**, per the owner’s instruction. The owner entered the private review-contact fields directly; those details are not saved in source or captures. [Public metadata proof](../screenshots/61-testflight-public-contact-privacy.jpg). The saved No Data Collected answer's final Apple accuracy/update declaration remains separate; this beta does not publish an App Store listing or accept that declaration. The existing App Store description and screenshots remain in the draft.
-
-## Previous builds
-
-[The build 7 record](TESTFLIGHT_BUILD7.md) preserves the earlier release and review submission; [build 6](TESTFLIGHT_BUILD6.md) preserves the replacement-audio release. The pending public review for build 7 was withdrawn before submitting build 8, so Apple reviews the corrected build. Build 7 remains in the public group as Ready to Submit and in the private group as Testing; it was not expired or deleted. Builds 5 and 6 also remain in the internal group.
+Previous private delivery is preserved in [TESTFLIGHT_BUILD17.md](TESTFLIGHT_BUILD17.md).

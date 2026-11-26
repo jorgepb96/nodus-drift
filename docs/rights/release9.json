@@ -1,0 +1,45 @@
+{
+  "version": "0.1.0",
+  "build": 9,
+  "bundleId": "com.drakonis96.nodusdrift",
+  "catalogSounds": 89,
+  "verifiedRecordings": 81,
+  "signatureVerified": true,
+  "legalNotices": [
+    "STABLE_AUDIO_COMMUNITY.md",
+    "GEMMA_TERMS.md",
+    "NOTICE.txt",
+    "STABLE_AUDIO_MLX_MIT.txt",
+    "MLX_MIT.txt",
+    "SWIFT_NUMERICS_LICENSE.txt",
+    "PRIVACY.md"
+  ],
+  "modelWeightsBundled": false,
+  "mlxMetalLibraryBundled": true,
+  "sourceFiles": 146,
+  "sourceFingerprintSHA256": "a9f98802eb28ad6d2b3599dc25d9ec54adc2b6a3c1a7542ee1263c5330bd1166",
+  "testFlightInternalTestingOnly": true,
+  "physicalDeviceTesting": "Not repeated, per user instruction",
+  "appStoreId": "6820753637",
+  "uploadSucceeded": true,
+  "uploadCompletedLocal": "2026-11-07T00:21:28+01:00",
+  "observedAt": "2026-11-07T00:26:13.890879+01:00",
+  "phase": "INTERNAL_TESTING",
+  "notesLocale": "en-US",
+  "notesFile": "docs/TESTFLIGHT_NOTES_BUILD9.txt",
+  "buildId": "f8c28659-c4c0-454e-ad94-1322d699c67e",
+  "buildAudienceType": "INTERNAL_ONLY",
+  "processingState": "VALID",
+  "internalBuildState": "IN_BETA_TESTING",
+  "externalBuildState": "NOT_APPLICABLE",
+  "groups": [
+    {
+      "id": "40f2ec9c-cccb-4c2d-b3ce-ce073515bc77",
+      "name": "Jorge — beta interna",
+      "isInternalGroup": true
+    }
+  ],
+  "englishNotesSaved": true,
+  "notesSHA256": "f1d0865bff5bf3995b1ff16840762da876df1b3ded7c71079ad680d76373eca9",
+  "buildUrl": "https://appstoreconnect.apple.com/teams/36804ede-f0b5-4cd2-a273-c619feb6168f/apps/6820753637/testflight/ios/f8c28659-c4c0-454e-ad94-1322d699c67e"
+}

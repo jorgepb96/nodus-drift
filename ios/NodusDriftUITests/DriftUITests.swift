@@ -67,7 +67,7 @@ final class DriftUITests: XCTestCase {
         app.buttons["Load Evening reading"].tap()
         XCTAssertEqual(app.buttons["mix-play"].label, "Play soundscape")
         app.buttons["mix-play"].tap()
-        app.buttons["enter-meditation"].tap()
+        app.buttons["enter-meditation"].tap(); app.tap()
         XCTAssertTrue(app.buttons["leave-meditation"].waitForExistence(timeout: 3))
         capture("04-meditation-controls")
         // Wait for auto-hidden controls; no app idling delay on the native Canvas.
@@ -130,7 +130,7 @@ final class DriftUITests: XCTestCase {
         expectation(for: landscape, evaluatedWith: app)
         waitForExpectations(timeout: 8)
         capture("12-device-landscape")
-        app.buttons["enter-meditation"].tap()
+        app.buttons["enter-meditation"].tap(); app.tap()
         XCTAssertTrue(app.buttons["leave-meditation"].waitForExistence(timeout: 3))
         let character = app.descendants(matching: .any).matching(identifier: "nodi").firstMatch
         XCTAssertEqual(character.frame.midX, app.frame.midX, accuracy: 10, "Meditation stays centered after rotation")

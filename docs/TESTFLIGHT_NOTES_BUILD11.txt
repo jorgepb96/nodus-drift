@@ -1,0 +1,14 @@
+Meditation landscapes, live animation and visual consistency
+
+- Choose Your landscape or Nodi in My mix before entering meditation, or switch between them inside meditation. Your choice is remembered.
+- Meditation now interprets your selected sounds as a nature setting, with rain, wind and fire when present. Rain and campfire create a cabin; river, coast, snow and night sounds select the corresponding environment. The original mix continues playing without a second audio engine.
+- Studio previews and immersive landscapes animate even while audio is paused. Pause visuals and audio independently. Low Power Mode reduces the animation rate instead of freezing it. Reduce Motion is respected.
+- Rain is more visible, with smoother thin droplets. Flames change shape and firelight flickers in real time.
+- Improved audio connection handling on iOS 27, explicit spatial input buses and sample-rate conversion, plus a still-image fallback after a reported GPU rendering error.
+- Restored the Nodus N logo in the Studio header and aligned branding across all five tabs. Nodi in My mix now uses the same size as Sounds.
+
+Please check the first cabin scene: start playback, enter the immersive view, return, then repeat. Also try a rain-and-campfire mix in meditation, switch to Nodi, reopen the app and confirm the selection is remembered.
+
+The reported build 10 cabin crash has not been reproduced in Simulator, and no TestFlight crash report was available during investigation. This build includes defensive changes; it does not claim a confirmed root-cause fix for that device-specific report. Please submit TestFlight crash feedback if it happens again.
+
+No new physical iPhone tests were performed. Local audio-generation models remain optional, with the same previously documented hardware and simulator limits.

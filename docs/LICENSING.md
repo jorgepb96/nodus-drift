@@ -1,5 +1,33 @@
 # Distribution rights — version 0.1.0 (7)
 
+## Photographic landscapes — 7 November 2026
+
+Build 10 adds seven photographic-style images generated for Nodus Drift with the
+built-in OpenAI image tool during development. No external stock collection was
+incorporated. Prompts, generation provenance and file hashes are retained in
+[LANDSCAPE_ASSETS.json](soundscape-studio/LANDSCAPE_ASSETS.json). They are
+AI-generated artwork, not documentary photographs; no exclusive copyright in
+generated imagery is asserted. The native rendering code remains under the
+project's MIT license. The bundled `Legal/LANDSCAPES.md` notice is reachable in
+Settings, separately from audio/model/dependency licenses. The app performs no
+runtime image-generation calls and requires no image-service account.
+
+## Soundscape Studio addition — 6 November 2026
+
+The build-7 review below is a historical scope record. Studio adds the separately
+MIT-licensed `Modules/StableAudioMLX` package from Reader, including its upstream
+notices, MLX Swift (MIT), and Swift Numerics (Apache 2.0 with Swift exception).
+Reader's AGPL-only app services were inspected as architectural references and
+were not incorporated into this app. The package's own MIT LICENSE is retained.
+
+Optional model weights are not part of the app bundle and are not MIT licensed:
+Stable Audio 3 Small-SFX/Small-Music and SAME-S use the Stability AI Community
+License; T5Gemma uses the Gemma Terms of Use. Copies of both, a model NOTICE,
+attribution, use-policy links and dependency notices are bundled under
+`ios/NodusDrift/Resources/Legal` and reachable in Settings → Models & licenses.
+Before public distribution, the distributor must check applicable Stability
+registration/revenue conditions. See [Studio feasibility](soundscape-studio/FEASIBILITY.md).
+
 **The owner chose MIT for Nodus Drift for iOS and requested a public TestFlight beta.** The native implementation and the owner's incorporated DRIFT contributions are MIT licensed from build 7. The development repository remains private; MIT does not require public corresponding source. This decision does not change the main Nodus repository's license, revoke earlier AGPL grants, or relicense third-party material.
 
 ## First-party license decision

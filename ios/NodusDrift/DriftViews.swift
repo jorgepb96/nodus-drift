@@ -21,6 +21,7 @@ struct DriftTabScrollView<Content: View>: View {
     var body: some View {
         ScrollViewReader { proxy in
             ScrollView { content(proxy).id(top) }
+                .contentShape(Rectangle())
                 .onAppear { if store.tab == tab { proxy.scrollTo(top, anchor: .top) } }
                 .onChange(of: store.tab) { _, selected in
                     if selected == tab { proxy.scrollTo(top, anchor: .top) }
@@ -51,7 +52,7 @@ private struct DriftEmptyState: View {
     let action: () -> Void
     var body: some View {
         VStack(spacing: 24) {
-            NodiView().frame(height: 230)
+            NodiCompanion()
             ContentUnavailableView(title, systemImage: icon, description: Text(description))
             Button(action: action) {
                 Text(actionTitle).frame(maxWidth: .infinity).padding(18)
@@ -65,21 +66,48 @@ private struct DriftEmptyState: View {
 struct DriftRootView: View {
     @ObservedObject var store: DriftStore
     @ObservedObject private var audio: DriftAudioEngine
-    init(store: DriftStore) { self.store = store; audio = store.audio }
+    @ObservedObject private var studio: StudioStore
+    init(store: DriftStore, studio: StudioStore) {
+        self.store = store; audio = store.audio
+        self.studio = studio
+    }
     var body: some View {
         TabView(selection: $store.tab) {
             NavigationStack { SoundsView() }.tag(0).tabItem { Label("Sounds", systemImage: "waveform") }
             NavigationStack { MixView() }.tag(1).tabItem { Label("My mix", systemImage: "slider.horizontal.3") }
+            NavigationStack { StudioView(studio: studio) }.tag(4).tabItem { Label("Studio", systemImage: "sparkles.rectangle.stack") }
             NavigationStack { SavedView() }.tag(2).tabItem { Label("Saved", systemImage: "bookmark") }
-            NavigationStack { SettingsView() }.tag(3).tabItem { Label("Settings", systemImage: "gearshape") }
+            NavigationStack { SettingsView(studio: studio) }.tag(3).tabItem { Label("Settings", systemImage: "gearshape") }
         }
-        .environmentObject(store).environmentObject(audio)
+        .environmentObject(store).environmentObject(audio).environmentObject(studio)
+        .onOpenURL { url in
+            do { try studio.importScene(from: url); store.tab = 4 }
+            catch { store.notice = error.localizedDescription }
+        }
         .foregroundStyle(DriftTheme.text)
         .fullScreenCover(isPresented: $store.immersive) { ImmersiveView().environmentObject(store).environmentObject(audio) }
+        .fullScreenCover(isPresented: $studio.immersive) { StudioImmersiveView(studio: studio) }
         .alert("A little heads-up", isPresented: Binding(get: { store.notice != nil }, set: { if !$0 { store.notice = nil } })) {
             Button("Got it", role: .cancel) { store.notice = nil }
         } message: { Text(store.notice ?? "") }
     }
+}
+
+struct DriftBrand: View {
+    var body: some View {
+        HStack(spacing: 7) {
+            NodusMark().frame(width: 19, height: 21)
+            Text("NODUS").font(.system(size: 11, weight: .semibold)).tracking(3)
+            Text("/ DRIFT").font(.system(size: 10, weight: .medium)).tracking(2).foregroundStyle(DriftTheme.muted)
+        }.foregroundStyle(DriftTheme.accent).fixedSize().accessibilityElement(children: .combine)
+            .accessibilityLabel("Nodus Drift").accessibilityIdentifier("nodus-brand")
+    }
+}
+
+/// The same canvas dimensions keep Nodi's actual drawing scale identical on tabs.
+struct NodiCompanion: View {
+    var awake = false
+    var body: some View { NodiView(awake: awake).frame(height: 185).frame(maxWidth: .infinity) }
 }
 
 struct BrandToolbar: ViewModifier {
@@ -87,11 +115,7 @@ struct BrandToolbar: ViewModifier {
     func body(content: Content) -> some View {
         content.toolbar {
             ToolbarItem(placement: .principal) {
-                HStack(spacing: 7) {
-                    NodusMark().frame(width: 19, height: 21)
-                    Text("NODUS").font(.system(size: 11, weight: .semibold)).tracking(3)
-                    Text("/ DRIFT").font(.system(size: 10, weight: .medium)).tracking(2).foregroundStyle(DriftTheme.muted)
-                }.foregroundStyle(DriftTheme.accent).fixedSize().accessibilityElement(children: .combine).accessibilityLabel("Nodus Drift")
+                DriftBrand()
             }
             ToolbarItem(placement: .topBarTrailing) {
                 Button { store.immersive = true } label: { Image(systemName: "arrow.up.left.and.arrow.down.right").font(.system(size: 16)).frame(width: 44, height: 44) }
@@ -120,6 +144,8 @@ struct SoundsView: View {
     @FocusState private var searchFocused: Bool
     @ScaledMetric(relativeTo: .largeTitle) private var headingSize = 39.0
     @Environment(\.dynamicTypeSize) private var typeSize
+    @Environment(\.verticalSizeClass) private var verticalSizeClass
+    private var compactLandscape: Bool { verticalSizeClass == .compact }
     private var filtered: [DriftSound] {
         let query = search.folding(options: [.caseInsensitive, .diacriticInsensitive], locale: Locale(identifier: "en"))
         return store.sorted(DriftCatalog.sounds.filter {
@@ -134,13 +160,26 @@ struct SoundsView: View {
     }
     var body: some View {
         GeometryReader { viewport in
+            // Compact-height windows use normal document flow. A pinned search
+            // panel must never reserve the space needed to read a whole card.
+            let pinControls = !compactLandscape
             ZStack(alignment: .top) {
                 DriftTabScrollView(tab: 0) { proxy in
                     // Eager section geometry prevents a shrinking lazy grid from
                     // retaining an estimated origin thousands of points away.
-                    VStack(alignment: .leading, spacing: 24) {
+                    VStack(alignment: .leading, spacing: compactLandscape ? 12 : 24) {
                         companion
                         starters
+                        if compactLandscape {
+                            // Use intrinsic height directly, rather than keeping
+                            // a portrait-sized placeholder after rotation.
+                            libraryControls
+                                .background(GeometryReader { geometry in
+                                    Color.clear.preference(key: LibraryControlsPositionKey.self,
+                                                           value: geometry.frame(in: .named("sounds-viewport")).minY)
+                                })
+                                .id("sound-library")
+                        } else {
                         Color.clear.frame(height: controlsHeight)
                             .background(GeometryReader { geometry in
                                 Color.clear.preference(key: LibraryControlsPositionKey.self,
@@ -150,20 +189,32 @@ struct SoundsView: View {
                                 // Keep the controls in the scroll view's gesture
                                 // hierarchy while pinning their rendered position.
                                 libraryControls.fixedSize(horizontal: false, vertical: true)
-                                    .offset(y: libraryOffset.isFinite ? max(0, -libraryOffset) : 0)
+                                    .offset(y: pinControls && libraryOffset.isFinite ? max(0, -libraryOffset) : 0)
                             }
                             .zIndex(1)
                             .id("sound-library")
-                        libraryResults(minimumHeight: max(0, viewport.size.height - controlsHeight - 32))
-                            .id(filtered.map(\.id))
-                    }.padding(.horizontal, 24).padding(.top, 18).padding(.bottom, 24)
+                        }
+                        libraryResults(minimumHeight: max(0, viewport.size.height - (pinControls ? controlsHeight + 32 : 16)))
+                            .id(filtered.map(\.id)).id("sound-results")
+                    }.padding(.horizontal, 24).padding(.top, compactLandscape ? 8 : 18).padding(.bottom, 24)
                         .frame(maxWidth: 860).frame(maxWidth: .infinity)
+                        .contentShape(Rectangle())
                         .onChange(of: libraryRevision) { _, _ in
                             filterTask?.cancel()
                             filterTask = Task {
                                 await Task.yield()
                                 if !Task.isCancelled && store.tab == 0 && libraryOffset <= 1 {
-                                    proxy.scrollTo("sound-library", anchor: .top)
+                                    proxy.scrollTo(pinControls ? "sound-library" : "sound-results", anchor: .top)
+                                }
+                            }
+                        }
+                        .onChange(of: verticalSizeClass) { _, _ in
+                            guard libraryOffset <= 1 else { return }
+                            filterTask?.cancel()
+                            filterTask = Task {
+                                await Task.yield()
+                                if !Task.isCancelled && store.tab == 0 {
+                                    proxy.scrollTo(pinControls ? "sound-library" : "sound-results", anchor: .top)
                                 }
                             }
                         }
@@ -174,10 +225,12 @@ struct SoundsView: View {
             .clipped()
         }
         .background(DriftTheme.background)
-        .safeAreaInset(edge: .bottom, spacing: 0) { if !store.selection.isEmpty { MiniPlayer() } }
+        .safeAreaInset(edge: .bottom, spacing: 0) { if !store.selection.isEmpty || audio.owner == .studio { MiniPlayer() } }
         .modifier(BrandToolbar())
         .onPreferenceChange(LibraryControlsHeightKey.self) { height in
-            if height > 0 { controlsHeight = height }
+            // Only the portrait pinned header needs a placeholder. Do not carry
+            // a compact row's height back into the portrait layout after rotation.
+            if height > 0 && !compactLandscape { controlsHeight = height }
         }
         .onPreferenceChange(LibraryControlsPositionKey.self) { top in
             if top.isFinite { libraryOffset = top }
@@ -199,7 +252,7 @@ struct SoundsView: View {
             awake = true; store.feedback(); wakeTask?.cancel()
             wakeTask = Task { try? await Task.sleep(for: .milliseconds(2500)); if !Task.isCancelled { awake = false } }
         } label: {
-            NodiView(awake: awake).frame(height: 185).frame(maxWidth: .infinity)
+            NodiCompanion(awake: awake)
         }.buttonStyle(.plain).accessibilityLabel("Wake Nodi").accessibilityIdentifier("wake-nodi")
         HStack(spacing: 6) {
             Circle().fill(DriftTheme.accent).frame(width: 5, height: 5)
@@ -209,11 +262,29 @@ struct SoundsView: View {
     }
     private var libraryControls: some View {
         VStack(alignment: .leading, spacing: 16) {
-        HStack {
-            Text("Find your sound").font(.system(size: 25, design: .serif))
-            Spacer()
-            Text("89 SOUNDS").font(.system(size: 9, weight: .medium)).tracking(1.8).foregroundStyle(DriftTheme.muted)
-        }
+            if compactLandscape && !typeSize.isAccessibilitySize {
+                HStack(spacing: 12) {
+                    librarySearchControls.frame(width: 240)
+                    libraryCategories
+                }
+            } else {
+                if !compactLandscape {
+                    HStack {
+                        Text("Find your sound").font(.system(size: 25, design: .serif))
+                        Spacer()
+                        Text("89 SOUNDS").font(.system(size: 9, weight: .medium)).tracking(1.8).foregroundStyle(DriftTheme.muted)
+                    }
+                }
+                librarySearchControls
+                libraryCategories
+            }
+        }.padding(.bottom, compactLandscape ? 8 : 16).background(DriftTheme.background)
+            .background(GeometryReader { geometry in
+                Color.clear.preference(key: LibraryControlsHeightKey.self, value: geometry.size.height)
+            })
+            .accessibilityElement(children: .contain).accessibilityIdentifier("sound-library-controls")
+    }
+    private var librarySearchControls: some View {
         HStack(spacing: 12) {
             HStack(spacing: 10) {
                 Image(systemName: "magnifyingglass").foregroundStyle(DriftTheme.muted)
@@ -227,6 +298,8 @@ struct SoundsView: View {
             } label: { Image(systemName: "arrow.up.arrow.down").frame(width: 44, height: 44).background(DriftTheme.panel, in: Circle()) }
                 .accessibilityLabel("Sort sounds").accessibilityIdentifier("sort-sounds")
         }
+    }
+    private var libraryCategories: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
                 filterChip("All", icon: "square.grid.2x2", selected: category == "all" && !favoritesOnly) { category = "all"; favoritesOnly = false }
@@ -236,11 +309,6 @@ struct SoundsView: View {
                 }
             }
         }.frame(height: 44).contentMargins(.trailing, 3)
-        }.padding(.bottom, 16).background(DriftTheme.background)
-            .background(GeometryReader { geometry in
-                Color.clear.preference(key: LibraryControlsHeightKey.self, value: geometry.size.height)
-            })
-            .accessibilityElement(children: .contain).accessibilityIdentifier("sound-library-controls")
     }
     private func libraryResults(minimumHeight: CGFloat) -> some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -307,26 +375,29 @@ struct SoundCard: View {
     @EnvironmentObject private var store: DriftStore
     @EnvironmentObject private var audio: DriftAudioEngine
     @ScaledMetric(relativeTo: .body) private var nameSize = 14.0
+    @Environment(\.verticalSizeClass) private var verticalSizeClass
+    @Environment(\.dynamicTypeSize) private var typeSize
+    private var compactLandscape: Bool { verticalSizeClass == .compact && !typeSize.isAccessibilitySize }
     private var selected: Bool { store.selection.contains(sound.id) }
     var body: some View {
         ZStack(alignment: .topTrailing) {
             Button { store.toggle(sound.id) } label: {
-                VStack(alignment: .leading, spacing: 16) {
-                    Image(systemName: sound.icon).font(.system(size: 28, weight: .ultraLight))
-                        .frame(height: 32).foregroundStyle(DriftTheme.accent)
+                VStack(alignment: .leading, spacing: compactLandscape ? 10 : 16) {
+                    Image(systemName: sound.icon).font(.system(size: compactLandscape ? 24 : 28, weight: .ultraLight))
+                        .frame(height: compactLandscape ? 28 : 32).foregroundStyle(DriftTheme.accent)
                     VStack(alignment: .leading, spacing: 5) {
                         Text(sound.name).font(.system(size: nameSize, weight: .medium))
                             .foregroundStyle(DriftTheme.text).fixedSize(horizontal: false, vertical: true)
                         HStack(spacing: 5) {
                             if selected { Circle().fill(DriftTheme.accent).frame(width: 4, height: 4) }
-                            Text(selected ? (audio.loading.contains(sound.id) ? "Loading…" : audio.errors[sound.id] != nil ? "Tap to remove" : audio.playing ? "In your mix" : "Paused") : DriftCatalog.categoryName(sound.category))
+                            Text(selected ? (audio.loading.contains(sound.id) ? "Loading…" : audio.errors[sound.id] != nil ? "Tap to remove" : audio.listening ? "In your mix" : "Paused") : DriftCatalog.categoryName(sound.category))
                                 .font(.system(size: 11)).foregroundStyle(DriftTheme.muted)
                         }
                     }
                     // Reserve the volume row in both states so selection does
                     // not move nearby cards under the user's finger.
-                    Color.clear.frame(height: 28)
-                }.padding(18).frame(maxWidth: .infinity, minHeight: 148, alignment: .topLeading)
+                    Color.clear.frame(height: compactLandscape ? 24 : 28)
+                }.padding(compactLandscape ? 14 : 18).frame(maxWidth: .infinity, minHeight: compactLandscape ? 132 : 148, alignment: .topLeading)
                     .contentShape(Rectangle())
             }.buttonStyle(.plain)
                 .accessibilityLabel("\(selected ? "Remove" : "Add") \(sound.name)")
@@ -355,26 +426,42 @@ struct SoundCard: View {
 }
 
 struct MiniPlayer: View {
+    @Environment(\.verticalSizeClass) private var verticalSizeClass
+    private var compactLandscape: Bool { verticalSizeClass == .compact }
     @EnvironmentObject private var store: DriftStore
     @EnvironmentObject private var audio: DriftAudioEngine
+    @EnvironmentObject private var studio: StudioStore
     var body: some View {
-        HStack(spacing: 14) {
-            Button { store.tab = 1 } label: {
-                HStack(spacing: 13) {
-                    Image(systemName: audio.playing ? "waveform" : "headphones").font(.system(size: 22, weight: .light)).foregroundStyle(DriftTheme.accent).frame(width: 42, height: 42).background(DriftTheme.accent.opacity(0.08), in: RoundedRectangle(cornerRadius: 13))
+        let sceneOwned = audio.owner == .studio
+        let active = sceneOwned ? studio.playing : audio.listening
+        HStack(spacing: 8) {
+            Button { store.tab = sceneOwned ? 4 : 1 } label: {
+                HStack(spacing: 10) {
+                    Image(systemName: active ? "waveform" : "headphones").font(.system(size: 22, weight: .light)).foregroundStyle(DriftTheme.accent).frame(width: 38, height: 42)
                     VStack(alignment: .leading, spacing: 4) {
-                        HStack { Text("Your soundscape").font(.system(size: 14, weight: .medium)); Text("\(store.selection.count)/6").font(.system(size: 10)).foregroundStyle(DriftTheme.muted) }
-                        Text(store.summary).font(.system(size: 11)).foregroundStyle(DriftTheme.muted).lineLimit(1)
+                        HStack(spacing: 5) {
+                            Text(sceneOwned ? studio.scene.name : "Your soundscape").font(.system(size: 14, weight: .medium)).lineLimit(1)
+                            if !sceneOwned { Text("\(store.selection.count)/6").font(.system(size: 10)).foregroundStyle(DriftTheme.muted) }
+                        }
+                        Text(sceneOwned ? studio.scene.layers.map(\.name).joined(separator: " · ") : store.summary)
+                            .font(.system(size: 11)).foregroundStyle(DriftTheme.muted).lineLimit(1)
                     }
                     Spacer(minLength: 0)
                 }
-            }.buttonStyle(.plain).accessibilityLabel("Open your mix")
-            Button { store.togglePlayback() } label: {
-                Image(systemName: audio.playing ? "pause.fill" : "play.fill").font(.system(size: 16)).frame(width: 48, height: 48).foregroundStyle(DriftTheme.background).background(DriftTheme.accent, in: Circle())
-            }.accessibilityLabel(audio.playing ? "Pause mix" : "Play mix").accessibilityIdentifier("mini-play")
-        }.padding(14).background(Color(hex: 0x1C2A25), in: RoundedRectangle(cornerRadius: 24))
-            .overlay(RoundedRectangle(cornerRadius: 24).stroke(DriftTheme.accent.opacity(0.13)))
-            .padding(.horizontal, 16).padding(.vertical, 8).background(DriftTheme.background)
+            }.buttonStyle(.plain).accessibilityLabel(sceneOwned ? "Open your scene" : "Open your mix")
+            Button {
+                if sceneOwned { studio.immersive = true }
+                else { store.setMeditationAppearance(.landscape); store.immersive = true }
+            } label: {
+                Image(systemName: "photo").font(.system(size: 20)).frame(width: 44, height: 48).foregroundStyle(DriftTheme.accent)
+            }.accessibilityLabel("Open landscape").accessibilityIdentifier("mini-landscape")
+            Button { if sceneOwned { studio.togglePlayback() } else { store.togglePlayback() } } label: {
+                Image(systemName: active ? "pause.fill" : "play.fill").font(.system(size: 16)).frame(width: 48, height: 48).foregroundStyle(DriftTheme.background).background(DriftTheme.accent, in: Circle())
+            }.accessibilityLabel(active ? "Pause mix" : "Play mix").accessibilityIdentifier("mini-play")
+        }.padding(compactLandscape ? 4 : 12).background(Color(hex: 0x1C2A25), in: RoundedRectangle(cornerRadius: compactLandscape ? 18 : 24))
+            .overlay(RoundedRectangle(cornerRadius: compactLandscape ? 18 : 24).stroke(DriftTheme.accent.opacity(0.13)))
+            .padding(.horizontal, 16).padding(.vertical, compactLandscape ? 4 : 8).background(DriftTheme.background)
+            .accessibilityElement(children: .contain).accessibilityIdentifier("mini-player")
     }
 }
 
@@ -416,7 +503,7 @@ struct MixView: View {
                                 Text("\(Int(store.volume(sound.id) * 100))%").font(.system(size: 11, design: .monospaced)).foregroundStyle(DriftTheme.muted).frame(width: 35, alignment: .trailing)
                             }
                             if let error = audio.errors[sound.id] {
-                                HStack { Text(error).font(.footnote); Spacer(); Button("Retry") { audio.retry(sound.id); if !audio.playing { store.togglePlayback() } } }.foregroundStyle(Color(hex: 0xE8BD99))
+                                HStack { Text(error).font(.footnote); Spacer(); Button("Retry") { audio.retry(sound.id); if !audio.listening { store.togglePlayback() } } }.foregroundStyle(Color(hex: 0xE8BD99))
                             }
                         }.padding(18).driftPanel()
                             .accessibilityElement(children: .contain).accessibilityIdentifier("mix-card-\(sound.id)")
@@ -434,14 +521,20 @@ struct MixView: View {
                         Label("Binaural tones use two separate channels. Listen with stereo headphones.", systemImage: "headphones").font(.footnote).foregroundStyle(DriftTheme.muted)
                     }
                     if let error = audio.errors["session"] { Text(error).font(.footnote).foregroundStyle(Color(hex: 0xE8BD99)) }
-                    Button { store.immersive = true } label: { HStack { Image(systemName: "sparkles"); Text("Drift into meditation"); Spacer(); Image(systemName: "arrow.up.right") }.font(.subheadline).padding(20).driftPanel() }
+                    VStack(alignment: .leading, spacing: 14) {
+                        Text("Make room for a quiet moment.").font(.system(size: 22, design: .serif))
+                        MeditationAppearancePicker()
+                        Text("Your landscape follows the sounds in this mix.").font(.footnote).foregroundStyle(DriftTheme.muted)
+                        Button { store.immersive = true } label: { HStack { Image(systemName: "sparkles"); Text("Drift into meditation"); Spacer(); Image(systemName: "arrow.up.right") }.font(.subheadline).padding(.vertical, 12) }
+                            .accessibilityIdentifier("drift-into-meditation")
+                    }.padding(20).driftPanel()
                 }
             }.driftPageLayout()
         }.background(DriftTheme.background).modifier(BrandToolbar())
         .safeAreaInset(edge: .bottom) {
             if !store.selection.isEmpty {
                 Button { store.togglePlayback() } label: {
-                    Label(audio.playing ? "Pause soundscape" : "Play soundscape", systemImage: audio.playing ? "pause.fill" : "play.fill").font(.system(size: 15, weight: .semibold)).frame(maxWidth: .infinity).frame(height: 58).foregroundStyle(DriftTheme.background).background(DriftTheme.accent, in: Capsule())
+                    Label(audio.listening ? "Pause soundscape" : "Play soundscape", systemImage: audio.listening ? "pause.fill" : "play.fill").font(.system(size: 15, weight: .semibold)).frame(maxWidth: .infinity).frame(height: 58).foregroundStyle(DriftTheme.background).background(DriftTheme.accent, in: Capsule())
                 }.accessibilityIdentifier("mix-play").padding(.horizontal, 24).padding(.vertical, 12).background(DriftTheme.background)
             }
         }
@@ -455,6 +548,7 @@ struct MixView: View {
 }
 
 struct SavedView: View {
+    @EnvironmentObject private var audio: DriftAudioEngine
     @EnvironmentObject private var store: DriftStore
     @State private var editing: DriftPreset?
     @State private var search = ""
@@ -510,7 +604,7 @@ struct SavedView: View {
                 }
             }.driftPageLayout()
         }.background(DriftTheme.background).modifier(BrandToolbar())
-        .safeAreaInset(edge: .bottom, spacing: 0) { if !store.selection.isEmpty { MiniPlayer() } }
+        .safeAreaInset(edge: .bottom, spacing: 0) { if !store.selection.isEmpty || audio.owner == .studio { MiniPlayer() } }
         .sheet(item: $editing) { PresetEditor(preset: $0) }
     }
 }

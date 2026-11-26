@@ -1,0 +1,196 @@
+{
+  "version": "0.2.0",
+  "build": 15,
+  "bundleId": "com.drakonis96.nodusdrift",
+  "catalogSounds": 89,
+  "verifiedRecordings": 81,
+  "signatureVerified": true,
+  "legalNotices": [
+    "STABLE_AUDIO_COMMUNITY.md",
+    "GEMMA_TERMS.md",
+    "NOTICE.txt",
+    "STABLE_AUDIO_MLX_MIT.txt",
+    "MLX_MIT.txt",
+    "SWIFT_NUMERICS_LICENSE.txt",
+    "PRIVACY.md",
+    "LANDSCAPES.md"
+  ],
+  "modelWeightsBundled": false,
+  "mlxMetalLibraryBundled": true,
+  "landscapeMetalLibraryBundled": true,
+  "landscapes": [
+    {
+      "name": "forest",
+      "bytes": 1007581,
+      "sha256": "2ddc666c37f616fa3cfc63fcde9c8bac34d4baa77397b7dd49b4682cd2bbe1f2",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "coast",
+      "bytes": 585492,
+      "sha256": "6e2104d3b5a175bac2907c2af28630d14df4dffd24b4344799044ee798b7dc2a",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "mountains",
+      "bytes": 615992,
+      "sha256": "093864c3a8835d564eebc38bfd5e78a98c3c3af2f08b6e838b1ff95dd0f917f7",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "cabin",
+      "bytes": 694342,
+      "sha256": "f6143cc849fd23731cd46bb6898076fce1fc11baf91721c652c04bd6e5075c11",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "river",
+      "bytes": 1032627,
+      "sha256": "e81b4261582044c9b4a373fdf28a8f56e57794e2dbfead264b2fb623a23448ee",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "snow",
+      "bytes": 816178,
+      "sha256": "e9fcc04c6efd7c10585c4accb40d9304d918f8dd089d7670cbe97edae44b038e",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "night",
+      "bytes": 442284,
+      "sha256": "876b78e3810ea8ce8eb615d7f2d9589a7ec193995e6a32a5bdf397ae6a455d06",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "car",
+      "bytes": 569243,
+      "sha256": "5530e5b01daf823a00940190cab19b183662bc14c789a891a5fe9b306e92fa2a",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "tent",
+      "bytes": 750298,
+      "sha256": "f768c54fb2a4437dc150c0de54d8ed47f0d15e568c2d2415ee8f48ca67b46bfc",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "animals",
+      "bytes": 1647813,
+      "sha256": "2141e1b887061daef537ad106f36b4b8665cb9e8e9c4d40c9ff0f112968175a8",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "name": "props",
+      "bytes": 1591622,
+      "sha256": "3fc8ac826adf782c0380c31c08a83cefca5aa5397a1229ea5c19af2611826da0",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "name": "cafe",
+      "bytes": 659626,
+      "sha256": "cf5abf0ae10e258d455c48daab61960961d6a233d70b012bc0ce424021626e50",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "city",
+      "bytes": 758444,
+      "sha256": "6b4abd211f8e0e22fee39b24d2a0aac561ffad003616ad988a22ac21da51f799",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "train",
+      "bytes": 590219,
+      "sha256": "dcb7a1f6bf42a3a487bdf4916723c1c11c3e9cfa52ddfd952ba4cb9573951048",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "underwater",
+      "bytes": 620034,
+      "sha256": "b522748c2faba92b071e228f0cee176f79c1834c333973ab8ef97037c1342d5c",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "room",
+      "bytes": 585553,
+      "sha256": "a00c902bbda1a29ceb00b396a9da65719003fbbf6c80b403e4d1e391f678fcb8",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "sanctuary",
+      "bytes": 624420,
+      "sha256": "4a0a19feb76cc670b8b0be04be2ffe8d027453ce7063ba893de1c85824a25526",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "airport",
+      "bytes": 424494,
+      "sha256": "5f6835f46e8ee4babbbd447d79e45aca9f2467b2fb4cb4ef53bf19fc134e5384",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "utility",
+      "bytes": 424769,
+      "sha256": "790cdbdf132b8b61c15c3ea78f3f0edaa916b8956528f5098c75be6cda19942b",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "market",
+      "bytes": 607902,
+      "sha256": "4cbb4c4e4fec6520aca2dc6ffb59a75c8609bdeb90b1b253521fee75fa77c754",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "library",
+      "bytes": 689791,
+      "sha256": "9c2be8cae7d1d83f3a788f5cca65ec1ff62e509deb13836ab5c89468bc30073a",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "fairground",
+      "bytes": 844135,
+      "sha256": "3b7fd68291f08b0318efd0475cf9b52ce577104fe36a694bc7c1791373963158",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "laboratory",
+      "bytes": 346522,
+      "sha256": "ffa7e7e67965d654e3e33138761df51252049b98af32fa8bcf3da140c42f4b95",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "construction",
+      "bytes": 633007,
+      "sha256": "968b1a6c982924fc4fd60b90ab372731005c141460eaea27a6bb6c7bc2b3f5d9",
+      "width": 1024,
+      "height": 1536
+    }
+  ],
+  "landscapeArtworkBytes": 17562388,
+  "sourceFiles": 178,
+  "sourceFingerprintSHA256": "b756bfee7b27b42627fe0ae7fbcc51b26816ba6a7b4d636e45e0002833a280b8",
+  "testFlightInternalTestingOnly": true,
+  "physicalDeviceTesting": "Not repeated, per user instruction"
+}

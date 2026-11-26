@@ -1,0 +1,15 @@
+Personalized landscapes, clean immersion and playback fixes
+
+- Your landscape now adapts to the sounds selected in My mix. Try Footsteps in the snow + Wolf, or Rain on a car + Windshield wipers. Animals, objects, footprints, weather and windshield effects are composed locally across 22 photographic-style settings.
+- A clean immersive view shows just the N mark and Nodus Drift at the top left. Tap to reveal controls; Hide controls clears them immediately. Removed the large gray title and element panels.
+- Choose Your landscape or the original Nodi companion before meditation, or switch inside meditation. Your choice is remembered and your existing mix continues playing.
+- Rain falls, flames change shape and firelight flickers in real time. Preview and immersive animations work independently of audio. Pause visuals separately; Reduce Motion and power/thermal limits are respected.
+- Landscape crops keep the scene focus and selected animals visible. Layout adapts to available space on iPhone, iPad and Duo.
+- Corrected the audio-player startup path identified in the build 10 cabin crash report: validate connections, recover when the engine stops during preparation, and handle iOS 27 playback errors. Failed sources can be retried. GPU errors fall back to a still image.
+- Restored the N logo across all five tabs. Nodi uses the same drawing size in Sounds and My mix.
+
+Please try the first cabin starter: play, open immersion, return and repeat. Also test personalized snow/wolf and car/rain/wipers mixes, rotate the device, use the rotation button if needed, hide/reveal controls and switch between landscape and Nodi.
+
+All visual assets work offline. Compositions use bundled scenery and native effects, rather than generating arbitrary images or videos. Optional local audio models retain their previously documented hardware limits.
+
+No new physical iPhone tests were performed, as requested. The existing cabin crash log was retrieved and symbolicated read-only; its failing startup path was checked with simulator regression tests. Please send TestFlight crash feedback if another closure occurs.

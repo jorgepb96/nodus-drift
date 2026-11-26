@@ -1,0 +1,3 @@
+// Enable only with Apple's approved CarPlay Audio capability and matching profile.
+DRIFT_CARPLAY_ENTITLEMENTS = NodusDrift/CarPlay.entitlements
+CODE_SIGN_ENTITLEMENTS = $(DRIFT_CARPLAY_ENTITLEMENTS)

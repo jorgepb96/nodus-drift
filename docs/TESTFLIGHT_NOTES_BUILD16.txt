@@ -1,0 +1,11 @@
+Version 0.2.0 — dedicated horizontal landscapes and simpler immersion
+
+- Added 22 newly composed horizontal photographic settings, one for every environment. Portrait artwork remains available. The app selects the appropriate image from the actual viewport size, including landscape phones, tablets and resizable windows.
+- Horizontal photographs have their own calibrated window/weather bounds and cabin hearth position. Rain, foliage, water, wipers and fire continue animating within the selected environment.
+- Rotation swaps the image without stretching the portrait or reusing an old texture with a new scene. A native photograph stays visible until the replacement GPU frame is ready. Texture caches and rendering resolution remain bounded.
+- Landscapes now show the main setting and animated atmosphere only. Decorative animal/object cutouts are hidden everywhere; their artwork and scene data are preserved for possible future use. Unused sprite atlases are not loaded into GPU memory.
+- Improved Your landscape / Nodi switching: explicit selection buttons, stable controls, one retained landscape surface, and paused hidden scenery. Switching visuals keeps audio playing and preserves the selected appearance.
+
+Please rotate each environment between portrait and landscape. Try the cabin fire and rain, car rain with wipers, snow, river and night lake. Check tablet or resizable layouts if available. Then alternate repeatedly between Your landscape and Nodi while a mix plays. No animal or object cutouts should appear.
+
+All scenery is bundled and works offline. No new physical iPhone tests were performed, as requested; simulator evidence and platform limits are recorded in the repository.

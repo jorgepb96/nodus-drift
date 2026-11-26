@@ -11,10 +11,17 @@ settings:
     CODE_SIGN_STYLE: Automatic
     DEVELOPMENT_TEAM: 6RPLS9EA4X
     GENERATE_INFOPLIST_FILE: NO
+packages:
+  StableAudioMLX:
+    path: ../Modules/StableAudioMLX
 targets:
   NodusDrift:
     type: application
     platform: iOS
+    dependencies:
+      - package: StableAudioMLX
+        product: StableAudioMLX
+        weak: true
     sources:
       - path: NodusDrift
         excludes: [Resources]
@@ -26,14 +33,19 @@ targets:
       - path: NodusDrift/Resources/Legal
         type: folder
         buildPhase: resources
+      - path: NodusDrift/Resources/Landscapes
+        type: folder
+        buildPhase: resources
       - path: NodusDrift/Resources/PrivacyInfo.xcprivacy
         buildPhase: resources
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.drakonis96.nodusdrift
+        PRODUCT_BUNDLE_IDENTIFIER: com.drakonis96.nodusdrift$(DRIFT_BUILD_SUFFIX)
         INFOPLIST_FILE: NodusDrift/Info.plist
-        MARKETING_VERSION: '0.1.0'
-        CURRENT_PROJECT_VERSION: '8'
+        DRIFT_CARPLAY_ENTITLEMENTS: NodusDrift/CarPlay.entitlements
+        CODE_SIGN_ENTITLEMENTS: $(DRIFT_CARPLAY_ENTITLEMENTS)
+        MARKETING_VERSION: '0.2.0'
+        CURRENT_PROJECT_VERSION: '18'
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
   NodusDriftTests:
     type: bundle.unit-test

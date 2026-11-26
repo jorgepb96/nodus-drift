@@ -1,0 +1,17 @@
+{
+  "source": "xcodebuild console, /tmp/drift-duo-resizable.log",
+  "device": "Duo expanded simulator, iOS 27.1",
+  "unitTests": {
+    "passed": 10,
+    "skipped": 1,
+    "failed": 0,
+    "skipReason": "UISceneErrorDomain 101: current windowing mode prohibits programmatic orientation"
+  },
+  "uiTests": {
+    "passed": 0,
+    "failed": 1,
+    "failure": "Catalogue search result did not become hittable in automation"
+  },
+  "finalization": "Test bodies finished; hung result cleanup was terminated; no complete xcresult summary is available",
+  "physicalDeviceTests": false
+}

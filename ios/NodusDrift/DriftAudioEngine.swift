@@ -4,12 +4,13 @@ import MediaPlayer
 import CryptoKit
 
 enum DriftAudioFailure: LocalizedError {
-    case missing, corrupt, capacity
+    case missing, corrupt, capacity, connection
     var errorDescription: String? {
         switch self {
         case .missing: return "This recording is missing. Reinstall the app to restore it."
         case .corrupt: return "This recording could not be read. Try again."
         case .capacity: return "This mix needs too much audio memory. Try a shorter recording."
+        case .connection: return "This sound could not connect to the audio output. Try playing again."
         }
     }
 }
@@ -92,11 +93,26 @@ final class DriftDSP {
     @Published private(set) var errors: [String: String] = [:]
     var didStartVoice: ((String) -> Void)?
     var didStop: (() -> Void)?
+    var didRequestStudioPlayback: (() -> Void)?
     var master: Float = 0.35 { didSet { fadeMaster(to: master) } }
     var mixWithOtherAudio = false
     var sleepDeadline: Date? { didSet { scheduleSleep() } }
-    private let engine = AVAudioEngine()
-    private let limiter = AVAudioUnitEffect(audioComponentDescription: AudioComponentDescription(componentType: kAudioUnitType_Effect, componentSubType: kAudioUnitSubType_PeakLimiter, componentManufacturer: kAudioUnitManufacturer_Apple, componentFlags: 0, componentFlagsMask: 0))
+    enum Owner { case listen, studio }
+    @Published private(set) var owner: Owner = .listen
+    var nowPlayingContent: (() -> DriftNowPlayingContent?)?
+    #if DEBUG
+    var simulateEngineStopBeforePlayerStart = false
+    #endif
+    var listening: Bool { playing && owner == .listen }
+    private var environment = AVAudioEnvironmentNode()
+    private var spatialPositions: [String: StudioPosition] = [:]
+    private var finished = Set<String>()
+    private var engine = AVAudioEngine()
+    private var limiter = DriftAudioEngine.makeLimiter()
+    private var graphNeedsRebuild = false
+    private static func makeLimiter() -> AVAudioUnitEffect {
+        AVAudioUnitEffect(audioComponentDescription: AudioComponentDescription(componentType: kAudioUnitType_Effect, componentSubType: kAudioUnitSubType_PeakLimiter, componentManufacturer: kAudioUnitManufacturer_Apple, componentFlags: 0, componentFlagsMask: 0))
+    }
     private var nodes: [String: AVAudioNode] = [:]
     private var mixers: [String: AVAudioMixerNode] = [:]
     private var buffers: [String: AVAudioPCMBuffer] = [:]
@@ -108,36 +124,73 @@ final class DriftDSP {
     private var worker: Task<Void, Never>?
     private var fade: Task<Void, Never>?
     private var voiceFades: [String: Task<Void, Never>] = [:]
+    private var retiring = Set<String>()
     private var sleepTimer: DispatchSourceTimer?
     private var observers: [NSObjectProtocol] = []
     private var remoteTargets: [(MPRemoteCommand, Any)] = []
+    private var resumeAfterInterruption = false
     private let memoryBudget = 192 * 1024 * 1024
     var decodedBytes: Int { buffers.values.reduce(0) { $0 + Int($1.frameLength) * Int($1.format.channelCount) * 4 } }
     var activeVoiceCount: Int { nodes.count }
 
     init() {
+        configureGraph()
+        installObservers()
+    }
+    private func configureGraph() {
+        engine.attach(environment)
+        engine.connect(environment, to: engine.mainMixerNode, format: AVAudioFormat(standardFormatWithSampleRate: 48_000, channels: 2))
+        environment.distanceAttenuationParameters.distanceAttenuationModel = .inverse
+        environment.distanceAttenuationParameters.referenceDistance = 2
+        environment.distanceAttenuationParameters.maximumDistance = 30
+        environment.distanceAttenuationParameters.rolloffFactor = 0.5
         engine.attach(limiter)
         engine.connect(engine.mainMixerNode, to: limiter, format: nil)
         engine.connect(limiter, to: engine.outputNode, format: nil)
         engine.mainMixerNode.outputVolume = 0
+    }
+    private func rebuildGraph() {
+        // A stopped stereo graph can retain uninitialized converter/bus state when
+        // handed to the spatial environment on iOS 27. Rebuild only at transport
+        // boundaries, after the old voices are detached, never in a render callback.
+        engine.stop()
+        for id in Array(nodes.keys) { detach(id) }
+        engine = AVAudioEngine(); environment = AVAudioEnvironmentNode(); limiter = Self.makeLimiter()
+        configureGraph(); graphNeedsRebuild = false
+    }
+    private func installObservers() {
         observers.append(NotificationCenter.default.addObserver(forName: AVAudioSession.interruptionNotification, object: nil, queue: .main) { [weak self] note in
             let type = note.userInfo?[AVAudioSessionInterruptionTypeKey] as? UInt
-            if type == AVAudioSession.InterruptionType.began.rawValue { Task { @MainActor in self?.pause() } }
+            let options = note.userInfo?[AVAudioSessionInterruptionOptionKey] as? UInt ?? 0
+            Task { @MainActor in
+                guard let self else { return }
+                if type == AVAudioSession.InterruptionType.began.rawValue {
+                    let wasPlaying = self.playing
+                    self.pause(); self.resumeAfterInterruption = wasPlaying
+                } else if type == AVAudioSession.InterruptionType.ended.rawValue {
+                    let resume = self.resumeAfterInterruption && AVAudioSession.InterruptionOptions(rawValue: options).contains(.shouldResume)
+                    self.resumeAfterInterruption = false
+                    if resume { self.resume() }
+                }
+            }
         })
         observers.append(NotificationCenter.default.addObserver(forName: AVAudioSession.routeChangeNotification, object: nil, queue: .main) { [weak self] note in
             let reason = note.userInfo?[AVAudioSessionRouteChangeReasonKey] as? UInt
             if reason == AVAudioSession.RouteChangeReason.oldDeviceUnavailable.rawValue { Task { @MainActor in self?.pause() } }
         })
         observers.append(NotificationCenter.default.addObserver(forName: AVAudioSession.mediaServicesWereResetNotification, object: nil, queue: .main) { [weak self] _ in
-            Task { @MainActor in self?.pause(immediate: true) }
+            Task { @MainActor in self?.pause(immediate: true); self?.graphNeedsRebuild = true }
         })
         let commands = MPRemoteCommandCenter.shared()
-        for (command, action) in [(commands.playCommand, 0), (commands.pauseCommand, 1), (commands.togglePlayPauseCommand, 2)] {
+        commands.nextTrackCommand.isEnabled = false; commands.previousTrackCommand.isEnabled = false
+        commands.changePlaybackPositionCommand.isEnabled = false
+        commands.seekForwardCommand.isEnabled = false; commands.seekBackwardCommand.isEnabled = false
+        for (command, action) in [(commands.playCommand, 0), (commands.pauseCommand, 1), (commands.stopCommand, 1), (commands.togglePlayPauseCommand, 2)] {
             let target = command.addTarget { [weak self] _ in
                 Task { @MainActor in
                     guard let self else { return }
                     if action == 1 || (action == 2 && self.playing) { self.pause() }
-                    else { self.play(sounds: self.desired, volumes: self.volumes) }
+                    else { self.resume() }
                 }
                 return .success
             }
@@ -156,23 +209,40 @@ final class DriftDSP {
         } catch { errors["session"] = "Audio is unavailable. Try playing again." }
     }
     func configure(sounds: [DriftSound], volumes: [String: Float]) {
+        owner = .listen; spatialPositions = [:]
         desired = sounds; self.volumes = volumes
         updateNowPlaying()
     }
     func clear() { pause(); desired = []; updateNowPlaying() }
-    func play(sounds: [DriftSound], volumes: [String: Float]) {
+    func resume() {
+        guard !desired.isEmpty else { return }
+        if owner == .studio, let request = didRequestStudioPlayback { request() }
+        else { play(sounds: desired, volumes: volumes, owner: owner, positions: spatialPositions) }
+    }
+    func play(sounds: [DriftSound], volumes: [String: Float], owner: Owner = .listen, positions: [String: StudioPosition] = [:]) {
         #if DEBUG
         // Interaction-only UI runs never activate the audio session or engine.
         if ProcessInfo.processInfo.arguments.contains("-ui-testing-silent") { return }
         #endif
         guard !sounds.isEmpty else { return }
+        resumeAfterInterruption = false
+        let changingOwner = self.owner != owner
+        if changingOwner || (!playing && (!nodes.isEmpty || worker != nil)) { pause(immediate: true) }
+        if graphNeedsRebuild || changingOwner { rebuildGraph() }
+        // Invalidate asynchronous preparation from the previous playback request.
+        revision += 1; loading = []
+        if !playing { finished.removeAll() }
+        self.owner = owner; spatialPositions = positions
         desired = sounds; self.volumes = volumes
         let keep = Set(sounds.map(\.id))
+        if nodes.keys.contains(where: { !keep.contains($0) }) { engine.pause() }
         for id in Array(nodes.keys) where !keep.contains(id) { detach(id) }
         errors = errors.filter { keep.contains($0.key) }
         reconfigureSession()
         do {
-            if !engine.isRunning { try engine.start() }
+            // Connect new inputs before initializing their converters. Transport
+            // boundaries rebuild stopped graphs that retained stale bus state.
+            if !nodes.isEmpty && !engine.isRunning { try engine.start() }
             playing = true
             fadeMaster(to: master)
             for sound in sounds { setVolume(sound.id, volumes[sound.id] ?? 0.25) }
@@ -181,6 +251,7 @@ final class DriftDSP {
     }
     func retry(_ id: String) { errors[id] = nil; pump() }
     func pause(immediate: Bool = false) {
+        resumeAfterInterruption = false
         guard playing || !nodes.isEmpty else { return }
         playing = false; revision += 1; loading = []
         didStop?(); updateNowPlaying()
@@ -200,11 +271,13 @@ final class DriftDSP {
     private func finishPause() {
         engine.stop()
         for id in Array(nodes.keys) { detach(id) }
+        graphNeedsRebuild = true
         try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
     }
     func remove(_ id: String) {
         desired.removeAll { $0.id == id }; errors[id] = nil
         guard let mixer = mixers[id] else { return }
+        guard retiring.insert(id).inserted else { return }
         voiceFades[id]?.cancel()
         let start = mixer.outputVolume
         voiceFades[id] = Task { [weak self] in
@@ -220,6 +293,7 @@ final class DriftDSP {
     }
     func setVolume(_ id: String, _ value: Float) {
         volumes[id] = value
+        retiring.remove(id)
         voiceFades[id]?.cancel()
         guard let mixer = mixers[id] else { return }
         let start = mixer.outputVolume
@@ -230,6 +304,32 @@ final class DriftDSP {
                 try? await Task.sleep(for: .milliseconds(15))
             }
         }
+    }
+    /// Transport updates keep loaded nodes and the existing continuous streams alive.
+    func synchronizeStudio(sounds: [DriftSound], volumes: [String: Float], positions: [String: StudioPosition]) {
+        guard owner == .studio, playing else { return }
+        let oldSpatial = Set(spatialPositions.keys)
+        desired = sounds; self.volumes = volumes; spatialPositions = positions
+        let keep = Set(sounds.map(\.id))
+        finished.formIntersection(keep)
+        for id in Array(nodes.keys) {
+            if !keep.contains(id) { remove(id) }
+            else if oldSpatial.contains(id) != positions.keys.contains(id) { detach(id) }
+        }
+        for (id, value) in volumes where keep.contains(id) && (retiring.contains(id) || abs((mixers[id]?.outputVolume ?? -1) - value) > 0.002) { setVolume(id, value) }
+        for (id, point) in positions {
+            mixers[id]?.position = AVAudio3DPoint(x: point.x, y: 0, z: point.z)
+        }
+        pump()
+    }
+    func resetStudioCycle() {
+        guard owner == .studio else { return }
+        finished.removeAll()
+    }
+    var spatialRouteDescription: String {
+        let outputs = AVAudioSession.sharedInstance().currentRoute.outputs
+        let headphones = outputs.contains { [.headphones, .bluetoothA2DP, .bluetoothLE].contains($0.portType) }
+        return headphones ? "Spatial rendering · headphones" : "Stereo speaker rendering · connect headphones for immersion"
     }
     private func fadeMaster(to target: Float) {
         guard playing else { return }
@@ -244,6 +344,9 @@ final class DriftDSP {
         }
     }
     private func detach(_ id: String) {
+        let resume = playing && engine.isRunning
+        if engine.isRunning { engine.pause() }
+        retiring.remove(id)
         voiceFades[id]?.cancel(); voiceFades[id] = nil
         if let node = nodes.removeValue(forKey: id) {
             (node as? AVAudioPlayerNode)?.stop(); engine.disconnectNodeOutput(node); engine.detach(node)
@@ -252,20 +355,58 @@ final class DriftDSP {
         buffers[id] = nil
         fileLoops[id] = nil
         completedFileCycles[id] = nil
+        if resume && !nodes.isEmpty {
+            do { try engine.start() }
+            catch { errors["session"] = "Audio could not resume. Try playing again." }
+        }
     }
-    private func attach(_ node: AVAudioNode, id: String, format: AVAudioFormat) {
+    private func attach(_ node: AVAudioNode, id: String, format: AVAudioFormat) throws {
+        if engine.isRunning { engine.pause() }
         let mixer = AVAudioMixerNode()
         engine.attach(node); engine.attach(mixer)
-        engine.connect(node, to: mixer, format: format)
-        engine.connect(mixer, to: engine.mainMixerNode, format: format)
+        do {
+            try connect(node, to: mixer, bus: 0, format: format)
+            if let point = spatialPositions[id] {
+                // The mixer converts recording rates to the environment's rate.
+                let rate = environment.outputFormat(forBus: 0).sampleRate
+                guard let mono = AVAudioFormat(standardFormatWithSampleRate: rate, channels: 1) else { throw DriftAudioFailure.connection }
+                try connect(mixer, to: environment, bus: environment.nextAvailableInputBus, format: mono)
+                mixer.renderingAlgorithm = .auto
+                mixer.position = AVAudio3DPoint(x: point.x, y: 0, z: point.z)
+            } else {
+                try connect(mixer, to: engine.mainMixerNode, bus: engine.mainMixerNode.nextAvailableInputBus, format: format)
+            }
+        } catch {
+            engine.detach(node); engine.detach(mixer)
+            throw error
+        }
         mixer.outputVolume = 0
         nodes[id] = node; mixers[id] = mixer
+    }
+    private func connect(_ source: AVAudioNode, to destination: AVAudioNode, bus: AVAudioNodeBus, format: AVAudioFormat) throws {
+        if #available(iOS 27, *) {
+            try engine.connectNode(source, to: destination, fromBus: 0, toBus: bus, format: format)
+        } else {
+            engine.connect(source, to: destination, fromBus: 0, toBus: bus, format: format)
+        }
+    }
+    /// The legacy play() API aborts on an invalid graph. In particular, the
+    /// engine may have stopped during asynchronous file preparation or a route change.
+    func startPlayer(_ player: AVAudioPlayerNode) throws {
+        guard player.engine === engine,
+              !engine.outputConnectionPoints(for: player, outputBus: 0).isEmpty else { throw DriftAudioFailure.connection }
+        #if DEBUG
+        if simulateEngineStopBeforePlayerStart { simulateEngineStopBeforePlayerStart = false; engine.stop() }
+        #endif
+        if !engine.isRunning { try engine.start() }
+        if #available(iOS 27, *) { try player.playAudio() }
+        else { player.play() }
     }
     private func pump() {
         guard worker == nil else { return }
         worker = Task { [weak self] in
             guard let self else { return }
-            while self.playing, let sound = self.desired.first(where: { self.nodes[$0.id] == nil && self.errors[$0.id] == nil }) {
+            while self.playing, let sound = self.desired.first(where: { self.nodes[$0.id] == nil && self.errors[$0.id] == nil && !self.finished.contains($0.id) }) {
                 let ticket = self.revision
                 self.loading.insert(sound.id)
                 do {
@@ -276,13 +417,23 @@ final class DriftDSP {
                             self.loading.remove(sound.id); continue
                         }
                         let player = AVAudioPlayerNode()
-                        self.attach(player, id: sound.id, format: loop.file.processingFormat)
+                        try self.attach(player, id: sound.id, format: loop.file.processingFormat)
                         self.fileLoops[sound.id] = loop
                         self.buffers[sound.id] = loop.seam
                         // Keep three cycles queued so scheduling never waits for
                         // the last sample to reach the output device.
-                        for _ in 0..<3 { self.queueFileCycle(sound.id, player: player) }
-                        player.play()
+                        if sound.oneShot == true {
+                            let offset = min(loop.file.length - 1, AVAudioFramePosition(max(0, sound.startOffsetSeconds ?? 0) * loop.file.processingFormat.sampleRate))
+                            player.scheduleSegment(loop.file, startingFrame: offset, frameCount: AVAudioFrameCount(loop.file.length - offset), at: nil, completionCallbackType: .dataPlayedBack) { [weak self, weak player] _ in
+                                Task { @MainActor in
+                                    guard let self, let player, self.nodes[sound.id] === player else { return }
+                                    self.finished.insert(sound.id); self.detach(sound.id)
+                                }
+                            }
+                        } else {
+                            for _ in 0..<3 { self.queueFileCycle(sound.id, player: player) }
+                        }
+                        try self.startPlayer(player)
                     } else {
                         let format = AVAudioFormat(standardFormatWithSampleRate: 48_000, channels: 2)!
                         let dsp = DriftDSP(sound: sound, sampleRate: 48_000)
@@ -293,17 +444,23 @@ final class DriftDSP {
                             for frame in 0..<Int(frameCount) { let s = dsp.sample(); left[frame] = s.0; right[frame] = s.1 }
                             return noErr
                         }
-                        self.attach(source, id: sound.id, format: format)
+                        try self.attach(source, id: sound.id, format: format)
+                        if !self.engine.isRunning { try self.engine.start() }
                     }
                     self.setVolume(sound.id, self.volumes[sound.id] ?? 0.25)
                     self.didStartVoice?(sound.id)
                 } catch {
+                    self.detach(sound.id)
+                    if self.playing && !self.nodes.isEmpty && !self.engine.isRunning {
+                        do { try self.engine.start() }
+                        catch { self.errors["session"] = "Audio could not resume. Try playing again."; self.pause(immediate: true) }
+                    }
                     if ticket == self.revision && self.desired.contains(where: { $0.id == sound.id }) { self.errors[sound.id] = error.localizedDescription }
                 }
                 self.loading.remove(sound.id)
             }
             self.worker = nil
-            if self.playing && self.nodes.isEmpty && !self.desired.isEmpty { self.pause() }
+            if self.playing && self.nodes.isEmpty && !self.desired.isEmpty && self.desired.allSatisfy({ self.errors[$0.id] != nil }) { self.pause() }
             self.updateNowPlaying()
         }
     }
@@ -326,9 +483,14 @@ final class DriftDSP {
         }
     }
     nonisolated private static func verifiedFile(_ sound: DriftSound) throws -> AVAudioFile {
-        guard let asset = sound.asset, !asset.contains(".."),
-              let resource = Bundle.main.resourceURL else { throw DriftAudioFailure.missing }
-        let url = resource.appendingPathComponent("Audio").appendingPathComponent(asset)
+        let url: URL
+        if let fileName = sound.localFileName {
+            guard StudioScene.safeAudioName(fileName) else { throw DriftAudioFailure.missing }
+            url = StudioLibrary.recordingsURL.appendingPathComponent(fileName)
+        } else {
+            guard let asset = sound.asset, !asset.contains(".."), let resource = Bundle.main.resourceURL else { throw DriftAudioFailure.missing }
+            url = resource.appendingPathComponent("Audio").appendingPathComponent(asset)
+        }
         guard FileManager.default.fileExists(atPath: url.path) else { throw DriftAudioFailure.missing }
         let data = try Data(contentsOf: url, options: .mappedIfSafe)
         guard data.count == sound.bytes,
@@ -402,13 +564,21 @@ final class DriftDSP {
         timer.setEventHandler { [weak self] in Task { @MainActor in self?.pause() } }
         sleepTimer = timer; timer.resume()
     }
+    func refreshNowPlaying() { updateNowPlaying() }
     private func updateNowPlaying() {
         guard !desired.isEmpty else { MPNowPlayingInfoCenter.default().nowPlayingInfo = nil; return }
-        MPNowPlayingInfoCenter.default().nowPlayingInfo = [
-            MPMediaItemPropertyTitle: "Nodus Drift",
-            MPMediaItemPropertyArtist: desired.map(\.name).joined(separator: " · "),
-            MPNowPlayingInfoPropertyIsLiveStream: true,
+        let content = nowPlayingContent?()
+        var info: [String: Any] = [
+            MPMediaItemPropertyTitle: content?.title ?? "Nodus Drift",
+            MPMediaItemPropertyArtist: content?.subtitle ?? desired.map(\.name).joined(separator: " · "),
+            MPNowPlayingInfoPropertyIsLiveStream: content?.duration == nil,
             MPNowPlayingInfoPropertyPlaybackRate: playing ? 1.0 : 0.0
         ]
+        if let artwork = content?.artwork { info[MPMediaItemPropertyArtwork] = artwork }
+        if let duration = content?.duration {
+            info[MPMediaItemPropertyPlaybackDuration] = duration
+            info[MPNowPlayingInfoPropertyElapsedPlaybackTime] = content?.elapsed ?? 0
+        }
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = info
     }
 }

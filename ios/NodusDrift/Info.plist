@@ -10,9 +10,29 @@
 <key>CFBundleVersion</key><string>$(CURRENT_PROJECT_VERSION)</string>
 <key>CFBundleDevelopmentRegion</key><string>en</string>
 <key>CFBundleLocalizations</key><array><string>en</string></array>
+<key>UTExportedTypeDeclarations</key><array><dict>
+<key>UTTypeIdentifier</key><string>com.drakonis96.nodusdrift.scene</string>
+<key>UTTypeDescription</key><string>Nodus Drift Soundscape</string>
+<key>UTTypeConformsTo</key><array><string>public.json</string></array>
+<key>UTTypeTagSpecification</key><dict><key>public.filename-extension</key><array><string>driftscene</string></array><key>public.mime-type</key><string>application/json</string></dict>
+</dict></array>
+<key>CFBundleDocumentTypes</key><array><dict>
+<key>CFBundleTypeName</key><string>Nodus Drift Soundscape</string>
+<key>LSHandlerRank</key><string>Owner</string>
+<key>LSItemContentTypes</key><array><string>com.drakonis96.nodusdrift.scene</string></array>
+</dict></array>
+<key>LSSupportsOpeningDocumentsInPlace</key><false/>
 <key>LSRequiresIPhoneOS</key><true/>
 <key>UILaunchScreen</key><dict><key>UIColorName</key><string>LaunchBackground</string></dict>
-<key>UIApplicationSceneManifest</key><dict><key>UIApplicationSupportsMultipleScenes</key><false/><key>UISceneConfigurations</key><dict/></dict>
+<key>UIApplicationSceneManifest</key><dict>
+<key>UIApplicationSupportsMultipleScenes</key><true/>
+<key>UISceneConfigurations</key><dict>
+<key>CPTemplateApplicationSceneSessionRoleApplication</key><array><dict>
+<key>UISceneClassName</key><string>CPTemplateApplicationScene</string>
+<key>UISceneConfigurationName</key><string>Nodus Drift CarPlay</string>
+<key>UISceneDelegateClassName</key><string>$(PRODUCT_MODULE_NAME).DriftCarPlaySceneDelegate</string>
+</dict></array>
+</dict></dict>
 <key>UIApplicationSupportsIndirectInputEvents</key><true/>
 <key>UIBackgroundModes</key><array><string>audio</string></array>
 <key>UISupportedInterfaceOrientations</key><array><string>UIInterfaceOrientationPortrait</string><string>UIInterfaceOrientationLandscapeLeft</string><string>UIInterfaceOrientationLandscapeRight</string></array>

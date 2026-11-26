@@ -1,0 +1,11 @@
+Version 0.2.0 — coherent landscapes and direct landscape access
+
+- Visual compositions now respect the setting, animal habitat and available surfaces. A car shows its surroundings, rain and wipers, without an open umbrella or flames on the dashboard. Visible fire stays in the cabin fireplace.
+- Selected sounds continue playing. Objects that do not belong in the shot are treated as off-screen ambience, with a short explanation in the expanded controls. The same rules protect older drafts, imported scenes and AI-created scenes.
+- Fewer foreground objects, consistent scale and calibrated resting positions keep compositions uncluttered. A wide crop no longer moves an object from its surface into the sky, onto a dashboard or over water.
+- Added a picture-frame button beside play/pause in the bottom mini player. It opens the landscape directly and remains available when the active scene is paused. When Studio owns playback, it opens the active Studio scene and its playback controls operate that scene.
+- Fixed the handoff from an already-playing mix to Studio's preset landscapes, which could fail with audio error -10867. Stopped audio graphs are rebuilt at playback boundaries, stale asynchronous preparation is discarded, and graph edits are coordinated with engine playback.
+
+Please try Rain on a car + Rain on an umbrella + Campfire, and Footsteps in the snow + Wolf. Rotate the view and confirm the scene remains coherent. Then keep a six-sound mix playing, select each Studio preset in turn, return to Sounds and use the new picture-frame shortcut. Pause and resume both a mix and a Studio scene.
+
+All scenery remains bundled and works offline. This is curated local composition, not arbitrary image/video generation. No new tests were performed on the physical iPhone, as requested; simulator results and remaining platform limits are recorded in the repository.

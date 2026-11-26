@@ -3,7 +3,7 @@ import Foundation
 import SwiftUI
 
 struct DriftSound: Codable, Identifiable, Equatable {
-    let id: String
+    var id: String
     let name: String
     let detail: String
     let category: String
@@ -19,6 +19,9 @@ struct DriftSound: Codable, Identifiable, Equatable {
     var beatHz: Double?
     let licenseStatus: String
     let licenseId: String
+    var localFileName: String?
+    var oneShot: Bool?
+    var startOffsetSeconds: Double?
 }
 
 enum DriftCatalog {
@@ -73,6 +76,8 @@ struct DriftConfiguration: Codable {
     var haptics = true
     var keepAwake = true
     var mixWithOtherAudio = false
+    // Optional preserves decoding of configuration files from earlier builds.
+    var meditationAppearance: MeditationAppearance?
 
     mutating func sanitize() {
         let known = Set(DriftCatalog.sounds.map(\.id))
@@ -116,6 +121,7 @@ struct DriftConfiguration: Codable {
     @Published var immersive = false
     @Published private(set) var sleepDeadline: Date?
     @Published private(set) var remainingSeconds: Int?
+    private(set) var loadedPreset: DriftPreset?
     let audio = DriftAudioEngine()
     private let defaults: UserDefaults
     private var clock: Timer?
@@ -123,6 +129,15 @@ struct DriftConfiguration: Codable {
     var selection: [String] { config.selection }
     var activeSounds: [DriftSound] { selection.compactMap(DriftCatalog.sound) }
     var summary: String { activeSounds.map(\.name).joined(separator: " · ") }
+    var playbackName: String {
+        let loaded = loadedPreset.map { value in config.presets.first { $0.id == value.id } ?? value }
+        return ([loaded].compactMap { $0 } + config.presets).first { preset in
+            preset.selection == selection && selection.allSatisfy { (preset.volumes[$0] ?? 0.25) == volume($0) }
+        }?.name ?? "Your soundscape"
+    }
+    var meditationAppearance: MeditationAppearance { config.meditationAppearance ?? (selection.isEmpty ? .nodi : .landscape) }
+    var meditationScene: StudioScene { MeditationComposition.scene(sounds: activeSounds, volumes: config.volumes) }
+    func setMeditationAppearance(_ appearance: MeditationAppearance) { config.meditationAppearance = appearance; persist() }
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
@@ -147,7 +162,7 @@ struct DriftConfiguration: Codable {
         }
         #endif
         audio.didStartVoice = { [weak self] id in
-            guard let self else { return }
+            guard let self, DriftCatalog.sound(id) != nil else { return }
             self.config.usage[id] = min(1_000_000, (self.config.usage[id] ?? 0) + 1)
             self.persist()
         }
@@ -173,24 +188,28 @@ struct DriftConfiguration: Codable {
         }
         persist(); feedback()
         // Selecting a sound starts the mix, as in the desktop experience.
+        audio.master = config.master
         audio.play(sounds: activeSounds, volumes: config.volumes)
     }
     func remove(_ id: String) {
         config.selection.removeAll { $0 == id }; audio.remove(id); persist(); feedback()
-        if selection.isEmpty { audio.pause(); setSleepTimer(minutes: nil) }
+        if selection.isEmpty && audio.owner == .listen { audio.pause(); setSleepTimer(minutes: nil) }
     }
     func togglePlayback() {
-        if audio.playing { audio.pause() }
-        else if !selection.isEmpty { audio.play(sounds: activeSounds, volumes: config.volumes) }
+        if audio.listening { audio.pause() }
+        else if !selection.isEmpty { audio.master = config.master; audio.play(sounds: activeSounds, volumes: config.volumes) }
     }
-    func clear() { audio.clear(); config.selection = []; setSleepTimer(minutes: nil); persist() }
+    func clear() {
+        if audio.owner == .listen { audio.clear(); setSleepTimer(minutes: nil) }
+        config.selection = []; persist()
+    }
     func setVolume(_ id: String, _ value: Float) {
         config.volumes[id] = DriftConfiguration.clamp(value, fallback: 0.25)
         audio.setVolume(id, volume(id)); persist()
     }
     func setMaster(_ value: Float) {
         config.master = DriftConfiguration.clamp(value, fallback: 0.35)
-        audio.master = config.master; persist()
+        if audio.owner == .listen { audio.master = config.master }; persist()
     }
     func favorite(_ id: String) {
         if config.favorites.contains(id) { config.favorites.remove(id) } else { config.favorites.insert(id) }
@@ -217,6 +236,7 @@ struct DriftConfiguration: Codable {
     func deletePreset(_ id: String) { config.presets.removeAll { $0.id == id }; config.presetUsage[id] = nil; persist() }
     func load(_ preset: DriftPreset) {
         audio.pause(); setSleepTimer(minutes: nil)
+        loadedPreset = preset
         config.selection = preset.selection
         config.volumes.merge(preset.volumes) { _, new in new }
         config.master = preset.master; audio.master = preset.master

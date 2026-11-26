@@ -2,6 +2,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @ObservedObject var studio: StudioStore
     @EnvironmentObject private var store: DriftStore
     @State private var legalDocument: LegalDocument?
     @ScaledMetric(relativeTo: .largeTitle) private var headingSize = 35.0
@@ -23,9 +24,12 @@ struct SettingsView: View {
                     preference("Mix with other audio", detail: "Keep music from other apps playing", icon: "music.note", key: \DriftConfiguration.mixWithOtherAudio)
                 }.driftPanel()
                 Label("Nodi follows your iOS Reduce Motion setting. VoiceOver keeps meditation controls visible.", systemImage: "accessibility").font(.footnote).foregroundStyle(DriftTheme.muted)
+                NavigationLink { StudioModelsView(models: studio.generator.models, generator: studio.generator) } label: {
+                    Label("Models & licenses", systemImage: "square.stack.3d.up").frame(maxWidth: .infinity, alignment: .leading).padding(22).driftPanel()
+                }.accessibilityIdentifier("settings-models-licenses")
                 VStack(alignment: .leading, spacing: 17) {
                     Label("A quiet app, in every sense.", systemImage: "lock.shield").font(.system(size: 19, design: .serif))
-                    Text("All 89 sounds work offline. Your mixes and favorites stay on this device. No account, advertising, analytics or purchases.").font(.subheadline).foregroundStyle(DriftTheme.muted).lineSpacing(5)
+                    Text("All 89 sounds work offline. Your mixes, scenes and recordings stay on this device. Optional AI models download from your Hugging Face account. No advertising, analytics or purchases.").font(.subheadline).foregroundStyle(DriftTheme.muted).lineSpacing(5)
                     Button("Read privacy policy") { legalDocument = LegalDocument(title: "Privacy policy", file: "PRIVACY.md") }.font(.subheadline)
                 }.frame(maxWidth: .infinity, alignment: .leading).padding(22).driftPanel()
                     .accessibilityElement(children: .contain).accessibilityIdentifier("settings-privacy-card")
@@ -39,6 +43,9 @@ struct SettingsView: View {
                         Label("Nodus support", systemImage: "questionmark.circle")
                     }.font(.subheadline).accessibilityIdentifier("nodus-support")
                     Divider().overlay(DriftTheme.line)
+                    Button("Landscape artwork & credits") {
+                        legalDocument = LegalDocument(title: "Landscape artwork", file: "LANDSCAPES.md")
+                    }.font(.subheadline).accessibilityIdentifier("landscape-credits")
                     Text("Sound catalogue by Moodist").font(.subheadline.weight(.medium))
                     Text("Moodist’s catalogue data is MIT licensed, © 2023 MAZE. Audio loops were newly made for Nodus from documented CC0 sources, with original radio sound design. Source credits and licenses are included below.")
                         .font(.footnote).foregroundStyle(DriftTheme.muted).lineSpacing(4)
