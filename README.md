@@ -10,7 +10,7 @@
 
 # Nodus Drift
 
-Nodus Drift is a free, open-source app for playing ambient sounds on iPhone and iPad. It includes 89 sounds, supports mixes of up to six sounds, and works without a network connection. There are no accounts, ads, tracking, subscriptions or purchases.
+Nodus Drift is a free, open-source app for listening to ambient sounds and creating immersive soundscapes on iPhone and iPad. It includes 89 offline sounds, simple mixes of up to six sounds, and a Studio for scenes of up to 12 layers. There are no ads, tracking, subscriptions or purchases. Optional model downloads use your Hugging Face account; listening and manual creation work without an account.
 
 It is built with SwiftUI and AVAudioEngine. Audio is decoded, mixed and played on the device.
 
@@ -18,13 +18,33 @@ Download Nodus Drift on the [App Store](https://apps.apple.com/app/nodus-drift-a
 
 ## Features
 
+- **Soundscape Studio:** create and save scenes with up to 12 layers, intensity and
+  position keyframes, random events, fades, a timeline and an interactive spatial map.
+  Three evolving starter scenes are included; simple listening remains available.
+- **Portable scenes:** edit, duplicate, import, export and share scene documents
+  including their locally generated recordings.
+- **Local audio generation:** optional Stable Audio 3 Small-SFX and Small-Music
+  models, reusing Reader's StableAudioMLX runtime. Downloads use your Hugging Face
+  read token, stored in Keychain. Weights have separate Stability/Gemma terms.
+  Generation runs on supported physical devices and is disabled in Simulator.
+- **Create with words:** Apple's optional on-device Foundation Models framework
+  directs editable scenes on eligible iOS 26+ devices. No external AI fallback.
+- **Living landscapes:** 22 bundled photographic-style environments with native
+  Metal water, foliage, rain, snow, mist, firelight and stars. Selected animals,
+  objects, footprints and windshield effects form personalized compositions. Weather follows scene
+  automation. Visuals work offline, can be disabled, and respect Reduce Motion,
+  Low Power Mode, visibility and thermal state.
+
 - **Sound catalogue:** 89 sounds in Rain, Nature, Animals, Places, Things, Transport, Urban, Noise and Binaural categories.
 - **Mixing:** play up to six sounds at once. Each sound has its own volume, and a master volume controls the mix. Gain changes use 150 ms ramps and the output passes through a peak limiter.
 - **Playback:** seamless loops, independent stereo white, pink and brown noise, and five binaural presets. Audio playback continues in the background with lock-screen controls.
 - **Discovery:** search sounds, mark favorites, filter by category and sort by recommended order, name, type or use count.
 - **Saved mixes:** save up to 48 mixes with a name, icon, sounds and volumes. Edit or delete them at any time. Restored mixes start paused.
 - **Sleep timer:** stop playback after a chosen number of minutes. Playback fades out when the timer ends, including while the screen is locked.
-- **Nodi:** an animated Nodus character with a lotus pose, breathing animation and a full-screen meditation view.
+- **Meditation:** choose the original Nodi companion or an animated personalized landscape
+  based on the sounds in your mix. Pause visuals independently of audio; your
+  appearance choice is remembered. A clean immersive view keeps only the small
+  top-left Nodus Drift brand visible until tapped. Nodi keeps its lotus pose and breathing animation.
 - **Accessibility:** VoiceOver labels and actions, Reduce Motion support, adaptive grids and native controls.
 - **Offline use:** all sounds, favorites, mixes and settings are stored on the device. No account or server is required.
 
@@ -76,3 +96,23 @@ All screenshots use the same 600 × 800 frame.
 To use the Nodus Drift experience on macOS, install the original [Nodus Research](https://github.com/jorgepb96/nodus) app.
 
 Nodus Drift is licensed under the MIT licence. See [docs/LICENSING.md](docs/LICENSING.md) for the licence scope and [docs/rights](docs/rights) for the audio source register. Moodist catalogue data is MIT licensed.
+
+Studio architecture, evidence and limitations are recorded in
+[docs/soundscape-studio](docs/soundscape-studio/ARCHITECTURE.md). The feasibility
+measurements are from Reader; at the user's request no new physical iPhone tests
+were performed for Studio. See [feasibility](docs/soundscape-studio/FEASIBILITY.md)
+and [validation](docs/soundscape-studio/VALIDATION.md).
+
+Immersive scenes show the main photograph and animated atmosphere. Decorative
+animal/object overlays are disabled; their assets and recipes are retained.
+Every environment includes a dedicated horizontal photograph. The mini player
+opens the landscape for the current mix or Studio scene. See
+[horizontal landscapes](docs/soundscape-studio/BUILD16_HORIZONTAL_LANDSCAPES.md)
+and the [0.2.0 (17) library layout correction](docs/soundscape-studio/BUILD17_LANDSCAPE_LIBRARY.md)
+for implementation and validation.
+
+CarPlay Audio provides Home, saved mixes/Studio scenes and Explore using native
+static-artwork grids, with the system Now Playing screen and one shared audio
+transport. Editing and animated landscapes remain on iPhone. See
+[implementation and signing](docs/carplay/IMPLEMENTATION.md) and
+[validation and remaining vehicle checks](docs/carplay/VALIDATION.md).

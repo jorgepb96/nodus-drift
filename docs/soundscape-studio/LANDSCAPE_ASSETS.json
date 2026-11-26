@@ -1,0 +1,209 @@
+{
+  "generatedWith": "Built-in image_gen tool",
+  "purpose": "Photorealistic landscape plates with real-time native Metal effects",
+  "assets": [
+    {
+      "name": "forest",
+      "prompt": "Photorealistic wilderness photograph, portrait 2:3 composition, 2048 by 3072 if supported. Immersive ground-level view inside a real old-growth temperate conifer forest, looking along a small meandering trail toward an opening in the distance. Enormous naturally irregular spruce and cedar trunks, fine branches and believable needles, lush ferns and wet moss covering roots, subtle scattered forest-floor leaves, rich bark and damp stone microtexture. Strong foreground/middle/distant depth with clear atmospheric perspective. Soft early morning overcast blue-hour light, open detailed shadows, luminous pale sky only glimpsed through upper branches; restrained natural olive/emerald and slate tones. National Geographic quality full-frame nature photography, 35mm lens, natural optics, detailed focus without oversharpening, realistic photographic dynamic range. Keep central 60 percent composition attractive when cropped to either a wide preview or phone portrait. No people, no animals, no cabins, no sun disk or moon, no stars, no baked-in rain streaks, no dense baked fog, no captions, no lettering, no UI, no watermark. Must look like an actual photograph, not an illustration, painting, CGI or stylized game environment.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/forest.jpg",
+      "sha256": "2ddc666c37f616fa3cfc63fcde9c8bac34d4baa77397b7dd49b4682cd2bbe1f2",
+      "bytes": 1007581,
+      "originalSHA256": "faa1802c717b6c89fc58af3e390bde5dbb951a1acf088f3e2f2b25293f837973"
+    },
+    {
+      "name": "coast",
+      "prompt": "Photorealistic seascape photograph, portrait 2:3 composition, 2048 by 3072 if supported. Peaceful wild Atlantic cove at soft overcast blue hour, seated eye-level view from the shore. Dark weathered rocky coastline curves in from the left; blue-gray ocean occupies the lower half and center-right, delicate natural foam along low rolling shore waves, glistening wet sand and dark pebbles in the foreground, headlands softly receding into the distance. A straight, level distant sea horizon at approximately 45 percent of image height, open softly clouded sky above. Real ocean surface detail with small irregular swells and pale reflections. Restrained blue, slate, muted teal, silver light. Full-frame coastal landscape photography, 35mm, natural exposure, highly detailed rocks and water without HDR halos. Compose a strong central scene usable when cropped to portrait or a wide app preview. No people, boats, buildings, animals, sun disk, moon, stars, baked rain, text, watermark, graphics or frame. Actual photographic realism, not CGI, painting or vector art.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/coast.jpg",
+      "sha256": "6e2104d3b5a175bac2907c2af28630d14df4dffd24b4344799044ee798b7dc2a",
+      "bytes": 585492,
+      "originalSHA256": "e5c8b12b7d03d771148e3a14adcded344130d0e413c473d2310e80a2bc63da81"
+    },
+    {
+      "name": "mountains",
+      "prompt": "Photorealistic alpine landscape photograph, portrait 2:3 composition, 2048 by 3072 if supported. Looking from a mossy rocky mountainside across a deep pine-filled alpine valley to a majestic jagged granite mountain range. Detailed rock strata, distant small snow patches in high crevices, layers of naturally shaped mountains receding through blue atmospheric haze. Foreground dark weathered rocks and low mountain grasses, middle-ground real conifers. Soft overcast early-dawn light with subtle silvery rim illumination through clouds, no direct sun. Mountain skyline at 40 percent image height, luminous softly clouded sky above, natural muted alpine greens and cool slate. Full-frame landscape photography, 35mm lens, crisp natural details and convincing enormous scale, restrained dynamic range. Keep central composition beautiful for a wide preview and tall phone screen. No people, buildings, artificial lights, sun disk, moon, stars, baked rainfall, text, watermark, illustration, CGI or stylization. Look like a real remote alpine location photographed in excellent natural light.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/mountains.jpg",
+      "sha256": "093864c3a8835d564eebc38bfd5e78a98c3c3af2f08b6e838b1ff95dd0f917f7",
+      "bytes": 615992,
+      "originalSHA256": "9c915fd8b990cb9cfadca4d28ce8413312cfef45b79edc8cf5920030b3e27869"
+    },
+    {
+      "name": "cabin",
+      "prompt": "Photorealistic architectural nature photograph, portrait 2:3 composition, 2048 by 3072 if supported. A quiet authentic small mountain cabin interior photographed from a seated reading position. A rough dark natural-stone fireplace and unlit black hearth on the LEFT in the lower half, a few real charred logs inside but absolutely NO fire and no glowing embers. Hearth opening centered around x=0.20 and y=0.73 in the full image; hearth opening width around 0.23 of image width, height around 0.17. A large clean picture window fills the center-right, with window glass revealing close tall spruce trees and a deep evergreen forest outside. Broad forest view through glass, soft cool overcast dawn light. Beautiful tactile worn timber beams, subtle wool and linen textures at frame edges, stone floor, believable cozy proportions. Open detailed natural shadows, cool natural ambient daylight; no artificial yellow lighting because firelight will be animated later. Full-frame interior photography, natural 28mm lens without fisheye, real material microtexture, cinematic but documentary realism, rich atmosphere. Keep fireplace and window identifiable in central landscape crop as well as full portrait. No people, animals, text, branding, screens, baked-in rain droplets, stars or dense fog. No illustration, painting or CGI appearance.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/cabin.jpg",
+      "sha256": "f6143cc849fd23731cd46bb6898076fce1fc11baf91721c652c04bd6e5075c11",
+      "bytes": 694342,
+      "originalSHA256": "4e8218ae0c9cc4aeda4ccb361e04580de4eb17349001a3889e0abb54cbefa215"
+    },
+    {
+      "name": "river",
+      "prompt": "Photorealistic forest river landscape photograph, portrait 2:3 composition, 2048 by 3072 if supported. Immersive seated view upstream along a crystal-clear shallow river through a real lush temperate forest. River runs down the CENTER of the image, beginning near x=0.52 y=0.42 in the distance and widening naturally toward the bottom center, with irregular moss-covered dark stones along both banks and some submerged rounded stones. Flowing water with finely textured natural ripples, restrained small cascades, transparent green/blue reflections. Thick diverse ferns, cedar and spruce trees flank both banks, rich damp moss, detailed bark, convincing depth. Soft overcast early morning light, natural cool greens and slate, open shadows. Full-frame wilderness photography, 35mm lens, real photographic water and rock detail, no exaggerated long-exposure blur. Keep the central river compelling in both a wide app preview and tall portrait crop. No people, animals, buildings, sun disk, moon, stars, baked rain, fog blanket, lettering, watermark or frame. Real photograph, no painting, CGI or stylized trees.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/river.jpg",
+      "sha256": "e81b4261582044c9b4a373fdf28a8f56e57794e2dbfead264b2fb623a23448ee",
+      "bytes": 1032627,
+      "originalSHA256": "acf119aa11ce091291278eef8d57e13aee9df2ab5a66c00078e472f342dc7016"
+    },
+    {
+      "name": "snow",
+      "prompt": "Photorealistic winter wilderness photograph, portrait 2:3 composition, 2048 by 3072 if supported. A silent deep natural spruce forest after fresh snow, viewed from a small clearing. Real irregular snow-laden evergreen boughs reach inward from both sides, distant conifers recede into a softly luminous opening near the center. Uneven soft fresh snow blankets rocks, fallen logs and the forest floor with highly believable fine texture; natural branch detail and subtle icy glints, strong near/far depth. Soft diffuse blue-hour overcast light, luminous whites without blown highlights, cool blue shadows and extremely restrained dark evergreen. Full-frame winter landscape photography, 35mm, rich quiet atmosphere and realistic exposure, not overprocessed. No falling snow particles baked into the image, because snow will be animated; no people, tracks, animals, cabins, artificial lights, sun, moon, stars, text or watermark. Keep central scene effective in a wide crop and tall phone screen. Must look like an actual nature photograph, not CGI or a painting.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/snow.jpg",
+      "sha256": "e9fcc04c6efd7c10585c4accb40d9304d918f8dd089d7670cbe97edae44b038e",
+      "bytes": 816178,
+      "originalSHA256": "32ec608478b73290b7a2de4ec3c73e9ca65e6d1d135adad5b517ab7d222c3907"
+    },
+    {
+      "name": "night",
+      "prompt": "Photorealistic wilderness blue-hour landscape photograph, portrait 2:3 composition, 2048 by 3072 if supported. A tranquil dark remote mountain lake viewed from its low rocky shore through a few framing pine branches. The upper 45 percent is an expansive clean deep blue twilight sky with only the faintest thin wisps of clouds, no stars, no moon and no sun, because those will be controlled in the app. Distant subtle mountain silhouettes and dense real evergreen forest form an irregular horizon around y=0.46; the lower half is still dark blue water with fine irregular gentle ripples and faint real sky reflections. Some naturally textured dark stones at the lower edges, layers of distance, open shadows still revealing texture. Convincing astronomical blue-hour photographic exposure, muted navy and silver-blue with natural greens, full-frame 35mm landscape photography. Central framing must work for both a tall phone screen and wide landscape crop. No people, boats, buildings, artificial lights, baked rain, text, logo, watermark, illustration, CGI or oversaturated fantasy colors. Extraordinary realism, quiet and natural.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/night.jpg",
+      "sha256": "876b78e3810ea8ce8eb615d7f2d9589a7ec193995e6a32a5bdf397ae6a455d06",
+      "bytes": 442284,
+      "originalSHA256": "fa47aef5664a98f207dcafe6e669a0a8172201ef9f4ff7dce216b65fd4d33128"
+    },
+    {
+      "name": "car",
+      "prompt": "Photorealistic full-frame interior nature photograph for a relaxing iPhone soundscape, portrait 2:3 1024x1536. Parked stationary modern unbranded car seen from driver eye level. Detailed dark dashboard and steering wheel occupy lower 35 percent, roof edge frames top, broad clean windshield from y=.18 to .57 reveals a peaceful empty forest road and conifers. Absolutely no rain, droplets, wipers, text or logos baked into the photo: rain and windshield wipers are rendered later. Natural cool overcast diffuse morning light, convincing automotive materials, restrained colors, no people, no motion blur, no CGI or illustration. Windshield large and unobstructed across central image for native weather animation.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/car.jpg",
+      "sha256": "5530e5b01daf823a00940190cab19b183662bc14c789a891a5fe9b306e92fa2a",
+      "bytes": 569243,
+      "kind": "photographic background plate"
+    },
+    {
+      "name": "tent",
+      "prompt": "Photorealistic wilderness camping photograph, portrait 2:3 1024x1536. Seated inside a small authentic canvas camping tent looking through its large open triangular doorway toward a quiet real spruce forest. Fabric sides frame both edges, top edge, sleeping bag and camping mat lower 25 percent, detailed forest path and moss outside central 60 percent. No people, no fire, no rain, no text or brand. Soft overcast light, real tactile fabric, natural scale and quiet documentary landscape realism. Leave the doorway unobstructed for native animated rain and wildlife outside. Not a painting or CGI.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/tent.jpg",
+      "sha256": "f768c54fb2a4437dc150c0de54d8ed47f0d15e568c2d2415ee8f48ca67b46bfc",
+      "bytes": 750298,
+      "kind": "photographic background plate"
+    },
+    {
+      "name": "animals",
+      "prompt": "Create one professional photorealistic raster sprite atlas, 2048x2048 if supported, exactly FOUR equal columns and FOUR equal rows, 16 square cells in a strict uniform grid, completely TRANSPARENT background. No cell borders, no grid, no captions, no text, no shadows outside each subject. Each full subject is centered in its own exact cell, occupies at most 78 percent of cell width and height, with at least 11 percent transparent padding on all sides, never crossing a cell edge. Camera realistic full-body wildlife cutouts, natural fur and feathers, neutral soft overcast light, consistent three-quarter view, convincing anatomy and restrained natural color, no cartoon or illustration. Exact row-major order: ROW1: one small songbird, one seagull with wings open, one cricket, one gray timber wolf standing and howling. ROW2: one perched owl, one green frog, one sitting dog, one standing horse. ROW3: one curled sleeping cat, one perched black crow, one humpback whale side view, one small natural hanging beehive with a few tiny bees. ROW4: one woodpecker clinging to a short branch within the cell, one hen, one standing cow, one standing sheep. Keep every subject fully inside the assigned cell. Realistic photographic game compositing assets, alpha cutouts, no ground or landscape.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/animals.png",
+      "sha256": "2141e1b887061daef537ad106f36b4b8665cb9e8e9c4d40c9ff0f112968175a8",
+      "bytes": 1647813,
+      "kind": "transparent 4x4 photographic sprite atlas"
+    },
+    {
+      "name": "props",
+      "prompt": "Create one photorealistic object sprite atlas, 2048x2048 if supported, exactly FOUR equal columns and FOUR equal rows, strict uniform grid of 16 square cells on a fully TRANSPARENT background. No grid lines, borders, numbers, labels, lettering, brands or captions. Every object centered in its own cell, fully visible and contained within central 78 percent of cell dimensions, generous 11 percent transparent padding on all sides, no overlap or shadows outside its cell. Real-life tactile material detail, soft neutral upper-left studio daylight, natural perspective, photographic compositing cutouts, no CGI appearance, no cartoon. Exact row-major order: ROW1: round simple analog wall clock with tick marks and no numbers; modern plain computer keyboard; vintage manual typewriter; two loosely folded sheets of cream paper. ROW2: hanging metal wind chimes; bronze singing bowl with wooden mallet; ceiling fan with three wooden blades viewed slightly from below; small vintage slide projector. ROW3: metal kettle with lid; small vintage wooden tabletop radio; vinyl record player with black disc; white front-loading washing machine. ROW4: simple white tumble dryer; brass Morse telegraph key; open plain dark umbrella; small neutral canvas camping tent viewed from outside. Keep each object within its exact grid cell. Transparent isolated alpha, no floor, room or background.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/props.png",
+      "sha256": "3fc8ac826adf782c0380c31c08a83cefca5aa5397a1229ea5c19af2611826da0",
+      "bytes": 1591622,
+      "kind": "transparent 4x4 photographic sprite atlas"
+    },
+    {
+      "name": "cafe",
+      "prompt": "Photorealistic background plate for Nodus Drift immersive soundscapes. Portrait 2:3, 1024x1536. Scene: a quiet authentic cafe, seen from a seated position behind an empty warm wooden table occupying the lower 35 percent. A large clear street-facing window occupies the upper center/right, with a calm European street outside. Tasteful unbranded cafe interior, soft lamps, wooden chairs in distance. No mugs or devices on the foreground table, no people. Full-frame natural photographic optics, tactile detailed materials, restrained cool/neutral color, soft believable light, convincing scale, peaceful cinematic documentary realism. Keep central composition usable in both phone portrait and a wide crop. No rain or snow baked into the image: weather is animated later. No graphics, UI, captions, watermark, illustration, CGI or painting appearance.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/cafe.jpg",
+      "sha256": "cf5abf0ae10e258d455c48daab61960961d6a233d70b012bc0ce424021626e50",
+      "bytes": 659626,
+      "kind": "photographic background plate"
+    },
+    {
+      "name": "city",
+      "prompt": "Photorealistic background plate for Nodus Drift immersive soundscapes. Portrait 2:3, 1024x1536. Scene: a peaceful real European city street at blue hour, seen from a sidewalk beside a small square. Convincing stone and brick buildings, street lamps, a clear roadway receding into the center, distant parked cars only, open pavement in foreground. No crowds or close vehicles. Restrained documentary urban photography. Full-frame natural photographic optics, tactile detailed materials, restrained cool/neutral color, soft believable light, convincing scale, peaceful cinematic documentary realism. Keep central composition usable in both phone portrait and a wide crop. No rain or snow baked into the image: weather is animated later. No graphics, UI, captions, watermark, illustration, CGI or painting appearance.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/city.jpg",
+      "sha256": "6b4abd211f8e0e22fee39b24d2a0aac561ffad003616ad988a22ac21da51f799",
+      "bytes": 758444,
+      "kind": "photographic background plate"
+    },
+    {
+      "name": "train",
+      "prompt": "Photorealistic background plate for Nodus Drift immersive soundscapes. Portrait 2:3, 1024x1536. Scene: the interior of an authentic modern regional passenger train, seen from a seated position. Empty cloth seat and small clean table in foreground bottom/left, broad clean window upper center/right revealing a pine valley and distant mountain railway landscape. Real metal/plastic/material details, no people or signage. Full-frame natural photographic optics, tactile detailed materials, restrained cool/neutral color, soft believable light, convincing scale, peaceful cinematic documentary realism. Keep central composition usable in both phone portrait and a wide crop. No rain or snow baked into the image: weather is animated later. No graphics, UI, captions, watermark, illustration, CGI or painting appearance.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/train.jpg",
+      "sha256": "dcb7a1f6bf42a3a487bdf4916723c1c11c3e9cfa52ddfd952ba4cb9573951048",
+      "bytes": 590219,
+      "kind": "photographic background plate"
+    },
+    {
+      "name": "underwater",
+      "prompt": "Photorealistic background plate for Nodus Drift immersive soundscapes. Portrait 2:3, 1024x1536. Scene: a quiet realistic shallow underwater world, looking across a gently sloping sandy seabed toward rocks, sea grass and restrained coral. Clear blue-green water occupying upper half, soft natural shafts of light from surface, convincing depth and photographic scuba optics. No fish, bubbles or animals baked in; those are composited later. Full-frame natural photographic optics, tactile detailed materials, restrained cool/neutral color, soft believable light, convincing scale, peaceful cinematic documentary realism. Keep central composition usable in both phone portrait and a wide crop. No rain or snow baked into the image: weather is animated later. No graphics, UI, captions, watermark, illustration, CGI or painting appearance.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/underwater.jpg",
+      "sha256": "b522748c2faba92b071e228f0cee176f79c1834c333973ab8ef97037c1342d5c",
+      "bytes": 620034,
+      "kind": "photographic background plate"
+    },
+    {
+      "name": "room",
+      "prompt": "Photorealistic background plate for Nodus Drift immersive soundscapes. Portrait 2:3, 1024x1536. Scene: a quiet cozy real study interior, viewed from a seated position behind an EMPTY broad natural wooden desk occupying the lower 40 percent. A clean broad window upper right reveals a subdued forest garden. Wooden walls and shelves in the distance, simple neutral chair, tranquil soft daylight. No objects, devices or papers on the foreground desk, no visible clock or fan. Full-frame natural photographic optics, tactile detailed materials, restrained cool/neutral color, soft believable light, convincing scale, peaceful cinematic documentary realism. Keep central composition usable in both phone portrait and a wide crop. No rain or snow baked into the image: weather is animated later. No graphics, UI, captions, watermark, illustration, CGI or painting appearance.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/room.jpg",
+      "sha256": "a00c902bbda1a29ceb00b396a9da65719003fbbf6c80b403e4d1e391f678fcb8",
+      "bytes": 585553,
+      "kind": "photographic background plate"
+    },
+    {
+      "name": "sanctuary",
+      "prompt": "Photorealistic background plate for Nodus Drift immersive soundscapes. Portrait 2:3, 1024x1536. Scene: a serene real historic stone sanctuary, with tall arches, a broad warm wood floor in foreground, subtle pillars along both sides, diffuse soft window light. Quiet dignified architectural photography, open floor and side ledges for small composited objects. No people, lettering, icons, candles or dramatic religious symbols. Full-frame natural photographic optics, tactile detailed materials, restrained cool/neutral color, soft believable light, convincing scale, peaceful cinematic documentary realism. Keep central composition usable in both phone portrait and a wide crop. No rain or snow baked into the image: weather is animated later. No graphics, UI, captions, watermark, illustration, CGI or painting appearance.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/sanctuary.jpg",
+      "sha256": "4a0a19feb76cc670b8b0be04be2ffe8d027453ce7063ba893de1c85824a25526",
+      "bytes": 624420,
+      "kind": "photographic background plate"
+    },
+    {
+      "name": "airport",
+      "prompt": "Photorealistic background plate for Nodus Drift immersive soundscapes. Portrait 2:3, 1024x1536. Scene: an authentic calm airport departure lounge at soft overcast dawn, viewed from a seated position. Large unobstructed glass windows across central image reveal apron and one distant unbranded passenger aircraft. A few empty terminal seats frame lower edges, polished floor in foreground. No people, text, signage, logos or advertisements. Full-frame natural photographic optics, tactile detailed materials, restrained cool/neutral color, soft believable light, convincing scale, peaceful cinematic documentary realism. Keep central composition usable in both phone portrait and a wide crop. No rain or snow baked into the image: weather is animated later. No graphics, UI, captions, watermark, illustration, CGI or painting appearance.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/airport.jpg",
+      "sha256": "5f6835f46e8ee4babbbd447d79e45aca9f2467b2fb4cb4ef53bf19fc134e5384",
+      "bytes": 424494,
+      "kind": "photographic background plate"
+    },
+    {
+      "name": "utility",
+      "prompt": "Photorealistic background plate for Nodus Drift soundscape composition, portrait 2:3 1024x1536. a clean authentic laundry/utility room with warm restrained off-white walls and a pale stone floor occupying lower 40 percent. Empty space on both sides of the foreground floor for separate washing machine and dryer cutouts. A large clear window on the right at x=.6..95,y=.12..5 reveals green trees. No appliances baked into the image. Quiet, tidy, detailed materials, realistic room proportions. Natural full-frame photographic optics, detailed tactile materials, restrained neutral/cool colors, peaceful soft believable light, convincing scale. Keep central composition useful when cropped wide. No rain, snowfall, visual overlays, captions, UI, watermark, CGI, illustrations or paintings. All weather and composited characters are added later.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/utility.jpg",
+      "sha256": "790cdbdf132b8b61c15c3ea78f3f0edaa916b8956528f5098c75be6cda19942b",
+      "bytes": 424769,
+      "kind": "photographic background plate"
+    },
+    {
+      "name": "market",
+      "prompt": "Photorealistic background plate for Nodus Drift soundscape composition, portrait 2:3 1024x1536. a quiet authentic small grocery market interior, viewed down a central aisle. Wooden produce shelving and unbranded softly detailed food packaging flank both sides, open tile floor foreground, a broad clear street-facing window at upper right. Gentle natural daylight, no shoppers, no readable signage or letters. Natural full-frame photographic optics, detailed tactile materials, restrained neutral/cool colors, peaceful soft believable light, convincing scale. Keep central composition useful when cropped wide. No rain, snowfall, visual overlays, captions, UI, watermark, CGI, illustrations or paintings. All weather and composited characters are added later.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/market.jpg",
+      "sha256": "4cbb4c4e4fec6520aca2dc6ffb59a75c8609bdeb90b1b253521fee75fa77c754",
+      "bytes": 607902,
+      "kind": "photographic background plate"
+    },
+    {
+      "name": "library",
+      "prompt": "Photorealistic background plate for Nodus Drift soundscape composition, portrait 2:3 1024x1536. a quiet authentic old library reading room seen from behind an EMPTY broad wooden reading table occupying lower 35 percent. Beautiful tall real wood bookshelves filled with varied unlettered spines flank left and right, a large clear window upper right reveals a garden. Architectural photographic realism, subtle material wear, no people, signs, lettering or devices on the foreground table. Natural full-frame photographic optics, detailed tactile materials, restrained neutral/cool colors, peaceful soft believable light, convincing scale. Keep central composition useful when cropped wide. No rain, snowfall, visual overlays, captions, UI, watermark, CGI, illustrations or paintings. All weather and composited characters are added later.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/library.jpg",
+      "sha256": "9c2be8cae7d1d83f3a788f5cca65ec1ff62e509deb13836ab5c89468bc30073a",
+      "bytes": 689791,
+      "kind": "photographic background plate"
+    },
+    {
+      "name": "fairground",
+      "prompt": "Photorealistic background plate for Nodus Drift soundscape composition, portrait 2:3 1024x1536. a peaceful real small park fairground at blue hour with an authentic vintage carousel in the middle distance, subtle warm bulbs and plain painted wooden horses. Open stone path in foreground, trees framing the sides, believable quiet scale and empty park, no people or text. Natural full-frame photographic optics, detailed tactile materials, restrained neutral/cool colors, peaceful soft believable light, convincing scale. Keep central composition useful when cropped wide. No rain, snowfall, visual overlays, captions, UI, watermark, CGI, illustrations or paintings. All weather and composited characters are added later.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/fairground.jpg",
+      "sha256": "3b7fd68291f08b0318efd0475cf9b52ce577104fe36a694bc7c1791373963158",
+      "bytes": 844135,
+      "kind": "photographic background plate"
+    },
+    {
+      "name": "laboratory",
+      "prompt": "Photorealistic background plate for Nodus Drift soundscape composition, portrait 2:3 1024x1536. a real quiet clean research laboratory viewed from behind an EMPTY broad pale workbench occupying lower 35 percent. Authentic glass beakers, microscope and plain cabinets in the middle distance, clear large window upper right revealing subdued green trees. Soft diffuse daylight, unbranded realistic instruments, no people, labels, text or medical imagery. Natural full-frame photographic optics, detailed tactile materials, restrained neutral/cool colors, peaceful soft believable light, convincing scale. Keep central composition useful when cropped wide. No rain, snowfall, visual overlays, captions, UI, watermark, CGI, illustrations or paintings. All weather and composited characters are added later.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/laboratory.jpg",
+      "sha256": "ffa7e7e67965d654e3e33138761df51252049b98af32fa8bcf3da140c42f4b95",
+      "bytes": 346522,
+      "kind": "photographic background plate"
+    },
+    {
+      "name": "construction",
+      "prompt": "Photorealistic background plate for Nodus Drift soundscape composition, portrait 2:3 1024x1536. a real quiet construction site at early morning, seen from a safe open gravel path. Partially built brick/steel building and one tower crane in the middle distance, realistic construction materials neatly stacked at sides, foreground gravel and a concrete slab, convincing real engineering proportions. No workers, no signs or branding. Natural full-frame photographic optics, detailed tactile materials, restrained neutral/cool colors, peaceful soft believable light, convincing scale. Keep central composition useful when cropped wide. No rain, snowfall, visual overlays, captions, UI, watermark, CGI, illustrations or paintings. All weather and composited characters are added later.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/construction.jpg",
+      "sha256": "968b1a6c982924fc4fd60b90ab372731005c141460eaea27a6bb6c7bc2b3f5d9",
+      "bytes": 633007,
+      "kind": "photographic background plate"
+    }
+  ],
+  "actualOutputDimensions": {
+    "backgrounds": {
+      "width": 1024,
+      "height": 1536
+    },
+    "spriteAtlases": {
+      "width": 1254,
+      "height": 1254
+    }
+  },
+  "encoding": "Backgrounds converted to JPEG quality 88 with sips; transparent sprite atlases preserved as generated PNG; metadata reads alpha bounds without modifying artwork."
+}

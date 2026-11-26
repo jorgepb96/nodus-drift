@@ -1,0 +1,20 @@
+{
+  "source": "xcodebuild console in .build/build13/ios27-validation.log",
+  "device": "Nodus Drift iOS 27 QA simulator",
+  "runtime": "iOS 27.1",
+  "testBodies": {
+    "passed": 17,
+    "failed": 0,
+    "skipped": 0
+  },
+  "includes": [
+    "3916 catalogue pair audit",
+    "22 background compatibility sweep",
+    "car umbrella/fire regression and GPU guard",
+    "all Studio starters",
+    "six-sound mix handoff to every starter and back",
+    "six spatial sources with rerouting"
+  ],
+  "finalization": "All test suites logged passed; Xcode stalled after completion with invalidDigitCount runtime-version warnings. Simulator was shut down and the hung runner terminated. No complete xcresult summary is claimed.",
+  "physicalDeviceTesting": false
+}

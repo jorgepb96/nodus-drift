@@ -1,5 +1,5 @@
 Nodus Drift — Privacy policy
-Effective date: 9 October 2026. Applies to Nodus Drift 0.1.0 for iPhone and iPad.
+Effective date: 6 November 2026. Applies to Nodus Drift with Soundscape Studio for iPhone and iPad.
 
 Nodus Drift is a free native ambient sound mixer and meditation companion for iPhone and iPad, maintained by Jorge Pérez Burgueño. The app does not create accounts, collect or transmit personal information to the developer, sell or share app data, or include advertising, tracking, remote analytics, subscriptions or in-app purchases.
 
@@ -9,7 +9,17 @@ Nodus Drift stores your selected sounds, volume settings, favorites, saved mixes
 
 Offline audio and permissions
 
-All sound recordings are bundled with the app. Noise and binaural tones are generated on your device. Playback and meditation do not need a network connection or a companion desktop app. Nodus Drift requests no microphone, camera, location, photo-library, contacts, local-network or notification access. Audio may continue in the background when you choose to play a soundscape.
+Optional local AI and Studio documents
+
+Studio scenes, layer positions, automation, visual settings and generated recordings stay in the app's local container. Scene files exported or shared at your request include the composition and its generated recordings. You choose the destination through Apple's Files or sharing interface. Imported scene files are validated before use.
+
+Stable Audio 3 models are optional downloads from Hugging Face. If you choose this feature, the app sends your Hugging Face read token to Hugging Face to verify your account and authorize downloads. The token is stored in this device's Keychain, is excluded from account synchronization and is removed when you sign out. Hugging Face and its download infrastructure receive ordinary network information such as your IP address and requested model files under their own privacy terms. No token is sent to the Nodus developer. Model downloads and temporary archives are excluded from device backups; models can be removed in Models & licenses. Generated recordings remain independently of model downloads. Device backups may include scenes and recordings according to your Apple settings.
+
+Audio generation runs locally using StableAudioMLX. Prompts and recordings are not sent to Stability AI, Hugging Face, the developer or an external AI service. Optional scene direction uses Apple's on-device SystemLanguageModel when Apple Intelligence is available. It does not use Private Cloud Compute or third-party language models. Manual creation and catalogue playback do not require an account or an AI model.
+
+Playback and permissions
+
+All catalogue sound recordings are bundled with the app. Noise and binaural tones are generated on your device. Playback and meditation do not need a network connection or a companion desktop app. Nodus Drift requests no microphone, camera, location, photo-library, contacts, local-network or notification access. Audio may continue in the background when you choose to play a soundscape.
 
 External links and support
 

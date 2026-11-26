@@ -1,0 +1,13 @@
+{
+  "bundleId": "com.drakonis96.nodusdrift",
+  "appIdResource": "2MD2567RHV",
+  "teamId": "6RPLS9EA4X",
+  "entitlement": "com.apple.developer.carplay-audio",
+  "enabledInApplePortal": true,
+  "persistedSettingVerified": true,
+  "verifiedAtLocal": "2026-11-26T10:12:27.094646+01:00",
+  "newEntitlementRequestSubmitted": false,
+  "newAgreementAccepted": false,
+  "profileRegenerationRequired": true,
+  "signedProfileVerification": "Passed; see SIGNED_BUILD.json"
+}

@@ -1,0 +1,81 @@
+{
+  "runtime": "iOS 26.5 simulator",
+  "testBodies": {
+    "passed": 17,
+    "failed": 0,
+    "skipped": 0
+  },
+  "tests": [
+    {
+      "name": "NodusDriftTests.LandscapeTests testAppearanceChangesKeepOneLandscapeSurfaceAndPauseItBehindNodi",
+      "seconds": 4.191
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testCarRejectsUmbrellaFireWildlifeAndWaterInLegacyAndCurrentScenes",
+      "seconds": 0.047
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testEveryBackgroundFiltersAllCatalogueActorsAndEffects",
+      "seconds": 0.008
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testEveryCatalogueItemProducesAValidLocalVisualRecipe",
+      "seconds": 0.008
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testEveryCataloguePairKeepsACompatibleCompositionWithoutChangingAudio",
+      "seconds": 0.308
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testEveryScenarioHasAnIndependentWidePhotographAndAdaptsToViewport",
+      "seconds": 0.868
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testFireAndRainMoveIndividuallyWithoutFoliageOrWater",
+      "seconds": 0.109
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testLiveSurfaceChangesArtworkOnResizeEvenWhilePaused",
+      "seconds": 0.413
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testLiveViewKeepsRenderingAndSurvivesPauseAndReattachment",
+      "seconds": 3.323
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testMeditationUsesTheSelectedMixAndLegacySettingsStillDecode",
+      "seconds": 0.002
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testMetalRendersPhotographsAndRealMotion",
+      "seconds": 1.125
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testPhotographicAssetsAreBundledAndDecode",
+      "seconds": 0.004
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testPhotographicColorPreservesNaturalGreens",
+      "seconds": 0.066
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testReduceMotionSuppressesLightning",
+      "seconds": 0.007
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testSimplifiedCompositionsKeepWeatherAndPreserveDormantActors",
+      "seconds": 0.065
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testVisualStateTracksAutomationAndMutedSources",
+      "seconds": 0.002
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testWindowCanAdoptLandscapeGeometry",
+      "seconds": 2.022
+    }
+  ],
+  "source": ".build/horizontal-landscapes/resumed-validation.log",
+  "finalization": "Rendering unit tests all passed. The UI test later raced hidden controls; that runner was terminated during stalled finalization. Final corrected UI evidence is in Build16FinalUI-summary.json.",
+  "physicalDeviceTesting": false
+}

@@ -1,0 +1,84 @@
+{
+  "device": "Nodus Drift Studio QA \u00b7 iPhone 17 Pro simulator",
+  "runtime": "iOS 26.5",
+  "sdk": "iOS Simulator 27.1",
+  "testBodies": {
+    "passed": 17,
+    "failed": 0,
+    "skipped": 0
+  },
+  "tests": [
+    {
+      "name": "NodusDriftTests.LandscapeTests testAppearanceChangesKeepOneLandscapeSurfaceAndPauseItBehindNodi",
+      "seconds": 3.811
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testCarRejectsUmbrellaFireWildlifeAndWaterInLegacyAndCurrentScenes",
+      "seconds": 0.034
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testEveryBackgroundFiltersAllCatalogueActorsAndEffects",
+      "seconds": 0.005
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testEveryCatalogueItemProducesAValidLocalVisualRecipe",
+      "seconds": 0.008
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testEveryCataloguePairKeepsACompatibleCompositionWithoutChangingAudio",
+      "seconds": 0.238
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testFireAndRainMoveIndividuallyWithoutFoliageOrWater",
+      "seconds": 0.069
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testLiveViewKeepsRenderingAndSurvivesPauseAndReattachment",
+      "seconds": 3.323
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testMeditationUsesTheSelectedMixAndLegacySettingsStillDecode",
+      "seconds": 0.002
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testMetalRendersPhotographsAndRealMotion",
+      "seconds": 0.594
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testPhotographicAssetsAreBundledAndDecode",
+      "seconds": 0.004
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testPhotographicColorPreservesNaturalGreens",
+      "seconds": 0.04
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testReduceMotionSuppressesLightning",
+      "seconds": 0.004
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testSimplifiedCompositionsKeepWeatherAndPreserveDormantActors",
+      "seconds": 0.038
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testVisualStateTracksAutomationAndMutedSources",
+      "seconds": 0.001
+    },
+    {
+      "name": "NodusDriftTests.LandscapeTests testWindowCanAdoptLandscapeGeometry",
+      "seconds": 2.026
+    },
+    {
+      "name": "NodusDriftUITests.LandscapeUITests testAppearanceSwitchKeepsSelectorStableAndPlaybackRunning",
+      "seconds": 30.344
+    },
+    {
+      "name": "NodusDriftUITests.LandscapeUITests testRealMixMeditationCanChooseLandscapeOrNodi",
+      "seconds": 38.076
+    }
+  ],
+  "source": "xcodebuild console in .build/simplified-landscapes/final.log",
+  "finalization": "All 17 test bodies passed. Xcode stalled after test completion with invalidDigitCount SDK-version warnings; the runner was terminated after more than a minute without progress. No completed xcresult bundle is claimed.",
+  "physicalDeviceTesting": false,
+  "visualEvidence": "screenshots/studio/simplified/snow.png"
+}

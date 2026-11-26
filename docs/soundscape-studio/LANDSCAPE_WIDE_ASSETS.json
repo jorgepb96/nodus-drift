@@ -1,0 +1,248 @@
+{
+  "generatedWith": "Built-in image_gen tool",
+  "assets": [
+    {
+      "name": "forest",
+      "prompt": "Use case: photorealistic-natural. Asset: new standalone wide horizontal photographic environment plate for the Nodus Drift relaxation app. Create ONE image, landscape 16:9 composition (ideally 2048x1152), NOT a collage. Scene FOREST: immersive eye-level view along a small meandering trail through an old-growth temperate spruce and cedar forest; naturally irregular huge trunks, detailed bark, wet moss, lush ferns, fine branches. Calm early-morning overcast light, believable depth, open shadows, restrained emerald, olive and slate tones. A genuine full-frame 28mm wilderness photograph with natural photographic exposure and texture, never an illustration or CGI. Compose specifically for a wide screen: rich context across the entire width, the path opening around the center, ground below y=0.62, luminous sky glimpsed through the upper branches. Keep important scenery within the central 70% width so the same horizontal asset works on 4:3 tablets and ultrawide phones. Main environment only: NO people, animals, foreground props, cutout objects, lettering, logo, watermark, UI or borders. NO baked-in rain streaks, snow particles, dense fog, stars or sun disk; weather and light animate in the app.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/forest-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1059917,
+      "sha256": "8096b4c76c771614da2b4103d241ae6e7386128fa472bbca3691167ad92ef61b",
+      "originalSHA256": "3263488bd7b84ffcae8385838569f1f391a8a277a43973c23af254d4070c3c5b",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "coast",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. Quiet wild Atlantic cove at overcast blue hour. Weathered dark coastal rocks enter only from the left and lower-left, ocean spans center and right, delicate small foamy shoreline waves, wet sand at the bottom. Straight level sea horizon at y=0.45. Pale softly clouded sky above; ocean water below y=0.48. Documentary landscape realism, cool slate/teal and silver.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/coast-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 421437,
+      "sha256": "bc956e8678ac480e787d2bc9be99191ae3cfb423595efe197fbd13da4f2f68fd",
+      "originalSHA256": "9854354437ea8610f17ad6e8aeb5af2cdd0120c0d03e084cf0abfb2ab99a3adc",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "mountains",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. A remote alpine valley viewed from mossy rocks and low grasses across natural conifers toward a broad jagged granite mountain range with small patches of old snow. Mountains skyline near y=0.4, soft clouded early dawn sky above. Convincing enormous scale and receding blue atmospheric layers. Restrained alpine greens and slate, natural 28mm landscape photograph.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/mountains-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 580697,
+      "sha256": "81713bfc519801b3acc05c7ae8bcd4a2a097f2e7f99c223ab3d9f2913ea7dee8",
+      "originalSHA256": "dc5bf221660f1fa6075eec0859a87b2b42f81c3b6ba1dadddcbf2d7f1a814eac",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "cabin",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. A quiet authentic timber mountain cabin from a seated reading position. On the LEFT, rough natural stone fireplace, a dark unlit hearth with a few charred logs; absolutely no flame or glowing ember. Center the entire black hearth opening near normalized x=.26 y=.69, width .18 and height .20; fully visible, safely inset from image edges. On the RIGHT, one broad unobstructed rectangular picture window approximately x=.49 to .92 and y=.18 to .69, showing close real spruce trees and deep evergreen forest. No grilles across the center of this large glass pane. Worn timber beams, stone floor, linen at far frame edges. Soft cool diffuse forest daylight, natural detailed shadows, authentic cozy proportions. Wide architectural photography, 28mm lens. Empty room, no people, no animals, no props placed in front of the hearth. No artificial yellow light.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/cabin-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 744786,
+      "sha256": "5fac8385bf5a432fcac6d1ee43eb6b818754fec2f81736139a858eeacae554eb",
+      "originalSHA256": "88edad0a053ace35a4d4ed4eb1813ed26730e5bf48836e886dae9c63b937fa58",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "river",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. A crystal-clear shallow river through lush temperate spruce forest. River starts near x=.52 y=.42 and widens toward the lower center; irregular mossy rocks on both banks, natural transparent green/blue reflections and fine small ripples, modest tiny cascades. Ferns, old cedars and finely textured roots frame the two sides. Overcast early-morning light, cool greens and slate, convincing wet stone detail; documentary 28mm wilderness photography. No dramatic long exposure.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/river-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 880496,
+      "sha256": "c368a525d4d7c296b4b27be2872261e52b186a5feb67ca45754f3bfde20f3384",
+      "originalSHA256": "113fb60c96b7d07dc68a39e1e17c5321ba3364c5aa2f2c203168c99a4aec9b18",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "snow",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. A silent natural spruce forest after fresh snowfall, viewed from a broad small clearing. Real irregular snow-laden evergreen boughs at both sides, distant conifers and a luminous opening in the center; uneven soft snow covering rocks, fallen logs and forest floor. Soft blue-hour overcast light, luminous whites and blue shadows, natural fine snow texture. Snow-covered open ground below y=.62. Absolutely NO tracks, animals or falling flakes baked into the photograph.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/snow-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 742639,
+      "sha256": "1bcb5668eb31e475674dfee362cc01f120d8312c781164b31cdf2824982ca970",
+      "originalSHA256": "f5bfd2c63457df14641be2a8c3f8631bd27e57db9a9625eff60cf01d0781d418",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "night",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. A remote tranquil mountain lake at deep blue twilight. Clean expansive dark navy sky across the upper 48%, no stars or moon. Distant natural mountain and evergreen silhouettes near y=.48, still dark blue lake water across the lower half with delicate photographic ripples and sky reflections. A few low shore stones only at extreme lower edges. Open realistic nighttime shadows, silver-blue reflections. Genuine astronomical blue-hour landscape photography, no artificial lights.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/night-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 260976,
+      "sha256": "2f06aec43e4fa46705a42ff7289ec014e7395557ad7d0e983e27d3e092af5290",
+      "originalSHA256": "31040210bb0a08390482817e9dc8b23bc1078d2ded6b13e442bc72c7dca4a806",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "car",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. Parked stationary unbranded modern car interior viewed from the driver's eyes. Wide clean unobstructed windshield fills approximately x=.07 to .93, y=.20 to .62, showing an empty narrow road through dense natural spruce forest; roof edge only in upper frame and realistic dark dashboard/steering wheel below y=.66. The road vanishing point centered. Strong immersive wide driving-seat perspective but car is stopped. Soft overcast daylight, tactile black upholstery and detailed real tree bark. Absolutely NO umbrella, fire, animals, loose dashboard objects, pedestrians, raindrops or visible wiper blades: the app animates rain and wipers later.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/car-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 543407,
+      "sha256": "73d1849f588c5d4a91529b218e7be68872344870dee1bf577b6c27691bdbe254",
+      "originalSHA256": "fb2b3552dc7c7845cb3bf2e1843ead43679ad8d82aa12f7958b2385255c45f0b",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "tent",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. Seated inside an authentic small canvas camping tent looking through a large open triangular doorway into a quiet natural spruce forest. Tactile canvas sides frame both extreme edges and upper corners, a simple sleeping mat at the bottom edge only. Broad forest view through the open doorway; doorway apex near x=.5 y=.10 and lower corners near x=.10/.90 y=.80. A central forest path, moss and fine tree bark, soft overcast daylight. Peaceful intimate real wilderness camping photography. No campfire, stove, umbrella, camping gear or animal subjects.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/tent-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 757031,
+      "sha256": "b0ae0905b186380f79e800ad7fcdd587bcbde51e097e3dbdf7132fd7a39cf326",
+      "originalSHA256": "981d0bcce39eba314130803750b7f33eb005d511452d9a3a17b60663340e3d0d",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "cafe",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. A quiet authentic cafe seen from a seated position behind an EMPTY warm wooden table in the lower 30%. A broad unobstructed street-facing rectangular window occupies center-right, approximately x=.40..92 y=.16..66, showing a calm European street. Warm tactile timber chairs in the middle distance to the left, restrained soft lamps, credible calm interior architecture, soft cool daylight with subdued warm interior accents. No mugs, devices or papers on the foreground table, no people.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/cafe-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 607963,
+      "sha256": "3cfd06638dddea6bdcfd1c0013887211ed5bc35b0183a93d2fdd5d54aa3ac078",
+      "originalSHA256": "35d172d481ae54eb5e0cddb96f31b6cbbc26e5a332ab8f7f09dc4a81c1ba2fca",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "city",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. A peaceful authentic European stone-and-brick city street at blue hour, viewed from a broad sidewalk beside a small square. A clear roadway recedes toward the center, convincing facades with restrained street lamps, naturally detailed masonry and open pavement at bottom. Only a few very distant parked cars integrated into the street; no close vehicles, crowds, signage, adverts or readable lettering. Restrained documentary urban photography with subtle cool twilight and gentle warm street-light accents.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/city-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 683637,
+      "sha256": "4c7aa72e1dcfac7ad0eb38fd99506b01c6b1d275e52927b8aaf8ff1aeb429507",
+      "originalSHA256": "d944d150b44a5d4b3d05b3c9e107f212385693b109678f3c325841fd44e10d0d",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "train",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. The interior of an authentic modern regional passenger train, seen from a seated position. An empty textured-cloth seat frames left, small EMPTY table below, wide rectangular clean window spans approximately x=.30..94 y=.14..65, revealing a beautiful pine valley with distant alpine mountains. Genuine rounded metal/plastic train fittings, realistic materials, quiet cool diffuse daylight and broad side-window perspective. No people, signs, logos, lettering, devices or visible rain.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/train-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 547472,
+      "sha256": "a3e7845af01982cfa34e1c66ecddf0a062684e4b258e63e9b67ee41c9df9b95f",
+      "originalSHA256": "6371447b1987494f26bf0438f28c498beeff6d8b719f877332148539c56672bb",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "underwater",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. A quiet realistic shallow underwater seascape photographed by a scuba camera. Clear blue-green water and soft natural light shafts occupy the upper half; gently sloping sandy seabed with believable sand ripples, natural rocks and sea grass across lower half. Restrained coral at distant side edges. Convincing aquatic depth and gentle optical softness in the distance. NO fish, whales, animals, people, submarines, bubbles or floating cutouts.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/underwater-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 542946,
+      "sha256": "63f22e9a0f49e8697a4f4635f6198c4b833663c2c3c2dacda8decdfac3c4c6f6",
+      "originalSHA256": "828fb59736b73811f4fc4345317e4fc9cb58487a8091d412a1b557fa50368c63",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "room",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. A tranquil real timber study interior from a seated position behind an EMPTY broad natural wood desk across the lower 30%. Warm wooden walls and bookshelves to the left, a simple neutral chair set back, and a large unobstructed garden-facing rectangular window at approximately x=.54..93 y=.12..63 showing subdued natural evergreen trees. Genuine wood grain and worn joinery, soft diffuse daylight. No devices, papers, loose foreground objects, clocks or fans.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/room-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 585362,
+      "sha256": "48b979eec36b6c164e5e1202e499197e3e6959b22881ba0e09ed21a085e782d9",
+      "originalSHA256": "ec728f36ce5b946e0a9378e7108d3688224c45b2b876cd85368a3797c4511402",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "sanctuary",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. A serene authentic historic stone sanctuary interior, broad nave with tall arches and restrained pillars flanking both sides. Open warm timber floor occupies the lower 35%, strong real architectural depth toward a modest central narrow rectangular daylight window near x=.46..54 y=.27..53. Soft diffuse window light, detailed naturally worn stone, dignified neutral cool colors. Absolutely no people, statues, religious icons, candles, strong symbols, lettering or loose objects.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/sanctuary-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 596263,
+      "sha256": "59f133038ebed3f5587bca4dc38ed06f6f2d19942d880aa7bddf1cadb87138b0",
+      "originalSHA256": "eb5de8e221f9fe89acea0fefeed28e6e6189acf19aad0b2cc79fd09225a5c157",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "airport",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. A calm authentic airport departure lounge in soft overcast dawn light. Broad clean floor-to-ceiling panoramic glass from approximately x=.08..94 and y=.12..65 shows the real apron and ONE distant unbranded white passenger aircraft. Empty terminal seats only at lower side edges, open polished stone floor, real steel beams and credible airport architecture. Quiet believable scale. No people, signs, adverts, logos or readable text.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/airport-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 386975,
+      "sha256": "ca60b1a7c8fafca7101cf597653073fb83219018a561bad4fa0008cf9f001cef",
+      "originalSHA256": "071fe5764c44f78691fd8520b78107ffacd2b450b16c78fb2cc36860d5d1f75d",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "utility",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. A quiet clean authentic laundry utility room with restrained warm off-white walls, pale stone floor across the lower 38%, and a large rectangular garden window on the right, x=.60..93 y=.15..59, showing natural green trees. A fixed built-in counter and closed cabinet at far left only, otherwise spacious empty floor. Realistic room proportions, tactile stone and painted joinery, soft diffuse daylight. No loose appliances, no laundry piles, no foreground objects or cutouts.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/utility-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 379639,
+      "sha256": "7e93df2d19f4c38f9e9691880cb22f87c9eb2d887c1cc26ad9b878cba4e23ffb",
+      "originalSHA256": "3c30445b2b68d96426500b705c56291ba70acc0aebb5d9e12060f6e5993e9835",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "market",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. A peaceful authentic small grocery market interior viewed down a central aisle. Real wooden produce shelves and naturally varied unbranded food packaging flank left and right, open clean tile floor in foreground. A rectangular street-facing window at upper-right x=.72..94 y=.13..49 gives gentle natural daylight. Warm wood, neutral stone and restrained natural produce color, real small-scale local shop architecture. No shoppers, carts, readable signs, prices, logos or lettering.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/market-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 644455,
+      "sha256": "72abfca7c4f95b9ee5025e3be6cc38f974714e5ea10f0b79fe1831d74fdafb66",
+      "originalSHA256": "c5f8c93aa402d5685d14eb7d8048d47f235bc542f15f11664928f7754f35310c",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "library",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. A quiet authentic old library reading room seen from behind an EMPTY broad wooden reading table occupying lower 30%. Tall real wood bookshelves with varied worn unlettered book spines frame left and right in middle distance. A broad unobstructed rectangular window at x=.57..91 y=.16..61 reveals a tranquil garden. Believable architecture, subtle wood wear, soft natural daylight, calm cinematic documentary exposure. No people, devices, open books, loose papers or foreground props.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/library-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 638426,
+      "sha256": "b60ec5960dd3dd1af70deba13f2a055dd0ee438507d81570c785d0f9aec7c3c3",
+      "originalSHA256": "57f1ea1e3ae10a08c886725478168cc6c41d2e48a9e781d286c8de1983ff5540",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "fairground",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. A peaceful genuine small European park fairground at blue hour. One authentic vintage carousel stands in the middle distance, with real painted wooden carousel horses built into the structure, fine carved details and subtle warm bulbs. A broad EMPTY stone path fills foreground and leads toward the carousel, mature park trees framing both sides, credible quiet real-world scale. Documentary park photography with restrained twilight colors. No riders, people, loose animal subjects, text, signs or branding.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/fairground-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 830102,
+      "sha256": "eba093cca5774dcd5c63096310b814a74c65d4c2460eac97096549ad6638c1ce",
+      "originalSHA256": "fd0ace62e5a53336009db1c0ba9815f062040f85ae2b6379e26e8d16ef099fb8",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "laboratory",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. A real quiet clean research laboratory photographed from behind an EMPTY broad pale workbench occupying lower 32%. Authentic closed cabinets and a few glass beakers and one microscope integrated on a distant side bench at left. Large rectangular clear window at x=.52..92 y=.13..60 reveals natural green trees; soft diffuse daylight and restrained neutral/cool tones, genuine brushed steel, glass and painted materials. No people, labels, text, logos, medical imagery or foreground props.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/laboratory-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 450182,
+      "sha256": "a5585456f33c389085f437021138f37be0c1183f72c4d9c084af8d4ee8b9dc11",
+      "originalSHA256": "b385101a5ee6ed7d4940ef5e7c1e18538ec2f453c1bfe0b5b0e9f3b619c2fa75",
+      "kind": "independently generated horizontal photographic background plate"
+    },
+    {
+      "name": "construction",
+      "prompt": "Use case: photorealistic-natural. Asset: ONE new standalone horizontal 16:9 photographic environment plate (ideally 2048x1152) for a relaxing immersive app. Compose a true wide photograph with scenery across the entire width, not a stretched portrait, collage or multiple panels. Real full-frame camera optics, restrained natural color, tactile fine materials, believable scale and depth, soft light, open detailed shadows. Main environment only. NO people, animal subjects, loose foreground props, composited cutouts, lettering, logos, watermark, UI, borders, illustration, painting or CGI. NO baked-in falling rain/snow, droplets on glass, fog blanket, stars, sun disk or flame; native app effects will animate later. Keep important environment within the central 75% so it remains useful on 4:3 tablet screens. A genuine quiet construction site at early morning viewed from a safe broad gravel path. A realistically partially completed brick-and-steel building and one structurally believable tower crane in middle distance, neatly stacked building materials only at distant sides, detailed gravel and a concrete slab below. Convincing real engineering proportions and scale, pale overcast dawn sky above, muted stone/wood/steel tones. Calm documentary site photography. No workers, pedestrians, signs, text, branding or close machinery.",
+      "asset": "ios/NodusDrift/Resources/Landscapes/construction-wide.jpg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 599327,
+      "sha256": "b047dd8c9f9244744e3d69a90d3a11936c0f9b462ec9a641bd220fe27b0f9c22",
+      "originalSHA256": "e091de27d88b7e1d39dfad0e1c8e8653be8a3d6fe5bd3a59c3427eeb92250b2e",
+      "kind": "independently generated horizontal photographic background plate"
+    }
+  ],
+  "purpose": "22 newly composed horizontal environment plates, one per scenario; original portrait artwork retained."
+}

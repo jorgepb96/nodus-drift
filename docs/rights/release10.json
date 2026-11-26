@@ -1,0 +1,100 @@
+{
+  "version": "0.1.0",
+  "build": 10,
+  "bundleId": "com.drakonis96.nodusdrift",
+  "catalogSounds": 89,
+  "verifiedRecordings": 81,
+  "signatureVerified": true,
+  "legalNotices": [
+    "STABLE_AUDIO_COMMUNITY.md",
+    "GEMMA_TERMS.md",
+    "NOTICE.txt",
+    "STABLE_AUDIO_MLX_MIT.txt",
+    "MLX_MIT.txt",
+    "SWIFT_NUMERICS_LICENSE.txt",
+    "PRIVACY.md",
+    "LANDSCAPES.md"
+  ],
+  "modelWeightsBundled": false,
+  "mlxMetalLibraryBundled": true,
+  "landscapeMetalLibraryBundled": true,
+  "landscapes": [
+    {
+      "name": "forest",
+      "bytes": 1007581,
+      "sha256": "2ddc666c37f616fa3cfc63fcde9c8bac34d4baa77397b7dd49b4682cd2bbe1f2",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "coast",
+      "bytes": 585492,
+      "sha256": "6e2104d3b5a175bac2907c2af28630d14df4dffd24b4344799044ee798b7dc2a",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "mountains",
+      "bytes": 615992,
+      "sha256": "093864c3a8835d564eebc38bfd5e78a98c3c3af2f08b6e838b1ff95dd0f917f7",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "cabin",
+      "bytes": 694342,
+      "sha256": "f6143cc849fd23731cd46bb6898076fce1fc11baf91721c652c04bd6e5075c11",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "river",
+      "bytes": 1032627,
+      "sha256": "e81b4261582044c9b4a373fdf28a8f56e57794e2dbfead264b2fb623a23448ee",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "snow",
+      "bytes": 816178,
+      "sha256": "e9fcc04c6efd7c10585c4accb40d9304d918f8dd089d7670cbe97edae44b038e",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "night",
+      "bytes": 442284,
+      "sha256": "876b78e3810ea8ce8eb615d7f2d9589a7ec193995e6a32a5bdf397ae6a455d06",
+      "width": 1024,
+      "height": 1536
+    }
+  ],
+  "landscapeArtworkBytes": 5194496,
+  "sourceFiles": 158,
+  "sourceFingerprintSHA256": "32a870f057d24b769b6e2cb4546d0890dbde0818d5934f5b4d89a3b929a41e5e",
+  "testFlightInternalTestingOnly": true,
+  "physicalDeviceTesting": "Not repeated, per user instruction",
+  "appStoreId": "6820753637",
+  "uploadSucceeded": true,
+  "uploadId": "8749105a-8883-41ba-b1c1-d0509f288c55",
+  "uploadCompletedLocal": "2026-11-07T07:33:08+01:00",
+  "observedAt": "2026-11-07T07:36:48.818234+01:00",
+  "phase": "INTERNAL_TESTING",
+  "notesLocale": "en-US",
+  "notesFile": "docs/TESTFLIGHT_NOTES_BUILD10.txt",
+  "englishNotesSaved": true,
+  "buildId": "8749105a-8883-41ba-b1c1-d0509f288c55",
+  "buildAudienceType": "INTERNAL_ONLY",
+  "processingState": "VALID",
+  "internalBuildState": "IN_BETA_TESTING",
+  "externalBuildState": "NOT_APPLICABLE",
+  "groups": [
+    {
+      "id": "40f2ec9c-cccb-4c2d-b3ce-ce073515bc77",
+      "name": "Jorge — beta interna",
+      "isInternalGroup": true
+    }
+  ],
+  "notesSHA256": "2acb0255b535b1466d5834ead0cedf0eb043911ac4188e8e1332e993e26c8520",
+  "buildUrl": "https://appstoreconnect.apple.com/teams/36804ede-f0b5-4cd2-a273-c619feb6168f/apps/6820753637/testflight/ios/8749105a-8883-41ba-b1c1-d0509f288c55"
+}

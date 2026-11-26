@@ -1,0 +1,7 @@
+Landscape simplification and meditation appearance switching
+
+- Landscapes now show the main photographic setting with animated weather, water, light and atmosphere. Decorative animal and object cutouts are hidden across mixes, Studio and saved/imported scenes.
+- Existing sounds continue playing. Actor data, placement recipes and artwork remain preserved for a future update; unused sprite atlases are not loaded into GPU memory.
+- Switching between Your landscape and Nodi keeps one landscape surface alive, pauses it behind Nodi, and resumes the existing frame. The selector uses explicit buttons, keeps its position and remains visible after a selection.
+
+Please alternate between Your landscape and Nodi while audio is playing. Check that controls remain stable and playback continues. Try Footsteps in the snow + Wolf: the snowy landscape and weather remain, with no animal cutout.

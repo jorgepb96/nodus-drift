@@ -1,0 +1,30 @@
+CarPlay app category: Audio
+
+App name: Nodus Drift
+Bundle ID: com.drakonis96.nodusdrift
+App Store ID: 6820753637
+App Store URL: https://apps.apple.com/app/id6820753637
+
+Nodus Drift provides local playback of layered environmental soundscapes and
+instrumental ambient audio. People can prepare and save mixes and evolving audio
+scenes on iPhone, then select and listen to them through CarPlay.
+
+The CarPlay interface uses the CarPlay framework's audio templates. Home provides
+Continue Listening and recent selections. My Mixes displays saved mixes and
+Studio scenes using native static artwork grids. Explore provides a small set of
+ready-to-play soundscapes. Selecting an item starts local audio playback and opens
+the native Now Playing screen, with the soundscape title and static cover art.
+Playback supports system and vehicle play/pause controls and respects audio
+interruptions. Browsing and playback do not require network access or interaction
+with the connected iPhone.
+
+CarPlay does not expose scene editing, timelines, AI prompts, audio generation,
+model downloads, account setup, visual animations, meditation exercises or sleep
+guidance. These remain outside the vehicle interface. The CarPlay experience is
+focused on selecting and playing existing audio content with minimal interaction.
+
+Configured CarPlay Audio entitlement:
+com.apple.developer.carplay-audio
+
+Reference description only. The existing team capability was enabled for the
+Drift App ID on 2026-11-26. No new entitlement request or agreement was required.

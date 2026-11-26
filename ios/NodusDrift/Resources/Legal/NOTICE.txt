@@ -1,0 +1,26 @@
+This Stability AI Model is licensed under the Stability AI Community License,
+Copyright © Stability AI Ltd. All Rights Reserved
+
+Powered by Stability AI
+
+Models: Stable Audio 3 Small-SFX and Stable Audio 3 Small-Music, SAME-S encoder
+and decoder. T5Gemma text conditioning: Google, under the Gemma Terms of Use.
+Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms
+These weights are downloaded optionally from Hugging Face; no model weights are
+included in the application or licensed under Nodus Drift's MIT license.
+
+Pinned optimized revision: 30cb2644da54bfa63275d1bc7f1fa67fc718680f
+Source: https://huggingface.co/stabilityai/stable-audio-3-optimized
+Project: https://github.com/Stability-AI/stable-audio-3
+Licensing: https://stability.ai/license
+Acceptable use: https://stability.ai/use-policy
+Gemma: https://ai.google.dev/gemma/terms
+
+Weight format is converted locally from uncompressed NPZ to safetensors. Model
+weights and model behaviour are not fine-tuned or otherwise changed by Drift.
+
+The StableAudioMLX Swift runtime is reused from Nodus Reader's MIT-licensed
+package. Network implementation: stableaudio3-ios contributors, including
+kellyvv/StableAudio3-IOS. MLX Swift: Apple / ml-explore (MIT). Swift Numerics:
+Apple and Swift project authors (Apache 2.0 with Swift runtime exception).
+Copies of the runtime/dependency licenses and model terms accompany this notice.

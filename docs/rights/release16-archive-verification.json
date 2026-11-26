@@ -1,0 +1,442 @@
+{
+  "version": "0.2.0",
+  "build": 16,
+  "bundleId": "com.drakonis96.nodusdrift",
+  "catalogSounds": 89,
+  "verifiedRecordings": 81,
+  "signatureVerified": true,
+  "legalNotices": [
+    "STABLE_AUDIO_COMMUNITY.md",
+    "GEMMA_TERMS.md",
+    "NOTICE.txt",
+    "STABLE_AUDIO_MLX_MIT.txt",
+    "MLX_MIT.txt",
+    "SWIFT_NUMERICS_LICENSE.txt",
+    "PRIVACY.md",
+    "LANDSCAPES.md"
+  ],
+  "modelWeightsBundled": false,
+  "mlxMetalLibraryBundled": true,
+  "landscapeMetalLibraryBundled": true,
+  "landscapes": [
+    {
+      "name": "forest",
+      "asset": "forest.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 1007581,
+      "sha256": "2ddc666c37f616fa3cfc63fcde9c8bac34d4baa77397b7dd49b4682cd2bbe1f2",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "coast",
+      "asset": "coast.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 585492,
+      "sha256": "6e2104d3b5a175bac2907c2af28630d14df4dffd24b4344799044ee798b7dc2a",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "mountains",
+      "asset": "mountains.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 615992,
+      "sha256": "093864c3a8835d564eebc38bfd5e78a98c3c3af2f08b6e838b1ff95dd0f917f7",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "cabin",
+      "asset": "cabin.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 694342,
+      "sha256": "f6143cc849fd23731cd46bb6898076fce1fc11baf91721c652c04bd6e5075c11",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "river",
+      "asset": "river.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 1032627,
+      "sha256": "e81b4261582044c9b4a373fdf28a8f56e57794e2dbfead264b2fb623a23448ee",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "snow",
+      "asset": "snow.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 816178,
+      "sha256": "e9fcc04c6efd7c10585c4accb40d9304d918f8dd089d7670cbe97edae44b038e",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "night",
+      "asset": "night.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 442284,
+      "sha256": "876b78e3810ea8ce8eb615d7f2d9589a7ec193995e6a32a5bdf397ae6a455d06",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "car",
+      "asset": "car.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 569243,
+      "sha256": "5530e5b01daf823a00940190cab19b183662bc14c789a891a5fe9b306e92fa2a",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "tent",
+      "asset": "tent.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 750298,
+      "sha256": "f768c54fb2a4437dc150c0de54d8ed47f0d15e568c2d2415ee8f48ca67b46bfc",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "animals",
+      "asset": "animals.png",
+      "orientation": "portrait-or-atlas",
+      "bytes": 1647813,
+      "sha256": "2141e1b887061daef537ad106f36b4b8665cb9e8e9c4d40c9ff0f112968175a8",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "name": "props",
+      "asset": "props.png",
+      "orientation": "portrait-or-atlas",
+      "bytes": 1591622,
+      "sha256": "3fc8ac826adf782c0380c31c08a83cefca5aa5397a1229ea5c19af2611826da0",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "name": "cafe",
+      "asset": "cafe.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 659626,
+      "sha256": "cf5abf0ae10e258d455c48daab61960961d6a233d70b012bc0ce424021626e50",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "city",
+      "asset": "city.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 758444,
+      "sha256": "6b4abd211f8e0e22fee39b24d2a0aac561ffad003616ad988a22ac21da51f799",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "train",
+      "asset": "train.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 590219,
+      "sha256": "dcb7a1f6bf42a3a487bdf4916723c1c11c3e9cfa52ddfd952ba4cb9573951048",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "underwater",
+      "asset": "underwater.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 620034,
+      "sha256": "b522748c2faba92b071e228f0cee176f79c1834c333973ab8ef97037c1342d5c",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "room",
+      "asset": "room.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 585553,
+      "sha256": "a00c902bbda1a29ceb00b396a9da65719003fbbf6c80b403e4d1e391f678fcb8",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "sanctuary",
+      "asset": "sanctuary.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 624420,
+      "sha256": "4a0a19feb76cc670b8b0be04be2ffe8d027453ce7063ba893de1c85824a25526",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "airport",
+      "asset": "airport.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 424494,
+      "sha256": "5f6835f46e8ee4babbbd447d79e45aca9f2467b2fb4cb4ef53bf19fc134e5384",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "utility",
+      "asset": "utility.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 424769,
+      "sha256": "790cdbdf132b8b61c15c3ea78f3f0edaa916b8956528f5098c75be6cda19942b",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "market",
+      "asset": "market.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 607902,
+      "sha256": "4cbb4c4e4fec6520aca2dc6ffb59a75c8609bdeb90b1b253521fee75fa77c754",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "library",
+      "asset": "library.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 689791,
+      "sha256": "9c2be8cae7d1d83f3a788f5cca65ec1ff62e509deb13836ab5c89468bc30073a",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "fairground",
+      "asset": "fairground.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 844135,
+      "sha256": "3b7fd68291f08b0318efd0475cf9b52ce577104fe36a694bc7c1791373963158",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "laboratory",
+      "asset": "laboratory.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 346522,
+      "sha256": "ffa7e7e67965d654e3e33138761df51252049b98af32fa8bcf3da140c42f4b95",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "construction",
+      "asset": "construction.jpg",
+      "orientation": "portrait-or-atlas",
+      "bytes": 633007,
+      "sha256": "968b1a6c982924fc4fd60b90ab372731005c141460eaea27a6bb6c7bc2b3f5d9",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "forest",
+      "asset": "forest-wide.jpg",
+      "orientation": "wide",
+      "bytes": 1059917,
+      "sha256": "8096b4c76c771614da2b4103d241ae6e7386128fa472bbca3691167ad92ef61b",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "coast",
+      "asset": "coast-wide.jpg",
+      "orientation": "wide",
+      "bytes": 421437,
+      "sha256": "bc956e8678ac480e787d2bc9be99191ae3cfb423595efe197fbd13da4f2f68fd",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "mountains",
+      "asset": "mountains-wide.jpg",
+      "orientation": "wide",
+      "bytes": 580697,
+      "sha256": "81713bfc519801b3acc05c7ae8bcd4a2a097f2e7f99c223ab3d9f2913ea7dee8",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "cabin",
+      "asset": "cabin-wide.jpg",
+      "orientation": "wide",
+      "bytes": 744786,
+      "sha256": "5fac8385bf5a432fcac6d1ee43eb6b818754fec2f81736139a858eeacae554eb",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "river",
+      "asset": "river-wide.jpg",
+      "orientation": "wide",
+      "bytes": 880496,
+      "sha256": "c368a525d4d7c296b4b27be2872261e52b186a5feb67ca45754f3bfde20f3384",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "snow",
+      "asset": "snow-wide.jpg",
+      "orientation": "wide",
+      "bytes": 742639,
+      "sha256": "1bcb5668eb31e475674dfee362cc01f120d8312c781164b31cdf2824982ca970",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "night",
+      "asset": "night-wide.jpg",
+      "orientation": "wide",
+      "bytes": 260976,
+      "sha256": "2f06aec43e4fa46705a42ff7289ec014e7395557ad7d0e983e27d3e092af5290",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "car",
+      "asset": "car-wide.jpg",
+      "orientation": "wide",
+      "bytes": 543407,
+      "sha256": "73d1849f588c5d4a91529b218e7be68872344870dee1bf577b6c27691bdbe254",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "tent",
+      "asset": "tent-wide.jpg",
+      "orientation": "wide",
+      "bytes": 757031,
+      "sha256": "b0ae0905b186380f79e800ad7fcdd587bcbde51e097e3dbdf7132fd7a39cf326",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "cafe",
+      "asset": "cafe-wide.jpg",
+      "orientation": "wide",
+      "bytes": 607963,
+      "sha256": "3cfd06638dddea6bdcfd1c0013887211ed5bc35b0183a93d2fdd5d54aa3ac078",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "city",
+      "asset": "city-wide.jpg",
+      "orientation": "wide",
+      "bytes": 683637,
+      "sha256": "4c7aa72e1dcfac7ad0eb38fd99506b01c6b1d275e52927b8aaf8ff1aeb429507",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "train",
+      "asset": "train-wide.jpg",
+      "orientation": "wide",
+      "bytes": 547472,
+      "sha256": "a3e7845af01982cfa34e1c66ecddf0a062684e4b258e63e9b67ee41c9df9b95f",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "underwater",
+      "asset": "underwater-wide.jpg",
+      "orientation": "wide",
+      "bytes": 542946,
+      "sha256": "63f22e9a0f49e8697a4f4635f6198c4b833663c2c3c2dacda8decdfac3c4c6f6",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "room",
+      "asset": "room-wide.jpg",
+      "orientation": "wide",
+      "bytes": 585362,
+      "sha256": "48b979eec36b6c164e5e1202e499197e3e6959b22881ba0e09ed21a085e782d9",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "sanctuary",
+      "asset": "sanctuary-wide.jpg",
+      "orientation": "wide",
+      "bytes": 596263,
+      "sha256": "59f133038ebed3f5587bca4dc38ed06f6f2d19942d880aa7bddf1cadb87138b0",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "airport",
+      "asset": "airport-wide.jpg",
+      "orientation": "wide",
+      "bytes": 386975,
+      "sha256": "ca60b1a7c8fafca7101cf597653073fb83219018a561bad4fa0008cf9f001cef",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "utility",
+      "asset": "utility-wide.jpg",
+      "orientation": "wide",
+      "bytes": 379639,
+      "sha256": "7e93df2d19f4c38f9e9691880cb22f87c9eb2d887c1cc26ad9b878cba4e23ffb",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "market",
+      "asset": "market-wide.jpg",
+      "orientation": "wide",
+      "bytes": 644455,
+      "sha256": "72abfca7c4f95b9ee5025e3be6cc38f974714e5ea10f0b79fe1831d74fdafb66",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "library",
+      "asset": "library-wide.jpg",
+      "orientation": "wide",
+      "bytes": 638426,
+      "sha256": "b60ec5960dd3dd1af70deba13f2a055dd0ee438507d81570c785d0f9aec7c3c3",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "fairground",
+      "asset": "fairground-wide.jpg",
+      "orientation": "wide",
+      "bytes": 830102,
+      "sha256": "eba093cca5774dcd5c63096310b814a74c65d4c2460eac97096549ad6638c1ce",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "laboratory",
+      "asset": "laboratory-wide.jpg",
+      "orientation": "wide",
+      "bytes": 450182,
+      "sha256": "a5585456f33c389085f437021138f37be0c1183f72c4d9c084af8d4ee8b9dc11",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "construction",
+      "asset": "construction-wide.jpg",
+      "orientation": "wide",
+      "bytes": 599327,
+      "sha256": "b047dd8c9f9244744e3d69a90d3a11936c0f9b462ec9a641bd220fe27b0f9c22",
+      "width": 1672,
+      "height": 941
+    }
+  ],
+  "landscapeArtworkBytes": 31046523,
+  "sourceFiles": 200,
+  "sourceFingerprintSHA256": "c1a1e00af61d768e4be02cdb229db889ac4fb9de5a7663a56135d7a1480f7277",
+  "testFlightInternalTestingOnly": true,
+  "physicalDeviceTesting": "Not repeated, per user instruction"
+}

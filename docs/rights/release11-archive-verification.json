@@ -1,0 +1,77 @@
+{
+  "version": "0.1.0",
+  "build": 11,
+  "bundleId": "com.drakonis96.nodusdrift",
+  "catalogSounds": 89,
+  "verifiedRecordings": 81,
+  "signatureVerified": true,
+  "legalNotices": [
+    "STABLE_AUDIO_COMMUNITY.md",
+    "GEMMA_TERMS.md",
+    "NOTICE.txt",
+    "STABLE_AUDIO_MLX_MIT.txt",
+    "MLX_MIT.txt",
+    "SWIFT_NUMERICS_LICENSE.txt",
+    "PRIVACY.md",
+    "LANDSCAPES.md"
+  ],
+  "modelWeightsBundled": false,
+  "mlxMetalLibraryBundled": true,
+  "landscapeMetalLibraryBundled": true,
+  "landscapes": [
+    {
+      "name": "forest",
+      "bytes": 1007581,
+      "sha256": "2ddc666c37f616fa3cfc63fcde9c8bac34d4baa77397b7dd49b4682cd2bbe1f2",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "coast",
+      "bytes": 585492,
+      "sha256": "6e2104d3b5a175bac2907c2af28630d14df4dffd24b4344799044ee798b7dc2a",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "mountains",
+      "bytes": 615992,
+      "sha256": "093864c3a8835d564eebc38bfd5e78a98c3c3af2f08b6e838b1ff95dd0f917f7",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "cabin",
+      "bytes": 694342,
+      "sha256": "f6143cc849fd23731cd46bb6898076fce1fc11baf91721c652c04bd6e5075c11",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "river",
+      "bytes": 1032627,
+      "sha256": "e81b4261582044c9b4a373fdf28a8f56e57794e2dbfead264b2fb623a23448ee",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "snow",
+      "bytes": 816178,
+      "sha256": "e9fcc04c6efd7c10585c4accb40d9304d918f8dd089d7670cbe97edae44b038e",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "name": "night",
+      "bytes": 442284,
+      "sha256": "876b78e3810ea8ce8eb615d7f2d9589a7ec193995e6a32a5bdf397ae6a455d06",
+      "width": 1024,
+      "height": 1536
+    }
+  ],
+  "landscapeArtworkBytes": 5194496,
+  "sourceFiles": 159,
+  "sourceFingerprintSHA256": "f4e77cfc137477dfa93457142f99ffd91e2d75eb861ca15f4c7fd6b90210fc26",
+  "testFlightInternalTestingOnly": true,
+  "physicalDeviceTesting": "Not repeated, per user instruction"
+}

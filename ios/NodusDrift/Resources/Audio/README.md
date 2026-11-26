@@ -9,4 +9,5 @@ docs/AUDIO_REPLACEMENT_2026-10-09.md and docs/rights/replacement-audio/.
 
 Source WAVs and final MP3s are excluded from Git. No original Moodist recording
 is downloaded or bundled by the current preparation pipeline. The app works
-offline and has no audio export feature.
+offline. Soundscape Studio exports scene documents and generated recordings;
+bundled catalogue recordings are referenced by ID rather than copied into exports.

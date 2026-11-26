@@ -1,0 +1,23 @@
+{
+  "version": "0.1.0",
+  "build": 9,
+  "bundleId": "com.drakonis96.nodusdrift",
+  "catalogSounds": 89,
+  "verifiedRecordings": 81,
+  "signatureVerified": true,
+  "legalNotices": [
+    "STABLE_AUDIO_COMMUNITY.md",
+    "GEMMA_TERMS.md",
+    "NOTICE.txt",
+    "STABLE_AUDIO_MLX_MIT.txt",
+    "MLX_MIT.txt",
+    "SWIFT_NUMERICS_LICENSE.txt",
+    "PRIVACY.md"
+  ],
+  "modelWeightsBundled": false,
+  "mlxMetalLibraryBundled": true,
+  "sourceFiles": 146,
+  "sourceFingerprintSHA256": "a9f98802eb28ad6d2b3599dc25d9ec54adc2b6a3c1a7542ee1263c5330bd1166",
+  "testFlightInternalTestingOnly": true,
+  "physicalDeviceTesting": "Not repeated, per user instruction"
+}

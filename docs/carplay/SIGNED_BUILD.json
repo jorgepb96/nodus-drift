@@ -1,0 +1,12 @@
+{
+  "bundleId": "com.drakonis96.nodusdrift",
+  "configuration": "Debug / generic iOS",
+  "signatureVerified": true,
+  "appCarPlayAudioEntitlement": true,
+  "profileCarPlayAudioEntitlement": true,
+  "profileName": "iOS Team Provisioning Profile: com.drakonis96.nodusdrift",
+  "profileUUID": "8b5ddc9c-0b6e-4df1-b18f-ab257cc18a4b",
+  "profileExpiration": "2027-11-26T09:11:57",
+  "verifiedAtLocal": "2026-11-26T10:13:54.480682+01:00",
+  "installedOnPhysicalDevice": false
+}

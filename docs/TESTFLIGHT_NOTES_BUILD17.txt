@@ -1,0 +1,8 @@
+Version 0.2.0 — readable landscape sound library
+
+- Fixed the sound library's compact-height layout. The previous portrait-sized search/filter header and player left too little space for sound cards after rotating a phone.
+- Search, sorting and categories share one compact row in landscape. Library controls scroll with the catalogue in compact-height windows, freeing space for the results instead of reserving a portrait-sized pinned header.
+- Sound cards use tighter spacing while retaining readable names, favorites and individual volume controls. The mini player uses less padding and keeps its landscape shortcut and playback buttons at full touch-target size.
+- Rotating a scrolled library brings its results back into view while preserving the selected sounds, search and filters. Portrait layouts retain their existing proportions.
+
+Please keep four to six sounds selected, rotate the Sounds tab to landscape and browse/filter the library. Confirm that a complete card, its name, favorite and volume control remain usable above the player. Open the landscape from the picture button and return to the library. Then rotate back to portrait and check Favorites.

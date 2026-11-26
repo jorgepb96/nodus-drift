@@ -1,0 +1,14 @@
+Photorealistic immersive landscapes
+
+This private build replaces the flat illustrated scenery with seven detailed photographic-style environments: forest, coast, mountains, cabin, river, snow and night.
+
+What to test:
+- Open a scene in Soundscape Studio, choose Visuals, then enter the full-screen landscape and hide the controls.
+- Look for subtle water ripples, moving foliage, layered rain and snow, drifting mist, fireplace flames and warm flickering light, and stars in the night sky.
+- Adjust rain, wind, daylight, fog and fire. Weather follows the scene's layer intensity and timeline automation; cabin rain stays outside the window.
+- Pause and resume the scene. Animation should stop when paused, offscreen or in the background, and with Reduce Motion, Low Power Mode or serious thermal pressure.
+- Check the portrait view and larger iPad layouts, plus the option to turn visuals off completely.
+
+All landscape artwork is included and works offline. No image-generation account or download is required. The existing catalogue, simple mixer, saved mixes, timer, Nodi, scene editing, spatial audio and optional local audio-generation tools remain available.
+
+Please report visual artifacts, unexpected motion, excessive warmth, or performance issues together with your device model. This build was checked in Simulator; no new physical-device tests were performed.

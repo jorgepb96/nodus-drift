@@ -1,0 +1,26 @@
+Soundscape Studio — Private Preview
+
+What's new
+- Create editable soundscapes with up to 12 layers, individual volumes, fades, natural random events and evolving scenes.
+- Shape intensity and movement with timeline keyframes. Position sources around the listener in the spatial editor; try headphones for a more immersive experience.
+- Customize procedural forests, coasts, mountains, cabins, rivers, snow and night skies. Adjust rain, wind, mist, fire, stars and sunrise, or turn visuals off.
+- Save, duplicate, import and share scene documents, including generated recordings.
+- Optionally generate local sound effects and instrumental music with Stable Audio 3 Small-SFX and Small-Music. Models & licenses contains Hugging Face sign-in, downloads, storage controls and full terms. The first model needs about 1.9 GB; installing both uses about 2.84 GB.
+- Create and modify scenes with Apple's on-device Foundation Models when Apple Intelligence is available. Suggested new recordings are generated locally when the required Stable Audio models are installed.
+
+What to test
+1. Open Studio, listen to a starter scene, then create your own scene manually.
+2. Add several layers, edit fades and keyframes, move sources, and compare headphones with speaker playback.
+3. Save a scene, restart the app, duplicate it, and export/import a shared scene.
+4. Try the immersive landscape and visual controls, including Reduce Motion and Low Power Mode.
+5. If using local AI, check sound quality, generation time, memory/temperature behavior, cancellation, model removal, regeneration and continuation/fragment repair.
+6. Check that the existing sound catalogue, saved mixes, favorites, sleep timer, background playback and Nodi meditation still work as expected.
+
+Notes
+- Manual editing and all 89 catalogue sounds work without models or an account.
+- Scene direction requires iOS 26 or later and available Apple Intelligence.
+- Local audio generation requires a physical device with sufficient memory (at least 6 GB total and enough free memory). It pauses in the background, Low Power Mode or high temperatures.
+- Generated music plays once; continuation is limited to 120 seconds. Voice detection is a probabilistic local safeguard, not an absolute guarantee.
+- This preview reuses the inference runtime validated in Nodus Reader. Physical-device quality and performance of the new Drift workflow are being evaluated in this private build.
+
+Powered by Stable Audio 3 · Stability AI

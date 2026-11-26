@@ -10,19 +10,48 @@
 		01E3B3E25027EC9DFD40D47E /* DriftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9BEAB0E1DD899E05573E9F /* DriftUITests.swift */; };
 		07CF76F58B0B4D5220CDE575 /* DriftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E895F7DD6650E60EC07C2C /* DriftModel.swift */; };
 		082901040E25BEC52B8A6FFE /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = 03F9AC09FBA646FDA4F2E366 /* Audio */; };
+		0BEFD7331A55CD68D2607354 /* StudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045750852DC74999C554B6C /* StudioTests.swift */; };
+		18EC96CD6D2106A6AFD2F99A /* StudioVisualState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CBC7A4AD9F99DFEE0C5D7 /* StudioVisualState.swift */; };
+		2AD73566CC2F2E1D1AE3C053 /* StudioFeasibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5FFD0BFBBC8BA80D2CD525 /* StudioFeasibilityTests.swift */; };
+		2B00D564B82E71F360F4E797 /* DriftCarPlayLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9A129A975E5983183E5904 /* DriftCarPlayLibrary.swift */; };
+		2C7996E0A84354AF01652ABB /* StudioAudioQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B7679472CBBCA6B3F34E78 /* StudioAudioQuality.swift */; };
+		35424F54C85015D123B8DC49 /* LandscapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C517A008465996A04D93F81 /* LandscapeTests.swift */; };
+		390DBCB8F03AF25E26B27CF3 /* StudioLandscapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB4F7134A9B1F4CE1FE9BD /* StudioLandscapeView.swift */; };
 		3CB028F5067062168F0BA882 /* DriftSilentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0695ADA48AA59C96D135DD /* DriftSilentUITests.swift */; };
+		410AA08F43C325D3155E73DF /* StudioScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B141975182C9799EF2A85B88 /* StudioScene.swift */; };
+		4324EB5D0803690B1DF35945 /* DriftPlaybackMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB11031A84A890CF069CD21 /* DriftPlaybackMetadata.swift */; };
+		462DACAC130E83FEE6AC3A07 /* StudioEditors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1451949B94264890D7AC6C /* StudioEditors.swift */; };
+		47C2C14767349C779BF73969 /* StudioGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515020500088BE10ADB301B2 /* StudioGenerator.swift */; };
+		4934FC82D060411E538791DB /* LandscapeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDE7546FF93647152875FD /* LandscapeUITests.swift */; };
+		4B13FCBFD13DA306AFEF2451 /* StudioLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ACAA8D5EB697DB01BE207E /* StudioLibrary.swift */; };
 		4DC99DE9E08D61A68120D0C6 /* NodiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F027CEE9FDFAB20990939C /* NodiView.swift */; };
 		526935550D0B66D28F58CBE9 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 3DF741CE779FDFB73313566C /* PrivacyInfo.xcprivacy */; };
 		5C769B97931D0938B8A088B5 /* DriftAudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89E07F425C8E8D1F86C7836 /* DriftAudioEngine.swift */; };
+		63FD12260061C7447131AA81 /* DriftArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304900597032038EDDD3FF4 /* DriftArtwork.swift */; };
+		65A8B3368BDFCEB84C997C77 /* StudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBB674D22B49DB865E4DB46 /* StudioView.swift */; };
+		68A0E2C3D0CCC675E94E75E1 /* StudioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132C32ADBFDC63783E09B82A /* StudioUITests.swift */; };
+		78807A1DAFAB3F4341FCEFD8 /* Landscapes in Resources */ = {isa = PBXBuildFile; fileRef = DF85E95444F0E22E80ECCA72 /* Landscapes */; };
 		7986275B745C1C6F759698EF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F9BFC3DBF594A88C981610 /* SettingsView.swift */; };
 		7A3A27B92B3998DCF6C7CA03 /* DriftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BADB4C7FC3D49E1D6B4AA0 /* DriftTests.swift */; };
+		8C48C974036ED9C49F0D9A47 /* MeditationLandscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9D7D6BC6EEFE66019D9595 /* MeditationLandscape.swift */; };
 		96BB1E7CF84C2BF711D49494 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D0165B5206E972B693474F /* Assets.xcassets */; };
+		A4737A8B2B044C1D45ABD0AE /* StudioDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2D97BBBABCDD1B68AD4C61 /* StudioDirector.swift */; };
+		A593C904C6EC0783F877C687 /* StudioAIViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F993B03995FC5A523067E5 /* StudioAIViews.swift */; };
 		A99EF57860E79C9C54D5C61B /* NodusMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F73A1AD4A46E1887E6C28B /* NodusMark.swift */; };
+		AAE7BEB32BA2F9AD5C54131A /* StudioLandscapeShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 72B7F03510F2B68251A8948F /* StudioLandscapeShaders.metal */; };
+		AC1D0E3E2D9E38B1146243B5 /* DriftSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD057EA47492D71EB0B2396 /* DriftSession.swift */; };
 		ACAF8EC4E8BDD489155AD8E4 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FC25CD44F09B358E1D6EB /* ImmersiveView.swift */; };
+		B2A962DE6D92FA03DFA51E77 /* StudioVisualElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9156B82B0F7C877F2563DF /* StudioVisualElements.swift */; };
+		BB1665E19364F56ED31005FE /* StableAudioMLX in Frameworks */ = {isa = PBXBuildFile; productRef = 9C0A8C8708CC526FACC88510 /* StableAudioMLX */; settings = {ATTRIBUTES = (Weak, ); }; };
+		BBEEB07FDC6961F6926FA73E /* CarPlayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C559E8146B0AFD17212511FC /* CarPlayTests.swift */; };
 		BEE56685B9EA297D5D780555 /* DriftViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A195C117C5DEBB3A168D186A /* DriftViews.swift */; };
+		BF730AB8B85476D5F47BD70C /* DriftCarPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEEF8308682EF40D15BC9E3 /* DriftCarPlay.swift */; };
+		C7307A04F3CD99D85B054FF2 /* StudioLandscapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A5AEB5E18BEFA1A6B69C1 /* StudioLandscapeRenderer.swift */; };
 		CC585B0CE1747F29EBCC62B0 /* catalog.json in Resources */ = {isa = PBXBuildFile; fileRef = 92995F4DEBF1D3CC62A6B52A /* catalog.json */; };
 		D521869BF2C2BBA1524D3716 /* NodusDriftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C3C9D32D4684EF9CC142C /* NodusDriftApp.swift */; };
+		EFBE96A916019EF0446FBBDC /* StudioStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33BEDD5047DD48CE01C0F59 /* StudioStore.swift */; };
 		F241BAF37146F0D5340DF4BF /* Legal in Resources */ = {isa = PBXBuildFile; fileRef = ECA3F7732062896D44A9EC31 /* Legal */; };
+		F5982ED986C3499676A21748 /* StudioModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423CB5857CE44B154B898985 /* StudioModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,37 +72,80 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0304900597032038EDDD3FF4 /* DriftArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftArtwork.swift; sourceTree = "<group>"; };
 		03F9AC09FBA646FDA4F2E366 /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Audio; path = NodusDrift/Resources/Audio; sourceTree = SOURCE_ROOT; };
+		0B9D7D6BC6EEFE66019D9595 /* MeditationLandscape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationLandscape.swift; sourceTree = "<group>"; };
+		132C32ADBFDC63783E09B82A /* StudioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioUITests.swift; sourceTree = "<group>"; };
+		1A969D8043B3EF2E2FEB9069 /* CarPlay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CarPlay.entitlements; sourceTree = "<group>"; };
 		26D0165B5206E972B693474F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		292A5AEB5E18BEFA1A6B69C1 /* StudioLandscapeRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioLandscapeRenderer.swift; sourceTree = "<group>"; };
+		3045750852DC74999C554B6C /* StudioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioTests.swift; sourceTree = "<group>"; };
 		3DF741CE779FDFB73313566C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		423CB5857CE44B154B898985 /* StudioModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioModels.swift; sourceTree = "<group>"; };
+		4BD057EA47492D71EB0B2396 /* DriftSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftSession.swift; sourceTree = "<group>"; };
+		515020500088BE10ADB301B2 /* StudioGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioGenerator.swift; sourceTree = "<group>"; };
 		5F9B403FD94152EAFCCCA7B6 /* NodusDriftUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = NodusDriftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72B7F03510F2B68251A8948F /* StudioLandscapeShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = StudioLandscapeShaders.metal; sourceTree = "<group>"; };
+		7C9A129A975E5983183E5904 /* DriftCarPlayLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftCarPlayLibrary.swift; sourceTree = "<group>"; };
 		8D0695ADA48AA59C96D135DD /* DriftSilentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftSilentUITests.swift; sourceTree = "<group>"; };
+		8D1451949B94264890D7AC6C /* StudioEditors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioEditors.swift; sourceTree = "<group>"; };
 		90E895F7DD6650E60EC07C2C /* DriftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftModel.swift; sourceTree = "<group>"; };
 		92995F4DEBF1D3CC62A6B52A /* catalog.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = catalog.json; sourceTree = "<group>"; };
+		94EDE7546FF93647152875FD /* LandscapeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeUITests.swift; sourceTree = "<group>"; };
 		97F73A1AD4A46E1887E6C28B /* NodusMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodusMark.swift; sourceTree = "<group>"; };
+		9C517A008465996A04D93F81 /* LandscapeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeTests.swift; sourceTree = "<group>"; };
+		9C5FFD0BFBBC8BA80D2CD525 /* StudioFeasibilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioFeasibilityTests.swift; sourceTree = "<group>"; };
+		9D6CBC7A4AD9F99DFEE0C5D7 /* StudioVisualState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioVisualState.swift; sourceTree = "<group>"; };
 		9E09FF571AA2354D1A59789A /* NodusDriftTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = NodusDriftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5C3C9D32D4684EF9CC142C /* NodusDriftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodusDriftApp.swift; sourceTree = "<group>"; };
 		A195C117C5DEBB3A168D186A /* DriftViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftViews.swift; sourceTree = "<group>"; };
 		A45F99AC624C21EAFD2D9D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B141975182C9799EF2A85B88 /* StudioScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioScene.swift; sourceTree = "<group>"; };
 		B3BADB4C7FC3D49E1D6B4AA0 /* DriftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftTests.swift; sourceTree = "<group>"; };
 		B4F027CEE9FDFAB20990939C /* NodiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodiView.swift; sourceTree = "<group>"; };
+		C559E8146B0AFD17212511FC /* CarPlayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPlayTests.swift; sourceTree = "<group>"; };
+		C83C0127DA5F8E2AEF1C70A7 /* StableAudioMLX */ = {isa = PBXFileReference; lastKnownFileType = folder; name = StableAudioMLX; path = ../Modules/StableAudioMLX; sourceTree = SOURCE_ROOT; };
 		C89E07F425C8E8D1F86C7836 /* DriftAudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftAudioEngine.swift; sourceTree = "<group>"; };
 		C8F9BFC3DBF594A88C981610 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CBB11031A84A890CF069CD21 /* DriftPlaybackMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftPlaybackMetadata.swift; sourceTree = "<group>"; };
+		CC2D97BBBABCDD1B68AD4C61 /* StudioDirector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioDirector.swift; sourceTree = "<group>"; };
+		D5DB4F7134A9B1F4CE1FE9BD /* StudioLandscapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioLandscapeView.swift; sourceTree = "<group>"; };
 		D6259506D5FD8337D53C9828 /* NodusDrift.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = NodusDrift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8ACAA8D5EB697DB01BE207E /* StudioLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioLibrary.swift; sourceTree = "<group>"; };
+		D9B7679472CBBCA6B3F34E78 /* StudioAudioQuality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioAudioQuality.swift; sourceTree = "<group>"; };
+		DF85E95444F0E22E80ECCA72 /* Landscapes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Landscapes; path = NodusDrift/Resources/Landscapes; sourceTree = SOURCE_ROOT; };
+		DFBB674D22B49DB865E4DB46 /* StudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioView.swift; sourceTree = "<group>"; };
+		E33BEDD5047DD48CE01C0F59 /* StudioStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioStore.swift; sourceTree = "<group>"; };
 		E78FC25CD44F09B358E1D6EB /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		E7F993B03995FC5A523067E5 /* StudioAIViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioAIViews.swift; sourceTree = "<group>"; };
+		EA9156B82B0F7C877F2563DF /* StudioVisualElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioVisualElements.swift; sourceTree = "<group>"; };
+		EAEEF8308682EF40D15BC9E3 /* DriftCarPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftCarPlay.swift; sourceTree = "<group>"; };
 		ECA3F7732062896D44A9EC31 /* Legal */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Legal; path = NodusDrift/Resources/Legal; sourceTree = SOURCE_ROOT; };
 		EE9BEAB0E1DD899E05573E9F /* DriftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A343C0290D86F019F4B39EED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB1665E19364F56ED31005FE /* StableAudioMLX in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		049DD2541427B1914A7DE632 = {
 			isa = PBXGroup;
 			children = (
 				03F9AC09FBA646FDA4F2E366 /* Audio */,
+				DF85E95444F0E22E80ECCA72 /* Landscapes */,
 				ECA3F7732062896D44A9EC31 /* Legal */,
 				A1047A896C960764E7103893 /* NodusDrift */,
 				201B5FD8B48E3B47DBA07222 /* NodusDriftTests */,
 				807FE0A485A5FFEB1D362A21 /* NodusDriftUITests */,
+				74C1AFE9A29E581A0E162A45 /* Packages */,
 				E88A9A2481F7EF5B7702F6E0 /* Resources */,
 				8B586B073018A9A7609AB5DD /* Products */,
 			);
@@ -82,9 +154,21 @@
 		201B5FD8B48E3B47DBA07222 /* NodusDriftTests */ = {
 			isa = PBXGroup;
 			children = (
+				C559E8146B0AFD17212511FC /* CarPlayTests.swift */,
 				B3BADB4C7FC3D49E1D6B4AA0 /* DriftTests.swift */,
+				9C517A008465996A04D93F81 /* LandscapeTests.swift */,
+				9C5FFD0BFBBC8BA80D2CD525 /* StudioFeasibilityTests.swift */,
+				3045750852DC74999C554B6C /* StudioTests.swift */,
 			);
 			path = NodusDriftTests;
+			sourceTree = "<group>";
+		};
+		74C1AFE9A29E581A0E162A45 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				C83C0127DA5F8E2AEF1C70A7 /* StableAudioMLX */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 		807FE0A485A5FFEB1D362A21 /* NodusDriftUITests */ = {
@@ -92,6 +176,8 @@
 			children = (
 				8D0695ADA48AA59C96D135DD /* DriftSilentUITests.swift */,
 				EE9BEAB0E1DD899E05573E9F /* DriftUITests.swift */,
+				94EDE7546FF93647152875FD /* LandscapeUITests.swift */,
+				132C32ADBFDC63783E09B82A /* StudioUITests.swift */,
 			);
 			path = NodusDriftUITests;
 			sourceTree = "<group>";
@@ -110,15 +196,37 @@
 			isa = PBXGroup;
 			children = (
 				26D0165B5206E972B693474F /* Assets.xcassets */,
+				1A969D8043B3EF2E2FEB9069 /* CarPlay.entitlements */,
+				0304900597032038EDDD3FF4 /* DriftArtwork.swift */,
 				C89E07F425C8E8D1F86C7836 /* DriftAudioEngine.swift */,
+				EAEEF8308682EF40D15BC9E3 /* DriftCarPlay.swift */,
+				7C9A129A975E5983183E5904 /* DriftCarPlayLibrary.swift */,
 				90E895F7DD6650E60EC07C2C /* DriftModel.swift */,
+				CBB11031A84A890CF069CD21 /* DriftPlaybackMetadata.swift */,
+				4BD057EA47492D71EB0B2396 /* DriftSession.swift */,
 				A195C117C5DEBB3A168D186A /* DriftViews.swift */,
 				E78FC25CD44F09B358E1D6EB /* ImmersiveView.swift */,
 				A45F99AC624C21EAFD2D9D6E /* Info.plist */,
+				0B9D7D6BC6EEFE66019D9595 /* MeditationLandscape.swift */,
 				B4F027CEE9FDFAB20990939C /* NodiView.swift */,
 				9F5C3C9D32D4684EF9CC142C /* NodusDriftApp.swift */,
 				97F73A1AD4A46E1887E6C28B /* NodusMark.swift */,
 				C8F9BFC3DBF594A88C981610 /* SettingsView.swift */,
+				E7F993B03995FC5A523067E5 /* StudioAIViews.swift */,
+				D9B7679472CBBCA6B3F34E78 /* StudioAudioQuality.swift */,
+				CC2D97BBBABCDD1B68AD4C61 /* StudioDirector.swift */,
+				8D1451949B94264890D7AC6C /* StudioEditors.swift */,
+				515020500088BE10ADB301B2 /* StudioGenerator.swift */,
+				292A5AEB5E18BEFA1A6B69C1 /* StudioLandscapeRenderer.swift */,
+				72B7F03510F2B68251A8948F /* StudioLandscapeShaders.metal */,
+				D5DB4F7134A9B1F4CE1FE9BD /* StudioLandscapeView.swift */,
+				D8ACAA8D5EB697DB01BE207E /* StudioLibrary.swift */,
+				423CB5857CE44B154B898985 /* StudioModels.swift */,
+				B141975182C9799EF2A85B88 /* StudioScene.swift */,
+				E33BEDD5047DD48CE01C0F59 /* StudioStore.swift */,
+				DFBB674D22B49DB865E4DB46 /* StudioView.swift */,
+				EA9156B82B0F7C877F2563DF /* StudioVisualElements.swift */,
+				9D6CBC7A4AD9F99DFEE0C5D7 /* StudioVisualState.swift */,
 			);
 			path = NodusDrift;
 			sourceTree = "<group>";
@@ -178,6 +286,7 @@
 			buildPhases = (
 				B9BB400D3247C103D0CD892C /* Sources */,
 				CF05E7D2535A21615E339549 /* Resources */,
+				A343C0290D86F019F4B39EED /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,6 +294,7 @@
 			);
 			name = NodusDrift;
 			packageProductDependencies = (
+				9C0A8C8708CC526FACC88510 /* StableAudioMLX */,
 			);
 			productName = NodusDrift;
 			productReference = D6259506D5FD8337D53C9828 /* NodusDrift.app */;
@@ -224,6 +334,9 @@
 			);
 			mainGroup = 049DD2541427B1914A7DE632;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4941A2D20999084E7DA98FC7 /* XCLocalSwiftPackageReference "../Modules/StableAudioMLX" */,
+			);
 			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
@@ -242,6 +355,7 @@
 			files = (
 				96BB1E7CF84C2BF711D49494 /* Assets.xcassets in Resources */,
 				082901040E25BEC52B8A6FFE /* Audio in Resources */,
+				78807A1DAFAB3F4341FCEFD8 /* Landscapes in Resources */,
 				F241BAF37146F0D5340DF4BF /* Legal in Resources */,
 				526935550D0B66D28F58CBE9 /* PrivacyInfo.xcprivacy in Resources */,
 				CC585B0CE1747F29EBCC62B0 /* catalog.json in Resources */,
@@ -255,7 +369,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBEEB07FDC6961F6926FA73E /* CarPlayTests.swift in Sources */,
 				7A3A27B92B3998DCF6C7CA03 /* DriftTests.swift in Sources */,
+				35424F54C85015D123B8DC49 /* LandscapeTests.swift in Sources */,
+				2AD73566CC2F2E1D1AE3C053 /* StudioFeasibilityTests.swift in Sources */,
+				0BEFD7331A55CD68D2607354 /* StudioTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,14 +381,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63FD12260061C7447131AA81 /* DriftArtwork.swift in Sources */,
 				5C769B97931D0938B8A088B5 /* DriftAudioEngine.swift in Sources */,
+				BF730AB8B85476D5F47BD70C /* DriftCarPlay.swift in Sources */,
+				2B00D564B82E71F360F4E797 /* DriftCarPlayLibrary.swift in Sources */,
 				07CF76F58B0B4D5220CDE575 /* DriftModel.swift in Sources */,
+				4324EB5D0803690B1DF35945 /* DriftPlaybackMetadata.swift in Sources */,
+				AC1D0E3E2D9E38B1146243B5 /* DriftSession.swift in Sources */,
 				BEE56685B9EA297D5D780555 /* DriftViews.swift in Sources */,
 				ACAF8EC4E8BDD489155AD8E4 /* ImmersiveView.swift in Sources */,
+				8C48C974036ED9C49F0D9A47 /* MeditationLandscape.swift in Sources */,
 				4DC99DE9E08D61A68120D0C6 /* NodiView.swift in Sources */,
 				D521869BF2C2BBA1524D3716 /* NodusDriftApp.swift in Sources */,
 				A99EF57860E79C9C54D5C61B /* NodusMark.swift in Sources */,
 				7986275B745C1C6F759698EF /* SettingsView.swift in Sources */,
+				A593C904C6EC0783F877C687 /* StudioAIViews.swift in Sources */,
+				2C7996E0A84354AF01652ABB /* StudioAudioQuality.swift in Sources */,
+				A4737A8B2B044C1D45ABD0AE /* StudioDirector.swift in Sources */,
+				462DACAC130E83FEE6AC3A07 /* StudioEditors.swift in Sources */,
+				47C2C14767349C779BF73969 /* StudioGenerator.swift in Sources */,
+				C7307A04F3CD99D85B054FF2 /* StudioLandscapeRenderer.swift in Sources */,
+				AAE7BEB32BA2F9AD5C54131A /* StudioLandscapeShaders.metal in Sources */,
+				390DBCB8F03AF25E26B27CF3 /* StudioLandscapeView.swift in Sources */,
+				4B13FCBFD13DA306AFEF2451 /* StudioLibrary.swift in Sources */,
+				F5982ED986C3499676A21748 /* StudioModels.swift in Sources */,
+				410AA08F43C325D3155E73DF /* StudioScene.swift in Sources */,
+				EFBE96A916019EF0446FBBDC /* StudioStore.swift in Sources */,
+				65A8B3368BDFCEB84C997C77 /* StudioView.swift in Sources */,
+				B2A962DE6D92FA03DFA51E77 /* StudioVisualElements.swift in Sources */,
+				18EC96CD6D2106A6AFD2F99A /* StudioVisualState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +419,8 @@
 			files = (
 				3CB028F5067062168F0BA882 /* DriftSilentUITests.swift in Sources */,
 				01E3B3E25027EC9DFD40D47E /* DriftUITests.swift in Sources */,
+				4934FC82D060411E538791DB /* LandscapeUITests.swift in Sources */,
+				68A0E2C3D0CCC675E94E75E1 /* StudioUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,15 +639,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(DRIFT_CARPLAY_ENTITLEMENTS)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 18;
+				DRIFT_CARPLAY_ENTITLEMENTS = NodusDrift/CarPlay.entitlements;
 				INFOPLIST_FILE = NodusDrift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.drakonis96.nodusdrift;
+				MARKETING_VERSION = 0.2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.drakonis96.nodusdrift$(DRIFT_BUILD_SUFFIX)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -516,15 +659,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(DRIFT_CARPLAY_ENTITLEMENTS)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 18;
+				DRIFT_CARPLAY_ENTITLEMENTS = NodusDrift/CarPlay.entitlements;
 				INFOPLIST_FILE = NodusDrift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.drakonis96.nodusdrift;
+				MARKETING_VERSION = 0.2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.drakonis96.nodusdrift$(DRIFT_BUILD_SUFFIX)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -570,6 +715,20 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		4941A2D20999084E7DA98FC7 /* XCLocalSwiftPackageReference "../Modules/StableAudioMLX" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Modules/StableAudioMLX;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9C0A8C8708CC526FACC88510 /* StableAudioMLX */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = StableAudioMLX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8D6D774532E9F3778D4B7A86 /* Project object */;
 }
