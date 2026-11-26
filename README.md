@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="screenshots/readme-banner.png" alt="Nodus Drift: Nodi with headphones, sound category icons and the Nodus Drift N on a dark background.">
+  <img src="screenshots/readme-banner.png" alt="Nodus Drift: headphones on a rock by a lake at night, with nature, sleep, water, fire and rain sound icons, and the Nodus Drift N. Ambient sounds for focus, relax and sleep. Nature sounds, focus ambience, sleep soundscapes, fully customizable, offline and private. Free and open source, on iPhone, iPad and Mac.">
 </p>
 
 <p align="center">
